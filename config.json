@@ -1,0 +1,12 @@
+{
+  "smtp_server": "smtp.gmail.com",
+  "smtp_port": 587,
+  "sender_name": "Medantrik MedTech - Hiring Team",
+  "sender_email": "join@medantrik.com",
+  "test_mode": true,
+  "test_recipient_email": "join@medantrik.com",
+  "delay_seconds_between_emails": 6,
+  "html_template_file": "common_placement_outreach.html",
+  "text_template_file": "common_placement_outreach.txt",
+  "subject_line": "Campus Internship & Hiring Connect: Medantrik MedTech (IIT Kanpur Incubated | Noida Sec 63A Facility)"
+}

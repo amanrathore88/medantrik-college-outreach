@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOL Admission | Academic Session 2026–2027</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      /* Pure White Card Backgrounds */
+      --card-bg: #ffffff;
+      --border-color: #e2e8f0;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --primary-color: #2563eb;
+      --radius-lg: 20px;
+      --radius-md: 12px;
+      --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.25);
+      --shadow-hover: 0 20px 35px -5px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Vibrant Animated Multi-Color Gradient Background */
+    body {
+      background: linear-gradient(-45deg, #4f46e5, #06b6d4, #ec4899, #8b5cf6);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      background-attachment: fixed;
+      color: var(--text-main);
+      line-height: 1.5;
+      padding: 32px 16px;
+      min-height: 100vh;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .main-wrapper {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* --- Clean Pure White Header --- */
+    .header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 28px 32px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1920px;
+      gap: 24px;
+    }
+
+    .header-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+    }
+
+    .header-logo img {
+      max-height: 186px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      padding: 8px;
+    }
+
+    /* Refactored Header Title & Typography */
+    .header-title {
+      flex: 1;
+      text-align: center;
+      min-width: 260px;
+      position: relative;
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sub-heading-top {
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .main-heading {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #1e3a8a, #3b82f6, #1e3a8a);
+      background-size: 200% auto;
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: textGradient 5s linear infinite;
+      margin: 0;
+      letter-spacing: 0.02em;
+      line-height: 1.3;
+    }
+
+    .erstwhile-heading {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .col-heading,
+    .du-heading {
+      font-size: 1.3rem;
+      color: #0f172a;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+
+    .du-heading {
+      text-transform: uppercase;
+      margin-top: -4px;
+    }
+
+    .admission-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      padding: 10px 28px;
+      border-radius: 50px;
+      border: 2px solid #2563eb;
+      color: #1e3a8a;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      box-shadow: 0 4px 15px rgba(37, 99, 235, 0.1);
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .admission-badge:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+    }
+
+    .pulse-dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ef4444;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background-color: #ef4444;
+      animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    @keyframes ping {
+
+      75%,
+      100% {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }
+
+    @keyframes textGradient {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    .academic-session {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+      color: #475569;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      position: relative;
+    }
+
+    .academic-session::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 2px;
+      background: #cbd5e1;
+      border-radius: 2px;
+      transition: width 0.3s ease, background 0.3s ease;
+    }
+
+    .header-text:hover .academic-session::after {
+      width: 100%;
+      background: #3b82f6;
+    }
+
+    @media (max-width: 640px) {
+      .header-title {
+        width: 100%;
+        padding: 10px 0;
+      }
+
+      .header-text {
+        gap: 6px;
+      }
+    }
+
+    .header-img-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 8px;
+      width: 100%;
+      max-width: 640px;
+    }
+
+    .header-img-row img {
+      max-height: 68px;
+      width: auto;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #f8fafc;
+      padding: 8px;
+      border: 1px solid #e2e8f0;
+    }
+
+    @media (max-width: 640px) {
+      .header-img-row {
+        gap: 10px;
+      }
+
+      .header-img-row img {
+        max-height: 111px;
+      }
+    }
+
+    .header-nav-links {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .btn-header-nav {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary-color);
+      color: #ffffff;
+      border: 1px solid var(--border-color);
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+
+
+    .btn-header-nav.beta {
+      background: #f59e0b;
+      color: #ffffff;
+
+      border-color: #fde68a;
+
+    }
+
+    .success {
+      background: #058427;
+      color: #ffffff;
+
+      border-color: #fde68a;
+    }
+
+    /* Social Buttons in Header */
+    .social-buttons {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+      white-space: nowrap;
+    }
+
+    .social-btn.youtube {
+      background: linear-gradient(90deg, #ff0000, #e11d48);
+    }
+
+    .social-btn.du {
+      background: #000;
+    }
+
+    .social-btn.sol {
+      background: #000;
+    }
+
+    .social-btn.instagram {
+      background: linear-gradient(90deg, #f97316, #ec4899);
+    }
+
+    .social-btn:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.05);
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        align-items: center;
+        text-align: center;
+      }
+
+      .header-brand {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .header-logo {
+        width: auto;
+      }
+
+      .header-logo img {
+        max-height: 171px;
+      }
+
+      .social-buttons {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .social-btn {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+      }
+    }
+
+
+
+    /* --- Announcement Bar (White) --- */
+    .announcement-bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--card-bg);
+      border: 1px solid #fda4af;
+      border-radius: 999px;
+      padding: 14px 24px;
+      text-decoration: none;
+      color: #e11d48;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.25s ease;
+    }
+
+    .announcement-bar:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .exam-announcement {
+      position: relative;
+      overflow: hidden;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 12px 10px 22px;
+      color: #0c4a6e;
+      background: linear-gradient(110deg, #ecfeff, #ffffff 42%, #eff6ff);
+      border: 2px solid #38bdf8;
+      box-shadow: 0 12px 28px rgba(14, 165, 233, 0.2);
+      animation: announcement-float 3.5s ease-in-out infinite;
+    }
+
+    .exam-announcement::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto 0 -35%;
+      width: 28%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9), transparent);
+      transform: skewX(-20deg);
+      animation: announcement-shine 3.2s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .exam-announcement .announcement-copy,
+    .exam-announcement .announcement-action {
+      position: relative;
+      z-index: 1;
+    }
+
+    .announcement-copy {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .announcement-copy i {
+      display: grid;
+      place-items: center;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0891b2, #2563eb);
+      border-radius: 50%;
+      box-shadow: 0 5px 12px rgba(37, 99, 235, 0.28);
+      animation: announcement-pulse 1.8s ease-in-out infinite;
+    }
+
+    .announcement-copy span {
+      font-weight: 800;
+    }
+
+    .announcement-copy small {
+      display: block;
+      margin-top: 2px;
+      color: #0369a1;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .announcement-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 999px;
+      padding: 10px 17px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0891b2, #2563eb);
+      font-size: 0.86rem;
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(37, 99, 235, 0.25);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    }
+
+    .announcement-action:hover {
+      transform: translateY(-2px) scale(1.02);
+      filter: brightness(1.08);
+      box-shadow: 0 9px 18px rgba(37, 99, 235, 0.32);
+    }
+
+    @keyframes announcement-float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-3px); }
+    }
+
+    @keyframes announcement-shine {
+      0%, 30% { left: -35%; }
+      70%, 100% { left: 125%; }
+    }
+
+    @keyframes announcement-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+
+    .badge-pulse {
+      background: linear-gradient(135deg, #e11d48, #f43f5e);
+      color: white;
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.85;
+        transform: scale(0.96);
+      }
+
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* --- Featured Action Links --- */
+    .featured-container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .featured-link {
+      background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+      color: white;
+      text-decoration: none;
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 0.95rem;
+      box-shadow: var(--shadow-soft);
+      transition: all 0.25s ease;
+    }
+
+    .featured-link.skill-courses {
+      background: linear-gradient(90deg, #0284c7 0%, #38bdf8 100%);
+    }
+
+    .featured-link.program {
+      background: linear-gradient(90deg, #7c3aed 0%, #a855f7 100%);
+    }
+
+    .featured-link:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-hover);
+      filter: brightness(1.05);
+    }
+
+    /* --- Portal Cards Section (UG / PG) --- */
+    .portal-sections {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* Solid Pure White Cards */
+    .section-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+      padding: 24px;
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .exam-card {
+      background: linear-gradient(145deg, #dbeafe 0%, #eff6ff 58%, #cffafe 100%);
+      border: 2px solid #60a5fa;
+    }
+
+    .exam-card:nth-child(2) {
+      background: linear-gradient(145deg, #dcfce7 0%, #f0fdf4 58%, #d1fae5 100%);
+      border-color: #4ade80;
+    }
+
+    .exam-card:nth-child(3) {
+      background: linear-gradient(145deg, #ffedd5 0%, #fff7ed 58%, #fee2e2 100%);
+      border-color: #fb923c;
+    }
+
+    .exam-card .section-title {
+      color: #172554;
+      border-bottom-color: rgba(30, 64, 175, 0.3);
+    }
+
+    .exam-card:nth-child(2) .section-title {
+      color: #14532d;
+      border-bottom-color: rgba(21, 128, 61, 0.3);
+    }
+
+    .exam-card:nth-child(3) .section-title {
+      color: #7c2d12;
+      border-bottom-color: rgba(194, 65, 12, 0.3);
+    }
+
+    .exam-card .action-item {
+      background: rgba(255, 255, 255, 0.92);
+      border-color: rgba(15, 23, 42, 0.16);
+      color: #0f172a;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .section-title span {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title i {
+      color: var(--primary-color);
+    }
+
+    /* Apply Buttons inside Portals */
+    .btn-apply-portal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.25s ease;
+    }
+
+    .btn-apply-portal.ug-btn {
+      background: linear-gradient(135deg, #0d9488 0%, #059669 100%);
+    }
+
+    .btn-apply-portal.pg-btn {
+      background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+
+    .btn-apply-portal.skill-btn {
+      background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+    }
+
+    .btn-apply-portal.cifl-btn {
+      background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+    }
+
+    .btn-apply-portal:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+      filter: brightness(1.08);
+    }
+
+    /* Program List Container - Clean Layout Without Scrollbar */
+    .program-list-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+    }
+
+    .program-list-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .program-list {
+      list-style: none;
+      display: flex;
+      padding: 0px;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .program-list li {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #334155;
+      padding: 6px 10px;
+      background: #ffffff;
+      border-radius: 6px;
+      border: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .program-list li i {
+      font-size: 0.75rem;
+      color: #059669;
+    }
+
+    .pg-card .program-list li i {
+      color: #6366f1;
+    }
+
+    /* Action Item Links inside Cards */
+    .action-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .action-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #f8fafc;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 0.92rem;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+    }
+
+    .action-item:hover {
+      background: #ffffff;
+      border-color: #cbd5e1;
+      transform: translateX(3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .action-item .left-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      width: 100%;
+      min-width: 0;
+    }
+
+    .action-item .text-content {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .action-item .text-content > span {
+      display: block;
+    }
+
+    .badge-new {
+      background: #fcdcdc;
+      color: #c7261b;
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    /* Subtext styling for Medhasetu */
+    .medhasetu-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .high-contrast-subtext {
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: #d97706;
+      border-radius: 4px;
+    }
+
+    .attention-pulse {
+      display: block;
+      width: 100%;
+      color: #7f1d1d;
+      font-weight: 800;
+      line-height: 1.45;
+      animation: attention-pulse 1.4s ease-in-out infinite;
+    }
+
+    @keyframes attention-pulse {
+      0%,
+      100% {
+        opacity: 1;
+        text-shadow: 0 0 0 rgba(127, 29, 29, 0);
+      }
+
+      50% {
+        opacity: 1;
+        text-shadow: 0 1px 0 rgba(127, 29, 29, 0.9), 0 0 2px rgba(127, 29, 29, 0.45), 0 0 6px rgba(127, 29, 29, 0.25);
+      }
+    }
+
+    /* Icon Box styling */
+    .icon-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .icon-red {
+      background: #ffe4e6;
+      color: #e11d48;
+    }
+
+    .icon-purple {
+      background: #f3e8ff;
+      color: #9333ea;
+    }
+
+    .icon-blue {
+      background: #dbeafe;
+      color: #2563eb;
+    }
+
+    .icon-teal {
+      background: #ccfbf1;
+      color: #0d9488;
+    }
+
+    .icon-amber {
+      background: #fef3c7;
+      color: #d97706;
+    }
+
+    .icon-indigo {
+      background: #e0e7ff;
+      color: #4f46e5;
+    }
+
+    /* Helpdesk Banner (White) */
+    .cta-banner {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      text-align: center;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .helpdesk-info h3 {
+      font-size: 1.2rem;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      font-weight: 800;
+    }
+
+    .helpdesk-info p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .contact-numbers {
+      font-weight: 800;
+      color: #2563eb;
+      margin-top: 6px;
+      font-size: 1.1rem;
+    }
+
+    .footer {
+      text-align: center;
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 8px 0;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes badge-blink {
+
+      0%,
+      100% {
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 0.2;
+      }
+    }
+
+    .blink-badge {
+      background: #dc2626 !important;
+      color: #ffffff !important;
+      animation: badge-blink 1s infinite ease-in-out;
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-nav-links {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .portal-sections {
+        grid-template-columns: 1fr;
+      }
+
+      .announcement-bar {
+        flex-direction: column;
+        text-align: center;
+        border-radius: var(--radius-lg);
+      }
+
+      .exam-announcement {
+        gap: 12px;
+        padding: 14px;
+      }
+
+      .announcement-copy {
+        justify-content: center;
+      }
+
+      .announcement-copy small {
+        font-size: 0.65rem;
+      }
+
+      .announcement-action {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .program-list li {
+        font-size: 1.2rem;
+        font-size: 700;
+      }
+
+      .program-list-title {
+        font-size: 1.4rem;
+        font-weight: 800;
+      }
+
+      #prospectus {
+        font-size: 1.2rem;
+        font-weight: 700;
+      }
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="main-wrapper">
+
+    <!-- White Header -->
+    <header class="header">
+      <div class="header-brand">
+        <div class="header-logo header-logo-left">
+          <img src="https://sol.du.ac.in/admission_23_24/assets/img/University_of_Delhi.png"
+            alt="University of Delhi logo">
+        </div>
+        <div class="header-title">
+          <div class="header-text">
+            <h2 class="sub-heading-top">Department of Distance & Continuing Education</h2>
+            <h1 class="main-heading">CENTRE FOR DISTANCE AND ONLINE EDUCATION (CDOE)</h1>
+            <h3 class="erstwhile-heading">(Erstwhile School of Open Learning (SOL))</h3>
+            <h4 class="col-heading">Campus of Open Learning (COL)</h4>
+            <h4 class="du-heading">University of Delhi</h4>
+            <div class="admission-badge">
+              <span class="pulse-dot"></span> SOL UG-PG Admission
+            </div>
+            <p class="academic-session">Academic Session 2026–2027</p>
+          </div>
+        </div>
+        <div class="header-logo header-logo-right">
+          <img src="https://sol.du.ac.in/admission_23_24/assets/img/new_logo.png" alt="SOL logo">
+        </div>
+      </div>
+      <div class="header-nav-links">
+        <div class="social-buttons" aria-label="social links">
+          <a href="https://www.youtube.com/@colradio.dusolofficial" target="_blank" class="social-btn youtube">
+            <i class="fa-brands fa-youtube"></i>
+            <span>Visit YouTube Channel</span>
+          </a>
+          <a href="https://x.com/UnivofDelhi" target="_blank" class="social-btn du">DU X</a>
+          <a href="https://x.com/DUSOLOfficial" target="_blank" class="social-btn sol">SOL X</a>
+          <a href="https://www.instagram.com/col.radio?igsh=d2ZzOWpycmJkdnRt" target="_blank"
+            class="social-btn instagram">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- <a href="https://web.sol.du.ac.in/uploads/pdfs/2026/August/Notice_nw.pdf" target="_blank" style="color:white;">Notice Regarding Webinar on Civil Services Examination (UPSC CSE).&nbsp;&nbsp;<a href="https://docs.google.com/forms/d/e/1FAIpQLSePqn1adMJmWr0CW-z-EILtZj--Wd7Q099Ip7EsP8JkH350ZA/viewform?usp=sharing&ouid=104677447093625206909" target="_blank" class="btn btn-danger">Click To Register</a></a><img height="20" width="35" src="admission_23_24/assets/img/new.gif" style="margin-top: -4px;margin-right: 0px;margin-bottom: 0px;margin-left: 7px;"></a><br /> -->
+     <!-- <a href="https://consent.oldcdu.ac.in/student/logout" target="_blank" class="announcement-bar exam-announcement">
+      <span class="announcement-copy">
+        <i class="fa-solid fa-file-signature" aria-hidden="true"></i>
+        <span>
+          Examination Form For the 4th Year Programs
+          <small>Complete your registration before the deadline</small>
+        </span>
+      </span>
+      <button class="announcement-action" type="button"
+        onclick="event.preventDefault(); event.stopPropagation(); window.open('https://consent.oldcdu.ac.in/student/logout', '_blank');">
+        Click to Register <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </button>
+    </a> -->
+    <a href="https://solbeta.oldcdu.ac.in/slm" target="_blank" class="announcement-bar">
+      <span>Click to Download the Self Learning Materials (SLM) of UG & PG Programs</span>
+      <button class='btn btn-danger' type="button"
+        onclick="event.preventDefault(); event.stopPropagation(); window.open('https://youtu.be/j_lIuilJv2s?si=edh1xhAMmH3MxDdQ', '_blank');">
+        Tutorial Video for the SLM Download Process <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </button>
+    </a>
+    <a href="https://sol.du.ac.in/merit_list.php" target="_blank" class="announcement-bar">
+      <span>MBA, MBA(HCA), M.A. & M.COM Merit List 2026-27</span>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+
+    <a href="https://web.sol.du.ac.in/uploads/pdfs/2026/July/Admission Poster 2026-27.pdf" target="_blank"
+      class="announcement-bar">
+      <span>Admissions Now Open for Skill Courses</span>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a>
+    
+    <!-- <a href="https://web.sol.du.ac.in/uploads/pdfs/2026/August/Placement_Drive_poster.pdf" target="_blank" class="announcement-bar">
+      <span>Invitation For Placement Drive 2026.</span>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a> -->
+    <!-- Examination Student Services -->
+    <div class="portal-sections">
+
+      <div class="section-card exam-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-user-clock"></i> Only For Admission Before 2025 Students</span>
+          <span class="badge-new blink-badge">LIVE</span>
+        </div>
+        <div class="action-list">
+          <a href="https://admission.sol.du.ac.in/examform/login" target="_blank" rel="noopener noreferrer" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-amber"><i class="fa-solid fa-file-pen"></i></div>
+              <div class="text-content">
+                <span>Examination Form For <b>UG Programs (Admission 2022-23, 2023-24, 2024-25) </b></span>
+                <span class="high text-danger attention-pulse" style="    font-size: large;">This Examination Form is only for students of 3rd Year Promoted, Ex Students and 4th Year Ex Students</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+          </a> 
+          <a href="https://fourthyear.oldcdu.ac.in/student/logout" target="_blank" rel="noopener noreferrer" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-teal"><i class="fa-solid fa-file-signature"></i></div>
+              <div class="text-content">
+                <span>Examination Form For the 4th Year Programme</span>
+                <span class="high text-danger attention-pulse" style="    font-size: large;">Those who only want to continue into the 4th Year Programme</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+          </a>
+          <a href="https://sol.du.ac.in/pgexamform/" target="_blank" rel="noopener noreferrer" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-teal"><i class="fa-solid fa-file-signature"></i></div>
+              <div class="text-content">
+                <span>Examination Form For <b>MA Hindi, MA Sanskrit, MCOM, BLISc, MLISc, PGDADLM & M.B.A </b> Programme Students</span>
+              </div>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="section-card exam-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-user-graduate"></i> 2025 Admission Onwards</span>
+          <span class="badge-new blink-badge">LIVE</span>
+        </div>
+        
+        <div class="action-list">
+          <a href="https://medhasetu.oldcdu.ac.in/" target="_blank" rel="noopener noreferrer" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-indigo"><i class="fa-solid fa-right-to-bracket"></i></div>
+              <span>Examination Form for <b>All UG Programs Students</b> (MEDHASETU)</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+          </a>
+          <a href="https://medhasetu.oldcdu.ac.in/" target="_blank" rel="noopener noreferrer" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-indigo"><i class="fa-solid fa-right-to-bracket"></i></div>
+              <span>Examination Form for <b>M.A, M.Com, MBA, BLISc, MLISc and PGDADLM Students</b> (MEDHASETU)</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="section-card exam-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-id-card"></i> Examination Hall Ticket</span>
+          <span class="badge-new">SOON</span>
+        </div>
+        <div class="action-list">
+          <div class="action-item" aria-disabled="true">
+            <div class="left-content">
+              <div class="icon-box icon-blue"><i class="fa-solid fa-ticket"></i></div>
+              <span>Hall Ticket / Admit Card Coming Soon</span>
+            </div>
+            <i class="fa-solid fa-clock" style="color: #94a3b8;"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- White Portals & Prospectus Grid -->
+    <div class="portal-sections">
+
+      <!-- UG Admission & Programs Section -->
+      <div class="section-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-user-graduate"></i> UG Admissions 2026-27</span>
+          <span class="badge-new">CLOSED</span>
+        </div>
+
+        <a href="https://ugadmission.oldcdu.ac.in/student/logout" target="_blank" class="btn-apply-portal ug-btn">
+          <span>Apply Online for UG Courses</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="action-list">
+          <a href="assets/2026-27/UG Prospectus 2026-27-with 4 year_nw_2.pdf" target="_blank" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-red"><i class="fa-regular fa-file-pdf"></i></div>
+              <span id="prospectus">Undergraduate (U.G.) Prospectus</span>
+            </div>
+            <i class="fa-solid fa-download" style="color: #94a3b8;"></i>
+          </a>
+        </div>
+        <!-- Programs Offered List (UG) -->
+        <div class="program-list-box">
+          <div class="program-list-title">
+            <i class="fa-solid fa-list-check"></i> Programs Offered (18)
+          </div>
+          <ul class="program-list">
+            <li><i class="fa-solid fa-circle-check"></i> B.Sc (Hons) - Computer Science<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> Bachelor of Management Studies</li>
+            <li><i class="fa-solid fa-circle-check"></i> Bachelor of Business Administration (FIA)</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Hons.) – English</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Hons.) – Political Science</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Hons.) – Economics</li>
+            <li><i class="fa-solid fa-circle-check"></i> B. Com (Hons.)</li>
+            <li><i class="fa-solid fa-circle-check"></i> B. Com.</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with Computer Applications</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with Economics</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. Programme with Education</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with English</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with Hindi</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with History</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with Mathematics</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. (Programme) with Political Science</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. Programme with Sanskrit</li>
+            <li><i class="fa-solid fa-circle-check"></i> B.A. Programme with Urdu</li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- PG & Professional Admission & Programs Section -->
+      <div class="section-card pg-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-graduation-cap"></i> PG Admissions 2026-27</span>
+          <span class="badge-new">CLOSED</span>
+        </div>
+
+        <a href="https://pgadmission.oldcdu.ac.in/student/logout" target="_blank" class="btn-apply-portal pg-btn">
+          <span>Apply Online for PG Courses</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <div class="action-list">
+          <a href="assets/2026-27/PG Prospectus - Final_PG wking 04-06-2026_nw.pdf" target="_blank" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-purple"><i class="fa-regular fa-file-pdf"></i></div>
+              <span id="prospectus">M.A & M.Com Prospectus</span>
+            </div>
+            <i class="fa-solid fa-download" style="color: #94a3b8;"></i>
+          </a>
+
+          <a href="assets/2026-27/MBA prospectus 04-06-2026 1_nw.pdf" target="_blank" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-blue"><i class="fa-regular fa-file-pdf"></i></div>
+              <span id="prospectus">MBA Prospectus</span>
+            </div>
+            <i class="fa-solid fa-download" style="color: #94a3b8;"></i>
+          </a>
+
+          <a href="assets/2026-27/PROSPECTUS_MBA_HCA_2026_nw.pdf" target="_blank" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-teal"><i class="fa-regular fa-file-pdf"></i></div>
+              <span id="prospectus">MBA (Exec) Healthcare Admin Prospectus</span>
+            </div>
+            <i class="fa-solid fa-download" style="color: #94a3b8;"></i>
+          </a>
+
+          <a href="assets/2026-27/Prospectus-Library Science-2026-2027_A_nw.pdf" target="_blank" class="action-item">
+            <div class="left-content">
+              <div class="icon-box icon-amber"><i class="fa-regular fa-file-pdf"></i></div>
+              <span id="prospectus">BLISc, MLISc & PGDADLM Prospectus</span>
+            </div>
+            <i class="fa-solid fa-download" style="color: #94a3b8;"></i>
+          </a>
+        </div>
+        <!-- Programs Offered List (PG) -->
+        <div class="program-list-box">
+          <div class="program-list-title">
+            <i class="fa-solid fa-list-check"></i> Programs Offered (10)
+          </div>
+          <ul class="program-list">
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Hindi One Year Programme<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Sanskrit One Year Programme<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. History One Year Programme<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Political Science One Year Programme<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> M. Com. One Year Programme<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> MBA (Executive) Healthcare Administration<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> Master of Business Administration (MBA)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Bachelor of Library and Information Science (BLISc)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Master of Library and Information Science (MLISc)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Post Graduate Diploma in Automated and Digital Library
+              Management (PGDADLM)</li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Hindi Two Year Programme</li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Sanskrit Two Year Programme</li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. History Two Year Programme</li>
+            <li><i class="fa-solid fa-circle-check"></i> M. A. Political Science Two Year Programme</li>
+            <li><i class="fa-solid fa-circle-check"></i> M. Com. Two Year Programme</li>
+          </ul>
+        </div>
+
+
+      </div>
+
+      <!-- Skill Courses Card -->
+      <div class="section-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-briefcase"></i> Job Ready Skill Courses</span>
+
+        </div>
+
+        <a href="https://oldcdu.ac.in/courses/job-ready-skill-courses-(cisbc)" target="_blank"
+          class="btn-apply-portal skill-btn">
+          <span>Apply Online for Skill Courses</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="program-list-box">
+          <div class="program-list-title">
+            <i class="fa-solid fa-list-check"></i> Full Course List
+          </div>
+          <ul class="program-list">
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in English Language (Online)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Media Studies and Journalism</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Basics of Robotics</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Lab Technology & Lab Management</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Library and Information Science</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Advanced Accounting and Financial
+              Management</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Basics of Accounting and GST</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Introduction to Basic Electrical Systems
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Digital & Social Media Marketing</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in English Language (Offline)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in RO Repairing</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Nail Art Training</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Python Programming (Basics to Advanced)
+            </li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Introduction to Computer Networking</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Basic Computer Application</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Motor Driving (Car)</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Graphic Design and DTP</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Photography and Video Editing</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Animation and Motion Graphics</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Stenography & Secretarial Practices</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Beauty and Hair Lab</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Bakery and Confectionery</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in AC & Refrigerator Repairing</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Medical Transcription</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate Course in Counselling and its Applications (Online)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Foreign Language Courses Card -->
+      <div class="section-card">
+        <div class="section-title">
+          <span><i class="fa-solid fa-language"></i> Certificate /Diploma Foreign Language (CIFL)</span>
+
+        </div>
+
+        <a href="https://cifl.oldcdu.ac.in/" target="_blank" class="btn-apply-portal cifl-btn">
+          <span>Apply Online for Foreign Languages</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+        <div class="program-list-box">
+          <div class="program-list-title">
+            <i class="fa-solid fa-list-check"></i> Full Course List
+          </div>
+          <ul class="program-list">
+
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Russian Language<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Arabic<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Persian<span
+                class="badge bg-success text-white ms-1 blink-badge">New</span></li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Italian</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Chinese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in French</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in German</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Japanese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Korean</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Portuguese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Certificate course in Spanish</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Chinese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in French</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in German</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Italian</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Japanese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Korean</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Portuguese</li>
+            <li><i class="fa-solid fa-circle-check"></i> Diploma course in Spanish</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <!-- Featured Buttons -->
+    <div class="featured-container">
+      <!-- <a href="https://sol.du.ac.in/admission_23_24/Programs_Structure.html" target="_blank" class="featured-link program">
+        <span><i class="fa-solid fa-graduation-cap" style="margin-right: 8px;"></i> UG & PG Programs Offered for Academic Year 2026-27</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+      <a href="https://cifl.oldcdu.ac.in/" target="_blank" class="featured-link">
+        <span><i class="fa-solid fa-language" style="margin-right: 8px;"></i> Apply Online for Part-Time Foreign Language Certificate & Diploma Courses</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a>
+
+      <a href="https://oldcdu.ac.in/courses/job-ready-skill-courses-(cisbc)" target="_blank" class="featured-link skill-courses">
+        <span><i class="fa-solid fa-briefcase" style="margin-right: 8px;"></i> Job-Ready Skill Courses (CISBC)</span>
+        <i class="fa-solid fa-chevron-right"></i>
+      </a> -->
+      <!-- White Announcement Bar -->
+      <!-- <a href="https://www.youtube.com/@colradio.dusolofficial" target="_blank" class="announcement-bar">
+      <span class="badge-pulse">Live Updates</span>
+      <span>Subscribe to COL Radio YouTube Channel for Admission Alerts & Notifications</span>
+      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+    </a> -->
+
+    </div>
+    <!-- Quick Links Card (White) -->
+    <div class="section-card">
+      <div class="section-title">
+        <span><i class="fa-solid fa-gears"></i> Quick Links & Student Services</span>
+      </div>
+      <div class="action-list">
+
+        <a href="https://medhasetu.oldcdu.ac.in/" target="_blank" class="action-item">
+          <div class="left-content">
+            <div class="icon-box icon-indigo"><i class="fa-solid fa-user-graduate"></i></div>
+            <div class="medhasetu-content">
+              <span>Student Dashboard (MEDHASETU)</span>
+              <span class="high-contrast-subtext">✨ For Academic Year 2025 Onwards Students</span>
+            </div>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+        </a>
+
+        <a href="https://colgram.oldcdu.ac.in/" target="_blank" class="action-item">
+          <div class="left-content">
+            <div class="icon-box icon-red"><i class="fa-solid fa-circle-question"></i></div>
+            <span>COL-GRAM Grievance Portal</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+        </a>
+
+        <a href="https://radio.oldcdu.ac.in/" target="_blank" class="action-item">
+          <div class="left-content">
+            <div class="icon-box icon-purple"><i class="fa-solid fa-radio"></i></div>
+            <span>COL Radio Website</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+        </a>
+
+        <a href="https://col.du.ac.in/v1/" target="_blank" class="action-item">
+          <div class="left-content">
+            <div class="icon-box icon-teal"><i class="fa-solid fa-globe"></i></div>
+            <span>COL Main Official Website</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+        </a>
+
+        <a href="https://sol.du.ac.in/home.php" target="_blank" class="action-item">
+          <div class="left-content">
+            <div class="icon-box icon-teal"><i class="fa-solid fa-globe"></i></div>
+            <span>SOL Main Official Website</span>
+          </div>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="color: #94a3b8;"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Helpdesk Banner (White) -->
+    <div class="cta-banner">
+      <div class="container py-3">
+        <a href="https://web.sol.du.ac.in/home" target="_blank" class="btn-header-nav">
+          Continue to SOL Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://solbeta.oldcdu.ac.in/" target="_blank" class="btn-header-nav beta">
+          Continue to SOL Beta Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://solbeta.oldcdu.ac.in/Notice" target="_blank" class="btn-header-nav beta">
+          SOL Notices <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <a href="https://sol.du.ac.in/time_table.php" target="_blank" class="btn-header-nav success">
+          SOL Classes Time Table <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+      <div class="helpdesk-info">
+        <h3>Helpdesk Support</h3>
+        <p>Monday to Friday · 09:30 AM to 5:30 PM</p>
+        <div class="contact-numbers">
+          📞 011-65213030 &nbsp;|&nbsp; 011-35663474
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2026 School of Open Learning, University of Delhi. All rights reserved.
+    </footer>
+
+  </div>
+
+</body>
+
+</html>

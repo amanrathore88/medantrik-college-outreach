@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Partnership & Hiring Invitation - Medantrik MedTech (IIT Kanpur Incubated)</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f1f5f9;
+      color: #334155;
+      line-height: 1.6;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f1f5f9;
+      padding: 30px 10px;
+    }
+    .main-table {
+      max-width: 660px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+      border: 1px solid #e2e8f0;
+    }
+    .top-bar {
+      background-color: #ffffff;
+      padding: 20px 30px;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .top-logo {
+      max-height: 52px;
+      width: auto;
+      display: inline-block;
+    }
+    .header {
+      background: linear-gradient(135deg, #091e3a 0%, #0f3d6c 100%);
+      padding: 30px 30px 26px 30px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .header-badge {
+      display: inline-block;
+      background-color: #f97316;
+      color: #ffffff;
+      padding: 4px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .header h1 {
+      margin: 0;
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      color: #ffffff;
+    }
+    .header-sub {
+      margin: 8px 0 0 0;
+      font-size: 13.5px;
+      color: #93c5fd;
+      font-weight: 500;
+    }
+    .content {
+      padding: 32px 32px 24px 32px;
+    }
+    .greeting {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 16px;
+    }
+    .intro-p {
+      font-size: 14px;
+      color: #334155;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    /* Press Card */
+    .press-card {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 22px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .press-tag {
+      background-color: #dc2626;
+      color: #ffffff;
+      padding: 6px 14px;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .press-img-container {
+      width: 100%;
+      background-color: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
+      text-align: center;
+    }
+    .press-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .press-body {
+      padding: 14px 18px;
+      background-color: #f8fafc;
+    }
+    .press-headline {
+      font-size: 14px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 6px 0;
+    }
+    .press-quote {
+      font-size: 12.5px;
+      color: #475569;
+      font-style: italic;
+      margin: 0 0 8px 0;
+    }
+    .press-link {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #0284c7;
+      text-decoration: none;
+    }
+
+    .facility-banner {
+      background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      border-left: 5px solid #0284c7;
+      padding: 16px 20px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+    .facility-banner h3 {
+      margin: 0 0 6px 0;
+      font-size: 15px;
+      color: #0369a1;
+      font-weight: 700;
+    }
+    .facility-banner p {
+      margin: 0;
+      font-size: 13px;
+      color: #0c4a6e;
+      line-height: 1.5;
+    }
+
+    .capabilities-box {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 20px 0;
+    }
+    .capabilities-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .capabilities-list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: #334155;
+      line-height: 1.7;
+    }
+
+    /* Next Steps / Connect Card */
+    .connect-card {
+      background-color: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 24px 0 10px 0;
+      text-align: left;
+    }
+    .connect-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #1e40af;
+      margin: 0 0 10px 0;
+    }
+    .step-item {
+      display: flex;
+      margin-bottom: 12px;
+      font-size: 13px;
+      color: #1e3a8a;
+    }
+    .step-item:last-child {
+      margin-bottom: 0;
+    }
+    .step-num {
+      display: inline-block;
+      width: 22px;
+      height: 22px;
+      background-color: #2563eb;
+      color: #ffffff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 22px;
+      font-weight: 700;
+      font-size: 12px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .cta-container {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background-color: #0284c7;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 14px;
+      padding: 13px 32px;
+      text-decoration: none;
+      border-radius: 6px;
+      box-shadow: 0 3px 8px rgba(2, 132, 199, 0.35);
+    }
+    .cta-hint {
+      font-size: 12.5px;
+      color: #64748b;
+      margin-top: 10px;
+    }
+
+    .footer {
+      background-color: #0f172a;
+      padding: 24px 30px;
+      text-align: center;
+      color: #94a3b8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    .footer strong {
+      color: #e2e8f0;
+    }
+    .footer a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="main-table" cellpadding="0" cellspacing="0" width="100%">
+      
+      <!-- Hero Header with Logo -->
+      <tr>
+        <td class="header" style="background: linear-gradient(135deg, #07172c 0%, #0d325e 100%); padding: 36px 30px 28px 30px; text-align: center; border-bottom: 3px solid #f97316;">
+          <div style="margin-bottom: 18px;">
+            <a href="https://medantrik.com" target="_blank" style="text-decoration: none; display: inline-block;">
+              <img src="https://medantrik.com/images/logo/logo.png" alt="Medantrik MedTech" style="max-height: 56px; width: auto; display: block; margin: 0 auto;">
+            </a>
+          </div>
+          <div class="header-badge">IIT KANPUR INCUBATED DEEP-TECH STARTUP</div>
+          <h1>MEDANTRIK MEDTECH PVT LTD</h1>
+          <p class="header-sub">Innovating Respiratory Care, Biomedical Devices & Medical Hardware</p>
+        </td>
+      </tr>
+
+      <!-- Content Area -->
+      <tr>
+        <td class="content">
+          
+          <div class="greeting">Dear Training & Placement Officer / Placement Committee,</div>
+          
+          <p class="intro-p">
+            Greetings from <strong>Medantrik MedTech Pvt Ltd</strong>!
+          </p>
+
+          <p class="intro-p">
+            We are an <strong>IIT Kanpur-incubated deep-tech healthcare company</strong> (supported by the Startup Incubation and Innovation Centre - SIIC IIT Kanpur). Our journey originated during the national oxygen crisis, where we pioneered India's first <strong>Oxygen Purity Meter</strong> and actively contributed to drafting its official Bureau of Indian Standards (BIS) standard.
+          </p>
+
+          <!-- Hindustan Times Feature Card -->
+          <div class="press-card">
+            <div class="press-tag">Featured in National Media: Hindustan Times</div>
+            <div class="press-img-container">
+              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank">
+                <img src="assets/ht_news_clipping_opt.jpg" alt="Hindustan Times: IIT-K startup opens respiratory device unit in Noida Sector 63A" class="press-img">
+              </a>
+            </div>
+            <div class="press-body">
+              <div class="press-headline">"IIT-K startup opens respiratory device unit in Noida Sector 63A"</div>
+              <p class="press-quote">
+                "Medantrik Medtech, a startup from IIT Kanpur, opens a manufacturing facility in Noida for indigenous respiratory devices to address healthcare needs in India."
+              </p>
+              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank" class="press-link">
+                Read Full Coverage on Hindustan Times ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Manufacturing Facility Announcement -->
+          <div class="facility-banner">
+            <h3>🏭 New Manufacturing Plant – Noida Sector 63A</h3>
+            <p>
+              To scale local manufacturing of medical hardware and clean-air technology, our <strong>new state-of-the-art facility in Sector 63A, Noida</strong> is now fully operational. To support our expansion, we are looking forward to partnering with your institution to hire students for paid internships and Pre-Placement Offers (PPOs).
+            </p>
+          </div>
+
+          <!-- Core Verticals -->
+          <div class="capabilities-box">
+            <div class="capabilities-title">Our Core Capabilities & Domains</div>
+            <ul class="capabilities-list">
+              <li><strong>Respiratory & Lung Health Devices:</strong> Smart air purification, aerosol drug delivery, and respiratory diagnostics (Asthma, COPD).</li>
+              <li><strong>Clinical Biomedical & Diagnostic Hardware:</strong> Sensor-integrated medical instruments and patient monitoring systems.</li>
+              <li><strong>Health & Wellness Smart Devices:</strong> Preventive wellness and indoor environmental quality hardware.</li>
+              <li><strong>Turnkey OEM & Contract Manufacturing:</strong> End-to-end medical device engineering, tooling, cleanroom assembly, and manufacturing.</li>
+            </ul>
+          </div>
+
+          <!-- Proposed 2-Step Connect Process -->
+          <div class="connect-card">
+            <div class="connect-title">🤝 How We Propose to Connect:</div>
+            
+            <table cellpadding="0" cellspacing="0" width="100%">
+              <tr>
+                <td style="vertical-align: top; width: 28px; padding-bottom: 12px;">
+                  <span class="step-num">1</span>
+                </td>
+                <td style="font-size: 13.5px; color: #1e3a8a; padding-bottom: 12px;">
+                  <strong>Share Contact Details:</strong> Kindly reply to this email with the primary contact person’s name, designation, direct phone/WhatsApp number, and email.
+                </td>
+              </tr>
+              <tr>
+                <td style="vertical-align: top; width: 28px;">
+                  <span class="step-num">2</span>
+                </td>
+                <td style="font-size: 13.5px; color: #1e3a8a;">
+                  <strong>Quick 15-Minute Intro Call:</strong> We would love to schedule a brief 15-minute video call (Google Meet) with our HR & leadership team to understand your student availability, academic calendar, and share detailed role profiles and hiring pathways.
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- CTA Button -->
+          <div class="cta-container">
+            <a href="mailto:join@medantrik.com?subject=Campus%20Hiring%20Connect%20-%20Placement%20Cell" class="cta-btn">
+              Reply to Connect / Propose a Call Slot
+            </a>
+            <p class="cta-hint">
+              You can simply reply to this email or write to us at <strong>join@medantrik.com</strong>.
+            </p>
+          </div>
+
+        </td>
+      </tr>
+
+      <!-- Footer -->
+      <tr>
+        <td class="footer">
+          <p style="margin: 0 0 6px 0;"><strong>Medantrik MedTech Pvt Ltd</strong></p>
+          <p style="margin: 0 0 6px 0;">
+            📍 <strong>New Manufacturing Plant:</strong> Sector 63A, Noida, Uttar Pradesh 201301<br>
+            🏛️ <strong>Incubation & R&D Hub:</strong> SIIC, Diamond Jubilee Academic Complex (DJAC), IIT Kanpur
+          </p>
+          <p style="margin: 8px 0 0 0;">
+            📧 <a href="mailto:join@medantrik.com">join@medantrik.com</a> | 🌐 <a href="https://medantrik.com">medantrik.com</a>
+          </p>
+        </td>
+      </tr>
+
+    </table>
+  </div>
+</body>
+</html>

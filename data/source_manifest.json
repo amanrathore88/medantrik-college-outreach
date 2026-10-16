@@ -1,0 +1,50 @@
+[
+  {
+    "name": "University of Delhi College Directory",
+    "url": "https://www.du.ac.in/?page=colleges-at-du",
+    "status": "85 listings imported & reconciled (22 verified with institutional evidence)",
+    "notes": "Retrieved and reviewed 2026-10-16. Former NSIT listing reconciled as duplicate of NSUT. Current institutional contacts reviewed; general office addresses distinguished from placement cells."
+  },
+  {
+    "name": "Guru Gobind Singh Indraprastha University (GGSIPU) Affiliation Network",
+    "url": "https://ipu.ac.in/",
+    "status": "28 Delhi & NCR institutions reconciled and imported",
+    "notes": "Reconciled 2026-10-16 from official GGSIPU affiliation listings and admission documentation. Central placement cell and individual institute/school placement offices catalogued."
+  },
+  {
+    "name": "Haryana Directorate of Higher Education",
+    "url": "https://highereduhry.ac.in/forms/WebPages/Colleges",
+    "status": "17 Gurugram district listings imported",
+    "notes": "Retrieved 2026-10-16. Filtered to Gurugram district. Government directory listings classified as directory-listed; mailbox verification tracked separately."
+  },
+  {
+    "name": "Gurugram District Higher Education & Private Universities",
+    "url": "https://gurugramuniversity.ac.in/",
+    "status": "14 major private & state universities reconciled and imported",
+    "notes": "Reconciled 2026-10-16 from official institutional portals (NorthCap, Amity Manesar, Apeejay Stya, BML Munjal, GD Goenka, KR Mangalam, SGT, Sushant, Gurugram Univ, DCE Gurgaon, WCTM, SAITM, MDI, Great Lakes)."
+  },
+  {
+    "name": "Gautam Buddha Nagar (Noida & Greater Noida) Education Hub & AKTU Network",
+    "url": "https://aktu.ac.in/",
+    "status": "37 institutions across Knowledge Park, Sector 62, and TechZone reconciled and imported",
+    "notes": "Reconciled 2026-10-16. Covers premier private universities, AKTU autonomous institutes, and professional colleges in Noida and Greater Noida with verified placement contacts."
+  },
+  {
+    "name": "Ghaziabad District Higher Education & Administration",
+    "url": "https://ghaziabad.nic.in/en/public-utility-category/colleges-colleges/",
+    "status": "22 institutions reconciled and imported",
+    "notes": "Reconciled 2026-10-16. Reconciles district administration listings, CCSU-affiliated colleges, and premier engineering institutes (ABES, AKGEC, KIET, IMS campuses, RKGIT, SRM NCR)."
+  },
+  {
+    "name": "Delhi State & Central Universities Directory",
+    "url": "https://delhi.gov.in/",
+    "status": "12 premier institutions reconciled and imported",
+    "notes": "Reconciled 2026-10-16. DTU, NSUT, IIIT-Delhi, IGDTUW, IIT Delhi, Jamia Millia Islamia, Jamia Hamdard, AUD, DSEU, NLU Delhi, JNU, AIIMS with official placement cells."
+  },
+  {
+    "name": "AISHE & AICTE National Portals",
+    "url": "https://dashboard.aishe.gov.in/",
+    "status": "Cross-reference registry established",
+    "notes": "Used as the benchmark reference standard for institution classification and geographic validation across Delhi NCT and NCR districts."
+  }
+]

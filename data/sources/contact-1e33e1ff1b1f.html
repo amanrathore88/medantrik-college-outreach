@@ -1,0 +1,2418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      
+      <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+
+<script>
+
+
+
+$(document).ready(function(e) {
+    
+    $(".orig").keypress(function(e){
+	var keycode = (e.keyCode ? e.keyCode : e.which);
+ 	if(keycode == '13'){
+ 	   var getValue = $('.orig').val();
+ 	  
+ 	    if(getValue==""){
+ 	        alert("Please Enter Name of Page and Post")
+ 	     
+ 	    }return false;
+ 	   
+
+ 	}else{
+ 	 
+  var keyCode = event.keyCode || event.which;
+  var regex = /^[A-Za-z]+$/;
+  var isValid = regex.test(String.fromCharCode(keyCode));
+       if (!isValid) {
+               alert("Only Alphabets allowed.");
+            }
+ 
+            return isValid;
+       
+
+ 	    
+ 	}
+
+});
+
+});
+
+
+
+
+
+</script>
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://ihe.du.ac.in/wp-content/themes/ihe/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <link href="https://ihe.du.ac.in/wp-content/themes/ihe/css/app.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://ihe.du.ac.in/wp-content/themes/ihe/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://ihe.du.ac.in/wp-content/themes/ihe/css/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>IHE (Institute of Home Economics)</title>
+   
+    <title>IHE</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="IHE &raquo; Feed" href="https://ihe.du.ac.in/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IHE &raquo; Comments Feed" href="https://ihe.du.ac.in/comments/feed/" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://ihe.du.ac.in/wp-includes/css/dist/block-library/style.min.css?ver=6.9.10' media='all' />
+
+<style id='wp-block-paragraph-inline-css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://ihe.du.ac.in/wp-includes/blocks/paragraph/style.min.css */
+</style>
+
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='extendify-utilities-css' href='https://ihe.du.ac.in/wp-content/plugins/ml-slider/extendify-sdk/public/build/extendify-utilities.css?ver=0.1.0' media='all' />
+<link rel='stylesheet' id='c4wp-public-css' href='https://ihe.du.ac.in/wp-content/plugins/wp-captcha//assets/css/c4wp-public.css?ver=6.9.10' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://ihe.du.ac.in/wp-includes/css/dashicons.min.css?ver=6.9.10' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-style-css' href='https://ihe.du.ac.in/wp-content/themes/ihe/style.css?ver=1.0' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css' href='https://ihe.du.ac.in/wp-content/themes/ihe/assets/css/print.css?ver=1.0' media='print' />
+<link rel='stylesheet' id='wpdreams-asl-basic-css' href='https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/css/style.basic.css?ver=4.11.1' media='all' />
+<link rel='stylesheet' id='wpdreams-ajaxsearchlite-css' href='https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/css/style-curvy-red.css?ver=4.11.1' media='all' />
+<link rel='stylesheet' id='tablepress-default-css' href='https://ihe.du.ac.in/wp-content/plugins/tablepress/css/build/default.css?ver=2.1.2' media='all' />
+<link rel='stylesheet' id='wps-visitor-style-css' href='https://ihe.du.ac.in/wp-content/plugins/wps-visitor-counter/styles/css/default.css?ver=2' media='all' />
+<script src="https://ihe.du.ac.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://ihe.du.ac.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/wp-captcha//assets/js/c4wp-public.js?ver=6.9.10" id="c4wp-public-js"></script>
+<script id="wps-js-extra">
+var wpspagevisit = {"ajaxurl":"https://ihe.du.ac.in/wp-admin/admin-ajax.php","ajax_nonce":"7b5fcd4410"};
+//# sourceURL=wps-js-extra
+</script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/wps-visitor-counter/styles/js/custom.js?ver=1" id="wps-js"></script>
+<link rel="https://api.w.org/" href="https://ihe.du.ac.in/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ihe.du.ac.in/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.10" />
+				<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+				<link rel="preload" as="style" href="//fonts.googleapis.com/css?family=Open+Sans&display=swap" />
+				<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans&display=swap" media="all" />
+				                <style>
+                    
+					div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label {
+						font-size: 0px !important;
+						color: rgba(0, 0, 0, 0);
+					}
+					div[id*='ajaxsearchlitesettings'].searchsettings .asl_option_inner label:after {
+						font-size: 11px !important;
+						position: absolute;
+						top: 0;
+						left: 0;
+						z-index: 1;
+					}
+					.asl_w_container {
+						width: 100%;
+						margin: 0px 0px 0px 0px;
+						min-width: 200px;
+					}
+					div[id*='ajaxsearchlite'].asl_m {
+						width: 100%;
+					}
+					div[id*='ajaxsearchliteres'].wpdreams_asl_results div.resdrg span.highlighted {
+						font-weight: bold;
+						color: rgba(217, 49, 43, 1);
+						background-color: rgba(238, 238, 238, 1);
+					}
+					div[id*='ajaxsearchliteres'].wpdreams_asl_results .results img.asl_image {
+						width: 70px;
+						height: 70px;
+						object-fit: cover;
+					}
+					div.asl_r .results {
+						max-height: none;
+					}
+				
+						div.asl_r.asl_w.vertical .results .item::after {
+							display: block;
+							position: absolute;
+							bottom: 0;
+							content: '';
+							height: 1px;
+							width: 100%;
+							background: #D8D8D8;
+						}
+						div.asl_r.asl_w.vertical .results .item.asl_last_item::after {
+							display: none;
+						}
+					                </style>
+                <link rel="icon" href="https://ihe.du.ac.in/wp-content/uploads/2022/02/cropped-logo_footer-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://ihe.du.ac.in/wp-content/uploads/2022/02/cropped-logo_footer-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ihe.du.ac.in/wp-content/uploads/2022/02/cropped-logo_footer-180x180.png" />
+<meta name="msapplication-TileImage" content="https://ihe.du.ac.in/wp-content/uploads/2022/02/cropped-logo_footer-270x270.png" />
+		<style id="wp-custom-css">
+			.event-table .wptb-image-wrapper img{
+	    width: 30% !important;
+}
+.event-table .wptb-image-wrapper a{
+	    text-align:center;
+}
+.wptb-table-14547 .wptb-ph-element a{
+	text-align:center;
+	font-size:15px;
+}
+.wptb-table-14547 .wptb-ph-element a strong {
+    font-size: 16px;
+}
+.directorsbox h3{
+	color:#000 !Important;
+    font-weight: bolder !important;
+	    font-size: 24px;
+}
+.directorsbox .elementor-widget-image-box .elementor-image-box-wrapper img{
+	margin-top:0px  !important;
+}
+.directorsbox .elementor-widget-image-box .elementor-image-box-wrapper{
+	border:1px solid #800;
+	border-radius:26px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.nss-gallery img{
+	max-width:100% !important;
+	max-height:300px !important;
+	object-fit:cover;	
+	height:300px !important;
+}
+.slider-edit .item{
+	height:600px;
+}
+
+.slider-edit .item img{
+	object-fit:cover;
+	height:600px;
+	width:100%;
+}
+.dir-img img {
+    max-width: 100% !important;
+    max-height: 100%;
+    width: 70% !important;
+}
+.fulimg img{
+	    max-width: 100% !important;
+    max-height: 100%;
+}
+.sportsimg img{
+	    height: 250px !important;
+    object-fit: cover;
+}
+.marquee p:nth-child(even) a{
+	color:#16294a !important;
+}
+.elementor-heading-title{
+	    padding: 12px 15px;
+	font-size:20px;
+}
+.events-imgbox .elementor-image-box-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 25px;
+    align-items: center !important;
+}
+.events-imgbox .elementor-image-box-wrapper img {
+    width: 100% !important;
+    max-width: 100% !important;
+/*     max-height: 100% !important;
+    height: 100% !important; */
+    margin: 0 !important;
+}
+.events-imgbox .elementor-image-box-wrapper .elementor-image-box-img{
+	width:40% !important;
+}
+.events-imgbox .elementor-image-box-wrapper .elementor-image-box-content h3 {
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 21px;
+}
+.miles-table li.wptb-in-element {
+    list-style: none !important;
+}
+.miles-table .wptb-table-container table td p {
+    text-align: left !important;
+	padding:0;
+}
+.miles-table .wptb-list-container li p::before{
+	content:none !important;
+}
+.single_image img {
+    height: auto !important;
+max-height:100%;
+}
+.full-img img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 100% !important;
+}
+.events-img img {
+    width: 100% !important;
+    height: 450px !important;
+    max-height: 500px !important;
+    object-fit: cover;
+}
+.wptb-table-5269 strong {
+    font-size: 16px;
+}
+.wptb-table-5269 p{
+	padding:0;
+}
+.wptb-table-5291 strong {
+    font-size: 16px;
+}
+.wptb-table-5291 p{
+	padding:0;
+}		</style>
+		<style type="text/css">/** Mega Menu CSS: fs **/</style>
+    
+    
+    <style>
+        .wprt-container .table > tbody > tr > td {border:1px solid #800!important;}
+        
+        #form1 {
+
+display:none;
+
+}
+*, ::after, ::before{
+    /*text-align:center;*/
+}
+		a.singletopNewsContainer {
+  color: #370808;
+  font-weight: 800;
+}
+		@media screen and (max-width: 767px){
+			.top_header{
+				display:none;
+			}
+			    .d-mob-block {
+        display: block;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: left !important;
+    }
+			.navigation_logo .navbar-brand{
+				width: 40%;
+			}
+    button.navbar-toggler {
+        width: 50%;
+    }
+			.nav-content {
+    margin: 10px 0;
+}
+			.navigation_logo .col-md-8 img {
+    width: 80px !important;
+}
+			.col-mob-none{
+				display:none;
+			}
+			.nav-content h2 {
+    font-size: 20px !important;
+}
+			.slider-edit .item img{
+				    height: 100%;
+			}
+			.slider-edit .item {
+    height: 200px;
+}
+.single_footer_container .links {
+    display: block;
+}
+
+
+		}
+		
+		
+    </style>
+  <link rel='stylesheet' id='pgntn_stylesheet-css' href='https://ihe.du.ac.in/wp-content/plugins/pagination/css/nav-style.css?ver=1.2.3' media='all' />
+
+</head>
+  <body>
+    <header class="top_header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="top_header_contact">
+              <a href="#"><i class="fa fa-phone"></i> 011-47702166</a>
+              <a href="#"><i class="fa fa-envelope"></i> principal@ihe.du.ac.in</a>
+            </div>
+          </div>
+          
+          
+<!--<button type="button" id="formButton"class="btn-grad">Show Search Option</button>-->
+
+          
+          <div class="col-md-6">
+            <div class="top_header_social_icons">
+                
+<!--<div class=" col-md-3 me-3">-->
+<!--<form id="form1">-->
+<!--  <input type="text"id="abc"placeholder="Search Here"class="form-control"style="-->
+<!--    height: 33px;-->
+<!--">-->
+<!--</form> </div>-->
+              <div class="asl_w_container asl_w_container_1">
+	<div id='ajaxsearchlite1'
+		 data-id="1"
+		 data-instance="1"
+		 class="asl_w asl_m asl_m_1 asl_m_1_1">
+		<div class="probox">
+
+	
+	<button class='promagnifier' aria-label="Search magnifier button">
+				<div class='innericon'>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+					<path d="M460.355,421.59L353.844,315.078c20.041-27.553,31.885-61.437,31.885-98.037
+						C385.729,124.934,310.793,50,218.686,50C126.58,50,51.645,124.934,51.645,217.041c0,92.106,74.936,167.041,167.041,167.041
+						c34.912,0,67.352-10.773,94.184-29.158L419.945,462L460.355,421.59z M100.631,217.041c0-65.096,52.959-118.056,118.055-118.056
+						c65.098,0,118.057,52.959,118.057,118.056c0,65.096-52.959,118.056-118.057,118.056C153.59,335.097,100.631,282.137,100.631,217.041
+						z"/>
+				</svg>
+		</div>
+	</button>
+
+	
+	
+	<div class='prosettings' style='display:none;' data-opened=0>
+				<div class='innericon'>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22" height="22" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+					<polygon transform = "rotate(90 256 256)" points="142.332,104.886 197.48,50 402.5,256 197.48,462 142.332,407.113 292.727,256 "/>
+				</svg>
+		</div>
+	</div>
+
+	
+	
+	<div class='proinput'>
+        <form role="search" action='#' autocomplete="off"
+			  aria-label="Search form">
+			<input aria-label="Search input"
+				   type='search' class='orig'
+				   name='phrase'
+				   placeholder='Search here..'
+				   value=''
+				   autocomplete="off"/>
+			<input aria-label="Search autocomplete input"
+				   type='text'
+				   class='autocomplete'
+				   tabindex="-1"
+				   name='phrase'
+				   value=''
+				   autocomplete="off" disabled/>
+			<input type='submit' value="Start search" style='width:0; height: 0; visibility: hidden;'>
+		</form>
+	</div>
+
+	
+	
+	<div class='proloading'>
+
+		<div class="asl_loader"><div class="asl_loader-inner asl_simple-circle"></div></div>
+
+			</div>
+
+			<div class='proclose'>
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+				 y="0px"
+				 width="12" height="12" viewBox="0 0 512 512" enable-background="new 0 0 512 512"
+				 xml:space="preserve">
+				<polygon points="438.393,374.595 319.757,255.977 438.378,137.348 374.595,73.607 255.995,192.225 137.375,73.622 73.607,137.352 192.246,255.983 73.622,374.625 137.352,438.393 256.002,319.734 374.652,438.378 "/>
+			</svg>
+		</div>
+	
+	
+</div>	</div>
+	<div class='asl_data_container' style="display:none !important;">
+		<div class="asl_init_data wpdreams_asl_data_ct"
+	 style="display:none !important;"
+	 id="asl_init_id_1"
+	 data-asl-id="1"
+	 data-asl-instance="1"
+	 data-asldata="ew0KCSJob21ldXJsIjogImh0dHBzOi8vaWhlLmR1LmFjLmluLyIsDQoJInJlc3VsdHN0eXBlIjogInZlcnRpY2FsIiwNCgkicmVzdWx0c3Bvc2l0aW9uIjogImhvdmVyIiwNCgkiaXRlbXNjb3VudCI6IDQsDQoJImNoYXJjb3VudCI6ICAwLA0KCSJoaWdobGlnaHQiOiAwLA0KCSJoaWdobGlnaHR3aG9sZXdvcmRzIjogMSwNCgkic2luZ2xlSGlnaGxpZ2h0IjogMCwNCgkic2Nyb2xsVG9SZXN1bHRzIjogew0KCQkiZW5hYmxlZCI6IDAsDQoJCSJvZmZzZXQiOiAwDQoJfSwNCgkicmVzdWx0YXJlYWNsaWNrYWJsZSI6IDEsDQoJImF1dG9jb21wbGV0ZSI6IHsNCgkJImVuYWJsZWQiIDogMSwNCgkJImxhbmciIDogImVuIiwNCgkJInRyaWdnZXJfY2hhcmNvdW50IiA6IDANCgl9LA0KCSJtb2JpbGUiOiB7DQoJCSJtZW51X3NlbGVjdG9yIjogIiNtZW51LXRvZ2dsZSINCgl9LA0KCSJ0cmlnZ2VyIjogew0KCQkiY2xpY2siOiAicmVzdWx0c19wYWdlIiwNCgkJImNsaWNrX2xvY2F0aW9uIjogInNhbWUiLA0KCQkidXBkYXRlX2hyZWYiOiAwLA0KCQkicmV0dXJuIjogInJlc3VsdHNfcGFnZSIsDQoJCSJyZXR1cm5fbG9jYXRpb24iOiAic2FtZSIsDQoJCSJmYWNldCI6IDEsDQoJCSJ0eXBlIjogMSwNCgkJInJlZGlyZWN0X3VybCI6ICI/cz17cGhyYXNlfSIsDQoJCSJkZWxheSI6IDMwMA0KCX0sDQogICAgImFuaW1hdGlvbnMiOiB7DQogICAgICAgICJwYyI6IHsNCiAgICAgICAgICAgICJzZXR0aW5ncyI6IHsNCiAgICAgICAgICAgICAgICAiYW5pbSIgOiAiZmFkZWRyb3AiLA0KICAgICAgICAgICAgICAgICJkdXIiICA6IDMwMA0KICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICJyZXN1bHRzIiA6IHsNCgkJCQkiYW5pbSIgOiAiZmFkZWRyb3AiLA0KCQkJCSJkdXIiICA6IDMwMA0KICAgICAgICAgICAgfSwNCiAgICAgICAgICAgICJpdGVtcyIgOiAidm9pZGFuaW0iDQogICAgICAgIH0sDQogICAgICAgICJtb2IiOiB7DQogICAgICAgICAgICAic2V0dGluZ3MiOiB7DQogICAgICAgICAgICAgICAgImFuaW0iIDogImZhZGVkcm9wIiwNCiAgICAgICAgICAgICAgICAiZHVyIiAgOiAzMDANCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICAicmVzdWx0cyIgOiB7DQoJCQkJImFuaW0iIDogImZhZGVkcm9wIiwNCgkJCQkiZHVyIiAgOiAzMDANCiAgICAgICAgICAgIH0sDQogICAgICAgICAgICAiaXRlbXMiIDogInZvaWRhbmltIg0KICAgICAgICB9DQogICAgfSwNCgkiYXV0b3AiOiB7DQoJCSJzdGF0ZSI6ICJkaXNhYmxlZCIsDQoJCSJwaHJhc2UiOiAiIiwNCgkJImNvdW50IjogMQl9LA0KICAgICJyZXNQYWdlIjogew0KICAgICAgICAidXNlQWpheCI6IDAsDQogICAgICAgICJzZWxlY3RvciI6ICIjbWFpbiIsDQogICAgICAgICJ0cmlnZ2VyX3R5cGUiOiAxLA0KICAgICAgICAidHJpZ2dlcl9mYWNldCI6IDEsDQogICAgICAgICJ0cmlnZ2VyX21hZ25pZmllciI6IDAsDQogICAgICAgICJ0cmlnZ2VyX3JldHVybiI6IDAgICAgfSwNCgkicmVzdWx0c1NuYXBUbyI6ICJsZWZ0IiwNCiAgICAicmVzdWx0cyI6IHsNCiAgICAgICAgIndpZHRoIjogImF1dG8iLA0KICAgICAgICAid2lkdGhfdGFibGV0IjogImF1dG8iLA0KICAgICAgICAid2lkdGhfcGhvbmUiOiAiYXV0byINCiAgICB9LA0KCSJzZXR0aW5nc2ltYWdlcG9zIjogInJpZ2h0IiwNCgkiY2xvc2VPbkRvY0NsaWNrIjogMSwNCgkib3ZlcnJpZGV3cGRlZmF1bHQiOiAwLA0KCSJvdmVycmlkZV9tZXRob2QiOiAiZ2V0Ig0KfQ0K"></div>	<div id="asl_hidden_data">
+		<svg style="position:absolute" height="0" width="0">
+			<filter id="aslblur">
+				<feGaussianBlur in="SourceGraphic" stdDeviation="4"/>
+			</filter>
+		</svg>
+		<svg style="position:absolute" height="0" width="0">
+			<filter id="no_aslblur"></filter>
+		</svg>
+	</div>
+	</div>
+
+	<div id='ajaxsearchliteres1'
+	 class='vertical wpdreams_asl_results asl_w asl_r asl_r_1 asl_r_1_1'>
+
+	
+	<div class="results">
+
+		
+		<div class="resdrg">
+		</div>
+
+		
+	</div>
+
+	
+	
+</div>
+
+	<div id='__original__ajaxsearchlitesettings1'
+		 data-id="1"
+		 class="searchsettings wpdreams_asl_settings asl_w asl_s asl_s_1">
+		<form name='options'
+	  aria-label="Search settings form"
+	  autocomplete = 'off'>
+
+	
+	
+	<input type="hidden" name="filters_changed" style="display:none;" value="0">
+	<input type="hidden" name="filters_initial" style="display:none;" value="1">
+
+	<div class="asl_option_inner hiddend">
+		<input type='hidden' name='qtranslate_lang' id='qtranslate_lang1'
+			   value='0'/>
+	</div>
+
+	
+	
+	<fieldset class="asl_sett_scroll">
+		<legend style="display: none;">Generic selectors</legend>
+		<div class="asl_option">
+			<div class="asl_option_inner">
+				<input type="checkbox" value="exact" id="set_exactonly1"
+					   title="Exact matches only"
+					   name="asl_gen[]" />
+				<label for="set_exactonly1">Exact matches only</label>
+			</div>
+			<div class="asl_option_label">
+				Exact matches only			</div>
+		</div>
+		<div class="asl_option">
+			<div class="asl_option_inner">
+				<input type="checkbox" value="title" id="set_intitle1"
+					   title="Search in title"
+					   name="asl_gen[]"  checked="checked"/>
+				<label for="set_intitle1">Search in title</label>
+			</div>
+			<div class="asl_option_label">
+				Search in title			</div>
+		</div>
+		<div class="asl_option">
+			<div class="asl_option_inner">
+				<input type="checkbox" value="content" id="set_incontent1"
+					   title="Search in content"
+					   name="asl_gen[]"  checked="checked"/>
+				<label for="set_incontent1">Search in content</label>
+			</div>
+			<div class="asl_option_label">
+				Search in content			</div>
+		</div>
+		<div class="asl_option_inner hiddend">
+			<input type="checkbox" value="excerpt" id="set_inexcerpt1"
+				   title="Search in excerpt"
+				   name="asl_gen[]"  checked="checked"/>
+			<label for="set_inexcerpt1">Search in excerpt</label>
+		</div>
+	</fieldset>
+	<fieldset class="asl_sett_scroll">
+		<legend style="display: none;">Post Type Selectors</legend>
+					<div class="asl_option_inner hiddend">
+				<input type="checkbox" value="post"
+					   id="1customset_11"
+					   title="Hidden option, ignore please"
+					   name="customset[]" checked="checked"/>
+				<label for="1customset_11">Hidden</label>
+			</div>
+			<div class="asl_option_label hiddend"></div>
+
+						<div class="asl_option_inner hiddend">
+				<input type="checkbox" value="page"
+					   id="1customset_12"
+					   title="Hidden option, ignore please"
+					   name="customset[]" checked="checked"/>
+				<label for="1customset_12">Hidden</label>
+			</div>
+			<div class="asl_option_label hiddend"></div>
+
+				</fieldset>
+	</form>
+	</div>
+</div>              
+              <div id="google_translate_element"></div>
+              <a target="_blank" rel="noreferrer noopener" href="https://www.facebook.com/Institute-of-Home-Economics-University-of-Delhi-839168583106147"><i class="fa fa-facebook"></i></a>
+              <a target="_blank" rel="noreferrer noopener" href="https://twitter.com/Iheofficial61"><i class="fa fa-twitter"></i></a>
+              <a target="_blank" rel="noreferrer noopener" href="https://www.instagram.com/instituteofhomeeconomics/"><i class="fa fa-instagram"></i></a>
+              <a target="_blank" rel="noreferrer noopener" href="https://www.youtube.com/channel/UCkkPSAiD0hWzckHna-hs8VA"><i class="fa fa-youtube-play"></i></a>
+              <a target="_blank" rel="noreferrer noopener" href="#"><i class="fa fa-linkedin"></i></a>
+              <!-- <a id="top_menu"><i class="fa fa-bars"></i></a> -->
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- top_header close here -->
+<style>
+	  .login-btn {
+    background-color: #800000 !important;
+    color: #fff !important;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(128,0,0,0.3);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.login-btn:hover {
+    background-color: #990000 !important;
+    transform: scale(1.07);
+    box-shadow: 0px 6px 16px rgba(128,0,0,0.45);
+}
+
+/* Eye-catchy subtle pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+</style>
+    <section  class="navigation_logo">
+      <nav class="navbar navbar-expand-lg py-0" style="flex-direction: column;">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-md-9 d-flex justify-content-around d-mob-block" >
+              <a class="navbar-brand my-auto" href="#">
+                <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/logo_footer.png" class="img-fluid" alt="" />
+              </a>
+              <!-- logo 1 -->
+               <div class="nav-content notranslate">
+                  	<h2> <font color="#16294a">Institute of Home Economics</font></h2>
+				   		 <h2 class="mb-1">University of Delhi </h2>
+					<div class="row align-items-center">
+						<div class="col-md-2 col-333333333333333">
+							<img src="https://ihe.du.ac.in/wp-content/uploads/2024/08/NAAC-A-grade.jpg" alt="grade-logo" style="width:60px;">
+						</div>
+						<div class="col-md-10 col-9">
+							<p><b>Awarded 'A++' Grade by NAAC</b></p>
+						</div>
+				   </div>
+                </div>
+
+               <a class="navbar-brand my-auto" href="#">
+                <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/du.png" class="img-fluid" style="width:145px" alt="" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="fa fa-bars"></span>
+              </button>
+              </div>
+              
+              <div class="col-md-2 my-auto col-res">
+                 <div class="shail-side-tabs">
+					<!-- <php wp_nav_menu( array( 'theme_location' => 'top' ,'items_wrap' => '<ul>%3$s</ul>' ) ); ?> -->
+									  <ul>
+					<!--                     <li><p><a href="/library"> Library </a></p></li> -->
+					<!--                     <li><p><a href="/e-resources"> E-resources </a></p></li> -->
+					<!--                     <li><p><a href="/about-vidya-vistar"> Vidya Vistar Scheme</a></p></li> -->
+										<li><p><a href="/naac">  NAAC  </a></p></li>
+					<!--                     <li><p><a href="/feedback"> Feedback </a></p></li> -->
+										<li><p><a href="/nss"> NSS </a></p></li>
+					<!--                     <li><p><a href="/ignou-0787"> IGNOU </a></p></li> -->
+                    <li><p><a href="/nirf"> NIRF </a></p></li>
+                     <li><p><a href="/ic">ICC</a></p></li>
+					  <li><p><a href="https://eazypay.icicibank.com/eazypayLink?P1=j6jdPaCjJxEO2xHSHYSYXQ==" target="_blank">Fee Payment</a></p></li>
+					  <li><p><a href="https://ihe.du.ac.in/about-spic-macay/">Spic Macay Society</a></p></li>
+                   <!--    <li><p><a href="/about-viksit-bharat"> Viksit Bharat@2047 </a></p></li>-->
+                   
+                    
+                    
+                   
+                  </ul>
+                  </div>
+            </div>
+            <div class="col-md-1 col-6 col-mob-none d-none">
+                <div class="n_head" style="width:100";>
+                    <!--<img src="http://182.76.237.238/~gunjantest/ihe/wp-content/uploads/2021/09/new_lgo.png" class="img-fluid">-->
+                  <a href="https://ihe.du.ac.in/azadi-ka-amrut-mahotsav/">  <img src="http://ihe.du.ac.in/wp-content/uploads/2021/10/azadi-logo.png" class="img-fluid"style="width:120px; height:55px;"></a>
+                </div>    
+            </div> 
+			  <div class="col-md-1 col-6 col-mob-none d-none" >
+                <div class="n_head"style="width:100"; >
+                 
+                  <a href="https://www.g20.org/en/" class="img-fluid mt-1" ><img src="http://ihe.du.ac.in/wp-content/uploads/2023/03/g-20-logo-1.jpg" class="img-fluid" style="width:100%; height:40px;" ></a>
+                </div>    
+            </div>
+			  
+			  <div class="col-md-1">
+				  <div class="ms-auto">
+      <div class="dropdown text-center">
+        <button class="btn login-btn btn-primary dropdown-toggle" type="button" id="loginDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          Login
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="loginDropdown">
+          <li><a class="dropdown-item" href="https://ihe.symphonyx.in/student" target="_blank">Student Login</a></li>
+          <li><a class="dropdown-item" href="https://ihe.symphonyx.in/faculty" target="_blank">Faculty Login</a></li>
+          <li><a class="dropdown-item" href="https://ihe.symphonyx.in/admin" target="_blank">Admin Login</a></li>
+        </ul>
+      </div>
+    </div>
+			  </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+                  <h3 style="text-align:center"> <section id="block-10" class="widget widget_block"><p>
+    <marquee class="marquee d-flex" onmouseover="this.stop()" onmouseout="this.start()" style="color:#fff">
+        <div class="displ" style="display: flex;gap: 60px;">
+
+      
+
+            <p>
+                <a href="https://ihe.du.ac.in/wp-content/uploads/2026/08/E-Invite-IHE-1-1.jpeg" target="_blank"
+                    rel="noopener">150 Years of Vande Mataram <img decoding="async"
+                        src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif"></a>
+            </p>
+
+            <p>
+                <a href="https://ihe.du.ac.in/wp-content/uploads/2026/07/IHE_Help_Desk_Poster_2026-2027.pdf"
+                    target="_blank" rel="noopener">Welcome freshers <img decoding="async"
+                        src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif"></a>
+            </p>
+            <p>
+                <a href="https://ihe.du.ac.in/wp-content/uploads/2026/07/Anti-Ragging-Banner2026.pdf" target="_blank"
+                    rel="noopener">SAY "NO" to RAGGING<img decoding="async"
+                        src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif"></a>
+            </p>
+            <p>
+                <a href=" https://ihe.du.ac.in/aarambh-2/" target="_blank" rel="noopener">Admission open Aarambh(Play
+                    School)<img decoding="async" src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif"></a>
+            </p>
+
+            <p style="">
+                <a href="https://ihe.du.ac.in/wp-content/uploads/2025/10/Social-Media_-Notice-1-1-1.pdf" target="_blank"
+                    rel="noopener">Important Notice on Verified Social Media Platforms <img decoding="async"
+                        src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif"></a>
+            </p>
+
+        </div>
+    </marquee>
+</p></section>			  
+					</h3>
+                </div>
+                
+   
+        <div class="container-fluid px-0" id="navigation">
+                <div class="collapse navbar-collapse nav-tabs" id="navbarSupportedContent">
+                    
+                    <div class="menu-primary-menu-container"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in">Home</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">About</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/">About us</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/vision-and-mission/">Vision and mission</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/wp-content/uploads/2022/07/Organogram-of-the-college.pdf">Organogram</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/annual-reports/">Annual reports</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/history-of-college/">History of college</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/code-of-professional-ethics/">Code of professional ethics</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/governing-body/">Governing body</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/milestones/">Milestones</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/former-directors/">Former Directors</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/college-committees/">College committees</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/strategic-plan/">Strategic plan</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/grievance-committee/">Grievance Committee</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/standard-operating-procedure/">Standard Operating Procedure</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/balance-sheet/">Balance sheet</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/receipt-and-payment-account/">Receipt and Payment Account</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/about/income-and-expenditure-account/">Income and Expenditure Account</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Admission</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/college-prospectus/">College prospectus</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/admission-support-committee/">Admission support committee</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/undergraduate-admissions/">Under-graduate admissions</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/anti-ragging-committee/">Anti-ragging committee</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/postgraduate-admissions/">Post-graduate admissions</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/du-bulletin-of-information/">DU bulletin of information</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/fee-structure/">Fee structure</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/admission-report/">Admission report</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/admission/payment-mode/">Payment mode</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://admission.uod.ac.in/?UG-Admissions/FAQs">FAQs</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Departments</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/biochemistry-2/">Biochemistry</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/hdcs/">Human Development &#038; Childhood Studies</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/dcej/">Development Communication, Extension &#038; Journalism</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/microbiology/">Microbiology</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/elementary-education/">Elementary Education</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/physical-educatiom/">Physical Education</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/english/">English</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/physiology/">Physiology & Promotive health</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/fas/">Fabric &#038; Apparel Science</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/rmda/">Resource Management &#038; Design Application</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/fnft/">Food &#038; Nutrition and Food Technology</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/departments/science/">Sciences</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Courses</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/courses/undergraduate-courses/">Under-graduate courses</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/courses/postgraduate-courses/">Post-graduate courses</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/courses/doctoral-programmes-ph-d/">Doctoral programmes/Ph.D</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/courses/short-term-courses/">Short-term courses</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Faculty profile</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/director/">Director</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/human-development-childhood-studies/">Human Development &#038; Childhood Studies</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/biochemistry/">Biochemistry</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/microbiology-2/">Microbiology</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/development-communication-extension-journalism/">Development Communication, Extension &#038; Journalism</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/physical-education/">Physical Education</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/elementary-education-2/">Elementary Education</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/physiology-promotive-health/">Physiology &#038; Promotive Health</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/english/">English</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/resource-management-and-design-application/">Resource management and design application</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/fabric-apparel-science/">Fabric &#038; Apparel Science</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/sciences/">Sciences</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/food-nutrition-and-food-technology/">Food &#038; Nutrition and Food Technology</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/faculty-profile/retired-faculty-2/">Retired faculty</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Student’s corner</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/student-council/">Student council</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/academic-college-calendar/">Academic / College Calendar</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/sports/">Sports</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/mental-health-and-wellbeing/">Mental Health and Wellbeing</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/maitri-society/">Maitri Society</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/eco-club/">Eco-club</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/student-advisors/">Student advisors</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/wp-content/uploads/2024/07/UG-Semester-Attendence.pdf">Attendance</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/wp-content/uploads/2024/07/IA-May-June-2024.pdf">Internal assessment</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/annual-cultural-festival/">Annual cultural festival</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/students-corner/eminence-the-placement-cell/">Eminence The Placement Cell</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/library/">Library</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Research</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/institutional-ethics-committee/">Institutional Ethics Committee</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/research/research-projects/">Research projects</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/research/publications-last-10-years/">Publications</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/research/doctoral-research/">Doctoral research</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/post-graduate-research/">Post-graduate Research</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/under-graduate-research/">Under-graduate Research</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/centres-for-excellence/">Centres for Excellence</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="http://ihe.du.ac.in/">Infrastructure</a>
+<ul/ class="new_drop" />
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/academic-teaching-learning-and-research/classrooms/">Teaching, Learning and Research</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/green-infrastructure/">Green infrastructure</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/administration/">Administration</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/health-and-sports/medical-room/">Health and sports</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/student-support/canteen/">Student support</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/security/cctv-monitoring/">Security</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/conference-and-cultural/conference-room/">Conference and cultural</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/infrastructure/it/">IT</a></li>
+</ul>
+</li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/wp-content/uploads/2026/09/Syllabus-link-for-NEP-2024-July-21-09-2026.pdf">Syllabi</a></li>
+<li class='li_class nav-item'><a class="nav_link nav-link" href="https://ihe.du.ac.in/time-table/">Time-table</a></li>
+</ul></div>                 <!-- <ul
+                    class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-center"
+                  >
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"
+                        >About</a
+                      >
+                      
+                      <ul class="new_drop">
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;History</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Message From The Director </a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Former Directors</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Student Activities</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Governing Body Members</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Rules and Regulations</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;College committees</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Teacher-in-charges</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Enabling Unit and Equal Opportunity</a></li>
+                            <li><a href="javascript:void(0)">&nbsp;&nbsp;Student Council</a></li>
+                      </ul>      
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Admission</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Departments</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Courses</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Faculty Profile</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Students’ Corner</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Research</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Infrastructure</a>
+                    </li>
+                    
+                     <li class="nav-item">
+                      <a class="nav-link" href="#">Downloads</a>
+                    </li>
+                    
+                     <li class="nav-item">
+                      <a class="nav-link" href="#">contact us</a>
+                    </li>
+                    
+                  </ul>-->
+                </div>
+            </div>
+      </nav>
+    </section>
+    <script>
+        const navLink = document.querySelectorAll(".nav-link");
+        for (i = 0; i < navLink.length; i++) {
+          if (navLink[i].textContent == "Courses") {
+            navLink[i].parentElement.classList.add("new_active");
+          }
+        }
+        for (i = 0; i < navLink.length; i++) {
+          if (navLink[i].textContent == "Research") {
+            navLink[i].parentElement.classList.add("new_active");
+          }
+        }
+      </script>
+    
+    <!-- navigation_logo close here  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var child =  $('.elementor-element-774196a').children(".elementor-widget-wrap");
+    console.log(child,  "child");
+</script>
+
+
+<style>
+    /*     .modal-dialog {max-width:700px!important;} */
+</style>
+
+
+
+
+
+<section class="slider slider-edit">
+        <div id="mainSlider" class="owl-carousel owl-theme">
+
+
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/08/3.jpg" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/08/4.jpg" alt="" />
+        </div>
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/08/1.jpg" alt="" />
+        </div>
+
+   <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/09/2-scaled.jpg" alt="" />
+        </div>
+
+ <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/09/1-scaled.jpg" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/08/add-1-scaled.jpg" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/08/add-scaled.png" alt="" />
+        </div>
+
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/07/IMG_1739-scaled.jpeg" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/07/IMG_1860-1-scaled.jpg" alt="" />
+        </div>
+
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/07/DSC_1118-1-1.png" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/07/DSC_1118-1-1-1.png" class="img-fluid" alt="" />
+        </div>
+
+
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/07/Research-Visit-Final-July-26-1-scaled.jpg"
+                class="img-fluid" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/06/DSC_1118-1-1.png" class="img-fluid" alt="" />
+        </div>
+
+
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/06/DSC_0781-1.png" class="img-fluid" alt="" />
+        </div>
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/06/DSC_0918-1.png" class="img-fluid" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/04/DSC05173.jpeg" class="img-fluid" alt="" />
+        </div>
+
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/05/IMG_2558-1-scaled.jpeg" class="img-fluid"
+                alt="" />
+        </div>
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/05/IMG_2548-1-scaled.jpeg" class="img-fluid"
+                alt="" />
+        </div>
+        <div class="item">
+            <img src="https://ihe.du.ac.in/wp-content/uploads/2026/05/IMG-1-1-scaled.jpg" class="img-fluid" alt="" />
+        </div>
+
+
+    </div>
+</section>
+<style>
+    .marquee {
+        background: #fff;
+        color: #800000;
+        padding: 10px;
+    }
+
+    .textwidget iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .textwidget {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .textwidget p {
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .img_link {
+        position: initial !important;
+        margin-right: initial !important;
+        border-radius: initial !important;
+        white-space: initial !important;
+        font-size: initial !important;
+        padding: initial !important;
+        color: initial !important;
+        white-space: initial !important;
+        text-align: initial !important;
+        display: initial !important;
+        color: initial !important;
+        text-transform: initial !important;
+        width: initial !important;
+        background: initial !important;
+        color: initial !important;
+        display: initial !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+</style>
+
+<section class="important_links ">
+    <div class="container">
+        <div class="important_links_container">
+            <a href="https://ihe.du.ac.in/why-ihe/" class="img_link">
+                <div class="single_link">
+                    <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/why.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/why-ihe/">Why IHE ?</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/best-practices/" class="img_link">
+                <div class="single_link">
+                    <!--<i class="fa fa-handshake-o"></i>-->
+                    <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/prac.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/best-practices/">Best Practices</a>
+                </div>
+            </a>
+
+            <a href="https://ihe.du.ac.in/introduction-objectives" class="img_link">
+                <div class="single_link">
+                    <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/iqac.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/introduction-objectives-2/">IQAC</a>
+                </div>
+            </a>
+
+            <a href="https://ihe.du.ac.in/star-college/" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/star.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/star-college/">Star College</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/gender-sensitization/" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/gender.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/gender-sensitization/">Gender Enrichment</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/eu-eoc/" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/equal.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/eu-eoc/">EU & EOC</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/community-outreach" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2024/06/community_outreach.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/community-outreach">Community Outreach</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a class="img_link" href="https://ihe.du.ac.in/awards/">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/collab.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/awards/">Collaborations & Awards</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a class="img_link" href="https://ihe.du.ac.in/student-societies/">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/student.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/student-societies/">Student societies</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/life-at-ihe/" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/life.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/life-at-ihe/">Life at IHE</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+            <a href="https://ihe.du.ac.in/department-activities/" class="img_link">
+                <div class="single_link">
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2022/09/department-1.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/department-activities/">Department Activities
+                </div>
+            </a>
+            <a class="img_link" href="https://ihe.du.ac.in/academic-festivals/">
+                <div class="single_link">
+
+                    <img src="http://ihe.du.ac.in/wp-content/uploads/2021/09/academic.png" class="img-fluid">
+                    <a href="https://ihe.du.ac.in/academic-festivals/">Academic festivals</a>
+                </div>
+            </a>
+            <!-- single_link close here -->
+        </div>
+    </div>
+</section>
+<style>
+    ul#iheTabs {
+        background: #fff;
+        border: 0 !important;
+        justify-content: center;
+    }
+
+    .nav-tabs .nav-link.active {
+        color: #000 !important;
+        font-weight: 700;
+    }
+</style>
+<section class="section_padding section_news_notice shail-bg">
+    <div class="container">
+        <div class="row">
+
+ <div class="col-md-4">
+                <h4 class="main_heading">News & Events</h4>
+                <div class="news_event_container">
+                    <div id="noticeBoard" class="overflow_y">
+
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU.pdf" target="_blank">
+
+                                        <img src="<img width="1428" height="2560" src="https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-scaled.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" fetchpriority="high" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-scaled.jpg 1428w, https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-167x300.jpg 167w, https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-571x1024.jpg 571w, https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-768x1377.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-857x1536.jpg 857w, https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU_page-0001-1143x2048.jpg 1143w" sizes="(max-width: 1428px) 100vw, 1428px" style="width:100%;height:179.27%;max-width:1428px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Sports &#038; Gymnasium Committee and Dept. of Physical Education in Collaboration with Delhi Police, South district organising &#8220;3 DAYS SELF DEFENCE WORKSHOP&#8221;                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                10:47 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                13-10-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026.pdf" target="_blank">
+
+                                        <img src="<img width="1568" height="2351" src="https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-1568x2351.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-1568x2351.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-200x300.jpg 200w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-683x1024.jpg 683w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-768x1152.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-1024x1536.jpg 1024w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-1366x2048.jpg 1366w, https://ihe.du.ac.in/wp-content/uploads/2026/10/oracle-2026_page-0001-scaled.jpg 1707w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:149.97%;max-width:1707px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Department of Resource Management &#038; Design Application (RMDA) ACADEMIC FESTIVAL! ORACLE 2026                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                06:16 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                13-10-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster.pdf" target="_blank">
+
+                                        <img src="<img width="1568" height="2352" src="https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-1568x2352.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-1568x2352.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-200x300.jpg 200w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-683x1024.jpg 683w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-768x1152.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-1024x1536.jpg 1024w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001-1365x2048.jpg 1365w, https://ihe.du.ac.in/wp-content/uploads/2026/10/IHE_AI_Academic_Research_Workshop_Poster_page-0001.jpg 1600w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:150%;max-width:1600px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Workshop on “AI in Academic Research and Scientific Writing: Responsible Use for Students”                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                10:45 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                05-10-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26.pdf" target="_blank">
+
+                                        <img src="<img width="1568" height="2218" src="https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-1568x2218.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-1568x2218.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-212x300.jpg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-724x1024.jpg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-768x1086.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-1086x1536.jpg 1086w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-1448x2048.jpg 1448w, https://ihe.du.ac.in/wp-content/uploads/2026/10/Green-consumer-day26_page-0001-scaled.jpg 1810w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:141.44%;max-width:1810px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Department of Resource Management and Design Application Under the aegis of IQAC Organizes Poster Making Competition on the occasion of Green consumer day on 5 October 2026                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                09:40 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                01-10-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti.pdf" target="_blank">
+
+                                        <img src="<img width="1568" height="2218" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-1568x2218.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-1568x2218.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-212x300.jpg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-724x1024.jpg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-768x1086.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-1086x1536.jpg 1086w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-1448x2048.jpg 1448w, https://ihe.du.ac.in/wp-content/uploads/2026/09/29-sept-26_Rajbhasha-Samiti_page-0001-1-scaled.jpg 1810w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:141.44%;max-width:1810px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            राजभाषा कार्यान्वयन समिति एवं आंतरिक गुणवत्ता आश्वासन प्रकोष्ठ के संयुक्त तत्वावधान में “संघ की राजभाषा नीति के बारे में सामूहिक चर्चा/परिचर्चा&#8221; का आयोजन किया जा रहा है दिनांक: 29 सितम्बर, 2026 दिन: मंगलवार समय: दोपहर 12:30 बजे स्थान: सम्मेलन कक्ष                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                04:48 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                28-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/fas.jpeg" target="_blank">
+
+                                        <img src="<img width="1131" height="1600" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/fas.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/fas.jpeg 1131w, https://ihe.du.ac.in/wp-content/uploads/2026/09/fas-212x300.jpeg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/fas-724x1024.jpeg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/fas-768x1086.jpeg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/fas-1086x1536.jpeg 1086w" sizes="(max-width: 1131px) 100vw, 1131px" style="width:100%;height:141.47%;max-width:1131px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Research and Development Cell Under the Aegis of IQAC Organizes a Workshop on Reference Management Tools: From Introduction to Application.                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                06:41 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                25-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565.jpg" target="_blank">
+
+                                        <img src="<img width="1131" height="1600" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565.jpg 1131w, https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565-212x300.jpg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565-724x1024.jpg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565-768x1086.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/1001115565-1086x1536.jpg 1086w" sizes="(max-width: 1131px) 100vw, 1131px" style="width:100%;height:141.47%;max-width:1131px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            The Placement Cell in Collaboration with Dept. of Fabric and Apparel Science Under the Aegis of IQAC Presents Talk on  &#8220;How FAS Helped Shape My Career in Fashion Merchandising&#8221;                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                09:32 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                18-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://forms.gle/DveQHs2Nd5NKiLE8A  " target="_blank">
+
+                                        <img src="<img width="1240" height="1755" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001.jpg 1240w, https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001-212x300.jpg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001-724x1024.jpg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001-768x1087.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/Workshop_page-0001-1085x1536.jpg 1085w" sizes="(max-width: 1240px) 100vw, 1240px" style="width:100%;height:141.53%;max-width:1240px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            Workshop for Parents of Semester I students &#8211; “Understanding Mental Health of Youth in Today’s Time on Saturday, 26 September 2026                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                12:37 PM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                16-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1.pdf" target="_blank">
+
+                                        <img src="<img width="1568" height="2218" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-1568x2218.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-1568x2218.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-212x300.jpg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-724x1024.jpg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-768x1086.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-1086x1536.jpg 1086w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-1448x2048.jpg 1448w, https://ihe.du.ac.in/wp-content/uploads/2026/09/हिंदी-माह-1-30-सितंबर-2026-का-पोस्टर-1_page-0001-scaled.jpg 1810w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:141.44%;max-width:1810px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            राजभाषा कार्यान्वयन समिति और आंतरिक गुणवत्ता आश्वासन प्रकोष्ठ (आई.क्यू.ए.सी.), के संयुक्त तत्वावधान में इंस्टीट्यूट ऑफ होम इकोनॉमिक्स, दिल्ली विश्वविद्यालय दिनांक 1/09/2026 से दिनांक 30/09/2026 तक हिंदी माह का आयोजन करने जा रही है।                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                09:08 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                01-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                                                    <div class="single_news_event">
+                                <div class="news_event_img">
+                                    <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026.jpeg" target="_blank">
+
+                                        <img src="<img width="1131" height="1600" src="https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026.jpeg 1131w, https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026-212x300.jpeg 212w, https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026-724x1024.jpeg 724w, https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026-768x1086.jpeg 768w, https://ihe.du.ac.in/wp-content/uploads/2026/09/National-Sports-day-2026-1086x1536.jpeg 1086w" sizes="(max-width: 1131px) 100vw, 1131px" style="width:100%;height:141.47%;max-width:1131px;" />                      </a> 
+                  </div>
+                  <!-- news_event_img close hrere -->
+                  <div class=" news_event_content">
+                                        <p>
+                                            National Sports Day-2026                                        </p>
+                                        <div class="time_date">
+                                            <p><i class="fa fa-clock-o"></i>
+                                                08:44 AM                                            </p>
+                                            <p><i class="fa fa-calendar"></i>
+                                                01-09-2026                                            </p>
+                                        </div>
+                                </div>
+                            </div>
+                        
+                    </div>
+                    <div class="text-right">
+                        <a href="https://ihe.du.ac.in/category/news-events/" class="btn btnMainView">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <h4 class="main_heading">Principal's Message</h4>
+                <div class="princple_message">
+                    <div class="princple_img">
+                        <img src="<img width="225" height="300" src="https://ihe.du.ac.in/wp-content/uploads/2024/01/Prof.-Dr.-Radhika-Bakhshi-225x300.jpg" class="attachment-medium size-medium wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2024/01/Prof.-Dr.-Radhika-Bakhshi-225x300.jpg 225w, https://ihe.du.ac.in/wp-content/uploads/2024/01/Prof.-Dr.-Radhika-Bakhshi.jpg 768w" sizes="(max-width: 225px) 100vw, 225px" style="width:100%;height:133.07%;max-width:768px;" />               
+               
+              </div>
+         
+        <div id=" paragraph">
+                        <p>From the Director’s Desk….It is with great pleasure and enthusiasm that I extend my warmest greetings to the entire Institute of Home Economics family. As the Principal, I am honoured to lead a college that is committed to fostering academic</p>
+                    </div>
+
+                    <a href="https://ihe.du.ac.in/principals-message/" class="btn d-block mt-2">Know More</a>
+                </div>
+            </div>
+
+           
+            <div class="col-md-4">
+                <h4 class="main_heading">Notice Board</h4>
+                <div class="news_evnet_container">
+                    <!-- TAB BUTTONS -->
+                    <ul class="nav nav-tabs" id="iheTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-tab="notice">General</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-tab="exam">Examination</a>
+                        </li>
+                    </ul>
+                    <!-- NOTICE TAB -->
+                    <div id="tab-notice" class="tab-pane active">
+                        <div id="newsEvents" class="overflow_y">
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Ph.D.-BoI-2026-27_compressed-1.pdf" target="_blank">
+                                            <h5>
+                                                Bulletin of Information For Admission to Ph.D. Programmes                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            15-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Notice-and-Form-for-Freeship.pdf" target="_blank">
+                                            <h5>
+                                                Notice and Form for Freeship                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            15-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/PHYEDU.pdf" target="_blank">
+                                            <h5>
+                                                THREE DAYS SELF DEFENCE WORKSHOP                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            13-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Guidleines-For-Student-Union-Societies.pdf" target="_blank">
+                                            <h5>
+                                                Guidelines for Student Union Societies                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            08-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/S.O-deputation-notice-or-application-form.pdf" target="_blank">
+                                            <h5>
+                                                Advertisement for the Section Officer on the Deputation basis                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            07-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Fee-Notice.pdf" target="_blank">
+                                            <h5>
+                                                Fee Notice for B.Sc(P) Home Science 3rd Year                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Notice-for-Admit-Card.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Admit Card.                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Notice-for-submission-of-Examnination-Form.pdf" target="_blank">
+                                            <h5>
+                                                Notice for submission of Examination Form till 06.10.2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/NOTICE-Submission-of-Examination-Form.pdf" target="_blank">
+                                            <h5>
+                                                NOTICE for  Submission of Examination Form                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/NOTICE-Verification-of-Documents-for-1st-semester-2026.pdf" target="_blank">
+                                            <h5>
+                                                NOTICE for Verification of Documents for 1st Semester (Admission-2026)                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Elementary_Education.pdf" target="_blank">
+                                            <h5>
+                                                Interview Notice for Walk-in-Interview- Elementary Education                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            03-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/EVS-guest-faculty-Notice.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Walk-in Interview for the Appointment of Guest Faculty &#8211; Environmental Science                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            28-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/New-Doc-09-25-2026-15.16.pdf" target="_blank">
+                                            <h5>
+                                                Notice Regarding Change in Fee amount.                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            25-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/NOTICE-Re-Registration.pdf" target="_blank">
+                                            <h5>
+                                                Re-registration and Attending the Course in Semester Ist and IIIrd                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            25-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/5_6172456470706136127.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Walk-in-Interview for the Appointment of Guest Faculty (Biochemistry)                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            24-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/Notice-for-Guest-interview.pdf" target="_blank">
+                                            <h5>
+                                                Notice regarding Interviews for the Appointment of Guest Faculty in the Department of Human Development &#038; Childhood Studies                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            23-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/Walk_In_Interview_21.09.2026.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Walk-in-Interview for the Appointment of Guest Faculty                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            22-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/beled2.pdf" target="_blank">
+                                            <h5>
+                                                Dept. of Elementary Education in Collaboration with Alumni Association Organized Alumna Speaks on 22 Sept. 2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            22-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/beled.pdf" target="_blank">
+                                            <h5>
+                                                Dept. of Elementary Education Organies Orientation Programme for 1st Year Student                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            22-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+
+                                    <div class="news_event_content">
+                                        <a href="https://forms.gle/DveQHs2Nd5NKiLE8A  " target="_blank">
+                                            <h5>
+                                                Workshop for Parents of Semester I students &#8211; “Understanding Mental Health of Youth in Today’s Time on Saturday, 26 September 2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            16-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                    </div>
+                        <div class="text-right">
+                            <a href="https://ihe.du.ac.in/notice-page/" class="btn btnMainView">Know More</a>
+                        </div>
+                    </div>
+
+                    <!-- EXAMINATION TAB -->
+                    <div id="tab-exam" class="tab-pane" style="display:none;">
+                        <div id="examEvents" class="overflow_y">
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Notice-for-Admit-Card.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Admit Card.                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/Notice-for-submission-of-Examnination-Form.pdf" target="_blank">
+                                            <h5>
+                                                Notice for submission of Examination Form till 06.10.2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/10/NOTICE-Submission-of-Examination-Form.pdf" target="_blank">
+                                            <h5>
+                                                NOTICE for  Submission of Examination Form                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            05-10-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/Notification-of-Examination-ND-2026.pdf" target="_blank">
+                                            <h5>
+                                                Notification of Examination Nov-Dec 2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            25-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/09/Notice-for-Examination-NOV-DEC-2026.pdf" target="_blank">
+                                            <h5>
+                                                Notice for Filling up of Examination form (Nov-Dec 2026-27)                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            07-09-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/07/Date-sheet-for-Id-ul-Zuha-Bakrid1.pdf" target="_blank">
+                                            <h5>
+                                                Extra Credit Courses and Special Examination for the students due to Id-Ul-Zuha                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            02-07-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/07/Date-sheet-for-Extra-Credit-Course.pdf" target="_blank">
+                                            <h5>
+                                                Extra Credit Courses and Special Examination for the students due to Id-Ul-Zuha                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            02-07-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/GE-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet GE May-June-2026 Datesheet                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/Five-Year-Integrated-Programme-in-Journalism-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet Five Year Integrated Programme in Journalism May-June-2026 Datesheet                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/B.EL_.ED_.-ANNUAL-MODE.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet B EL ED Annual Exam 2025-26                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/DSE-SEM-8-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet DSE SEM-8 May-June-2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/VAC-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory VAC May-June-2026 Datesheet                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/SEC-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory SEC May-June-2026 Datesheet                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/SBC-May-June-2026-Datesheet.pdf" target="_blank">
+                                            <h5>
+                                                Theory SBC May-June-2026 Datesheet                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/Revised-PG-DATE-SHEET-MAY-2026.pdf" target="_blank">
+                                            <h5>
+                                                Theory Revised PG DATE SHEET MAY 2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/Revised-Datesheet-B.Sc_.-P-Home-Sci.-M_J-2026.pdf" target="_blank">
+                                            <h5>
+                                                Theory Revised Datesheet B.Sc. (P) Home Sci. M_J 2026                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/Revised-B.Sc_.-P-4th-Sem-Lifespan-Approch-to-Nutrition.pdf" target="_blank">
+                                            <h5>
+                                                Revised B.Sc. (P) 4th Sem Lifespan Approch to Nutrition                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/Date-Sheet-Ability-Enchacement-24-Sem.-II.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet Date-Sheet Ability Enhancement 24-Sem. II                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/DATE-SHEET-OF-GENERIC-ELECTIVE-SEM.II-IV-2024.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet OF GENERIC ELECTIVE SEM.II-IV 2024                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                            <div class="single_news_event">
+                                    <div class="news_event_content">
+                                        <a href="https://ihe.du.ac.in/wp-content/uploads/2026/05/BSCP-2024-II-IV-VI-SemCBCS.pdf" target="_blank">
+                                            <h5>
+                                                Theory Datesheet  BSC(P)-2024-II-IV-VI Sem(CBCS)                                            </h5>
+                                        </a>
+                                        <span>Date :
+                                            14-05-2026                                        </span>
+                                    </div>
+                                    <div class="news_evnet_iocn">
+                                        <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/new.gif" class="img-fluid"
+                                            alt="" />
+                                    </div>
+                                </div>
+                                                    </div>
+                        <div class="text-right">
+                            <a href="https://ihe.du.ac.in/examination-result/" class="btn btnMainView">Know More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- section_news_notice close here -->
+
+<section class="section_padding gallery_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="main_heading text-dark newFont gallery-head" style="text-align:left">Latest Gallery</h4>
+                <div class="gallery_container">
+                    <div class="gallery_img_container">
+                        <a href="https://ihe.du.ac.in/annual-day-17/">
+                            <div class="gallery_img_item">
+                                <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/DSC_0045-scaled.jpg"
+                                    class="img-fluid" alt="" />
+
+                                <img width="1568" height="910" src="https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-1568x910.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" decoding="async" srcset="https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-1568x910.jpg 1568w, https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-300x174.jpg 300w, https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-1024x594.jpg 1024w, https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-768x446.jpg 768w, https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-1536x892.jpg 1536w, https://ihe.du.ac.in/wp-content/uploads/2021/09/slider2-scaled-1-2048x1189.jpg 2048w" sizes="(max-width: 1568px) 100vw, 1568px" style="width:100%;height:58.05%;max-width:2560px;" />                                <div class="gallery_caption">
+
+                                    <p>Annual Day ’17</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://ihe.du.ac.in/cultural-events-at-ihe/">
+                            <div class="gallery_img_item">
+
+                                                                <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/DSC_0068-scaled.jpg" class="img-fluid" alt="" />
+                                <div class="gallery_caption">
+                                    <p>Cultural Events at IHE</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://ihe.du.ac.in/golden-jubilee/">
+                            <div class="gallery_img_item">
+                                <img src="https://ihe.du.ac.in/wp-content/uploads/2021/09/DSC_0010-scaled.jpg" class="img-fluid" alt="" />
+                                <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/c5.JPG" class="img-fluid"
+                                    alt="" />
+                                <div class="gallery_caption">
+                                    <p>Golden Jubilee</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="gallery_img_item viewMore">
+                            <a href="https://ihe.du.ac.in/image-gallery/">View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                    </li>
+                    <li class="nav-item " role="presentation">
+                    </li>
+                </ul>
+
+                <h4 class="main_heading text-dark newFont gallery-head" style="text-align:left">College at a Glance</h4>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active mt-5" id="pills-student" role="tabpanel"
+                        aria-labelledby="pills-student-tab">
+                        <video width="100%" height="240" controls autoplay loop muted style="margin-top: -23px;">
+                            <source src="http://ihe.du.ac.in/wp-content/uploads/2024/07/ihe-display-video.mp4"
+                                type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+</section>
+<!-- gallery_section close here -->
+
+
+<!-- Collaborations close here -->
+
+<section class="testimonial">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4 class="main_heading text-dark">Find on Map</h4>
+                <div class="map_container" style="border-radius: 7px;overflow: hidden;">
+                    <div class="ratio ratio-16x9">
+                        <section id="text-4" class="widget widget_text">			<div class="textwidget"><p><iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.777829242753!2d77.20437201440508!3d28.546396894726524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25df4db7433%3A0xd956ecec51a0c0ff!2sInstitute%20of%20Home%20Economics!5e0!3m2!1sen!2sin!4v1627542102732!5m2!1sen!2sin"
+                  allowfullscreen
+                  loading="lazy"
+                ></iframe></p>
+</div>
+		</section>                        <!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.777829242753!2d77.20437201440508!3d28.546396894726524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce25df4db7433%3A0xd956ecec51a0c0ff!2sInstitute%20of%20Home%20Economics!5e0!3m2!1sen!2sin!4v1627542102732!5m2!1sen!2sin" allowfullscreen=""></iframe>-->
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4 class="main_heading text-left text-dark">Virtual Tour</h4>
+                <div class="tour_vdo_container">
+                    <div class="ratio ratio-16x9">
+                        <section id="text-3" class="widget widget_text">			<div class="textwidget"><p><iframe src="https://www.youtube.com/embed/_8JiLkj3mpU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
+Coming Soon</p>
+</div>
+		</section>                        <!--<iframe title="YouTube video" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen=""></iframe>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- testimonial clsoe here -->
+
+<style>.iframe{width: 100% !important;
+    height: 276px !important;}
+
+#wpsvccount {
+        
+       display:none!important;
+    }
+    #wpsvctotal img{
+        
+        display:none;
+        
+    }
+      #wpsvctotal{
+          
+       color:white!important;   
+      }
+    .wps_visitor_title{
+        
+        display:none;
+    }
+
+</style>
+<footer class="section_padding footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="single_footer_container">
+              <!-- <h4>About IHE</h4> -->
+              <div class="img">
+                <img src="https://ihe.du.ac.in/wp-content/themes/ihe/img/logo_footer2.png" class="img-fluid" alt="" />
+              </div>
+             
+            </div>
+          </div>
+          <!-- col md 4 close here  -->
+          <div class="col-md-8 col-12">
+            <div class="single_footer_container">
+              <h4>Important Links</h4>
+              <div class="links">
+                  <div class="menu-quick-links-container"><ul><li id="menu-item-5135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5135"><a target="_blank" href="https://www.ugc.ac.in/">University Grants Commission</a></li>
+<li id="menu-item-5136" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5136"><a target="_blank" href="http://www.du.ac.in/">University of Delhi</a></li>
+<li id="menu-item-15881" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15881"><a href="https://ihe.du.ac.in/about-vidya-vistar/">Vidya Vistar Scheme</a></li>
+<li id="menu-item-15882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15882"><a href="https://ihe.du.ac.in/about-viksit-bharat/">Viksit Bharat@2047</a></li>
+<li id="menu-item-12129" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12129"><a href="http://ihe.du.ac.in/wp-content/uploads/2023/06/Centenary-Celebration-Event-Report-2022-23-pdf.pdf">DU Centenary Celebrations</a></li>
+<li id="menu-item-15174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15174"><a href="https://ihe.du.ac.in/ignou-0787/">IGNOU Study Center-0787</a></li>
+<li id="menu-item-5137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5137"><a href="https://ihe.du.ac.in/alumni-association/">Alumni Association</a></li>
+<li id="menu-item-11066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11066"><a href="https://ihe.du.ac.in/workshops-seminars-conferences/">Workshops/Seminars/Conferences</a></li>
+</ul></div>                <!--<ul>
+                  <li>
+                    <a href="#">Links with other institutes</a>
+                  </li>
+                  <li>
+                    <a href="#">Alumni Association</a>
+                  </li>
+                  <li>
+                    <a href="#">RTI</a>
+                  </li>
+                  <li>
+                    <a href="#">Examination & Results</a>
+                  </li>
+                </ul>-->
+                <!-- ul close here -->
+                <div class="menu-quick-links-2-container"><ul><li id="menu-item-5140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5140"><a href="https://ihe.du.ac.in/right-to-information/">RTI</a></li>
+<li id="menu-item-10100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10100"><a href="https://ihe.du.ac.in/opportunities/">Opportunities</a></li>
+<li id="menu-item-5139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5139"><a href="https://ihe.du.ac.in/roaster/">Roster</a></li>
+<li id="menu-item-20536" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20536"><a href="https://ihe.du.ac.in/examination-result/">Examination Notice</a></li>
+<li id="menu-item-15878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15878"><a href="https://ihe.du.ac.in/e-resources/">E-resources</a></li>
+<li id="menu-item-15879" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15879"><a href="https://ihe.du.ac.in/media/">Media</a></li>
+<li id="menu-item-17100" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17100"><a target="_blank" href="https://eazypay.icicibank.com/eazypayLink?P1=j6jdPaCjJxEO2xHSHYSYXQ==">Fee Payment</a></li>
+</ul></div>				  <div class="menu-useful-links-container"><ul><li id="menu-item-15873" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15873"><a href="https://ihe.du.ac.in/downloads/">Downloads</a></li>
+<li id="menu-item-7292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7292"><a href="https://ihe.du.ac.in/help-desk/">Help desk</a></li>
+<li id="menu-item-15874" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15874"><a href="https://ihe.du.ac.in/tender-notices/">Tender Notices</a></li>
+<li id="menu-item-5182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5182"><a href="https://ihe.du.ac.in/college-timings/">College Timings</a></li>
+<li id="menu-item-16678" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16678"><a href="https://ihe.du.ac.in/feedback-report/">Feedback</a></li>
+<li id="menu-item-15875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15875"><a href="https://ihe.du.ac.in/contact-us/">Contact Us</a></li>
+</ul></div>                <!--<ul>
+                  <li>
+                    <a href="#">Tender Notices</a>
+                  </li>
+                  
+                  <li>
+                    <a href="#">Roaster</a>
+                  </li> 
+                  <li>
+                    <a href="#">Collaborations</a>
+                  </li>
+                  
+                </ul>-->
+                <!-- ul close here -->
+              </div>
+            </div>
+          </div>
+          <!-- col md 4 close here  -->
+          <div class="col-md-3 col-6 d-none">
+            <div class="single_footer_container">
+<!--               <h4>useful links</h4> -->
+              <div class="links">
+<!--                   <div class="menu-useful-links-container"><ul><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15873"><a href="https://ihe.du.ac.in/downloads/">Downloads</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7292"><a href="https://ihe.du.ac.in/help-desk/">Help desk</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15874"><a href="https://ihe.du.ac.in/tender-notices/">Tender Notices</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5182"><a href="https://ihe.du.ac.in/college-timings/">College Timings</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16678"><a href="https://ihe.du.ac.in/feedback-report/">Feedback</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15875"><a href="https://ihe.du.ac.in/contact-us/">Contact Us</a></li>
+</ul></div> -->
+                <!--<ul>
+                  <li>
+                    <a href="#">Helpdesk</a>
+                  </li>
+                  <li>
+                    <a href="#">College Timings</a>
+                </li>
+                </ul>-->
+              </div>
+            </div>
+          </div>
+          <!-- col md 4 close here  -->
+        </div>
+        <div class="credit_container bg_1 mt-4">
+          
+           
+						
+
+			
+	
+		
+
+	
+		
+											
+	
+				
+			
+	<div id='mvcwid'style='text-align: left; color: #000000;'><h3 class='wps_visitor_title'>Our Visitor</h3><div id="wpsvccount"><div class="wps_text_glowing effect-white">
+    						<span>7</span>
+							<span>7</span>
+							<span>7</span>
+							<span>1</span>
+							<span>6</span>
+							<span>3</span>
+							
+						</div></div>
+	<div id="wpsvctable"><div id="wpsvctotal" style='text-align: left; color: #000000;'><img src='https://ihe.du.ac.in/wp-content/plugins/wps-visitor-counter/counter/user_total.png'> Visitor Counter : 777163</div></div></div>          <section id="block-5" class="widget widget_block widget_text">
+<p></p>
+</section>        </div>
+      </div>
+    </footer>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <!--<script src="https://ihe.du.ac.in/wp-content/themes/ihe/js/jquery.js" crossorigin="anonymous"></script>-->
+    <script src="https://ihe.du.ac.in/wp-content/themes/ihe/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="https://ihe.du.ac.in/wp-content/themes/ihe/js/owl.carousel.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animehttps://ihe.du.ac.in/wp-content/themes/ihe/js/2.0.2/anime.min.js"></script>
+
+    <script src="https://ihe.du.ac.in/wp-content/themes/ihe/js/app.js" crossorigin="anonymous"></script>
+    <script>
+      // Get the video
+      var video = document.getElementById("myVideo");
+
+      // Get the button
+      var btn = document.getElementById("myBtn");
+
+      // Pause and play the video, and change the button text
+      function controlVideo() {
+        if (video.paused) {
+          video.play();
+          btn.innerHTML = `<i class="fa fa-pause"></i>`;
+        } else {
+          video.pause();
+          btn.innerHTML = `<i class="fa fa-play"></i>`;
+        }
+      }
+    </script>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+//       $(document).ready(function(){
+//         // Show the modal when the page loads
+//         $("#inviteModal").modal('show');
+//       });
+// 		// Also handle the 'Close' button in the footer
+//         $(".btn-secondary").click(function(){
+//           $("#inviteModal").modal('hide');
+//         });
+    </script>
+<script>
+jQuery(function ($) {
+
+    if ($(window).width() <= 768) {
+
+        $('.menu-item-has-children > a').on('click', function(e) {
+
+            e.preventDefault(); // Prevent navigation only on mobile
+
+            $(this).siblings('.new_drop').slideToggle(200);
+
+            $(this).parent().toggleClass('open');
+        });
+
+    }
+
+});
+</script>
+<script src="js/translate.js"></script>
+  </body>
+</html>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ihe/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+		<style type="text/css">
+							.pgntn-page-pagination {
+					text-align: left !important;
+				}
+				.pgntn-page-pagination-block {
+					width: 60% !important;
+					padding: 0 0 0 0;
+									}
+				.pgntn-page-pagination a {
+					color: #1e14ca !important;
+					background-color: #ffffff !important;
+					text-decoration: none !important;
+					border: 1px solid #cccccc !important;
+									}
+				.pgntn-page-pagination a:hover {
+					color: #000 !important;
+				}
+				.pgntn-page-pagination-intro,
+				.pgntn-page-pagination .current {
+					background-color: #efefef !important;
+					color: #000 !important;
+					border: 1px solid #cccccc !important;
+									}
+						</style>
+		<script>document.body.classList.remove("no-js");</script>	<script>
+	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
+		document.body.classList.add( 'is-IE' );
+	}
+	</script>
+		<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+	</script>
+	<script src="https://ihe.du.ac.in/wp-content/themes/ihe/assets/js/polyfills.js?ver=1.0" id="twenty-twenty-one-ie11-polyfills-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/themes/ihe/assets/js/primary-navigation.js?ver=1.0" id="twenty-twenty-one-primary-navigation-script-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/themes/ihe/assets/js/responsive-embeds.js?ver=1.0" id="twenty-twenty-one-responsive-embeds-script-js"></script>
+<script id="wd-asl-ajaxsearchlite-js-before">
+window.ASL = typeof window.ASL !== 'undefined' ? window.ASL : {}; window.ASL.wp_rocket_exception = "DOMContentLoaded"; window.ASL.ajaxurl = "https:\/\/ihe.du.ac.in\/wp-admin\/admin-ajax.php"; window.ASL.backend_ajaxurl = "https:\/\/ihe.du.ac.in\/wp-admin\/admin-ajax.php"; window.ASL.js_scope = "jQuery"; window.ASL.asl_url = "https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/"; window.ASL.detect_ajax = 1; window.ASL.media_query = 4757; window.ASL.version = 4757; window.ASL.pageHTML = ""; window.ASL.additional_scripts = [{"handle":"wd-asl-ajaxsearchlite","src":"https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/js\/min\/plugin\/optimized\/asl-prereq.js","prereq":[]},{"handle":"wd-asl-ajaxsearchlite-core","src":"https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/js\/min\/plugin\/optimized\/asl-core.js","prereq":[]},{"handle":"wd-asl-ajaxsearchlite-vertical","src":"https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/js\/min\/plugin\/optimized\/asl-results-vertical.js","prereq":["wd-asl-ajaxsearchlite"]},{"handle":"wd-asl-ajaxsearchlite-autocomplete","src":"https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/js\/min\/plugin\/optimized\/asl-autocomplete.js","prereq":["wd-asl-ajaxsearchlite"]},{"handle":"wd-asl-ajaxsearchlite-load","src":"https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/js\/min\/plugin\/optimized\/asl-load.js","prereq":["wd-asl-ajaxsearchlite-autocomplete"]}]; window.ASL.script_async_load = false; window.ASL.init_only_in_viewport = true; window.ASL.font_url = "https:\/\/ihe.du.ac.in\/wp-content\/plugins\/ajax-search-lite\/css\/fonts\/icons2.woff2"; window.ASL.css_async = false; window.ASL.highlight = {"enabled":false,"data":[]}; window.ASL.analytics = {"method":0,"tracking_id":"","string":"?ajax_search={asl_term}","event":{"focus":{"active":1,"action":"focus","category":"ASL","label":"Input focus","value":"1"},"search_start":{"active":0,"action":"search_start","category":"ASL","label":"Phrase: {phrase}","value":"1"},"search_end":{"active":1,"action":"search_end","category":"ASL","label":"{phrase} | {results_count}","value":"1"},"magnifier":{"active":1,"action":"magnifier","category":"ASL","label":"Magnifier clicked","value":"1"},"return":{"active":1,"action":"return","category":"ASL","label":"Return button pressed","value":"1"},"facet_change":{"active":0,"action":"facet_change","category":"ASL","label":"{option_label} | {option_value}","value":"1"},"result_click":{"active":1,"action":"result_click","category":"ASL","label":"{result_title} | {result_url}","value":"1"}}};
+window.ASL_INSTANCES = [];window.ASL_INSTANCES[1] = {"homeurl":"https:\/\/ihe.du.ac.in\/","resultstype":"vertical","resultsposition":"hover","itemscount":4,"charcount":0,"highlight":0,"highlightwholewords":1,"singleHighlight":0,"scrollToResults":{"enabled":0,"offset":0},"resultareaclickable":1,"autocomplete":{"enabled":1,"lang":"en","trigger_charcount":0},"mobile":{"menu_selector":"#menu-toggle"},"trigger":{"click":"results_page","click_location":"same","update_href":0,"return":"results_page","return_location":"same","facet":1,"type":1,"redirect_url":"?s={phrase}","delay":300},"animations":{"pc":{"settings":{"anim":"fadedrop","dur":300},"results":{"anim":"fadedrop","dur":300},"items":"voidanim"},"mob":{"settings":{"anim":"fadedrop","dur":300},"results":{"anim":"fadedrop","dur":300},"items":"voidanim"}},"autop":{"state":"disabled","phrase":"","count":1},"resPage":{"useAjax":0,"selector":"#main","trigger_type":1,"trigger_facet":1,"trigger_magnifier":0,"trigger_return":0},"resultsSnapTo":"left","results":{"width":"auto","width_tablet":"auto","width_phone":"auto"},"settingsimagepos":"right","closeOnDocClick":1,"overridewpdefault":0,"override_method":"get"};
+//# sourceURL=wd-asl-ajaxsearchlite-js-before
+</script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-prereq.js?ver=4757" id="wd-asl-ajaxsearchlite-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-core.js?ver=4757" id="wd-asl-ajaxsearchlite-core-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-results-vertical.js?ver=4757" id="wd-asl-ajaxsearchlite-vertical-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-autocomplete.js?ver=4757" id="wd-asl-ajaxsearchlite-autocomplete-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-load.js?ver=4757" id="wd-asl-ajaxsearchlite-load-js"></script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/ajax-search-lite/js/min/plugin/optimized/asl-wrapper.js?ver=4757" id="wd-asl-ajaxsearchlite-wrapper-js"></script>
+<script src="https://ihe.du.ac.in/wp-includes/js/hoverIntent.min.js?ver=1.10.2" id="hoverIntent-js"></script>
+<script id="megamenu-js-extra">
+var megamenu = {"timeout":"300","interval":"100"};
+//# sourceURL=megamenu-js-extra
+</script>
+<script src="https://ihe.du.ac.in/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.9.4" id="megamenu-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://ihe.du.ac.in/wp-includes/js/wp-emoji-release.min.js?ver=6.9.10"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://ihe.du.ac.in/wp-includes/js/wp-emoji-loader.min.js
+</script>

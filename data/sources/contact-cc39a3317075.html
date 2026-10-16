@@ -1,0 +1,4332 @@
+<!DOCTYPE html>
+<html lang="zxx">  
+<head>
+    <meta charset="utf-8">
+    <title>Rakcon</title>
+    <meta name="description" content="">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="https://rakcon.com/frontend/apple-touch-icon.html">
+    <link rel="shortcut icon" type="image/x-icon" href="https://rakcon.com/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/off-canvas.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/fonts/linea-fonts.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/fonts/flaticon.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://rakcon.com/frontend/assets/css/rsmenu-main.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/rs-spacing.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/style.css?ver=3.0">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/about.css">
+    <link rel="stylesheet" type="text/css" href="https://rakcon.com/frontend/assets/css/responsive.css">
+    
+    
+    
+    <style>
+			
+
+			.blue-txt{
+				color: #093461;
+			}
+			.terminal-tbl-head{
+				background: #547da9;
+				color: #fff;
+			}
+			.tbl-bordr-rght-none{
+				border-right: 0px solid #fff;
+			}
+			.terminal-tab .nav-link.active, .terminal-tab .show>.nav-link{
+				background-color: #093461;
+			}
+			.terminal-tab .nav-link {
+				border: 0;
+				border-top-left-radius: 10px;
+				border-bottom-left-radius: 10px;
+				border-top-right-radius: 0px;
+				border-bottom-right-radius: 0px;
+				text-align: right;
+				padding: 10px 55px 10px 20px;
+				background: #547da9;
+				margin-bottom: 2px;
+				font-size: 17px;
+				font-weight: 500;
+				color:#fff !important;
+			}
+			
+			.modal-backdrop {
+                display: none !important;
+            }
+            .justify{
+                text-align:justify !important;
+            }
+		</style>
+</head>
+
+<style>
+.marquee-vertical {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.marquee-vertical .track {
+    display: block;
+    animation: scrollY linear infinite;
+}
+.item {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+/* PAUSE */
+.marquee-vertical:hover .track {
+    animation-play-state: paused;
+}
+
+.scroll_css::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.scroll_css::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.scroll_css::-webkit-scrollbar-thumb {
+  background: #6693ef; 
+}
+
+/* Handle on hover */
+.scroll_css::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+</style>
+
+    <body class="defult-home">
+		<div class="main-content">
+			<!--Full width header Start-->
+			<div class="full-width-header home8-style4 home9">
+				<!--Header Start-->
+				<header id="rs-header" class="rs-header">
+					<!-- Menu Start -->
+					<!-- Topbar Area Start -->
+					<div class="top-header" style="background:#ffffff; padding:10px 0; position:relative;">
+
+    <div class="container">
+
+        <!-- Language -->
+        <div style="position:absolute; right:10px; top:10px;">
+            <select onchange="language_chnage(this.value)" 
+                style="padding:3px 8px; font-size:13px;">
+                <option selected value="english">English</option>
+                <option  value="hindi">Hindi</option>
+            </select>
+        </div>
+
+        <!-- Emblem -->
+        <div class="text-center" style="margin-bottom:5px;">
+            <img src="https://rakcon.com/images/emblem.jpeg" 
+                 style="height:55px;">
+        </div>
+
+        <div class="row align-items-center text-center">
+
+            <!-- Left Logo -->
+            <div class="col-md-3 text-md-start text-center">
+                <img src="https://rakcon.com/images/header_logo1.png" 
+                     style="max-height:85px;">
+            </div>
+
+            <!-- Center Text -->
+            <div class="col-md-6">
+                <h3 style="font-family:'Times New Roman', serif; font-weight:700; margin-bottom:4px;">
+                    Rajkumari Amrit Kaur College of Nursing                 </h3>
+
+                <p style="margin:0; font-size:14px; line-height:1.4;text-align: center;">
+                    Directorate General of Health Services, Ministry of Health & Family Welfare, <br>
+                    Government of India, New Delhi                 </p>
+            </div>
+
+            <!-- Right Logo -->
+            <div class="col-md-3 text-md-end text-center">
+                <img src="https://rakcon.com/images/header_logo2.png" 
+                     style="max-height:85px;">
+            </div>
+
+        </div>
+
+    </div>
+</div>
+					<!-- Topbar Area End -->
+					<div class="menu-area menu-sticky" >
+    <div class="container1">
+        <div class="row y-middle">
+            <div class="col-lg-12 d-md-none d-lg-none">
+				<div class="logo-cat-wrap">
+					<div class="logo-part">
+						<a href="https://rakcon.com/" style="color:#fff !important;font-size: 13px;position: relative;top: 37px;right: 13px;">
+							<img class="normal-logo" src="https://rakcon.com/images/logo_mobile.png" alt="">
+							<span style="position: relative;bottom: 10px;right: 13px;">RAJKUMARI AMRIT KAUR COLLEGE OF NURSING</span><br/><span style="position: relative;bottom: 84px;left: 50px;font-size: 8px;">(MINISTRY OF HEALTH AND FAMILY WELFARE) GOVT. OF INDIA,NEW DELHI</span>
+						</a>
+					</div>
+				</div>
+			</div>
+            <div class="col-lg-12 text-right">
+				<div class="rs-menu-area">
+					<div class="main-menu">
+						<div class="mobile-menu">
+							<a class="rs-menu-toggle">
+								<i class="fa fa-bars"></i>
+							</a>
+						</div>
+						<nav class="rs-menu">
+							<ul class="nav-menu">
+								<li class="rs-mega-menu mega-rs current-menu-item"> <a href="https://rakcon.com/">Home</a></li>
+																								<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/TFE5ZFErYlJLRTExcHdrbDVHV2x5QT09">About Us</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/SWtHNHdzaUZtbTVtQUp6NmJNa2RsZz09">Philosophy</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/WFg4TEVVSFIwaUJwT1ZVRGlqSVFOZz09">Aim</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/V0lCK2ZsSi9JWm9xeUNiUGNDajQ3UT09">Significant Landmarks</a>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  href="https://rakcon.com/page/TERJb0NNekhDcE4xTWVwZjNpdnBUUT09">Activities</a>
+																						<ul class="sub-menu right">
+																								<li><a  href="https://rakcon.com/page/d1Y0L0ltMndXdndPU3lzblBCUG1Ndz09">Student Activities</a></li>
+																								<li><a  href="https://rakcon.com/page/WVVMV2wyUU9Fd1NycjNDbXNCdjRuZz09">Society</a></li>
+																							</ul>
+																					</li>
+																				<li class="">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/List_of_Faculty.pdf">List Of Faculty</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/N1lSbDZsdWhDeXZkZUo3WFEyeTNadz09">Academic</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/WTRRU09hRCtxbUtTSHJTcS92Z1IvZz09">Faculty</a>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  href="https://rakcon.com/page/aElJM1lMbTkrcVhET0NsdFRhbDkvQT09">Courses</a>
+																						<ul class="sub-menu right">
+																								<li><a  href="https://rakcon.com/page/SGpLSUxqeFdPSG82c2g0ZzhlRHRVQT09">B.SC (Hons) Nursing</a></li>
+																								<li><a  href="https://rakcon.com/page/MUZzUlJFUWhtQ2xwWVlCQTFhYmVhdz09">M.SC Nursing</a></li>
+																								<li><a  href="https://rakcon.com/page/NGE5SGlDdCtpOEdnRWphM1JlWGJLQT09">Ph.D in Nursing</a></li>
+																							</ul>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  href="https://rakcon.com/page/Q1B2YnEyMmJSOG4wVkl0dGdLR0ZSdz09">Overview of course</a>
+																						<ul class="sub-menu right">
+																								<li><a  href="https://rakcon.com/page/Z1B0Y2ozL09WNmpwcTYzd3pVRWVWQT09">B.SC (Hons)</a></li>
+																								<li><a  target="_blank"  href="https://rakcon.com/uploads/content_manager/B.Sc. syllabus.pdf">Syllabus of B.Sc.</a></li>
+																								<li><a  href="https://rakcon.com/page/dGxXZFVwR3U5ZGRqQWVHazVPajZ6QT09">M.SC Nursing</a></li>
+																								<li><a  target="_blank"  href="https://rakcon.com/uploads/content_manager/">Syllabus of M.SC Nursing</a></li>
+																							</ul>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/emxybUZwYUlsOVdRU1Y1Z25ucHYwdz09">Admission</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/SkVJdXpKTWZFMjN4OGNXNDBYTnpPUT09">Admission Calender</a>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  href="https://rakcon.com/page/dzBYZjY1MGNqbW1tMXk2dGtNYUtnQT09">Eligibility</a>
+																						<ul class="sub-menu right">
+																								<li><a  href="https://rakcon.com/page/dklzd21sV2hGVlZHNXdMVFEzcktzQT09">B.Sc. (Honours) Nursing</a></li>
+																								<li><a  href="https://rakcon.com/page/ZkQ0cjgzcVFwcVNyQUVpUHg3aGp3UT09">Master of Nursing</a></li>
+																								<li><a  href="https://rakcon.com/page/bndjcGFqNFFtZWpjUjVJSlE1SWFOQT09">Ph.d in Nursing</a></li>
+																							</ul>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/ZEhYUjNlMis3SzFiamwvWGtMQXZUdz09">Fee & Other Charges</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/RHY0amJETzBtRXVMaGtmYndFdmV5dz09">Instruction for SC/ST & OBC Candidates</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/bk1aTDBkTjhJaVd5eGJNQlpHTW04Zz09">Common Mistakes resulting in Rejection of Application</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/dWoyOUtSOGlpWUdGTERHaGpxc3UzUT09">Direction to Candidates for Selection Test</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/bWtYQW9wL1N3RDJkdUNXUjhwMDlZUT09">Rules and Regulations</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/MmNoS0plUVI1eWtJOU1zWEdWWGU2UT09">Maintenance of Discipline</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/WFFIK01STmxTSlQydVRacGZ3WmNhUT09">Prohibition of Punishment for Ragging</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/Z2d3VlhPL3grdVV5a0FhcHFid0Y5Zz09">Prohibition of Punishment for Sexual Harassment</a>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  href="https://rakcon.com/page/ZnczZnNMWFByb043WThKSDREdW45dz09">Committees</a>
+																						<ul class="sub-menu right">
+																								<li><a  href="https://rakcon.com/page/WUg5ZEJsa3BtR1Q4TkJRWUpjZlI2UT09">Technical Advisory Committee</a></li>
+																								<li><a  href="https://rakcon.com/page/bDFMa0dpWGFRaWE2YUE5T1Uza0ZVQT09">College Council Committee</a></li>
+																								<li><a  href="https://rakcon.com/page/eE4rVGhQUWViNGJhRkJWQTZzUU9DQT09">Committees for Selection Team</a></li>
+																							</ul>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/VjA2ZXJiL1JHa2J2ZEhwdzAzWHV3QT09">Citizen Charter</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/MGlSelg5eW93WUQyRkRTeTYrNENFdz09">Facilities</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/VDRTUFJlSzllbDRDY05hVzdmdG5KZz09">Area of Clinical Field Experience</a>
+																					</li>
+																				<li class="">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/library.pdf">Library</a>
+																					</li>
+																				<li class="menu-item-has-children right">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/sna.pdf">S.N.A Activites</a>
+																						<ul class="sub-menu right">
+																								<li><a  target="_blank"  href="https://rakcon.com/uploads/content_manager/sna.pdf">SNA Activity Report 2023-2024</a></li>
+																								<li><a  target="_blank"  href="https://rakcon.com/uploads/content_manager/Document_(1)_(2).docx">SNA Activity Report 2024-2025</a></li>
+																							</ul>
+																					</li>
+																				<li class="">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/sports.pdf">Sports</a>
+																					</li>
+																				<li class="">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/other_activities.pdf">Others</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/RVFZSXpvb09uYnNITllDQ1JrMkY0Zz09">RTI</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/dzk5NFk3ak1mclhqVUduTWx1OCs1UT09">Job Responsbility</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/eEdOR3NncmgvTGJzMVRTMlArTFNHUT09">Various Committees</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/KzcvaTFJMHpFSEgrbU9YTUNnMytEUT09">Downloads</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/RnZtOXM1a1RYaytXOGdkQVRTcEY5UT09">Form Download</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/c2tPazlKNkE4WEJoTXRXbUhwOC9IUT09">Tenders</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  href="https://rakcon.com/page/ZVF4SStHLzIxSnYvQXgvSS81bjRCZz09">Active Tenders</a>
+																					</li>
+																				<li class="">
+											<a  href="https://rakcon.com/page/QXdxdEtwQ2VuVlJZSXJVVmgyL29MUT09">Archive</a>
+																					</li>
+																			</ul>
+																	</li>
+																<li class="menu-item-has-children">
+									<a  href="https://rakcon.com/page/Ni8vV2ZFR0Z1eHJmc0lXdTNLYkVIQT09">Admission M.Sc.</a>
+																		<ul class="sub-menu">
+																				<li class="">
+											<a  target="_blank"  href="https://rakcon.com/uploads/content_manager/PROSPECTUS_M.Sc_Nursing.pdf">Prospectus</a>
+																					</li>
+																				<li class="">
+											<a  target="_blank"  href="https://form.rakcon.com/">Application Form</a>
+																					</li>
+																			</ul>
+																	</li>
+																
+								
+								<!--<li class="rs-mega-menu mega-rs current-menu-item"> <select onchange="language_chnage(this.value)"><option  value="english">English</option><option  value="hindi">Hindi</option></select></li>-->
+							</ul> 
+						</nav>                                        
+					</div>
+				</div>
+			</div>
+				</div>
+			</div>
+		</div>
+        <!-- Menu End --> 
+        <!-- Canvas Menu start -->
+		<!--<nav class="right_menu_togle hidden-md">
+			<div class="close-btn">
+				<div id="nav-close">
+					<div class="line">
+						<span class="line1"></span><span class="line2"></span>
+					</div>
+				</div>
+			</div>
+			<div class="canvas-logo">
+				<a href=""><img src="frontend/assets/images/logo-yellow2.png" alt="logo"></a>
+			</div>
+			<div class="offcanvas-text">
+				<p>We denounce with righteous indige nationality and dislike men who are so beguiled and demo  by the charms of pleasure of the moment data com so blinded by desire.</p>
+			</div>
+			<div class="offcanvas-gallery">
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/1.jpg"><img src="frontend/assets/images/gallery/1.jpg" alt=""></a>
+				</div>
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/2.jpg"><img src="frontend/assets/images/gallery/2.jpg" alt=""></a>
+				</div>
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/3.jpg"><img src="frontend/assets/images/gallery/3.jpg" alt=""></a>
+				</div>
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/4.jpg"><img src="frontend/assets/images/gallery/4.jpg" alt=""></a>
+				</div>
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/5.jpg"><img src="frontend/assets/images/gallery/5.jpg" alt=""></a>
+				</div>
+				<div class="gallery-img">
+					<a class="image-popup" href="frontend/assets/images/gallery/6.jpg"><img src="frontend/assets/images/gallery/6.jpg" alt=""></a>
+				</div>
+			</div>
+			<div class="map-img">
+				<img src="frontend/assets/images/map.jpg" alt="">
+			</div>
+			<div class="canvas-contact">
+				<ul class="social">
+					<li><a href="frontend/#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="frontend/#"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="frontend/#"><i class="fa fa-pinterest-p"></i></a></li>
+					<li><a href="frontend/#"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+			</div>
+		</nav>-->
+    </header>
+</div>
+<div class="rs-slider style1">
+		<div class="rs-carousel owl-carousel" data-loop="true" data-items="1" data-margin="0" data-autoplay="true" data-hoverpause="true" data-autoplay-timeout="5000" data-smart-speed="800" data-dots="false" data-nav="false" data-nav-speed="false" data-center-mode="false" data-mobile-device="1" data-mobile-device-nav="false" data-mobile-device-dots="false" data-ipad-device="1" data-ipad-device-nav="false" data-ipad-device-dots="false" data-ipad-device2="1" data-ipad-device-nav2="true" data-ipad-device-dots2="false" data-md-device="1" data-md-device-nav="true" data-md-device-dots="false">
+									<div class="slider-content slide1"  style="background: url(https://rakcon.com/uploads/banner/15/slider3.jpg);">
+				<div class="container">
+					<div class="content-part">
+						<div class="sl-sub-title wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"></div>
+						<h1 class="sl-title wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"></h1>
+						<div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
+							<a class="readon orange-btn main-home" href="#" style="display:none;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="slider-content slide1"  style="background: url(https://rakcon.com/uploads/banner/14/slider2.jpg);">
+				<div class="container">
+					<div class="content-part">
+						<div class="sl-sub-title wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"></div>
+						<h1 class="sl-title wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"></h1>
+						<div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
+							<a class="readon orange-btn main-home" href="#" style="display:none;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="slider-content slide1"  style="background: url(https://rakcon.com/uploads/banner/16/slider4.jpg);">
+				<div class="container">
+					<div class="content-part">
+						<div class="sl-sub-title wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"></div>
+						<h1 class="sl-title wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"></h1>
+						<div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
+							<a class="readon orange-btn main-home" href="#" style="display:none;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+						<div class="slider-content slide1"  style="background: url(https://rakcon.com/uploads/banner/17/slider5.jpg);">
+				<div class="container">
+					<div class="content-part">
+						<div class="sl-sub-title wow bounceInLeft" data-wow-delay="300ms" data-wow-duration="2000ms"></div>
+						<h1 class="sl-title wow fadeInRight" data-wow-delay="600ms" data-wow-duration="2000ms"></h1>
+						<div class="sl-btn wow fadeInUp" data-wow-delay="900ms" data-wow-duration="2000ms">
+							<a class="readon orange-btn main-home" href="#" style="display:none;"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+		</div>
+	</div>
+	
+	
+
+<div class="container_ln"> 
+	<div class="headertext">Latest News </div> 
+	<div>
+		<div class="marquee-horizontal">
+  <div class="track" id="hTrack">
+		
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/365/5048_0001.pdf" target="_blank">Notice Regarding Commencement of B.Sc. (Hons.) Nursing Academic Session 2026–2027</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/298/vacancy-circular-14-08-2026-for-the-post-of-principal-and-vice-principal.pdf" target="_blank">Recruitment of Professor-cum-Principal & Professor-cum-Vice-Principal</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/news/Notice_0001.pdf" target="_blank">Notice</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/news/Notice with Annexure H_0001.pdf" target="_blank">Notice with Annexure</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/news/B.Sc. (Hons) Nursing Admission -_0001.pdf" target="_blank">B.Sc. (Hons) Nursing Admission</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/305/M.Sc_Nursing_Admissions,_2026-27_List_of_Candidates_for_Counselling_0001.pdf" target="_blank">List of Candidates of M.Sc. Nursing Admission 2026-27</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/303/Important_Notice_Regarding_M.Sc_Nursing_Council_0001.pdf" target="_blank">Important Notice for Counselling of M.Sc. Nursing Admission 2026-27</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/301/M.Sc_Nursing_Entrance_Exam_Result_0001.pdf" target="_blank">M.Sc Nursing Entrance Exam Combined Result 2026-27</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/299/Scan_document20260526_141206.pdf" target="_blank">Admit cards are available for download for M.Sc.(Nursing) 202-27 Entrance Exam</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/297/List_of_M.Sc_Nursing_-2026-27_Not_Eligible_Candidates_0001.pdf" target="_blank">LIST OF M. Sc. NURSING 2026-27 NOT-ELIGIBLE CANDIDATES</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/295/M.Sc_Nursing_correction_window_0001.pdf" target="_blank">M.Sc Nursing correction window</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/293/M.Sc_Form_Correction_Noticie_0001.pdf" target="_blank">M.Sc Form Correction Notice</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/285/Notice.pdf" target="_blank">Extension of Last Date for Submission of Application Form - M. Sc. Nursing 2026 till 4th May 2026, 11:55 PM</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/142/ACE_Scanner_2024_08_30.pdf" target="_blank">Recruitment Rules of LDC</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/282/PROSPECTUS_M.Sc_Nursing.pdf" target="_blank">M.Sc. Nursing (2026-2027) Prospectus</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/281/4286_0001.pdf" target="_blank">HOLI Committee</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/279/adver_(1).pdf" target="_blank">Engagement of Consultant on Contractual Basis in R.A.K. College of Nursing</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/uploads/whats_new/269/4263_0001.pdf" target="_blank">IMPORTANT NOTICE :- B.sc(H) Nursing Course, 2026-27</a>
+				|&nbsp;&nbsp;&nbsp; 
+								
+				<img src="https://rakcon.com/images/new-flash-gif.gif" style="width: 44px;" /> <a href="https://rakcon.com/" target="_blank">Faculty details,fee & information about disciplinary committee are available in prospectus under Academic section(M.Sc.Nursing)</a>
+				|&nbsp;&nbsp;&nbsp; 
+							</div>
+</div>
+	</div>
+</div> 
+
+<style>
+	
+.container_ln { 
+	position: relative; 
+	border:1px solid #777;  
+	/*background: linear-gradient(110deg, #fdcd3b 60%, #ffed4b 60%);*/
+	background:rgba(27, 127, 204, 0.29);
+	font-family:'Oswald',serif;
+	height: 48px;
+} 
+
+.container_ln, .container_ln .headertext { 
+	padding: 0px; 
+	background-color: #fff; 
+	color: #626060; 
+	font-weight: bold; 
+} 
+
+.container_ln .headertext { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 10; 
+	padding: 10px 10px;
+	border-right:1px solid #777;  
+	background:#5c88b9;
+	color:#fff ;
+    text-shadow: 1px 1px #111;
+} 
+
+.container_ln marquee { 
+	line-height: 1.5; 
+} 
+.container_ln marquee p { 
+	margin: 0;
+} 
+
+
+
+.marquee-horizontal {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+ 
+/*.marquee-horizontal .content {*/
+/*    display: inline-block;*/
+/*    padding-left: 100%;*/
+/*}*/
+
+.marquee-horizontal .track {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scrollX linear infinite;
+    gap: 10px;
+}
+
+.marquee-horizontal:hover .track {
+    animation-play-state: paused;
+}
+</style>
+
+
+<script>
+        
+(function () {
+    const track = document.getElementById("hTrack");
+
+    // ✅ duplicate once (safe)
+    track.innerHTML += track.innerHTML;
+
+    const distance = track.scrollWidth / 2;
+    const duration = distance / 100;
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes scrollX {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-${distance}px); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    track.style.animationDuration = duration + "s";
+})();
+
+
+</script>
+
+<!-- Slider Section End -->
+
+<!-- Blog Section Start -->
+
+<section class="mt-5 mb-5 about-rakcon-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-lg-8" style="background-color:#f9f9f9;">
+                <h5 class="page-title">About Us</h5><br/>
+				                <img src="https://rakcon.com/uploads/whats_new/6/DSC00001.jpg" align="left" style="padding:0.5em;width: 28%;" class="img-responsive"/>
+				<p>The Rajkumari Amrit Kaur College of Nursing is a pioneer institute for nursing education in India and South East Asian region offering basic and higher education programmes. It is controlled financially by Ministry of Health and Family Welfare and academically affiliated to University of Delhi as Department of Nursing under faculty of science. The primary objective of the College is to provide and promote education and research in the field of nursing.
+
+The College was established in 1946 and initially B.Sc. (Hons.) Nursing programme was formulated to train young women as professional nurses for meeting the health needs of the country. In 1959, the University approved the initiation of two years Master of Nursing programme, M.Phil, in Nursing was star ted in 1986 as a foundation course for undertaking doctoral work and in the year 1992, Doctoral programme in nursing was started under Department of Nursing, University of Delhi.
+
+Besides the regular academic programmes, College also conducts short term courses for nursing personnel through the Department of Continuing Education. College is also designated as a regional study centre for Ph.D Programme in Nursing conducted by Rajiv Gandhi University of Health science, Bangalore in collaboration with WHO and Indian Nursing Council.
+
+The college is also in process of being established as centre of excellence in Nursing by the Ministry of Health & Family Welfare.
+
+The college is also recognized as a programme study centre by IGNOU (Indira Gandhi National Open University) for conducting post basic B.Sc. Nursing Course.
+
+The College was selected as one of the sub-recipient for the GFATM (Global Fund for AIDS, Tuberculosis and Malaria) project under INC.</p>
+            </div>
+            <div class="col-md-4 col-lg-4">
+                <div class="list-group" style="background-color:#e9ecef;">
+                    <button type="button" class="list-group-item list-group-item-action active" aria-current="true" style="font-size:22px;">
+                      NOTICE BOARD                    </button>
+
+    <div class="scroll_css" style="background-color:#e9ecef;height: 510px; overflow-y:scroll">
+                                                	                        		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/377/Revised_Notice.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Sep 15, 2026</span><br/>
+                        				Notice Regarding Commencement of B.Sc. (Hons.) Nursing Academic Session 2026–2027 <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/298/vacancy-circular-14-08-2026-for-the-post-of-principal-and-vice-principal.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Aug 17, 2026</span><br/>
+                        				Recruitment of Professor-cum-Principal & Professor-cum-Vice-Principal <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/news/Notice_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Aug 10, 2026</span><br/>
+                        				Notice <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/news/Notice with Annexure H_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Aug 10, 2026</span><br/>
+                        				Notice with Annexure <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/news/B.Sc. (Hons) Nursing Admission -_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Aug 10, 2026</span><br/>
+                        				B.Sc. (Hons) Nursing Admission <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/304/M.Sc_Nursing_Admissions,_2026-27_List_of_Candidates_for_Counselling_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Jun 19, 2026</span><br/>
+                        				List of Candidates of M.Sc. Nursing Admission 2026-27 <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/302/Important_Notice_Regarding_M.Sc_Nursing_Council_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Jun 19, 2026</span><br/>
+                        				Important Notice for Counsellin of M.Sc Nursing Admission 2026-27 <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/300/M.Sc_Nursing_Entrance_Exam_Result_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Jun 12, 2026</span><br/>
+                        				M.Sc Nursing Entrance Exam Combined Result 2026-27 <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/298/Scan_document20260526_141206.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 26, 2026</span><br/>
+                        				Admit cards are available for download for M.Sc.(Nursing) 202-27 Entrance Exam <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/296/List_of_M.Sc_Nursing_-2026-27_Not_Eligible_Candidates_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 26, 2026</span><br/>
+                        				LIST OF M. Sc. NURSING 2026-27 NOT-ELIGIBLE CANDIDATES <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/294/M.Sc_Nursing_correction_window_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 22, 2026</span><br/>
+                        				M.Sc Nursing correction window <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/292/M.Sc_Form_Correction_Noticie_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 15, 2026</span><br/>
+                        				M.Sc Form Correction Notice <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/291/RR(Steno-II)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on Draft Recruitment Rules to the Post of Stenographer Grade II, Group-'C', Non-Gazetted in Level-04 at RAK College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/290/RR(Tutor)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on Draft Recruitment Rules to the Post of Tutor, Group-A, Gazetted in Level-10 at RAK College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/289/RR(Steno-I)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on Draft Recruitment Rules to the Post of Stenographer Grade I, Group-B, Non-Gazetted in Level-06 at RAK College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/288/RR(UDC)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on draft Recruitment Rules to the post of Upper Division Clerk, Group-'C', Non-Gazetted in Level-04 at RAK College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/287/RR(AO)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on draft Recruitment Rules to the post of Administrative Officer, Group-'B', Gazetted, Ministerial in Level-07 at RAK College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/286/RR(OS)_English.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Public Notice on draft Recruitment Rules to the post of Office Superintendent, Group-'B', Non-Gazetted, Ministerial in Level-06 at RAK College of Nurs <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/284/Notice.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Apr 24, 2026</span><br/>
+                        				Extension of Last Date for Submission of Application Form - M. Sc. Nursing 2026   till 4th May 2026 at  11:55 PM <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/280/4286_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Feb 26, 2026</span><br/>
+                        				HOLI Committee <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/278/adver_(1).pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Feb 26, 2026</span><br/>
+                        				Engagement of Consultant on Contractual Basis in R.A.K. College of Nursing <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/268/4263_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Feb 20, 2026</span><br/>
+                        				IMPORTANT NOTICE :- B.sc(H) Nursing Course, 2026-27 <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/236/DocScanner_11_Aug_2025_3-32 pm.jpg" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Mar 26, 2026</span><br/>
+                        				ICC <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/233/Anti_Ragging_0001.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Mar 26, 2026</span><br/>
+                        				Anti Ragging <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> May 12, 2026</span><br/>
+                        				Faculty details,fee & information about disciplinary committee are available in prospectus under Academic section(M.Sc.Nursing) <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/142/ACE_Scanner_2024_08_30.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Mar 27, 2026</span><br/>
+                        				Recruitment Rules of LDC <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    		<a type="button" class="list-group-item list-group-item-action" href="https://rakcon.com/uploads/whats_new/141/affidavit_regarding_anti_ragging.pdf" target="_blank" >
+                        			<span style="float:left;"><i class="fa fa-calendar-check-o" style="color:red;"></i> Mar 26, 2026</span><br/>
+                        				Affidavit regarding anti ragging <img style="width:50px;" src="https://rakcon.com/images/new-flash-gif.gif">
+                        		</a>		
+                                                    </div>
+                        
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="about-rakcon-section" >
+	<h5 class="page_title_center">Photo Gallery</h5>
+	<div class="rs-gallery  pb-100 md-pt-70 md-pb-70">
+		<div class="container-fluid mt-5 mb-5">
+			<div class="row">
+				<div class="col-md-3 col-lg-3 pe-0">
+					<div class="nav flex-column terminal-tab nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+												
+													
+							<button class="nav-link active" id="v-pills-tab1-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab1" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">College Tour</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab2-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab2" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">SNA Activities</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab3-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab3" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Sports Day 2026</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab4-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab4" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Rajbhasha Anubhag</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab5-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab5" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Swasth Nari Sashakt Parivar Abhiyaan</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab6-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab6" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">College Album</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab7-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab7" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Urban door to door awareness</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab8-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab8" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Swatchhata samwad</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab9-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab9" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Swatchhata Diwas</button>
+							
+							
+													
+							<button class="nav-link " id="v-pills-tab10-tab" data-bs-toggle="pill" data-bs-target="#v-pills-tab10" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Slogan and poster competition</button>
+							
+							
+											   
+					  </div>
+				</div>
+				<div class="col-md-9 col-lg-9 ps-0">
+				   <div class="card">
+					  <div class="card-body">
+						 <div class="tab-content" id="v-pills-tabContent">
+														<div class="tab-pane fade show active" id="v-pills-tab1" role="tabpanel" aria-labelledby="v-pills-tab1-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										College Tour									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/339/Conference_Room.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/339/Conference_Room.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Confrence Room</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/340/Faculty.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/340/Faculty.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Faculty</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/341/Dining_Hall.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/341/Dining_Hall.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Dining Hall</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/342/Library.jpeg">
+													<img src="https://rakcon.com/uploads/whats_new/342/Library.jpeg" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Library</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/343/Meeting_Hall.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/343/Meeting_Hall.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Meeting Hall</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/344/Office_Staff_room.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/344/Office_Staff_room.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Staff Room</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/345/Office_Staff.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/345/Office_Staff.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Office Staff</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/346/Old_College_Building_(2).JPG">
+													<img src="https://rakcon.com/uploads/whats_new/346/Old_College_Building_(2).JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Old College Building</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/347/Old_College_Building.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/347/Old_College_Building.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Old College Building</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/348/Old_Hostel_Block.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/348/Old_Hostel_Block.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Old Hostel Block</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/349/New_Academic_Block_Inside.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/349/New_Academic_Block_Inside.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Academic Block Inside</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/350/New_Academic_Block_Outside.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/350/New_Academic_Block_Outside.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Academic Block Outside</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/351/New_Academic_Block_Reception_(2).JPG">
+													<img src="https://rakcon.com/uploads/whats_new/351/New_Academic_Block_Reception_(2).JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Academic Block Reception</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/352/New_Academic_Block_Reception.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/352/New_Academic_Block_Reception.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Academic Block Reception</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/353/New_Building_Classroom.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/353/New_Building_Classroom.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Building Classroom</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/354/New_Hostel_Block(Outside_View).jpeg">
+													<img src="https://rakcon.com/uploads/whats_new/354/New_Hostel_Block(Outside_View).jpeg" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Hostel Block (Outside)</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/355/New_Hostel_Room.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/355/New_Hostel_Room.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">New Hostel Room</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/356/Outside_Auditorium.jpeg">
+													<img src="https://rakcon.com/uploads/whats_new/356/Outside_Auditorium.jpeg" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Outside Auditorium</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/357/Parking.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/357/Parking.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Parking</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/358/Principal_Madam_Room.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/358/Principal_Madam_Room.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Principal Madam Room</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/359/Transport_or_Buses.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/359/Transport_or_Buses.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Transport or Buses</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/360/Vice_Principal_office.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/360/Vice_Principal_office.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Vice Principal Office</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/361/Admin_Office.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/361/Admin_Office.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Admin Office</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/362/Auditorium.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/362/Auditorium.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Auditorium</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/363/College_enterance.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/363/College_enterance.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">College Enterance</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/364/Computer_lab.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/364/Computer_lab.JPG" 
+														 alt="333" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                            <p class="mb-0">Computer Lab</p>
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab2" role="tabpanel" aria-labelledby="v-pills-tab2-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										SNA Activities									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/271/SNABiennial_Conference_2025-26_page-0003.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/271/SNABiennial_Conference_2025-26_page-0003.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/272/SNABiennial_Conference_2025-26_page-0004.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/272/SNABiennial_Conference_2025-26_page-0004.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/273/SNABiennial_Conference_2025-26_page-0005.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/273/SNABiennial_Conference_2025-26_page-0005.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/274/SNABiennial_Conference_2025-26_page-0006.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/274/SNABiennial_Conference_2025-26_page-0006.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/275/SNABiennial_Conference_2025-26_page-0007.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/275/SNABiennial_Conference_2025-26_page-0007.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/276/SNABiennial_Conference_2025-26_page-0001.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/276/SNABiennial_Conference_2025-26_page-0001.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/277/SNABiennial_Conference_2025-26_page-0002.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/277/SNABiennial_Conference_2025-26_page-0002.jpg" 
+														 alt="270" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab3" role="tabpanel" aria-labelledby="v-pills-tab3-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Sports Day 2026									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/256/IMG_4314.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/256/IMG_4314.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/257/IMG_4364.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/257/IMG_4364.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/258/IMG_4366.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/258/IMG_4366.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/259/IMG_4430.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/259/IMG_4430.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/260/IMG_5123.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/260/IMG_5123.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/261/IMG_5145.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/261/IMG_5145.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/262/IMG_5288.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/262/IMG_5288.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/263/IMG_5488.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/263/IMG_5488.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/264/IMG_5577.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/264/IMG_5577.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/265/IMG_5740.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/265/IMG_5740.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/266/IMG_6487.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/266/IMG_6487.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/267/IMG_6571.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/267/IMG_6571.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/250/IMG_3961.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/250/IMG_3961.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/251/IMG_4003.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/251/IMG_4003.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/252/IMG_4007.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/252/IMG_4007.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/253/IMG_4008.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/253/IMG_4008.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/254/IMG_4056.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/254/IMG_4056.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/255/IMG_4085.JPG">
+													<img src="https://rakcon.com/uploads/whats_new/255/IMG_4085.JPG" 
+														 alt="249" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab4" role="tabpanel" aria-labelledby="v-pills-tab4-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Rajbhasha Anubhag									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/Sandesh_2026.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/Sandesh_2026.jpg" 
+														 alt="247" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/248/हिन्दी_दिवस_2025_(1).pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/248/हिन्दी_दिवस_2025_(1).pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/248/हिन्दी_दिवस_2025_(1).pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab5" role="tabpanel" aria-labelledby="v-pills-tab5-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Swasth Nari Sashakt Parivar Abhiyaan									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/239/Report_on_Blood_Donation_Camp_at_RAKCON_.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/239/Report_on_Blood_Donation_Camp_at_RAKCON_.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/239/Report_on_Blood_Donation_Camp_at_RAKCON_.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/240/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/240/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/240/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/241/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP3.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/241/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP3.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/241/REPORT_ON_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP3.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/242/GLIPMSES_OF_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_FOR_ADOLOSCENT_GIRLS4.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/242/GLIPMSES_OF_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_FOR_ADOLOSCENT_GIRLS4.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/242/GLIPMSES_OF_SCREENING_CUM_HEALTH_ASSESSMENT_CAMP_FOR_ADOLOSCENT_GIRLS4.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/243/REPORT_ON_HEALTH_CAMP_2-compressed_5.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/243/REPORT_ON_HEALTH_CAMP_2-compressed_5.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/243/REPORT_ON_HEALTH_CAMP_2-compressed_5.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/244/हिन्दी_दिवस_2025.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/244/हिन्दी_दिवस_2025.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/244/हिन्दी_दिवस_2025.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/245/Nikshay_Mitra_Awareness_program_report.pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/245/Nikshay_Mitra_Awareness_program_report.pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/245/Nikshay_Mitra_Awareness_program_report.pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- PDF File -->
+												  <a href="https://rakcon.com/uploads/whats_new/246/Nikshay_Mitra_Awareness_program_report_ON_20.9.2025_(1).pdf" target="_blank">
+													Download
+												 </a>
+												 <a href="https://rakcon.com/uploads/whats_new/246/Nikshay_Mitra_Awareness_program_report_ON_20.9.2025_(1).pdf" target="_blank">
+													<iframe src="https://rakcon.com/uploads/whats_new/246/Nikshay_Mitra_Awareness_program_report_ON_20.9.2025_(1).pdf" 
+															style="width:100%; height:300px; border:none;"></iframe>
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab6" role="tabpanel" aria-labelledby="v-pills-tab6-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										College Album									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/186/DSC00001.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/186/DSC00001.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/187/DSC00029.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/187/DSC00029.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/188/DSC00038.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/188/DSC00038.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/189/DSC00042.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/189/DSC00042.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/190/DSC00339.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/190/DSC00339.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/191/DSC00261.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/191/DSC00261.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/192/DSC00172.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/192/DSC00172.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/193/DSC00201.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/193/DSC00201.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/194/DSC00310.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/194/DSC00310.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/195/DSC00522.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/195/DSC00522.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/196/DSC00376.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/196/DSC00376.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/197/DSC00604.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/197/DSC00604.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/198/DSC00639.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/198/DSC00639.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/199/DSC00560.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/199/DSC00560.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/200/DSC00518.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/200/DSC00518.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/201/DSC00376.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/201/DSC00376.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/202/DSC00518.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/202/DSC00518.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/203/DSC00522.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/203/DSC00522.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/204/DSC00560.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/204/DSC00560.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/205/DSC00604.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/205/DSC00604.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/206/DSC00639.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/206/DSC00639.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/207/DSC00659.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/207/DSC00659.jpg" 
+														 alt="185" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab7" role="tabpanel" aria-labelledby="v-pills-tab7-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Urban door to door awareness									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/182/Students_in_urban_for_door_to_door_awareness_on_zero_waste_policy.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/182/Students_in_urban_for_door_to_door_awareness_on_zero_waste_policy.jpg" 
+														 alt="158" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/183/Urban_zero_waste_awareness.png">
+													<img src="https://rakcon.com/uploads/whats_new/183/Urban_zero_waste_awareness.png" 
+														 alt="158" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/184/Zero_wase_policy.png">
+													<img src="https://rakcon.com/uploads/whats_new/184/Zero_wase_policy.png" 
+														 alt="158" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab8" role="tabpanel" aria-labelledby="v-pills-tab8-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Swatchhata samwad									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/180/Samwad_on_swachhata.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/180/Samwad_on_swachhata.jpg" 
+														 alt="157" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/181/Swachhata_ka_samwad_with_children_in_School.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/181/Swachhata_ka_samwad_with_children_in_School.jpg" 
+														 alt="157" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab9" role="tabpanel" aria-labelledby="v-pills-tab9-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Swatchhata Diwas									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/175/picture1.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/175/picture1.jpg" 
+														 alt="156" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/176/1000200724.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/176/1000200724.jpg" 
+														 alt="156" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/177/picture2.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/177/picture2.jpg" 
+														 alt="156" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/178/picture3.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/178/picture3.jpg" 
+														 alt="156" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/179/picture4.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/179/picture4.jpg" 
+														 alt="156" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+														<div class="tab-pane fade " id="v-pills-tab10" role="tabpanel" aria-labelledby="v-pills-tab10-tab">
+							   <div class="row">
+								  <div class="col-md-12 col-lg-12">
+									 <h3 class="text-center">
+										Slogan and poster competition									 </h3> 
+								  </div>
+							   </div>
+							   <div class="row gy-5">
+								  								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/173/Poster_competition.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/173/Poster_competition.jpg" 
+														 alt="155" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  <div class="col-md-4 text-center">
+									 <div class="p-3 border bg-light">
+										<div class="gallery-item">
+										   <div class="gallery-img" style="position: relative; left: 13px;">
+											  												 <!-- Image File -->
+												 <a class="image-popup" href="https://rakcon.com/uploads/whats_new/174/Slogan_competition.jpg">
+													<img src="https://rakcon.com/uploads/whats_new/174/Slogan_competition.jpg" 
+														 alt="155" 
+														 style="height: 300px;">
+												 </a>
+											  										   </div>
+										</div>
+									
+									
+										<!--Dispaly image caption -->
+										 
+                                                <div class="mt-2 text-center">
+                                                                                                
+                                                                                                    </div>
+                                           
+										
+										<!--Display image caption-->
+										
+										
+										
+										
+										
+										
+									 </div>
+								  </div>
+								  								  							   </div>
+							</div>
+													 </div>
+					  </div>
+				   </div>
+				</div>
+
+			</div>
+		</div>
+	
+	
+	
+	
+		
+		<div class="container-fluid mt-70">
+			<div class="row">
+				<div class="col-md-12 text-right">
+					<a href="https://rakcon.com/gallery" type="button" class="btn btn-outline-danger">View More <i class="fa fa-arrow-right" ></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div> 
+
+<!-- Main content End -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+<style>
+   
+    .popup-content h1 {
+        color: #a30000;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+   
+    /* Overlay */
+    
+
+    /* Popup Box with Glassmorphism */
+    .popup-content {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(12px);
+        margin: 5% auto;
+        padding: 25px 30px;
+        width: 85%;
+        max-width: 850px;
+        border-radius: 15px;
+        position: relative;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        animation: popupShow 0.4s ease;
+    }
+
+    @keyframes popupShow {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Close button */
+    
+
+    /* Headings */
+   .popup-content h2 {
+        color: #a30000;
+        border-bottom: 3px solid #ff4d4d;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+   .popup-content h3 {
+        color: #b30000;
+        margin-top: 25px;
+        border-left: 5px solid #ff4d4d;
+        padding-left: 10px;
+    }
+
+     p, .popup_li {
+        color: #333;
+        text-align: justify;
+        line-height: 1.6;
+        font-size: 15px;
+    }
+
+     .popup_ul {
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .popup-content strong {
+        color: #222;
+    }
+
+    /* Badge Styles */
+    .badge {
+        display: inline-block;
+        background: #ff4d4d;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin: 5px;
+        font-weight: bold;
+    }
+
+    .highlight {
+        background: #a30000;
+    }
+</style>
+
+<!--<div class="modal" id="exampleModalCenter" data-bs-backdrop="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content" style="height: 500px;overflow-y: auto;">-->
+<!--      <div class="modal-header">-->
+<!--        <h5 class="modal-title" id="exampleModalLabel" style="text-align:center;"><img src="https://rakcon.com/images/logo.jpg" alt="" style="width:30%" /></h5>-->
+<!--        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span aria-hidden="true" onClick="hide_popup_modal()">&times;</span></button>-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--            <div class="col-md-12">-->
+<!--                <img src="https://rakcon.com/frontend/assets/images/Sandesh.jpg" alt=""  />-->
+<!--            </div>-->
+<!--            <p style="text-align:justify;" class="justify">The convocation ceremony was held on November 14, 2024, alongside the inauguration of the college auditorium. Mrs. Roli Singh, Additional Secretary, Ministry of Health and Family Welfare, graced the occasion as the Chief Guest. The event was further honored by the presence of Dr. Amita Bali, Deputy Director General, MOHFW; Dr. Vikas Gupta, Dean of Delhi University; and Dr. Deepika Khakha, who served as Guests of Honour. The auditorium was inaugurated by Mrs. Roli Singh.</p>-->
+<!--            <p style="text-align:center;"><b> Workshop Report: Maternal Newborn Health Competencies for Nursing Students</b></p>-->
+<!--			<p class="justify"><b>Organized by:</b> Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare (MOHFW)</p>-->
+<!--			<p class="justify"><b>In Collaboration with:</b>  Laerdal (Ms.Swati Sethi and Ms. Rinkle Pandey)</p>-->
+			
+<!--			<p class="justify"><b>	Program Details:</b></p>-->
+<!--			<p class="justify"><b>	•	Date: 8th to 10th January 2025</b></p>-->
+<!--			<p class="justify"><b>	•	Venue: RAK College of Nursing</b></p>-->
+<!--			<p class="justify"><b>	•	Participants: 62 students attended the Pre-OSCE session, and 61 students participated in the Post-OSCE session.</b></p>-->
+<!--			<p class="justify"><b>Objective</b></p>-->
+<!--			<p class="justify">The workshop aimed to enhance nursing students' competencies in maternal and newborn health, focusing on practical training and assessments for essential care and clinical management skills.</p>-->
+<!--			<p class="justify"><b>Day 1: 8th January 2025</b></p>-->
+<!--			<p class="justify">The program commenced with a Pre-OSCE assessment conducted for participating nursing students with 5 stations which included </p>-->
+<!--			<table class="table table-bordered">-->
+<!--				<tr>-->
+<!--					<th>Station</th>-->
+<!--					<th>Facilitators</th>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td>Supportive normal birth, AMTSL</td>-->
+<!--					<td>Mrs. Tumpa Roy</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td>Essential newborn care</td>-->
+<!--					<td>Mrs. Geetha Rajkumar</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td>Newborn resuscitation</td>-->
+<!--					<td>Mrs. Usha Shantal</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td>Management of atonic PPH</td>-->
+<!--					<td>Mrs. Geeta Saifi</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td>Uterine balloon tamponade</td>-->
+<!--					<td>Mrs. Simmi A Ekka</td>-->
+<!--				</tr>-->
+<!--			</table>-->
+			
+<!--			<p class="justify">The session aimed to evaluate students' baseline competencies in maternal and newborn health care before hands-on training sessions</p>-->
+			
+<!--			<p class="justify"><b>Day 2: 9th January 2025</b></p>-->
+<!--			<p class="justify"><b>•	Inauguration:</b> The formal inauguration session was graced by Dr. Deepika C. Khaka, Nursing Advisor, DGHS, MOHFW along with Dr.Daisy Thomas, Acting Vice Principal, Mrs.Sarita Shokanda, Academic In-charge, Mrs. Madhumita Dey, HOD, Continuing education department, Mrs.Mitali Biswas, B.Sc.coordinator along with other senior faculties of the RAK college of nursing.</p>-->
+<!--			<p class="justify"><b>•</b>	The inaugural session was followed by hands-on training sessions focused on:</p>-->
+<!--			<p class="justify"><b>o	Normal Vaginal Delivery and Active Management of the Third Stage of Labor (AMTSL)</b></p>-->
+<!--			<p class="justify"><b>o	Essential Care for Every Baby</b></p>-->
+<!--			<p class="justify"><b>o	Newborn Resuscitation</b></p>-->
+<!--			<p class="justify"><b>o	Management of atonic PPH</b></p>-->
+<!--			<p class="justify"><b>o	Uterine ballon tamponade</b></p>-->
+<!--			<p class="justify"><b>•</b>	The training was conducted by experts from Laerdal and the RAK team. Students engaged in skill-building exercises divided into smaller groups for personalized guidance from facilitators.</p>-->
+<!--			<p class="justify"><b>Day 3: 10th January 2025</b></p>-->
+<!--			<p class="justify"><b>•</b>	The workshop concluded with the Post-OSCE assessment to evaluate students' competency after the hands-on training sessions.</p>-->
+<!--			<p class="justify"><b>•</b>	The feedback from participants highlighted significant improvement in practical skills and confidence in maternal and newborn care techniques.</p>-->
+<!--			<p class="justify"><b>Highlights</b></p>-->
+<!--			<p class="justify"><b>Practical Learning:</b></p>-->
+<!--			<p class="justify">Hands-on sessions were prioritized to ensure comprehensive training in maternal and newborn care.</p>-->
+<!--			<p class="justify"><b>Digital Integration:</b></p>-->
+<!--			<p class="justify">Practice sessions were recorded and made available on digital platforms for student review. OSCE evaluation done at digital platform.</p>-->
+<!--			<p class="justify"><b>Group-Based Training:</b></p>-->
+<!--			<p class="justify">Training in small groups of 15 facilitated personalized coaching by facilitators from Laedral team.</p>-->
+<!--			<p class="justify"><b>Assessment and Certification:</b></p>-->
+<!--			<p class="justify">Students underwent objective structured clinical examinations (OSCE) and received e-certificates upon successful completion.</p>-->
+<!--			<p class="justify"><b>Outcomes:</b></p>-->
+<!--			<p class="justify"><b>•</b>	Enhanced clinical competencies in maternal and newborn health care.</p>-->
+<!--			<p class="justify"><b>•</b>	Improved student confidence and preparedness for real-world clinical scenarios.</p>-->
+<!--			<p class="justify"><b>•</b>	Hands-on experience and skills assessment using digital platforms for better training efficiency.</p>-->
+<!--			<p class="justify"><b>Conclusion</b></p>-->
+<!--			The Maternal Newborn Health Competencies Workshop successfully met its objectives of equipping nursing students with essential skills. The structured agenda and comprehensive training sessions fostered both theoretical understanding and practical proficiency.-->
+<!--      </div>-->
+<!--         <div class="popup-content">-->
+           
+            
+<!--            <h2>World Hepatitis Day 2025 Webinar Report</h2>-->
+<!--            <div>-->
+<!--                <span class="badge highlight">28 July 2025</span>-->
+<!--                <span class="badge">3:00 PM – 4:30 PM</span>-->
+<!--                <span class="badge">Attendance: 274</span>-->
+<!--            </div>-->
+    
+<!--            <p><strong>Program Name:</strong> World Hepatitis Day 2025: Let’s Break it Down</p>-->
+<!--            <p><strong>Cohort:</strong> Nursing professionals across India</p>-->
+    
+<!--            <p>In observance of World Hepatitis Day 2025, Rajkumari Amrit Kaur College of Nursing, in collaboration with the Trained Nurses Association of India (Delhi Branch) and ECHO India, organized a virtual program titled <em>“World Hepatitis Day: Nursing Insights.”</em> The event aimed to raise awareness among nursing professionals about hepatitis prevention, early detection, and the vital role of nurses in liver health.</p>-->
+    
+<!--            <p>Hepatitis, a group of infectious diseases affecting the liver, continues to be a global health concern. With this year’s theme, <strong>"Let’s Break It Down"</strong>, the session focused on demystifying hepatitis-related stigma, promoting vaccination, and strengthening preventive care through the nursing workforce.</p>-->
+    
+<!--            <h3>Opening Remarks</h3>-->
+<!--            <p>The session began with an introduction by <strong>Mrs. Madhumita Dey</strong>, Associate Professor & Head of Department (HOD), Continuing Education Department, Rajkumari Amrit Kaur College of Nursing, followed by messages from:</p>-->
+<!--            <ul class="popup_ul">-->
+<!--                <li class="popup_li">1. Welcome address by <strong>Dr. Daisy Thomas</strong>, Acting Vice Principal, Rajkumari Amrit Kaur College of Nursing & Chairperson, Nursing Education, TNAI Delhi</li>-->
+<!--                <li class="popup_li">2. <strong>Dr. Sandeep Bhalla</strong>, Vice President, ECHO India</li>-->
+<!--                <li class="popup_li">3. <strong>Mrs. Yangchen Dolma</strong>, President, TNAI – Delhi Branch</li>-->
+<!--                <li class="popup_li">4. Keynote address by <strong>Dr. Achala</strong>, Assistant Director General (Nursing), DGHS, MoHFW, highlighting the national vision on hepatitis control and the frontline role of nurses.</li>-->
+<!--            </ul>-->
+    
+<!--            <h3>Case Presentation</h3>-->
+<!--            <p>Case presentation by <strong>Ms. Shanu</strong>, Senior Nursing Officer, VMMC & SJH, sparked interactive engagement from attendees.</p>-->
+    
+<!--            <h3>Main Session</h3>-->
+<!--            <p><em>“World Hepatitis Day 2025: Nursing Insights”</em> was led by <strong>Dr. Mini George</strong>, Principal, College of Nursing, ILBS, New Delhi, who shared in-depth knowledge about the burden of Hepatitis, its disease aspect, diagnostic and preventive strategies, and clinical care, with special emphasis on comprehensive nursing action at various capacities.</p>-->
+    
+<!--            <h3>Conclusion</h3>-->
+<!--            <p>Participants asked insightful questions, particularly around hepatitis vaccination protocols and practices.</p>-->
+<!--            <p>The program concluded with a vote of thanks by <strong>Mrs. Jisha Srivastava</strong>, Faculty, Rajkumari Amrit Kaur College of Nursing.</p>-->
+<!--        </div>-->
+  
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<div class="modal fade"
+     id="exampleModalCenter"
+     tabindex="-1"
+     aria-labelledby="exampleModalLabel"
+     aria-hidden="true"
+     data-bs-backdrop="static"
+     data-bs-keyboard="true">
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+           
+
+            <!-- Modal Body -->
+            <div class="modal-body"
+                 style="max-height:70vh; overflow-y:auto;">
+
+                <div class="col-md-12 text-center">
+
+                    <img src="https://rakcon.com/frontend/assets/images/Sandesh_2026.jpg"
+                         alt="Sandesh September 2026"
+                         class="img-fluid"
+                         style="width:100%; height:auto;">
+
+                </div>
+
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+
+                <button type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     AUTOMATIC POPUP - SEPTEMBER 2026 ONLY
+     ========================================================= -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Current date
+    const today = new Date();
+
+    // September 01, 2026
+    const startDate = new Date("2026-09-01T00:00:00");
+
+    // October 01, 2026
+    // Popup will NOT display from October onwards.
+    const endDate = new Date("2026-10-01T00:00:00");
+
+    // Check whether current date is in September 2026
+    if (today >= startDate && today < endDate) {
+
+        const modalElement =
+            document.getElementById("exampleModalCenter");
+
+        if (modalElement) {
+
+            const sandeshModal =
+                new bootstrap.Modal(modalElement);
+
+            sandeshModal.show();
+        }
+    }
+
+});
+</script>
+
+<div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" onClick="hide_popup_modal()">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal"  onClick="hide_popup_modal()">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<script>
+(function () {
+    const track = document.getElementById("vTrack");
+
+    // ✅ duplicate once
+    track.innerHTML += track.innerHTML;
+
+    const distance = track.scrollHeight / 2;
+    const duration = distance / 50;
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+        @keyframes scrollY {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-${distance}px); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    track.style.animationDuration = duration + "s";
+})();
+</script>
+ 
+<!-- Footer Start -->
+
+<div class="container-fluid">
+	<footer class="py-4 my-4 rs-footer home9-style" id="rs-footer" style="height: 100%;" >
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="https://rakcon.com/" class="nav-link px-2 text-body-secondary color_white">Home</a></li>
+			    
+                         		  <li class="nav-item"><a href="https://rakcon.com/page/S2ZKNTh4Tll0ZEp2NVhvOEJiSHZ0QT09" class="nav-link px-2 text-body-secondary color_white">Important Links</a></li>
+				  <li class="nav-item"><a href="https://rakcon.com/page/VGtqTEE3MXFHNHN4Y1ZwRW9sT3RlQT09" class="nav-link px-2 text-body-secondary color_white">Vacancy</a></li>
+				  <li class="nav-item"><a href="https://rakcon.com/page/aUZIZnhTbmtmOW4xdHBoSHVRNEpOZz09" class="nav-link px-2 text-body-secondary color_white">Contact Us</a></li>
+				  <li class="nav-item"><a href="https://rakcon.com/page/dFhHWFd4eE90c1BWVkVVL3gzRFN6Zz09" class="nav-link px-2 text-body-secondary color_white">Feedback</a></li>
+				 
+		</ul>
+		<div class="row">
+			<div class="col-md-6">
+				<p class="text-left text-body-secondary color_white" style="position:relative;left: 16px;">Total Visitors:156712</p>
+			</div>
+			<div class="col-md-6">
+				<p class="text-right text-body-secondary color_white" style="position:relative;right: 16px;">Copyright © 2026 Rajkumari Amrit Kaur College Of Nursing</p>
+			</div>
+		</div>
+	</footer>
+</div>
+
+
+<!-- Footer End -->
+<!-- start scrollUp  -->
+<div id="scrollUp" class="yellow-color">
+    <i class="fa fa-angle-up"></i>
+</div>
+<!-- End scrollUp  -->
+
+<!-- Search Modal Start -->
+<div aria-hidden="true" class="modal fade search-modal" role="dialog" tabindex="-1">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span class="flaticon-cross"></span>
+  </button>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+        <div class="search-block clearfix">
+            <form>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Search Here..." type="text">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Search Modal End -->
+
+<!-- modernizr js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- js -->
+   
+    <!-- swiper js -->
+    
+
+
+<script src="https://rakcon.com/frontend/assets/js/modernizr-2.8.3.min.js"></script>
+<!-- jquery latest version -->
+<script src="https://rakcon.com/frontend/assets/js/jquery.min.js"></script>
+<!-- Bootstrap v4.4.1 js -->
+<script src="https://rakcon.com/frontend/assets/js/bootstrap.min.js"></script>
+<!-- Menu js -->
+<script src="https://rakcon.com/frontend/assets/js/rsmenu-main.js"></script> 
+<!-- op nav js -->
+<script src="https://rakcon.com/frontend/assets/js/jquery.nav.js"></script>
+<!-- owl.carousel js -->
+<script src="https://rakcon.com/frontend/assets/js/owl.carousel.min.js"></script>
+<!-- Slick js -->
+<script src="https://rakcon.com/frontend/assets/js/slick.min.js"></script>
+<!-- isotope.pkgd.min js -->
+<script src="https://rakcon.com/frontend/assets/js/isotope.pkgd.min.js"></script>
+<!-- imagesloaded.pkgd.min js -->
+<script src="https://rakcon.com/frontend/assets/js/imagesloaded.pkgd.min.js"></script>
+<!-- wow js -->
+<script src="https://rakcon.com/frontend/assets/js/wow.min.js"></script>
+<!-- Skill bar js -->
+<script src="https://rakcon.com/frontend/assets/js/skill.bars.jquery.js"></script>
+<script src="https://rakcon.com/frontend/assets/js/jquery.counterup.min.js"></script>        
+<!-- counter top js -->
+<script src="https://rakcon.com/frontend/assets/js/waypoints.min.js"></script>
+<!-- video js -->
+<script src="https://rakcon.com/frontend/assets/js/jquery.mb.YTPlayer.min.js"></script>
+<!-- magnific popup js -->
+<script src="https://rakcon.com/frontend/assets/js/jquery.magnific-popup.min.js"></script>
+<!-- tilt js -->
+<script src="https://rakcon.com/frontend/assets/js/tilt.jquery.min.js"></script>           
+<!-- plugins js -->
+<script src="https://rakcon.com/frontend/assets/js/plugins.js"></script>
+<!-- contact form js -->
+<script src="https://rakcon.com/frontend/assets/js/contact.form.js"></script>
+<!-- main js -->
+<script src="https://rakcon.com/frontend/assets/js/main.js"></script>
+<script>
+    	$(document).ready(function() {
+		$('table').addClass('table table-bordered');
+		$('thead').addClass('terminal-tbl-head');
+		function getRandomInt(min, max) {
+    		return Math.floor(Math.random() * (max - min + 1)) + min;
+    	  };
+    		var colors = ['#cfe2ff', '#f8d7da', '#d1e7dd', '#fff3cd', '#e2e3e5','#cff4fc','#f8f9fa'];
+    		//var colors = ['#fffff', '#e2e3e5'];
+    	   //var colors = ['primary','danger','success','warning','secondary','info','light'];
+    	  $('tr').each(function(index,el){
+    		var randomColorIndex = getRandomInt(0,colors.length-1);
+    		$(el).css('background-color',colors[randomColorIndex]);
+    	  });
+    	  $('th').each(function(index,el){
+			  $(el).css('background-color','#547da9');
+			  $(el).css('color','#fff');
+			}); 
+		})
+
+
+
+    function language_chnage(language)
+    {
+         $.ajax({
+           url: "https://rakcon.com/Frontend/language_chnage",
+           type: "POST",
+           data: {language:language},
+           success: function(result) {
+          window.location.reload();
+         },
+        error: function() {}
+      });
+    }
+    
+    $(window).on('load', function() {
+		$('#exampleModalCenter').modal('show');
+		 backdrop: false;
+	});
+	
+	function hide_popup_modal()
+	{
+	    $('#exampleModalCenter').modal('hide');
+	}
+</script>
+</body>
+
+</html>

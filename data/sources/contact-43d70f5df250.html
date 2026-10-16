@@ -1,0 +1,1739 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Kamala Nehru College</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://knc.du.ac.in//assets/front/images/fav/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="https://knc.du.ac.in//assets/front/images/fav/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="https://knc.du.ac.in//assets/front/images/fav/favicon-16x16.png" />
+  <link rel="manifest" href="https://knc.du.ac.in//assets/front/images/fav/site.webmanifest" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+  <link href="https://knc.du.ac.in//assets/front/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/line-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://knc.du.ac.in//assets/front/css/owl.carousel.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://knc.du.ac.in//assets/front/css/owl.theme.default.min.css" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/style.css?ver=0700726" rel="stylesheet" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/variables.css?ver=0700726" rel="stylesheet" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/responsive.css?ver=0700726" rel="stylesheet" type="text/css" />
+  <link href="https://knc.du.ac.in//assets/front/css/dark_mode.css?ver=0700726" rel="stylesheet" type="text/css" />
+  <script src="https://knc.du.ac.in//assets/front/js/jquery-3.7.1.min.js"></script>
+
+
+  <script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.4.1/css/rowReorder.dataTables.min.css">
+  <script>
+    window.addEventListener('load', function() {
+      var gtScript = document.createElement('script');
+      gtScript.type = 'text/javascript';
+      gtScript.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      document.body.appendChild(gtScript);
+    });
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi',
+      }, 'google_translate_element');
+    }
+
+
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        if (window.jQuery) {
+          $(".goog-logo-link").empty();
+          $('.goog-te-gadget').html($('.goog-te-gadget').children());
+        }
+      }, 200);
+    });
+  </script>
+</head>
+<!--  -->
+
+<body class="lang-en innerpage ">
+
+
+  <header>
+    <div class="header-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="header-mode">
+              <a href="#!" id="btn-increase">A+</a>
+              <a href="#!" id="btn-orig">A</a>
+              <a href="#!" id="btn-decrease">A-</a>
+              <a href="#!" class="theme-mode-btn fas fa-moon" onclick="updatesiteConfig(e=>({...e,isDark:!e.isDark}));"></a>
+            </div>
+            <div class="translator">
+              <div id="google_translate_element"></div>
+            </div>
+            <div class="searchicon"><a href="javascript:void(0)" class=""><i class="fa-solid fa-magnifying-glass"></i></a></div>
+
+            <div class="header-links">
+              <a href="https://knc.du.ac.in/" class="d-none d-md-inline-block">Home</a>
+              <a href="https://knc.du.ac.in/library" class="d-none d-md-inline-block">Library</a>
+              <!-- <a href="#!" class="d-none d-md-inline-block">Rajbhasha</a> -->
+              <a href="https://www.knc.mobiquel.com/smartprof/timetable/class-wise-tt.php" class="d-none d-md-inline-block">Timetable</a>
+              <a href="https://www.knc.mobiquel.com/smartprof/" target="_blank" class="login">Login</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-middle">
+      <div id="navbar" class="main-navbar">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 navouter">
+              <div class="navouterinnter">
+                <div class="nav-brand">
+                  <a href="https://knc.du.ac.in/"><img src="https://knc.du.ac.in//assets/front/images/knclogo-m.svg?ver=060626" alt="" /></a>
+                </div>
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                      <!-- <li class="nav-item">
+                        <a class="nav-link active" data-toggle="dropdown" href="">Home</a>
+                      </li> -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">About</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/about/history">History</a></li>
+                          <li><a href="https://knc.du.ac.in/about/emblem">Emblem</a></li>
+                          <li><a href="https://knc.du.ac.in/about/vission-mission">Vision and Mission</a></li>
+                          <li><a href="https://knc.du.ac.in/about/golden-jubliee">Golden Jubilee</a></li>
+                          <li><a href="https://knc.du.ac.in/about/gorowaralecture">Dr. K. K. Gorowara Memorial Public Lecture</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Adminstration</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/administration/principal-desk">Principal's Desk</a></li>
+                          <li><a href="https://knc.du.ac.in/administration/governing-body">Governing Body</a></li>
+                          <li><a href="https://knc.du.ac.in/administration/bursar">Bursar</a></li>
+                          <li><a href="https://knc.du.ac.in/administration/staff-association">Staff Association</a></li>
+                          <li><a href="#!">Administrative Staff</a></li>
+                          <!--<li><a href="">Administrative Staff</a></li>-->
+                          <li><a href="https://knc.du.ac.in/">Roster</a></li>
+                          <!-- <li><a href="">Seniority List</a></li> -->
+                          <li><a href="https://knc.du.ac.in/administration/library-staff">Library</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Academics</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/academics/course">Courses Offered</a></li>
+                          <li><a href="https://knc.du.ac.in/academics/departments/arts-and-commerce/alldepartments">Departments</a></li>
+                          <li><a href="https://www.knc.mobiquel.com/smartprof/timetable/class-wise-tt.php">Time-Table</a></li>
+                          <li><a href="https://knc.du.ac.in/academics/short-term-course">Short-Term Courses</a></li>
+                          <li><a href="https://knc.du.ac.in/academics/ignou-study-centre">IGNOU Study Centre</a></li>
+                          <!--<li><a href="https://www.du.ac.in/index.php?page=nep-ugcf-2022-syllabi">Syllabus</a></li>-->
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Admission</a> 
+                        <ul class="dropdown-menu"> 
+                          <li><a href="https://knc.du.ac.in/admission/admissionnotices">Admission Notices</a></li> 
+                          <li><a target="_blank" href="https://knc.du.ac.in/uploads/admission/Admission-Committee details -2026-2027 (2).pdf">Admission Committee</a></li>
+                          <li><a href="https://knc.du.ac.in/admission/boi">DU Bulletin of Information</a></li>
+                          <li><a target="_blank" href="https://knc.du.ac.in/uploads/admission/Prospectus_2026-2027_KNC_14-7-2026-3.pdf">Prospectus</a></li>
+                          <!-- <li><a href="https://admission.uod.ac.in/" target="_blank">Admission website of DU</a></li> -->
+                          <!-- <li><a href="">Seat Matrix</a></li> -->
+                          <!-- <li><a href="">Courses offered</a></li> -->
+                          <!-- <li><a href="https://knc.du.ac.in/">Add-on Courses</a></li> -->
+                          <li><a href="https://knc.du.ac.in/admission/certificate-courses">Certificate Courses</a></li>
+                          <li><a href="https://knc.du.ac.in/admission/fee-structure">Fee Structure</a></li>
+                          <li><a target="_blank" href="https://knc.du.ac.in/uploads/admission/Admission-Committee details -2026-2027 (2).pdf">Help Desk/ Grievances</a></li>
+                          <li><a href="https://knc.du.ac.in/admission/pg-admission/courses-offered">PG Admissions</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Student Corner</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/student-corner/student-council">Student’s Council</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/mentor">Counselling and Mentoring</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/committee">Committee and Societies</a></li>
+                          <li><a target="_blank" href="https://knc.du.ac.in/uploads/student-corner/UNIVERSITY OF DELHI- Calendar 26-27.pdf">Academic Calendar (DU)</a></li>
+                          <li><a href="https://www.knc.mobiquel.com/smartprof/timetable/class-wise-tt.php">Time-Table</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/attendance">Attendance Rules</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/assessment">Internal Assessment/ Continuous Assessment</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/scholar">Scholarships/Awards and Fee Concession</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/anti-raging">Anti Ragging</a></li>
+                          <li><a href="https://knc.du.ac.in/student-corner/medical">Medical Facilities</a></li>
+                          <li><a href="https://knc.du.ac.in/admission/fee-structure">Fee Structure</a></li>
+                          <li><a href="https://knc.du.ac.in/alumnae/about">Alumnae Association</a></li>
+
+                        </ul>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Accreditation</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/accreditation/naac">NAAC</a></li>
+                          <li><a target="_blank" href="https://knc.irins.org/">IRINS</a></li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="https://knc.du.ac.in/nirf">NIRF</a>
+                      </li>
+                      <!-- <li class="nav-item dropdown ">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Infrastructure</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/">Submenu</a></li>
+                          <li><a href="https://knc.du.ac.in/">Submenu</a></li>
+                          <li><a href="https://knc.du.ac.in/">Submenu</a></li>
+                        </ul>
+                      </li> -->
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">IQAC</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/iqac/composition">Composition of IQAC</a></li>
+                          <li> <a href="https://knc.du.ac.in/iqac/objective">Objective</a> </li>
+                          <!-- <li> <a href="https://knc.du.ac.in/iqac/institutional-development-plan">Institutional Development Plan</a> </li> -->
+                          <li> <a href="https://knc.du.ac.in/iqac/action-plan">Action Plan</a> </li>
+                          <li> <a href="https://knc.du.ac.in/iqac/iqac-initiatives">IQAC Initiatives</a></li>
+                          <li> <a href="https://knc.du.ac.in/iqac/annual-report">Annual Reports</a> </li>
+                          <li> <a href="https://knc.du.ac.in/iqac/gallery">Gallery</a> </li>
+
+                          <!-- 
+
+                          <li><a href="">Paramarsh</a></li>
+
+                          <li>
+                            <a href="">
+                              Policies
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="">
+                              Code of Conduct
+                            </a>
+                          </li> -->
+
+
+
+                          <!-- <li>
+                            <a href="">
+                              Covid Initiatives
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="https://knc.du.ac.in/iqac/minutes-report">
+                              Minutes and Action Taken Report
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="https://knc.du.ac.in/iqac/feedback">
+                              Feedback
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="https://knc.du.ac.in/iqac/best-practice">
+                              Best Practices
+                            </a>
+                          </li>
+
+                          <li>
+                            <a href="https://knc.du.ac.in/iqac/institutional-distinctiveness">
+                              Institutional Distinctiveness
+                            </a>
+                          </li>
+ -->
+                        </ul>
+
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">NEP 2020</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="https://knc.du.ac.in/nep/structure">Structure</a></li>
+                          <li><a href="https://knc.du.ac.in/nep/syllabi">Syllabi</a></li>
+                          <li><a href="https://knc.du.ac.in/nep/notices">Notices</a></li>
+                        </ul>
+                      </li>
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Library</a>
+                        <ul class="dropdown-menu">
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=43">About the KNC Library</a></li>
+                          <li><a href="https://knc.du.ac.in/">Ask the librarian (QR scanner)</a></li>
+                          <li><a href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=11">Librarian</a></li>
+                          <li><a href="https://knc.du.ac.in/">Staff member</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=24">Library Layout</a></li>
+                          <li><a href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=21">Services</a></li>
+                          <li><a href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=22" target="_blank">Facilities</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=20">Collection </a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=37" target="_blank">Subject-wise E-Resources</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=20">E-Resources in Public Domain</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=1">List of Newspapers</a></li>
+
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=14">List of Magazines/Periodicals/Journals</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=25">Deatails of Weeded Out Books</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=19">Rules and Regulations</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=20">Rules for Circulation</a></li>
+                          <li><a target="_blank" href="https://crl.du.ac.in/subjectportal/">University e-Resources</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/Booksearch.aspx">WEB OPAC</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=45">N-LIST Registration Form</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=6">Membership Form</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/LinkDetails.aspx?id=46">DU E-library</a></li>
+
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/Aboutus.aspx">Digital Library</a></li>
+                          <li><a target="_blank" href="http://knclibrary.saraswatilib.com/Aboutus.aspx">E-Platforms for Learning</a></li>
+
+                        </ul>
+                      </li> -->
+
+                      <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">NAAC</a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#!">Submenu</a></li>
+                          <li><a href="#!">Submenu</a></li>
+                          <li><a href="#!">Submenu</a></li>
+                        </ul>
+                      </li> -->
+
+
+                    </ul>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header><style>
+    .calendar {
+        padding: 10px;
+        background: #F5F5F5;
+        border-radius: 10px;
+        border: solid 1px #DBD3D3;
+    }
+</style>
+
+<!-- <style>
+    .html-marquee {
+        position: relative;
+        max-height: 350px;
+        min-height: 350px;
+    }
+
+    .fc .fc-toolbar-title {
+        font-size: 18px;
+        margin: 0px;
+    }
+
+    .fc .fc-daygrid-day-top {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .fc .fc-button {
+        font-size: 13px;
+        padding: 3px 7px;
+    }
+
+    .calendar {
+        padding: 10px;
+        background: #F5F5F5;
+        border-radius: 10px;
+        border: solid 1px #DBD3D3;
+    }
+
+    .fc table {
+        font-size: 13px;
+    }
+
+    .fc-event.fc-event-start {
+        background: #117554 !important;
+        border: none !important;
+        text-transform: none !important;
+    }
+
+    .fc .fc-daygrid-day.fc-day-today {
+        background-color: rgb(193, 238, 223);
+    }
+</style> -->
+<div class="middle-container">
+    <div class="banner-section">
+        <div class="banner-caption-outer">
+            <div class="slider-caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <span><strong>ऋते ज्ञानान्न मुक्तिः</strong></span>
+                            <h1>Without knowledge, there's no salvation</h1>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever...</p> 
+                          <a href="" class="btn btn-primary">View Event</a>  -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="slider-caption">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="main-banner">
+            <div>
+                <div class="owl-carousel owl-theme main-slider">
+                                                                                                        <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/photo-2026-06-21-12-36-05_1_114300596.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/photo-2026-06-21-12-36-07_1_5648990999.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/knc-banner-(1)_5776919444.png" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/dsc_0332_7414190796.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/dsc_0735_6213050961.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/dsc_0775_2847275330.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                                                                <div class="item">
+
+                                    <div class="banner-col relative">
+                                        <a href="">
+                                            <img src="uploads/banner/full/photo-2026-06-21-12-36-04_4513700652.jpg" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                                                                        
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="banner-blocks-sec">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xxl-10 col-lg-12">
+                    <div class="row ban-block-col-outer g-0 banblockouter">
+
+                        <div class="col-md-3">
+                            <div class="ban-block-col">
+                                <h3><a href="https://knc.du.ac.in/virtualtour"><i class="las la-camera-retro"></i> Virtual Tour</a></h3>
+                                <!-- <p>Lorem lipsum is simply dummy text and the lorem lipsum is the text</p> -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ban-block-col">
+                                <h3><a href="https://knc.du.ac.in/events/past-events"><i class="las la-trophy"></i> Spotlight</a></h3>
+                                <!-- <p>Lorem lipsum is simply dummy text and the lorem lipsum is the text</p> -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ban-block-col">
+                                <h3><a href="https://www.knc.mobiquel.com/smartprof/timetable/class-wise-tt.php"><i class="las la-user-graduate"></i> Time Table
+</a></h3>
+                                <!-- <p>Lorem lipsum is simply dummy text and the lorem lipsum is the text</p> -->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="ban-block-col">
+                                <h3><a href="https://knc.du.ac.in/akademos"><i class="las la-bullhorn"></i> Akademos</a></h3>
+                                <!-- <p>Lorem lipsum is simply dummy text and the lorem lipsum is the text</p> -->
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="marki">
+            <marquee class="marquee" behavior="scroll" scrollamount="4" direction="left" onMouseOver="this.stop()" onMouseOut="this.start()">
+                                                                                 
+               <ul>
+                
+                 <li>
+                                                                                 <a href="https://knc.du.ac.in/file_uploads//attachment_file_0_6835234b7dd43d3463225f66a7d84537.pdf" target="_blank">
+                                                                                                        Registration for improvement in IA and CA marks for previous odd semester                                                </a>
+                                                                        </li>
+                                 <li>
+                                                                                 <a href="https://knc.du.ac.in/file_uploads//attachment_file_0_aba0a0aa8b6d2499ed0411895af90f92.pdf" target="_blank">
+                                                                                                        CFP: Two-Day International Conference titled 'The Posthuman Re-Turns: Literature, Culture and the Futures of Being'                                                </a>
+                                                                        </li>
+                                 <li>
+                                                                                 <a href="https://knc.du.ac.in/file_uploads//attachment_file_0_d6dce3de38cb4a353041c5003eb61bcb.pdf" target="_blank">
+                                                                                                        Standing Together in Times of Need: Support for Students Affected by the Satya Niketan Building Collapse                                                </a>
+                                                                        </li>
+                                 <li>
+                                                                                 <a href="https://knc.du.ac.in/file_uploads//attachment_file_0_7c61b1211614856a4b6632e9e9844a8f.pdf" target="_blank">
+                                                                                                        Extension of the last date for admission to the French Language Certificate Course/French Language Courses for 2026–27                                                </a>
+                                                                        </li>
+                                                                                             </ul>
+            </marquee>
+        
+    </div>
+    <div class="knc-section paddTB70">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-4 d-flex justify-content-end pe-4 mb-4 mb-md-0"> <img src="https://knc.du.ac.in/assets/front/images/knchomeimage3.jpg"></div>
+                <div class="col-md-7 d-flex flex-column justify-content-center align-items-center ">
+                    <div class="section-title mb-0">
+                        <h2>Kamala Nehru College</h2>
+                        <span class="section-title-description text-justify ">
+                            <p>Smt. Kamala Nehru was a flame that flickered briefly during the raging storm of the freedom movement in India but left the imprints for generations to follow. Her contribution as an individual is not known to everyone. During the freedom struggle, she braved lathi-charges, organised processions, addressed meetings and led picketing of liquor and foreign cloth shops. She had to languish in the prison for days for the cause of India’s independence. Her personality had a major influence on her husband Jawaharlal Nehru and she stood by him in his determination to plunge into the movement started by Mahatma Gandhi so that India could be free from the clutches of the British rule.</p>
+                            <p>While her husband was sent to the prison for days and months, Kamala Nehru put all her energies into social work. To begin with, she instituted a hospital in Swaraj Bhawan (Nehru’s family mansion) to treat freedom fighters and others wounded due to severe lathi charges. She persuaded women to come out of their homes and join the freedom struggle movement. Her determination for the empowerment of women pushed her to work for the education of women and encourage them to get rid of the old custom of purdah which was a prevalent practice in Rajasthan and other parts of North India at that time. She represented the modern woman with a free will at a time when women were not allowed in public places.</p>
+                        </span>
+                        <p class="mt-2"><a href="https://knc.du.ac.in/about/history" class="readmore-custom">Read More <i class="fas fa-arrow-circle-right"></i></a></p>
+                        <!-- <div class="customlink-outer w-50 mt-4 d-flex flex-row justify-content-around">
+                            <div class="customlink-col w-100 me-2">
+                                <div class="customlinktop">
+                                    <p>College Achievments</p>
+                                    <a href="about/vission-mission" class="readmore-custom">
+                                        View
+                                        <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="customlink-col w-100 ms-2">
+                                <div class="customlinktop">
+                                    <p>Campus Tour</p>
+                                    <a href="#!" class="readmore-custom">
+                                        View
+                                        <i class="fas fa-arrow-circle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="princiipaldesk-secton clone paddTB70">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="row princ-row">
+                        <div class="col-md-6 d-flex flex-column justify-content-center">
+                            <div class="section-title">
+                                <h2 class="text-white">Announcements</h2>
+                            </div>
+                            <div class="btn-inline-tabs justify-content-start">
+                                <ul>
+                                    <li>
+                                        <a href="#!" class="nav-link active" data-target="#gen">General</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="nav-link" data-target="#stu">Student's</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" class="nav-link" data-target="#staff">Staff</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12 event-slide-row pe-5">
+                                <div class="custom-tab-content active" id="gen">
+                                    <div class="marquee-col">
+                                        <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                                                                                            <ul>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                15                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Sanskrit_Hons_pdf_20261012_163256_0000.pdf">
+                                                                शैक्षिक-दिवसः अन्तर्महाविद्यालयीना श्लोकावृत्तिप्रतियोगिता च                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                14                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/1000165498.jpg">
+                                                                Speaker\'s Session on Consumer Rights by Awaken - The Consumer Club                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                09                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Adobe_Scan_09_Oct_2026_(1).pdf">
+                                                                Opening of financial bids: Disaster Management Plan of College                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                09                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/10003004431.jpg">
+                                                                InDesign Workshop on Print Production by the Journalism department                                                                                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                                                                    </marquee>
+                                    </div>
+                                    <a href="https://knc.du.ac.in/notice/general" class="btn btn-secondary">View All</a>
+                                    <a href="https://knc.du.ac.in/notices/KNC-old/knc-notice" class="btn btn-secondary">KNC Archive</a>
+
+                                </div>
+                                <div class="custom-tab-content" id="stu">
+                                    <div class="marquee-col">
+                                        <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                                                                                            <ul>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                15                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Sanskrit_Hons_pdf_20261012_163256_0000.pdf">
+                                                                शैक्षिक-दिवसः अन्तर्महाविद्यालयीना श्लोकावृत्तिप्रतियोगिता च                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                14                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/1000165498.jpg">
+                                                                Speaker\'s Session on Consumer Rights by Awaken - The Consumer Club                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                13                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/IMG-20261013-WA0014.jpg">
+                                                                Fee Concession Notice 2026-2027                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                10                                                                <span>Oct 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/1000099130.jpg">
+                                                                Field trip to Dr. Ambedkar National Memorial                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                            
+                                        </marquee>
+                                    </div>
+                                    <a href="https://knc.du.ac.in/notice/students" class="btn btn-secondary">View All</a>
+                                    <a href="https://knc.du.ac.in/notices/KNC-old/knc-notice" class="btn btn-secondary">KNC Archive</a>
+
+                                </div>
+                                <div class="custom-tab-content" id="staff">
+                                    <div class="marquee-col">
+                                        <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();">
+                                                                                            <ul>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                24                                                                <span>Sep 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Adobe_Scan_22_Sept_2026.pdf">
+                                                                Shortlisted candidates for ICSSR Project                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                17                                                                <span>Sep 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Coach.pdf">
+                                                                NOTICE FOR APPOINTMENT OF COACH ON PART TIME BASIS                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                12                                                                <span>Sep 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/PHOTO-2026-09-12-14-47-11.jpg">
+                                                                Second Ahilyabai Holkar Annual Lecture                                                                                                                                    <img src="https://knc.du.ac.in/assets/front/images/new.gif" alt="New">
+                                                                                                                            </a>
+                                                        </li>
+                                                                                                            <li>
+                                                            <div class="date">
+                                                                10                                                                <span>Sep 26</span>
+                                                            </div>
+                                                            <a target="_blank" href="https://knc.du.ac.in/uploads/focus/Adobe_Scan_10_Sept_2026.pdf">
+                                                                Applications invited for posts in ICSSR research project                                                                                                                            </a>
+                                                        </li>
+                                                                                                    </ul>
+                                            
+                                        </marquee>
+                                    </div>
+                                    <a href="https://knc.du.ac.in/notice/staff" class="btn btn-secondary">View All</a>
+                                    <a href="https://knc.du.ac.in/notices/KNC-old/knc-notice" class="btn btn-secondary">KNC Archive</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-6 mb-4 mb-lg-0">
+                            <div class="knccollege-outer clone">
+                                <div class="section-title">
+                                    <h2>Principal’s Desk</h2>
+                                </div>
+                                <div class="principal-img">
+                                    <img src="https://knc.du.ac.in//assets/front/images/kncprincipalmage.jpg" alt="" />
+
+                                </div>
+                                <div class="namelable">
+                                    Prof. (Dr.) Pavitra Bhardwaj<br>
+                                    <span>Principal</span>
+                                </div>
+                                <p>
+                                    Smt. Kamala Nehru was a flame that flickered briefly during the raging storm of the freedom movement in India but left the imprints for generations to follow. Her contribution as an individual is not known to everyone. During the freedom
+                                    struggle, she braved lathi-charges, organised processions, addressed meetings and led picketing of liquor and foreign cloth shops.
+                                </p>
+                                <a href="https://knc.du.ac.in/about/principal-desk" class="readmore-custom">
+                                    Read More
+                                    <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="knc-section paddTB70">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-xxl-10 col-xl-12">
+                    <div class="knc-col-outer-icon">
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/admission-icon.svg" alt="" />
+                            <a class="btn btn-primary" href="https://knc.du.ac.in/research-awards/award">Awards & Achievements </a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+
+
+
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/academicalender icon.png" alt="" />
+                            <a target="_blank" class="btn btn-primary" href="https://knc.du.ac.in/uploads/student-corner/UNIVERSITY OF DELHI- Calendar 26-27.pdf">Academic Calander </a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/timetable icon.png" alt="" />
+                            <a target="_blank" class="btn btn-primary" href="https://knc.du.ac.in/students-corner/socities/societiesdetails/6">Placements</a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/timetable.svg" alt="" />
+                            <a target="_blank" class="btn btn-primary" href="https://knc.du.ac.in/ncc">NCC</a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/timetable.svg" alt="" />
+                            <a class="btn btn-primary" href="https://knc.du.ac.in/nss">NSS</a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+
+
+
+                        <div class="knc-col">
+                            <img src="https://knc.du.ac.in//assets/front/images/magazine icon.png" alt="" />
+                            <a class="btn btn-primary" href="https://knc.du.ac.in/magazine">College Magazine</a>
+                            <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been ...</p> -->
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="achievments-sec clone paddTB70">
+        <div class="container">
+            <div class="row achievments-row">
+                <div class="col-md-6">
+                    <div class="section-title ">
+                        <h2>Press Release</h2>
+                    </div>
+                    <div class="pressrelcol">
+                        <div class="slide_box_one">
+                            <div class="owl-carousel owl-theme owl-slide-two pressGallery">
+                                                                        <div class="item">
+                                            <div class="banner-col relative">
+
+                                                
+                                                    <a href="https://knc.du.ac.in/uploads/press-release/image_44322480342203fe16f0491733e9cc43.jpg" class="lg-item">
+                                                        <img src="https://knc.du.ac.in/uploads/press-release/image_44322480342203fe16f0491733e9cc43.jpg" alt="">
+                                                    </a>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                                                            <div class="item">
+                                            <div class="banner-col relative">
+
+                                                
+                                                    <a href="https://knc.du.ac.in/uploads/press-release/image_e430e11d77c1f44b672f68c4a04b1396.jpg" class="lg-item">
+                                                        <img src="https://knc.du.ac.in/uploads/press-release/image_e430e11d77c1f44b672f68c4a04b1396.jpg" alt="">
+                                                    </a>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                                                            <div class="item">
+                                            <div class="banner-col relative">
+
+                                                
+                                                    <a href="https://knc.du.ac.in/uploads/press-release/file_fbea402bd865478c9356140e1ba14824.jpeg" class="lg-item">
+                                                        <img src="https://knc.du.ac.in/uploads/press-release/image_b99e95b32b3ee86b67bab6c4afc57d6c.jpeg" alt="">
+                                                    </a>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                                                            <div class="item">
+                                            <div class="banner-col relative">
+
+                                                
+                                                    <a href="https://knc.du.ac.in/uploads/press-release/image_3c6f528d5e24b6f77a7fc5dca929e5bd.jpeg" class="lg-item">
+                                                        <img src="https://knc.du.ac.in/uploads/press-release/image_3c6f528d5e24b6f77a7fc5dca929e5bd.jpeg" alt="">
+                                                    </a>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                                                            <div class="item">
+                                            <div class="banner-col relative">
+
+                                                
+                                                    <a href="https://knc.du.ac.in/uploads/press-release/image_86417b437345a158652593b56bd25e1f.jpg" class="lg-item">
+                                                        <img src="https://knc.du.ac.in/uploads/press-release/image_86417b437345a158652593b56bd25e1f.jpg" alt="">
+                                                    </a>
+
+                                                
+                                            </div>
+                                        </div>
+
+                                    
+
+                                <!-- <div class="item">
+                                    <div class="banner-col relative">
+                                        <img src="https://knc.du.ac.in//assets/front/images/pressrelease2.png" alt="" />
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="banner-col relative">
+                                        <img src="https://knc.du.ac.in//assets/front/images/pressrelease1.png" alt="" />
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="calendar-sec">
+                        <div class="section-title">
+                            <h2 class="text-white">Calendar</h2>
+                        </div>
+
+                        <div class="calendar">
+                            <div id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="collegecounter-sec  paddTB70">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-md-12">
+                    <div class="stack-numbers-row">
+                        <div class="number-item">
+                            <div class="number"><span step="1">15</span></div>
+                            <div class="number-text">Courses</div>
+                        </div>
+
+                        <div class="number-item">
+                            <div class="number"><span step="1">15</span></div>
+                            <div class="number-text">Departments</div>
+                        </div>
+
+                        <div class="number-item">
+                            <div class="number">
+                                <span step="50">4000</span>
+                                +
+                            </div>
+                            <div class="number-text">Students</div>
+                        </div>
+
+                        <div class="number-item">
+                            <div class="number">
+                                <span step="5">140</span>
+                                +
+                            </div>
+                            <div class="number-text">Faculities</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="calendarModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Event Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">X</button>
+                </div>
+
+                <div class="modal-body">
+                    <p id="startDay"></p>
+                    <p id="endDay"></p>
+                    <p id="startTime"></p>
+                    <p id="endTime"></p>
+
+                    <div id="image" class="image-block mb-0 d-flex justify-content-center"></div>
+
+                    <p class="event-description"></p>
+                </div>
+
+                <div class="modal-footer">
+                    <span class="event-link-btn"></span>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="alumni-section paddTB70 bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="text-white">Alumni Messages</h2>
+                        <span class="section-title-description text-white">Smt. Kamala Nehru was a flame that flickered briefly during the raging storm of the freedom movement in India but left the imprints for generations to follow.</span>
+                    </div>
+                </div>
+
+                <div class="col-12 event-slide-row">
+                    <div class="custom-tab-content active">
+                        <div class="owl-carousel owl-theme event-slide">
+                                                                                                <div class="item">
+                                        <div class="event-col">
+                                            <div class="event-thumb">
+                                                <img src="https://knc.du.ac.in/uploads/distinguished-alumnae/image_377c3851d34c9d911ffe6d37706fe1fc.jpg" alt="" />
+                                                <div class="event-cap">
+                                                    <span class="event-cap-title">Anubha Bhonsle</span>
+                                                    <span class="event-cap-cont">Executive News Editor <br> CNN-News 18</span>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="event-conent">
+                                                <span class="event-date"><span>Anubha Bhonsle</span></span>
+                                                <h3>Executive News Editor <br> CNN-News 18 </h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                                                    <div class="item">
+                                        <div class="event-col">
+                                            <div class="event-thumb">
+                                                <img src="https://knc.du.ac.in/uploads/distinguished-alumnae/image_62efa78d6a7c2754de1946c6db14ea8a.jpg" alt="" />
+                                                <div class="event-cap">
+                                                    <span class="event-cap-title">Mereseni</span>
+                                                    <span class="event-cap-cont">Information Officer <br> Ministry of Foreign Affairs, The Republic of Fiji</span>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="event-conent">
+                                                <span class="event-date"><span>Mereseni</span></span>
+                                                <h3>Information Officer <br> Ministry of Foreign Affairs, The Republic of Fiji </h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                                                    <div class="item">
+                                        <div class="event-col">
+                                            <div class="event-thumb">
+                                                <img src="https://knc.du.ac.in/uploads/distinguished-alumnae/image_3348bb6d0cad87f39e12056893f54494.jpg" alt="" />
+                                                <div class="event-cap">
+                                                    <span class="event-cap-title">Natasha Jog</span>
+                                                    <span class="event-cap-cont">Journalist <br> NDTV</span>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="event-conent">
+                                                <span class="event-date"><span>Natasha Jog</span></span>
+                                                <h3>Journalist <br> NDTV </h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                                                    <div class="item">
+                                        <div class="event-col">
+                                            <div class="event-thumb">
+                                                <img src="https://knc.du.ac.in/uploads/distinguished-alumnae/image_1a599b97f818835974999723f3d2e223.jpg" alt="" />
+                                                <div class="event-cap">
+                                                    <span class="event-cap-title">Molly Gambhir</span>
+                                                    <span class="event-cap-cont">Anchor and Correspondent <br> World is One News</span>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="event-conent">
+                                                <span class="event-date"><span>Molly Gambhir</span></span>
+                                                <h3>Anchor and Correspondent <br> World is One News </h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                                                    <div class="item">
+                                        <div class="event-col">
+                                            <div class="event-thumb">
+                                                <img src="https://knc.du.ac.in/uploads/distinguished-alumnae/image_7a6f489300eedd4efcbb3e6793253291.jpg" alt="" />
+                                                <div class="event-cap">
+                                                    <span class="event-cap-title">Nandika Chand</span>
+                                                    <span class="event-cap-cont">Journalist <br> The Policy Times</span>
+
+                                                    
+
+                                                </div>
+                                            </div>
+                                            <div class="event-conent">
+                                                <span class="event-date"><span>Nandika Chand</span></span>
+                                                <h3>Journalist <br> The Policy Times </h3>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                                            
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="btn-inline d-flex justify-content-center">
+                        <a href="https://knc.du.ac.in/alumnae/alumni" class="btn btn-secondary">View All Alumni</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="media-gallery-section paddTB70">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2>Media Gallery</h2>
+                        <span>Smt. Kamala Nehru was a flame that flickered briefly during the raging storm of the freedom movement in India but left the imprints for generations to follow.movement in India.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                
+                    
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="gallery-col">
+                                <img src="https://knc.du.ac.in/uploads/albumImage/64/original/8bf86a1b5d476b19118bd9a0f910828c.jpg"
+                                    alt="" class="img-fluid">
+
+                                <a href="https://knc.du.ac.in/gallery/64/view"></a>
+
+                                <span>राजभाषा कार्यान्वयन समिति द्वारा आयोजित हिंदी माह</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="gallery-col">
+                                <img src="https://knc.du.ac.in/uploads/albumImage/62/original/cd5e2d86258e835d3de5478e6646f487.jpeg"
+                                    alt="" class="img-fluid">
+
+                                <a href="https://knc.du.ac.in/gallery/62/view"></a>
+
+                                <span>Freshers' Orientation 2026-27</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="col-md-4 col-sm-6 mb-4">
+                            <div class="gallery-col">
+                                <img src="https://knc.du.ac.in/uploads/albumImage/60/original/c13d70e5afb06f6d66521fbd4d4f463a.jpg"
+                                    alt="" class="img-fluid">
+
+                                <a href="https://knc.du.ac.in/gallery/60/view"></a>
+
+                                <span>International Day of Yoga on 21-06-2026, Organised by Department of Physical Education</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="col-md-6 col-sm-6 mb-4">
+                            <div class="gallery-col">
+                                <img src="https://knc.du.ac.in/uploads/albumImage/59/original/11f8a4f8334f39ec4c30e94527225172.jpg"
+                                    alt="" class="img-fluid">
+
+                                <a href="https://knc.du.ac.in/gallery/59/view"></a>
+
+                                <span>Alumnae Meet</span>
+                            </div>
+                        </div>
+
+                    
+                        <div class="col-md-6 col-sm-6 mb-4">
+                            <div class="gallery-col">
+                                <img src="https://knc.du.ac.in/uploads/albumImage/58/original/5f2a7c53a0d15ff3f95621952fb1e577.JPG"
+                                    alt="" class="img-fluid">
+
+                                <a href="https://knc.du.ac.in/gallery/58/view"></a>
+
+                                <span>19th Gorowara Annual Memorial Public Lecture held on 6th April 2026</span>
+                            </div>
+                        </div>
+
+                    
+                            </div>
+
+
+                            
+                <div class="col-12">
+                    <div class="btn-inline d-flex justify-content-center">
+                        <a href="https://knc.du.ac.in/gallery/64/view" class="btn btn-primary">
+                            View All Albums
+                        </a>
+                    </div>
+                </div>
+
+            
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Autoload modal for homepage -->
+<div class="modal fade custom-modal" id="autoloadModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" style="max-width: 500px;">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">X</button>
+                <div> <a href="https://knc.du.ac.in/uploads/homepopup/International_compressed.pdf" target="_blank">
+
+                        <img src="https://knc.du.ac.in//uploads/homepopup/International_page-0001.jpg" alt="">
+                    </a></div>
+                <div class="mt-3">
+                    <p></p>
+                    <a href="https://knc.du.ac.in/uploads/homepopup/Conference Booklet- KNC.pdf" target="_blank" class="link-blue mt-3">View Conference Booklet KNC</a>
+                </div>
+
+
+                <!-- <div class="ratio ratio-16x9" >
+                        <video controls poster="">
+                            <source src="" type="video/mp4">
+                            Sorry, your browser does not support embedded videos.
+                        </video>
+                    </div> -->
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    // Automatically show modal when page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        var myModal = new bootstrap.Modal(document.getElementById('autoloadModal'));
+
+        // 🔹 To temporarily disable modal on page load, comment the below line
+        //myModal.show();
+
+        // Optional: Store in localStorage when closed so it doesn't show again
+        document.getElementById('autoloadModal').addEventListener('hidden.bs.modal', function() {
+            localStorage.setItem('modalShown', 'true');
+        });
+
+        // Optional: Check if modal was already shown.
+        if (localStorage.getItem('modalShown')) {
+            myModal.hide();
+        }
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/6.1.9/index.global.js" integrity="sha512-lU5sd0e7f59Jia30P5oEI5zC3BzVJ4ao+xRA70IIJ2UBzek4PCkPk+MTLIYwXTXGErOqjJ/rLdB3gLK0E5hD0w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="http://www.datejs.com/build/date.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/css/lightgallery.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+        $('.pressGallery').lightGallery({
+            selector: '.lg-item',
+            hash: false,
+            download: true,
+            counter: false,
+            thumbnail: true,
+            zoom: true,
+            share: false
+        });
+
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var calendarEl = document.getElementById('calendar');
+
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+
+            initialDate: '2026-10-16',
+            initialView: 'dayGridMonth',
+            nowIndicator: true,
+
+            headerToolbar: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'dayGridMonth,listWeek'
+            },
+
+            buttonText: {
+                listWeek: 'Week',
+                dayGridMonth: 'Month'
+            },
+
+            events: [
+                            ],
+
+            eventClick: function(info) {
+
+                // Title
+                $(".modal-title").text(info.event.title);
+
+                // Description
+                $(".event-description").text(info.event.extendedProps.description || '');
+
+                // Format Dates
+                let start = new Date(info.event.extendedProps.startDate).toLocaleDateString();
+                let end = info.event.extendedProps.endDate ?
+                    new Date(info.event.extendedProps.endDate).toLocaleDateString() :
+                    '';
+
+                $("#startDay").html('<strong>Start Date:</strong> ' + start);
+                $("#endDay").html(end ? '<strong>End Date:</strong> ' + end : '');
+
+                // Time
+                $("#startTime").html(
+                    info.event.extendedProps.startTime ?
+                    '<strong>Start Time:</strong> ' + info.event.extendedProps.startTime :
+                    ''
+                );
+
+                $("#endTime").html(
+                    info.event.extendedProps.endTime ?
+                    '<strong>End Time:</strong> ' + info.event.extendedProps.endTime :
+                    ''
+                );
+
+                // Image (FIXED)
+                if (info.event.extendedProps.imageurl && info.event.extendedProps.imageurl !== '') {
+                    $("#image").html(
+                        '<img class="img-fluid rounded" style="max-height:400px;" src="' +
+                        info.event.extendedProps.imageurl + '">'
+                    );
+                } else {
+                    $("#image").html('<p class="text-muted">No image available</p>');
+                }
+
+                // Button BEFORE close
+                if (info.event.extendedProps.link && info.event.extendedProps.link !== '') {
+                    $(".event-link-btn").html(
+                        '<a target="_blank" class="btn btn-primary me-2" href="' +
+                        info.event.extendedProps.link + '">View</a>'
+                    );
+                } else {
+                    $(".event-link-btn").html('');
+                }
+
+                // Show Modal
+                $("#calendarModal").modal("show");
+            }
+
+        });
+
+        calendar.render();
+    });
+</script>
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+
+            initialDate: '2026-10-16',
+            initialView: 'dayGridMonth',
+            nowIndicator: true,
+            headerToolbar: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'dayGridMonth,listWeek',
+
+            },
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'listWeek,dayGridMonth'
+            },
+            defaultView: 'dayGridMonth',
+            buttonText: {
+                listWeek: 'Week',
+                dayGridMonth: 'Month',
+                //   today: 'Today'
+            },
+
+            events: [
+                            ],
+
+
+            eventClick: function(info) {
+
+                $(".modal-title").text(info.event.title);
+                $(".event-description").text(info.event.extendedProps.description || '');
+
+                // Image
+                if (info.event.extendedProps.imageurl) {
+                    $("#image").html(
+                        '<img class="img-fluid rounded" src="' + info.event.extendedProps.imageurl + '">'
+                    );
+                } else {
+                    $("#image").html('');
+                }
+
+                // Link
+                if (info.event.extendedProps.link) {
+                    $(".event-link").html(
+                        '<a target="_blank" class="btn btn-primary" href="' + info.event.extendedProps.link + '">View</a>'
+                    );
+                } else {
+                    $(".event-link").html('');
+                }
+
+                // Dates
+                $("#startDay").html('<strong>Start Date:</strong> ' + info.event.extendedProps.startDate);
+                $("#endDay").html(
+                    info.event.extendedProps.endDate ?
+                    '<strong>End Date:</strong> ' + info.event.extendedProps.endDate :
+                    ''
+                );
+
+                $("#calendarModal").modal("show");
+            }
+        });
+
+        calendar.render();
+    });
+</script> -->
+
+
+<footer>
+  <a href="#" class="scrollup" style="display: none"><i class="fas fa-chevron-up"></i></a>
+  <div class="footer-top">
+    <div class="location-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <ul>
+              <li>
+                <div class="loc-col">
+                  <div class="loc-icon"><img src="https://knc.du.ac.in//assets/front/images/location-icon.svg" alt="" /></div>
+                  <div class="loc-cont">
+                    <h4>Location</h4>
+                    <p>Kamala Nehru College , University of Delhi </p>
+                    <p> August Kranti Marg , New Delhi- 110049</p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="loc-col">
+                  <div class="loc-icon"><img src="https://knc.du.ac.in//assets/front/images/email-icon.svg" alt="" /></div>
+                  <div class="loc-cont">
+                    <h4>Email</h4>
+
+                    <p><a href="mailto:office@knc.du.ac.in">office@knc.du.ac.in</a></p>
+                    <!-- <p><a href="mailto:http://www.knc.du.ac.in">http://www.knc.du.ac.in</a></p> -->
+
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="loc-col">
+                  <div class="loc-icon"><img src="https://knc.du.ac.in//assets/front/images/phone-icon.svg" alt="" /></div>
+                  <div class="loc-cont">
+                    <h4>Phone No.</h4>
+                    <p>+91-11-26494881</p>
+                    <p>+91-11-26495964</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row footer-widget-row">
+        <div class="col-lg-3">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://knc.du.ac.in/tenders">Tenders</a></li>
+            <li><a href="https://knc.du.ac.in/rti">RTI</a></li>
+            <li><a href="https://knc.du.ac.in/icc-grivence">ICC & Grievance Cell</a></li>
+            <li><a href="https://knc.du.ac.in/student-corner/mentor">Counselling</a></li>
+            <li><a href="https://knc.du.ac.in/proctorialboard">Proctorial Board</a></li>
+            <li><a href="https://knc.du.ac.in/facilities">Facilities</a></li>
+
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3>Explore</h3>
+          <ul class="two-col">
+
+            <li><a href="https://knc.du.ac.in/magazine">Magazine</a></li>
+            <li><a href="https://knc.du.ac.in/forms">Forms</a></li>
+            <!-- <li><a href="#!">Admission : Archive</a></li> -->
+            <li><a target="_blank" href="https://knc.du.ac.in/uploads/student-corner/Att%20IACA.pdf">Attendance</a></li>
+            <li><a href="https://knc.du.ac.in/uploads/09072025_holiday_knc.pdf" target="_blank">Holidays</a></li>
+            <li><a href="https://knc.du.ac.in/uploads/Academic%20Calender.jpg" target="_blank">Academic Calendar</a></li>
+            <li><a href="https://knc.du.ac.in/annual-report">Annual Report</a></li>
+            <li><a href="https://knc.du.ac.in/administration/seniority-list">Seniority List</a></li>
+            <li><a href="https://knc.du.ac.in/student-corner/scholar">Scholarship &amp; Fee Concession</a></li>
+            <li><a href="https://knc.du.ac.in/recruitment">Recruitment</a></li>
+            <li><a href="https://knc.du.ac.in/student-union">Students' Union</a></li>
+            <li><a href="https://knc.du.ac.in/ncc">NCC</a></li>
+            <li><a href="https://knc.du.ac.in/nss">NSS</a></li>
+            <li><a href="https://knc.du.ac.in/nso">NSO</a></li>
+            <li><a href="https://knc.du.ac.in/examination-archieve">Examination Archive</a></li>
+
+          </ul>
+        </div>
+        <div class="col-lg-5">
+          <h3>Google Map</h3>
+          <div class="footer-map">
+          
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3496.357037003483!2d77.2141718!3d28.5560823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce26abe15c749%3A0xef3a70a01bb79361!2sKamala%20Nehru%20College!5e0!3m2!1sen!2sin!4v1739672520000!5m2!1sen!2sin"
+              width="100%"
+              height="200px"
+              style="border:0; border-radius: 10px;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+          </div>
+                    <div class="footer-visitor">
+            <p>Visitors:</p>
+            <ul class="vcounter">
+                                   <li>2</li>
+                            <li>5</li>
+                            <li>2</li>
+                            <li>0</li>
+                            <li>5</li>
+                            <li>6</li>
+                                  </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-btm">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <p>
+            Copyright © 2026 Kamala Nehru College. All rights reserved. Powered by
+            <a class="text-secondary" href="https://www.mobiquel.com/">Mobiquel</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay customnav" style="display:none;">
+    <a href="javascript:void(0)" style="display:none" class="closebtn">&times;</a>
+    <div class="overlay-content">
+      <div class="custom-search-center">
+        <div class="custom-autocomplete-outer">
+          <input type="search" id="site_searchElement" placeholder="Type to find relevant pages or content...">
+          <ul class="pushhSearchReult" style="display:none;">
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    /* The Overlay (background) */
+
+    .overlay {
+      height: 100%;
+      width: 100%;
+      position: fixed;
+      z-index: 99;
+      left: 0;
+      top: 0;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow-x: hidden;
+      transition: 0.5s;
+    }
+
+    .customnav {
+      display: none;
+    }
+
+    .customnav.searchOpen {
+      display: block;
+    }
+
+
+    /* Position the content inside the overlay */
+
+    .overlay-content {
+      position: relative;
+      top: 35%;
+      width: 100%;
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .custom-search-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .custom-autocomplete-outer {
+      width: 60%;
+    }
+
+    .custom-autocomplete-outer input {
+      background: transparent;
+      border: 2px solid #fff;
+      border-radius: 45px;
+      height: 60px;
+      width: 100%;
+      color: #fff;
+      padding: 0 30px;
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    .overlay .closebtn {
+      position: absolute;
+      top: 20px;
+      right: 15px;
+      font-size: 40px;
+      color: #fff;
+    }
+
+    .custom-autocomplete-outer ul {
+      border: 1px solid #ddd;
+      width: 50%;
+      margin: 0 auto;
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .custom-autocomplete-outer ul li {}
+
+    .custom-autocomplete-outer ul li a {
+      color: #fff;
+      font-size: 14px;
+      border-bottom: 1px solid #ddd;
+      display: block;
+      padding: 9px 0;
+      line-height: normal;
+    }
+
+    .custom-autocomplete-outer ul li a:hover {
+      color: var(--secondary);
+    }
+
+    .custom-autocomplete-outer ul li:last-child a {
+      border-bottom: none;
+    }
+  </style>
+</footer>
+<!-- Floting icon -->
+<div class="floating-icons">
+  <a href="https://www.facebook.com/people/Kamala-Nehru-College/100063733788470/#" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/kamalanehrucollege/?igshid=d3giza8b3lx4" target="_blank" class="ins"><i class="fab fa-instagram"></i></a>
+  <a href="https://x.com/CollegeKamala" target="_blank" class="tw"><i class="fa-brands fa-x-twitter"></i></a>
+  <a href="https://www.youtube.com/@kamalanehrucollege" target="_blank" class="you"><i class="fab fa-youtube"></i></a>
+  <!-- <a href="#!" target="_blank" class="bg-primary"><i class="fa-solid fa-magnifying-glass"></i></a> -->
+  <!-- <a href="javascript:void(0)" class="bg-primary"><i class="fa-solid fa-magnifying-glass"></i></a> -->
+</div>
+<!-- Subscribe floating icon -->
+<div class="accesibility">
+  <a href="#!" aria-label="Notification" class="bell-notification"><i class="fa-solid fa-bell"></i></a>
+</div>
+<!-- <script src="/assets/front/js/bootstrap.min.js"></script> -->
+<script src="https://knc.du.ac.in//assets/front/js/bootstrap.bundle.min.js"></script>
+<script src="https://knc.du.ac.in//assets/front/js/owl.carousel.min.js"></script>
+<script src="https://knc.du.ac.in//assets/front/js/custom.js"></script>
+<script>
+  var $ajaxForSearch;
+  $(document).ready(function() {
+
+    function getDataViaAjax(searchQuery) {
+      $ajaxForSearch = $.ajax({
+        type: "POST",
+        url: 'https://knc.du.ac.in/search-result',
+        dataType: "html",
+        cache: false,
+        data: {
+          q: searchQuery
+        },
+        beforeSend: function(xhr) {
+          if ($ajaxForSearch != null) {
+            $ajaxForSearch.abort();
+          }
+        },
+        success: function(msg) {
+
+          $(".pushhSearchReult").show();
+          $(".pushhSearchReult").html(msg);
+
+        },
+        error: function(xhr) {
+
+        }
+      });
+    }
+    $(".searchicon").click(function() {
+      $(".pushhSearchReult").hide();
+      $(".customnav").addClass("searchOpen");
+      $("body").css("position", "fixed");
+      $(".customnav").find('input').val('');
+      $(".customnav").show();
+      $(".closebtn").show();
+      $(".customnav").find('ul').html('').hide();
+      // getDataViaAjax('');
+    });
+    $(".closebtn").click(function() {
+      $(".customnav").removeClass("searchOpen");
+      $("body").css("position", "inherit");
+      $(".customnav").hide();
+      $(".closebtn").hide();
+    });
+
+
+    $('#site_searchElement').on("input", function() {
+      var searchQuery = this.value;
+      console.log(searchQuery);
+      getDataViaAjax(searchQuery);
+    });
+
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    // Select all p tags
+    const pTags = document.querySelectorAll('p');
+
+    pTags.forEach(p => {
+      // Check if the p tag is empty or contains only whitespace
+      if (p.textContent.trim() === '') {
+        p.remove();
+      }
+    });
+  });
+</script>
+</body>
+
+</html>

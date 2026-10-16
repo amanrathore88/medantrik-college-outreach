@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css" integrity="sha512-ioRJH7yXnyX+7fXTQEKPULWkMn3CqMcapK0NNtCN8q//sW7ZeVFcbMJ9RvX99TwDg6P8rAH2IqUSt2TLab4Xmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <script src="https://aditi.du.ac.in/wp-content/themes/aditi/js/jquery/3.4.1/jquery.min.js"></script>
+      <!--<link rel="stylesheet" href="https://aditi.du.ac.in/wp-content/themes/aditi/css/font-awesome.min.css">-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Indie+Flower&amp;display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://aditi.du.ac.in/wp-content/themes/aditi/css/bootstrap.min.css">
+      <script src="https://aditi.du.ac.in/wp-content/themes/aditi/js/dataTables.bootstrap.min.js"></script> 
+      <link href="https://aditi.du.ac.in/wp-content/themes/aditi/css/slick-slider.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://aditi.du.ac.in/wp-content/themes/aditi/css/style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+      <script src="https://aditi.du.ac.in/wp-content/themes/aditi/https://aditi.du.ac.in/wp-content/themes/aditi/js/jquery.dataTables.min.js"></script>  
+      <script src="https://aditi.du.ac.in/wp-content/themes/aditi/js/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+         $(document).ready(function() {
+             $('#example').DataTable( {
+                 "lengthMenu": [[10, 15, 25, 50, 100, -1], [10, 15, 25, 50, 100, "All"]]
+             } );
+         } );
+      </script>
+      
+     <style>
+     body{
+         background: #fff!important;
+     }
+        html body{font-family: "Poppins", sans-serif!important;}
+        .dropdown:hover,
+        .navigation li:hover{
+            background: #d40c0c;
+        }
+        .navigation li{padding: 6px 0;}
+        .dropdown:hover .dropdown-menu{
+            display: block!important;
+        }
+        .sub-dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 0!important;
+            background: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            padding: 6px 0;
+            list-style: none;
+            margin: 0;
+            border-radius: 5px;
+        }
+        .sub-dropdown:hover .sub-dropdown-menu{
+            display: block;
+        }
+        .sub-dropdown-menu li {
+            padding: 10px 0;
+        }
+        .sub-dropdown-menu li a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0px 20px;
+        }
+        .sub-dropdown a {
+            display: flex!important;
+            justify-content: space-between;
+            align-items: center;
+        }
+         /* Remove the navbar's default margin-bottom and rounded borders */
+         .wpb_wrapper aside.widget_nav_menu ul li a {
+         color: white;
+         border-bottom: 1px solid #666666 !important;
+         }
+         .wpb_wrapper aside.widget_nav_menu ul{
+         border-bottom: 1px solid #666666 !important;
+         }
+         .post-navigation {
+         display:none;
+         }
+         .toplogin {
+         margin-bottom: 8px;
+         margin-top: 8px;
+         }
+         .navbar {
+         margin-bottom: 0;
+         border-radius: 0;
+         }
+         /* Add a gray background color and some padding to the footer */
+         footer {
+         background-color: #fff;
+         }
+         .carousel-inner img {
+         width: 100%;
+         margin: auto;
+         /*            min-height: 200px;*/
+         }
+         .wpb_wrapper aside.widget_nav_menu ul li {
+         padding: 4px 5px;
+         list-style-type: disc;
+         color: #fff;
+         }
+         .wpb_wrapper aside.widget_nav_menu ul {
+         list-style-type: disc !important;
+         padding-left: 31px !important;
+         padding-top: 16px !important;
+         padding-bottom: 5px !important;
+         }
+         /* Hide the carousel text when the screen is less than 600 pixels wide */
+         @media (max-width: 600px) {
+         .carousel-caption {
+         display: none;
+         }
+         }
+         @media (max-width: 768px){
+         form.navbar-form.navbar-left{
+         float:left;
+         }
+         .toplogin{float:right;}
+         .logo_responsive{
+         max-width:72px !important;
+         margin-top: 8px;
+         }
+         .logo_name {
+         max-width:76%;
+         float:left;
+         }
+         .logo_name span {
+         font-size: 10px !important;
+         }
+         .m_p0{padding:0;}
+         .university{margin-bottom:0 !important;}
+         .nav_logo {
+         padding: 5px 0px;
+         }
+         }
+         .wpb_wrapper aside.widget_nav_menu ul li ul,  .wpb_wrapper aside.widget_nav_menu ul li ul li:last-child{
+         padding-bottom:0 !important;
+         }
+         .my-nav{
+         background:#eee;
+         }
+         #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
+         padding-left:2px!important;
+         }
+         .my-nav .myn{
+         padding:0 !important;
+         margin:0 !important;
+         }
+         .my-nav li{
+         list-style:none !important;
+         border-bottom:1px solid #ddd !important;
+         }
+         .my-nav li:last-child{
+         border-bottom:none;
+         }
+         .my-nav li a{
+         font-size:14px !important;
+         color:#000 !important;
+         position:relative;
+         z-index:99999 !important;
+         }
+         .my-nav .dropdown-menu li{
+         background:#800000;
+         }
+         .my-nav .dropdown-menu a{
+         color:#fff !important;
+         }
+         .navbar-toggle{
+         background:#800000 !important;
+         }
+         .accordion_head {
+         background-color: #800000;
+         color: white;
+         cursor: pointer;
+         font-family: arial;
+         font-size: 14px;
+         margin: 0 0 1px 0;
+         padding: 7px 11px;
+         font-weight: bold;
+         }
+         .accordion_body {
+         background: #eee;
+         }
+         .accordion_body p {
+         padding: 18px 5px;
+         margin: 0px;
+         }
+         .plusminus {
+         float: right;
+         }
+         .myna{
+         margin:0;
+         padding:0;
+         }
+         .myna li{
+         padding:7px 10px;
+         }
+         .bsac_right img {width:82%;}
+         .bsac_rights img {width:30%;}
+         @media only screen and (max-width: 600px) and (min-width: 320px) {     
+         /*.bsac_right img{     
+         float: right;
+         max-width: 183px!important;
+         max-height: 87px!important;
+         padding: 18px 0px;
+         position: relative;
+         right: 50px;
+         top: -17px;
+         }*/
+         }
+         @media only screen and (min-width: 393px)  {
+         }
+         span.hindiLogo {
+    display: block;
+    margin-bottom: 0;
+    font-size: 24px;
+    color: #ad0303;
+    font-weight: 600;
+}
+
+li.sub-dropdown {
+    position: relative;
+}
+
+.navigation a:hover{
+    
+    color:white!important;
+   text-decoration: none!important;
+}
+.menu-image{
+    width: 33%!important;
+    height: 64%!important;
+    max-width: 64px!important;
+    margin-left: -17px;
+}
+
+      </style>
+      <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+      <script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+      
+      <title>Home - Aditi Mahavidyalaya</title>
+      <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+      <link rel="canonical" href="index.html" />
+      <meta name="twitter:card" content="summary_large_image" />
+     
+      <!-- / Yoast SEO plugin. -->
+      <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+      
+      <link href='https://fonts.gstatic.com/' crossorigin rel='preconnect' />
+  
+      <script type="text/javascript">
+         window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bcas.du.ac.in\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.10"}};
+         /*! This file is auto-generated */
+         !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+      </script>
+      <style type="text/css">
+         img.wp-smiley,
+         img.emoji {
+         display: inline !important;
+         border: none !important;
+         box-shadow: none !important;
+         height: 1em !important;
+         width: 1em !important;
+         margin: 0 .07em !important;
+         vertical-align: -0.1em !important;
+         background: none !important;
+         padding: 0 !important;
+         }
+      </style>
+       <link rel='stylesheet' id='eo-leaflet.js-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/leaflet.min2fca.css' type='text/css' media='all' />
+      <style id='eo-leaflet.js-inline-css' type='text/css'>
+         .leaflet-popup-close-button{box-shadow:none!important;}
+      </style>
+      <link rel='stylesheet' id='wp-block-library-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/style.min923e.css' type='text/css' media='all' />
+      <!-- <link rel='stylesheet' id='rs-plugin-settings-css'  href='wp-content/plugins/revslider/public/assets/https://aditi.du.ac.in/wp-content/themes/aditi/css/settingsf1f1.css?ver=5.4.7.3' type='text/css' media='all' /> -->
+      <style id='rs-plugin-settings-inline-css' type='text/css'>
+         #rs-demo-id {}
+      </style>
+
+
+      <link rel='stylesheet' id='wpsm_tabs_r-font-awesome-front-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/font-awesome.min923e.css?ver=5.4.10' type='text/css' media='all' />
+      <link rel='stylesheet' id='wpsm_tabs_r_bootstrap-front-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/bootstrap-front923e.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='wpsm_tabs_r_animate-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/animate923e.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='megamenu-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/style9a0e.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='dashicons-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/dashicons.min923e.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='twentyfifteen-fonts-css'  href='https://fonts.googleapis.com/css?family=Noto+Sans%3A400italic%2C700italic%2C400%2C700%7CNoto+Serif%3A400italic%2C700italic%2C400%2C700%7CInconsolata%3A400%2C700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+      <link rel='stylesheet' id='genericons-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/genericonscf1b.css' type='text/css' media='all' />
+      <link rel='stylesheet' id='twentyfifteen-style-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/style923e.css' type='text/css' media='all' />
+      
+      <link rel='stylesheet' id='bootstrap.min-css'  href='https://aditi.du.ac.in/wp-content/themes/aditi/css/bootstrap.min923e.html' type='text/css' media='all' />
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/bootstrap.min923e.html'></script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/jquery/jquery4a5f.js'></script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/jquery/jquery-migrate.min330a.js'></script>
+      
+      <!--<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>-->
+      <!--<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>-->
+      <!--[if lte IE 9]>
+      <link rel="stylesheet" type="text/css" href="https://bcas.du.ac.in/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen">
+      <![endif]-->
+      <meta name="generator" content="Powered by Slider Revolution 5.4.7.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+      <!--<link rel="icon" href="images/cropped-logo-1-32x32.png" sizes="32x32" />-->
+      <!--<link rel="icon" href="wp-content/uploads/2020/02/cropped-logo-1-192x192.png" sizes="192x192" />-->
+      <!--<link rel="apple-touch-icon" href="images/cropped-logo-1-180x180.png" />-->
+      <!--<meta name="msapplication-TileImage" content="images/cropped-logo-1-270x270.png" />-->
+      
+      <script type="text/javascript">function setREVStartSize(e){									
+         try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+         	if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+         }catch(d){console.log("Failure at Presize of Slider:"+d)}						
+         };
+      </script>
+      <style type="text/css" id="wp-custom-css">
+         .mega-study{
+            Font-size : 14px;
+            Colot : #fff;
+         Background : #ad0303 !important
+         }
+         .mega-oldwebsite {Font-size : 14px;
+            Colot : #fff;
+            Background : #ad0303 !important}
+         .navigation_nav{ z-index : 11;}
+         h4.blink {
+             color: #d40c0c;
+             font-size: 22px;
+         }
+         .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header{margin-right:0;}
+        @media only screen and (max-width: 600px) {
+            .navbar-default .navbar-nav>li>a {
+                padding: 10px 14px!important;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .dropdown .dropdown-menu {
+                width: 100%;
+            }
+            .navbar-nav {
+                padding: 7.5px 0 7.5px 15px;
+                margin: 0;
+            }
+            .navbar-form.navbar-left {
+                width: 73%;
+            }
+            .search {
+                width: 100%;
+                display: flex;
+            }
+            .search input {
+                width: 80%!important;
+            }
+            .navigation li {
+                padding: 0!important;
+                background: #d40c0c;
+                border-bottom: none!important;
+            }
+            .navigation li a{
+                padding: 10px 10px;
+                background: #d40c0c;
+                border-bottom: 1px solid #d93535;
+            }
+            .dropdown-menu {
+                position: relative;
+                border: none!important;
+                margin-bottom: 10px!important;
+            }
+            .dropdown .dropdown-menu li a{
+                display: flex!important;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                color: #000;
+                background: #fff!important;
+            }
+            .sub-dropdown-menu{
+                z-index: 999;
+                background: #fff;
+                width: 100%;
+                left: 0!important;
+            }
+        }
+        /*header*/
+        .top-header {
+    background: #fff;
+    padding: 12px 0;
+    border-bottom: 4px solid #0b3c7d;
+}
+
+/* FLEX ALIGNMENT */
+.header-left img,
+.header-right img {
+    max-height: 80px;
+    margin: 5px;
+}
+
+.college-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.college-logo {
+    max-height: 90px;
+    margin-right: 15px;
+}
+
+.college-text h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    color: #0b3c7d;
+}
+
+.college-text h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.college-text .university {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.college-text .naac {
+    font-size: 13px;
+    color: #444;
+}
+
+/* RESPONSIVE TUNING */
+@media (max-width: 768px) {
+    .college-wrap {
+        flex-direction: column;
+    }
+
+    .college-logo {
+        margin-bottom: 10px;
+    }
+
+    .college-text h1 {
+        font-size: 22px;
+    }
+}
+
+.college-text .university {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 4px;
+    color: #333;
+}
+.college-wrap.dual-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.college-logo {
+   max-height: 160px;
+}
+
+.college-text.hindi {
+    text-align: right;
+}
+.top-header .align-items-center.row{
+    align-items: center;
+    display: flex;
+}
+
+.college-text.english {
+    text-align: left;
+}
+
+.college-text h1 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    color: #0b3c7d;
+        font-family: fangsong !important;
+}
+
+.college-text h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.college-text .university {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 2px 0 0;
+}
+
+/* 📱 Mobile: stack cleanly */
+@media (max-width: 768px) {
+    .college-wrap.dual-text {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .college-text.hindi,
+    .college-text.english {
+        text-align: center;
+    }
+    .top-header .align-items-center.row{
+    align-items: center;
+    display: block !important;
+}
+}
+
+      </style>
+      <noscript>
+         <style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style>
+      </noscript>
+      <style type="text/css">/** Mega Menu CSS: fs **/</style>
+       <script>
+      function changeFontSize(target) { 
+        var demo = document.getElementById("mydiv1");
+        var computedStyle = window.getComputedStyle
+              ? getComputedStyle(demo) // Standards
+              : demo.currentStyle;     // Old IE
+        var fontSize;
+      
+        if (computedStyle) { // This will be true on nearly all browsers
+            fontSize = parseFloat(computedStyle && computedStyle.fontSize);
+      	  
+            if (target == document.getElementById("plus")) {
+              fontSize += 2;
+            } else if (target == document.getElementById("minus")) { 
+              fontSize -= 2; 
+            }
+      	  else if (target == document.getElementById("normal")) { 
+              fontSize = 14; 
+            }
+            demo.style.fontSize = fontSize + "px";
+        }
+      }
+        
+  </script>
+  
+  <title>Aditi Mahavidyalaya &#8211; Just another WordPress site</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="Aditi Mahavidyalaya &raquo; Feed" href="https://aditi.du.ac.in/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Aditi Mahavidyalaya &raquo; Comments Feed" href="https://aditi.du.ac.in/comments/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://aditi.du.ac.in/wp-includes/css/dist/block-library/style.min.css?ver=7.1' media='all' />
+<style id="wp-block-library-theme-inline-css">
+.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:hsla(0,0%,100%,.65)}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:hsla(0,0%,100%,.65)}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote :where(cite),.wp-block-pullquote :where(footer),.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote:where(.has-text-align-right){border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote:where(.has-text-align-center){border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote:where(.is-style-plain){border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:hsla(0,0%,100%,.65)}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}
+/*# sourceURL=/wp-includes/css/dist/block-library/theme.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #FFFFFF;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--dark-gray: #28303D;--wp--preset--color--gray: #39414D;--wp--preset--color--green: #D1E4DD;--wp--preset--color--blue: #D1DFE4;--wp--preset--color--purple: #D1D1E4;--wp--preset--color--red: #E4D1D1;--wp--preset--color--orange: #E4DAD1;--wp--preset--color--yellow: #EEEADD;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--purple-to-yellow: linear-gradient(160deg, #D1D1E4 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-purple: linear-gradient(160deg, #EEEADD 0%, #D1D1E4 100%);--wp--preset--gradient--green-to-yellow: linear-gradient(160deg, #D1E4DD 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-green: linear-gradient(160deg, #EEEADD 0%, #D1E4DD 100%);--wp--preset--gradient--red-to-yellow: linear-gradient(160deg, #E4D1D1 0%, #EEEADD 100%);--wp--preset--gradient--yellow-to-red: linear-gradient(160deg, #EEEADD 0%, #E4D1D1 100%);--wp--preset--gradient--purple-to-red: linear-gradient(160deg, #D1D1E4 0%, #E4D1D1 100%);--wp--preset--gradient--red-to-purple: linear-gradient(160deg, #E4D1D1 0%, #D1D1E4 100%);--wp--preset--font-size--small: 18px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 24px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--extra-small: 16px;--wp--preset--font-size--normal: 20px;--wp--preset--font-size--extra-large: 40px;--wp--preset--font-size--huge: 96px;--wp--preset--font-size--gigantic: 144px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-color{color: var(--wp--preset--color--dark-gray) !important;}.has-gray-color{color: var(--wp--preset--color--gray) !important;}.has-green-color{color: var(--wp--preset--color--green) !important;}.has-blue-color{color: var(--wp--preset--color--blue) !important;}.has-purple-color{color: var(--wp--preset--color--purple) !important;}.has-red-color{color: var(--wp--preset--color--red) !important;}.has-orange-color{color: var(--wp--preset--color--orange) !important;}.has-yellow-color{color: var(--wp--preset--color--yellow) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-background-color{background-color: var(--wp--preset--color--dark-gray) !important;}.has-gray-background-color{background-color: var(--wp--preset--color--gray) !important;}.has-green-background-color{background-color: var(--wp--preset--color--green) !important;}.has-blue-background-color{background-color: var(--wp--preset--color--blue) !important;}.has-purple-background-color{background-color: var(--wp--preset--color--purple) !important;}.has-red-background-color{background-color: var(--wp--preset--color--red) !important;}.has-orange-background-color{background-color: var(--wp--preset--color--orange) !important;}.has-yellow-background-color{background-color: var(--wp--preset--color--yellow) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-dark-gray-border-color{border-color: var(--wp--preset--color--dark-gray) !important;}.has-gray-border-color{border-color: var(--wp--preset--color--gray) !important;}.has-green-border-color{border-color: var(--wp--preset--color--green) !important;}.has-blue-border-color{border-color: var(--wp--preset--color--blue) !important;}.has-purple-border-color{border-color: var(--wp--preset--color--purple) !important;}.has-red-border-color{border-color: var(--wp--preset--color--red) !important;}.has-orange-border-color{border-color: var(--wp--preset--color--orange) !important;}.has-yellow-border-color{border-color: var(--wp--preset--color--yellow) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-purple-to-yellow-gradient-background{background: var(--wp--preset--gradient--purple-to-yellow) !important;}.has-yellow-to-purple-gradient-background{background: var(--wp--preset--gradient--yellow-to-purple) !important;}.has-green-to-yellow-gradient-background{background: var(--wp--preset--gradient--green-to-yellow) !important;}.has-yellow-to-green-gradient-background{background: var(--wp--preset--gradient--yellow-to-green) !important;}.has-red-to-yellow-gradient-background{background: var(--wp--preset--gradient--red-to-yellow) !important;}.has-yellow-to-red-gradient-background{background: var(--wp--preset--gradient--yellow-to-red) !important;}.has-purple-to-red-gradient-background{background: var(--wp--preset--gradient--purple-to-red) !important;}.has-red-to-purple-gradient-background{background: var(--wp--preset--gradient--red-to-purple) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-extra-small-font-size{font-size: var(--wp--preset--font-size--extra-small) !important;}.has-normal-font-size{font-size: var(--wp--preset--font-size--normal) !important;}.has-extra-large-font-size{font-size: var(--wp--preset--font-size--extra-large) !important;}.has-huge-font-size{font-size: var(--wp--preset--font-size--huge) !important;}.has-gigantic-font-size{font-size: var(--wp--preset--font-size--gigantic) !important;}
+:root :where(.wp-block-icon svg){width: 24px;}
+:where(.wp-block-gallery.is-layout-flex){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}:where(.wp-block-gallery.is-layout-grid){gap: var( --wp--style--gallery-gap-default, var( --gallery-block--gutter-size, var( --wp--style--block-gap, 0.5em ) ) );}
+:where(.wp-block-latest-posts.is-layout-flex){gap: 1.25em;}:where(.wp-block-latest-posts.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='megamenu-css' href='https://aditi.du.ac.in/wp-content/uploads/maxmegamenu/style.css?ver=4822af' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://aditi.du.ac.in/wp-includes/css/dashicons.min.css?ver=7.1' media='all' />
+<link rel='stylesheet' id='wur_content_css-css' href='https://aditi.du.ac.in/wp-content/plugins/wp-ultimate-review/assets/public/css/content-page.css?ver=2.4.0' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-style-css' href='https://aditi.du.ac.in/wp-content/themes/aditi/style.css?ver=1.6' media='all' />
+<link rel='stylesheet' id='twenty-twenty-one-print-style-css' href='https://aditi.du.ac.in/wp-content/themes/aditi/assets/css/print.css?ver=1.6' media='print' />
+<link rel='stylesheet' id='ekit-widget-styles-css' href='https://aditi.du.ac.in/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.9.6' media='all' />
+<link rel='stylesheet' id='ekit-responsive-css' href='https://aditi.du.ac.in/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=3.9.6' media='all' />
+<link rel='stylesheet' id='wps-visitor-style-css' href='https://aditi.du.ac.in/wp-content/plugins/wps-visitor-counter/styles/css/default.css?ver=1.4.9' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://aditi.du.ac.in/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=4.1.1' media='all' />
+<link rel='stylesheet' id='eael-general-css' href='https://aditi.du.ac.in/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=6.6.5' media='all' />
+<link rel="stylesheet" type="text/css" href="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider.min.css?ver=d667a3aa" media="all">
+<style data-related="n2-ss-2">div#n2-ss-2 .n2-ss-slider-1{display:grid;position:relative;}div#n2-ss-2 .n2-ss-slider-2{display:grid;position:relative;overflow:hidden;padding:0px 0px 0px 0px;border:0px solid RGBA(62,62,62,1);border-radius:0px;background-clip:padding-box;background-repeat:repeat;background-position:50% 50%;background-size:cover;background-attachment:scroll;z-index:1;}div#n2-ss-2:not(.n2-ss-loaded) .n2-ss-slider-2{background-image:none !important;}div#n2-ss-2 .n2-ss-slider-3{display:grid;grid-template-areas:'cover';position:relative;overflow:hidden;z-index:10;}div#n2-ss-2 .n2-ss-slider-3 > *{grid-area:cover;}div#n2-ss-2 .n2-ss-slide-backgrounds,div#n2-ss-2 .n2-ss-slider-3 > .n2-ss-divider{position:relative;}div#n2-ss-2 .n2-ss-slide-backgrounds{z-index:10;}div#n2-ss-2 .n2-ss-slide-backgrounds > *{overflow:hidden;}div#n2-ss-2 .n2-ss-slide-background{transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slider-4{place-self:center;position:relative;width:100%;height:100%;z-index:20;display:grid;grid-template-areas:'slide';}div#n2-ss-2 .n2-ss-slider-4 > *{grid-area:slide;}div#n2-ss-2.n2-ss-full-page--constrain-ratio .n2-ss-slider-4{height:auto;}div#n2-ss-2 .n2-ss-slide{display:grid;place-items:center;grid-auto-columns:100%;position:relative;z-index:20;-webkit-backface-visibility:hidden;transform:translateX(-100000px);}div#n2-ss-2 .n2-ss-slide{perspective:1500px;}div#n2-ss-2 .n2-ss-slide-active{z-index:21;}.n2-ss-background-animation{position:absolute;top:0;left:0;width:100%;height:100%;z-index:3;}div#n2-ss-2 .nextend-arrow{cursor:pointer;overflow:hidden;line-height:0 !important;z-index:18;-webkit-user-select:none;}div#n2-ss-2 .nextend-arrow img{position:relative;display:block;}div#n2-ss-2 .nextend-arrow img.n2-arrow-hover-img{display:none;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-hover-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-hover-img{display:inline;}div#n2-ss-2 .nextend-arrow:FOCUS img.n2-arrow-normal-img,div#n2-ss-2 .nextend-arrow:HOVER img.n2-arrow-normal-img{display:none;}div#n2-ss-2 .nextend-arrow-animated{overflow:hidden;}div#n2-ss-2 .nextend-arrow-animated > div{position:relative;}div#n2-ss-2 .nextend-arrow-animated .n2-active{position:absolute;}div#n2-ss-2 .nextend-arrow-animated-fade{transition:background 0.3s, opacity 0.4s;}div#n2-ss-2 .nextend-arrow-animated-horizontal > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-horizontal .n2-active{top:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal .n2-active{left:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal .n2-active{right:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-horizontal:FOCUS > div{transform:translateX(100%);}div#n2-ss-2 .nextend-arrow-animated-vertical > div{transition:all 0.4s;transform:none;}div#n2-ss-2 .nextend-arrow-animated-vertical .n2-active{left:0;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical .n2-active{top:100%;}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical .n2-active{bottom:100%;}div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-previous.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(-100%);}div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:HOVER > div,div#n2-ss-2 .nextend-arrow-next.nextend-arrow-animated-vertical:FOCUS > div{transform:translateY(100%);}div#n2-ss-2 .n2-ss-control-bullet{visibility:hidden;text-align:center;justify-content:center;z-index:14;}div#n2-ss-2 .n2-ss-control-bullet--calculate-size{left:0 !important;}div#n2-ss-2 .n2-ss-control-bullet-horizontal.n2-ss-control-bullet-fullsize{width:100%;}div#n2-ss-2 .n2-ss-control-bullet-vertical.n2-ss-control-bullet-fullsize{height:100%;flex-flow:column;}div#n2-ss-2 .nextend-bullet-bar{display:inline-flex;vertical-align:top;visibility:visible;align-items:center;flex-wrap:wrap;}div#n2-ss-2 .n2-bar-justify-content-left{justify-content:flex-start;}div#n2-ss-2 .n2-bar-justify-content-center{justify-content:center;}div#n2-ss-2 .n2-bar-justify-content-right{justify-content:flex-end;}div#n2-ss-2 .n2-ss-control-bullet-vertical > .nextend-bullet-bar{flex-flow:column;}div#n2-ss-2 .n2-ss-control-bullet-fullsize > .nextend-bullet-bar{display:flex;}div#n2-ss-2 .n2-ss-control-bullet-horizontal.n2-ss-control-bullet-fullsize > .nextend-bullet-bar{flex:1 1 auto;}div#n2-ss-2 .n2-ss-control-bullet-vertical.n2-ss-control-bullet-fullsize > .nextend-bullet-bar{height:100%;}div#n2-ss-2 .nextend-bullet-bar .n2-bullet{cursor:pointer;transition:background-color 0.4s;}div#n2-ss-2 .nextend-bullet-bar .n2-bullet.n2-active{cursor:default;}div#n2-ss-2 div.n2-ss-bullet-thumbnail-container{position:absolute;z-index:10000000;}div#n2-ss-2 .n2-ss-bullet-thumbnail-container .n2-ss-bullet-thumbnail{background-size:cover;background-repeat:no-repeat;background-position:center;}div#n2-ss-2 .n2-style-785355f374be86c332d4665aae819858-dot{background: RGBA(0,0,0,0.67);opacity:1;padding:5px 5px 5px 5px ;box-shadow: none;border: 0px solid RGBA(0,0,0,1);border-radius:50px;margin:4px;}div#n2-ss-2 .n2-style-785355f374be86c332d4665aae819858-dot.n2-active, div#n2-ss-2 .n2-style-785355f374be86c332d4665aae819858-dot:HOVER, div#n2-ss-2 .n2-style-785355f374be86c332d4665aae819858-dot:FOCUS{background: RGBA(29,129,249,1);}div#n2-ss-2 .n2-ss-slide-limiter{max-width:1200px;}div#n2-ss-2 .nextend-arrow img{width: 32px}@media (min-width: 1200px){div#n2-ss-2 [data-hide-desktopportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 1199px) and (min-width: 901px),(orientation: portrait) and (max-width: 1199px) and (min-width: 701px){div#n2-ss-2 [data-hide-tabletportrait="1"]{display: none !important;}}@media (orientation: landscape) and (max-width: 900px),(orientation: portrait) and (max-width: 700px){div#n2-ss-2 [data-hide-mobileportrait="1"]{display: none !important;}div#n2-ss-2 .nextend-arrow img{width: 16px}}</style>
+<script>(function(){this._N2=this._N2||{_r:[],_d:[],r:function(){this._r.push(arguments)},d:function(){this._d.push(arguments)}}}).call(window);</script><script src="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/n2.min.js?ver=d667a3aa" defer async></script>
+<script src="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Application/Frontend/Assets/dist/smartslider-frontend.min.js?ver=d667a3aa" defer async></script>
+<script src="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Slider/SliderType/Simple/Assets/dist/ss-simple.min.js?ver=d667a3aa" defer async></script>
+<script src="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Widget/Arrow/ArrowImage/Assets/dist/w-arrow-image.min.js?ver=d667a3aa" defer async></script>
+<script src="https://aditi.du.ac.in/wp-content/plugins/smart-slider-3/Public/SmartSlider3/Widget/Bullet/Assets/dist/w-bullet.min.js?ver=d667a3aa" defer async></script>
+<script>_N2.r('documentReady',function(){n2const.prefersReducedMotion=false;_N2.r(["documentReady","smartslider-frontend","SmartSliderWidgetArrowImage","SmartSliderWidgetBulletTransition","ss-simple"],function(){new _N2.SmartSliderSimple('n2-ss-2',{"admin":false,"background.video.mobile":1,"loadingTime":2000,"alias":{"id":0,"smoothScroll":0,"slideSwitch":0,"scroll":1},"align":"normal","isDelayed":0,"responsive":{"mediaQueries":{"all":false,"desktopportrait":["(min-width: 1200px)"],"tabletportrait":["(orientation: landscape) and (max-width: 1199px) and (min-width: 901px)","(orientation: portrait) and (max-width: 1199px) and (min-width: 701px)"],"mobileportrait":["(orientation: landscape) and (max-width: 900px)","(orientation: portrait) and (max-width: 700px)"]},"base":{"slideOuterWidth":1200,"slideOuterHeight":500,"sliderWidth":1200,"sliderHeight":500,"slideWidth":1200,"slideHeight":500},"hideOn":{"desktopLandscape":false,"desktopPortrait":false,"tabletLandscape":false,"tabletPortrait":false,"mobileLandscape":false,"mobilePortrait":false},"onResizeEnabled":true,"type":"fullwidth","sliderHeightBasedOn":"real","focusUser":1,"focusEdge":"auto","breakpoints":[{"device":"tabletPortrait","type":"max-screen-width","portraitWidth":1199,"landscapeWidth":1199},{"device":"mobilePortrait","type":"max-screen-width","portraitWidth":700,"landscapeWidth":900}],"enabledDevices":{"desktopLandscape":0,"desktopPortrait":1,"tabletLandscape":0,"tabletPortrait":1,"mobileLandscape":0,"mobilePortrait":1},"sizes":{"desktopPortrait":{"width":1200,"height":500,"max":3000,"min":1200},"tabletPortrait":{"width":701,"height":292,"customHeight":false,"max":1199,"min":701},"mobilePortrait":{"width":320,"height":133,"customHeight":false,"max":900,"min":320}},"overflowHiddenPage":0,"focus":{"offsetTop":"#wpadminbar","offsetBottom":""}},"controls":{"mousewheel":0,"touch":"horizontal","keyboard":1,"blockCarouselInteraction":1},"playWhenVisible":1,"playWhenVisibleAt":0.5,"lazyLoad":0,"lazyLoadNeighbor":0,"blockrightclick":0,"maintainSession":0,"autoplay":{"enabled":0,"start":1,"duration":8000,"autoplayLoop":1,"allowReStart":0,"reverse":0,"pause":{"click":1,"mouse":"0","mediaStarted":1},"resume":{"click":0,"mouse":"0","mediaEnded":1,"slidechanged":0},"interval":1,"intervalModifier":"loop","intervalSlide":"current"},"perspective":1500,"layerMode":{"playOnce":0,"playFirstLayer":1,"mode":"skippable","inAnimation":"mainInEnd"},"bgAnimations":0,"mainanimation":{"type":"horizontal","duration":800,"delay":0,"ease":"easeOutQuad","shiftedBackgroundAnimation":0},"carousel":1,"initCallbacks":function(){new _N2.SmartSliderWidgetArrowImage(this);new _N2.SmartSliderWidgetBulletTransition(this,{"area":10,"dotClasses":"n2-style-785355f374be86c332d4665aae819858-dot ","mode":"","action":"click"})}})})});</script><script type='text/javascript'>
+		var elementskit = {
+			resturl: 'https://aditi.du.ac.in/wp-json/elementskit/v1/',
+		}
+
+		</script><script id="jquery-core-js" src="https://aditi.du.ac.in/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://aditi.du.ac.in/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="wur_review_content_script-js" src="https://aditi.du.ac.in/wp-content/plugins/wp-ultimate-review/assets/public/script/content-page.js?ver=2.4.0"></script>
+<script id="wps-visitor-counter-js-extra">
+var wpspagevisit = {"ajaxurl":"https://aditi.du.ac.in/wp-admin/admin-ajax.php","ajax_nonce":"5215c6d139"};
+//# sourceURL=wps-visitor-counter-js-extra
+</script>
+<script id="wps-visitor-counter-js" src="https://aditi.du.ac.in/wp-content/plugins/wps-visitor-counter/styles/js/custom.js?ver=1.4.9"></script>
+<link rel="https://api.w.org/" href="https://aditi.du.ac.in/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://aditi.du.ac.in/xmlrpc.php?rsd" />
+<meta name="generator" content="Elementor 4.1.1; features: additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-auto">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="icon" href="https://aditi.du.ac.in/wp-content/uploads/2022/06/cropped-logo-1-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://aditi.du.ac.in/wp-content/uploads/2022/06/cropped-logo-1-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://aditi.du.ac.in/wp-content/uploads/2022/06/cropped-logo-1-180x180.png" />
+<meta name="msapplication-TileImage" content="https://aditi.du.ac.in/wp-content/uploads/2022/06/cropped-logo-1-270x270.png" />
+  <body >
+      <header>
+         <div class="top_nav" >
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-md-5 col-sm-7 col-xs-12">
+                     <form class="navbar-form navbar-left" action="">
+                        <div class="search">
+                           <input type="text" class="form-control" placeholder="Search" name="s" id="search" value="" style="
+                              float: left;
+                              border-radius: 4px 0 0px 4px;width:auto;
+                              ">
+                           <button type="submit" class="searchButton form-control" style="
+                              border-radius: 0 4px 4px 0;width:auto;
+                              ">
+                           <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </form>
+
+                     <a href="/admin/" target="_blank" class="btn btn-success toplogin">Login</a>
+
+                     <a href="https://app.studybase.in/login" target="_blank" class="btn btn-success toplogin">Pay Fees</a>                  </div>
+                  <div class="col-md-7 col-sm-5 col-xs-12">
+                      
+                      <div class="menu-top-menu-container"><ul class="top_right_nav nav navbar-right"><li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341"><a href="https://aditi.du.ac.in/iqac/">IQAC</a></li>
+<li id="menu-item-343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-343"><a href="https://aditi.du.ac.in/nirf/">NIRF</a></li>
+<li id="menu-item-1126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1126"><a href="https://aditi.du.ac.in/rti/">RTI</a></li>
+<li id="menu-item-2660" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2660"><a href="https://aditi.du.ac.in/she/">ICC</a></li>
+<li id="menu-item-4830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4830"><a href="http://aditi.du.ac.in/quick-link-2/">Quick Link</a></li>
+<li id="menu-item-8232" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8232"><a href="https://aditi.du.ac.in/upcoming-events/">Upcoming Events</a></li>
+</ul></div>                     <!--<ul id="menu-top" class="top_right_nav nav navbar-right">-->
+                     <!--   <li id="menu-item-1293" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-60 current_page_item menu-item-1293"><a href="" aria-current="page">HOME</a></li>-->
+                     <!--   <li id="menu-item-1294" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1294"><a href="">IQAC</a></li>-->
+                     <!--   <li id="menu-item-1295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1295"><a href="">NAAC</a></li>-->
+                     <!--   <li id="menu-item-7607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7607"><a href="">NIRF</a></li>-->
+                     <!--   <li id="menu-item-1296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="">RTI</a></li>-->
+                     <!--   <li id="menu-item-1297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1297"><a href="">ICC</a></li>-->
+                     <!--   <li id="menu-item-1298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1298"><a href="">GRIEVANCE</a></li>-->
+                     <!--</ul>-->
+                     
+                     <ul class="mobileLang" style="list-style:none; display:flex; ">
+                        <li style="padding:11px; "><a style="color: #ffffff;" href="javascript:void(0);" id="minus" onclick="changeFontSize(this);" class="fontchange">A-</a></li>
+                        <li style="padding:11px; "><a style="color: #ffffff;" href="javascript:void(0);" id="normal" onclick="changeFontSize(this);"  class="fontchange">A</a></li>
+                        <li style="padding:11px;" ><a style="color: #ffffff;"  href="javascript:void(0);" id="plus" onclick="changeFontSize(this);"  class="fontchange">A+</a></li>
+                        <li style="padding:11px;" ><a style="color: #ffffff;"  href="" id="plus" onclick="changeFontSize(this);"  class="fontchange">Screen Reader</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="top-header">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+
+      <!-- LEFT LOGOS -->
+      <div class="col-md-3 col-sm-12 header-left text-center text-md-left">
+          <div class="row">
+              <div class="col-md-6  col-md-12">
+                  
+        <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/G20_India_Logo.png" alt="G20">
+              </div>
+              <div class="col-md-6  col-md-12">
+                  
+        <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/azadilogo-bg.png" class="img-responsive logo_responsive" alt="Azadi Ka Amrit Mahotsav">
+              </div>
+          </div>
+      </div>
+
+      <!-- CENTER COLLEGE IDENTITY -->
+    <div class="col-md-6 col-sm-12 header-center text-center">
+  <div class="college-wrap dual-text">
+
+    <!-- HINDI (LEFT) -->
+    <div class="college-text hindi">
+      <h2>अदिति महाविद्यालय</h2>
+      <p class="university">दिल्ली विश्वविद्यालय</p>
+    </div>
+
+    <!-- LOGO (CENTER) -->
+    <img src="https://aditi.du.ac.in/wp-content/uploads/2026/01/1.png" class="college-logo">
+
+    <!-- ENGLISH (RIGHT) -->
+    <div class="college-text english">
+      <h1>Aditi Mahavidyalaya</h1>
+      <p class="university">University of Delhi</p>
+    </div>
+
+  </div>
+</div>
+
+
+      <!-- RIGHT LOGOS -->
+      <div class="col-md-3 col-sm-12 header-right text-center text-md-right">
+        <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/100years.png" alt="100 Years">
+      </div>
+
+    </div>
+  </div>
+</div>
+
+         <nav id="navbar" class="navbar navbar-default navigation_nav" >
+            <div class="container">
+               <!-- Brand and toggle get grouped for better mobile display -->
+               <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  </button>
+                  <!--                    <a class="" href="#"><img src="img/logo.png"></a>-->
+               </div>
+               <!-- Collect the nav links, forms, and other content for toggling -->
+               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      
+                     <div class="menu-primary-menu-container"><ul class="nav navbar-nav navigation"><li class=''><a class="" href="http://aditi.du.ac.in/">Home</a></li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">About</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/about-college/">About College</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/chairperson/">Chairperson</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/principals-desk/">Principal’s Desk</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/governing-body/">Governing Body</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/vision-and-mission/">Vision and Mission</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/award-honors-certificate/">Award/Honors &#038; Certificate</a></li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Administration</a>
+	<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/directory-of-non-teaching/">Directory of Non-teaching</a></li>
+	</ul>
+</li>
+<li class=''><a class="" href="https://aditi.du.ac.in/welfare-schemes/">Welfare Schemes</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/organogram/">Organogram</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Academic</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/courses/">Courses</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/department/">Departments</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/faculty/">Faculty</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/committees/">List of Committees</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/achievement/">Achievements</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/ugcf/">UGCF</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/nep-2020/">NEP 2020</a></li>
+<li class=''><a class="" href="http://aditi.du.ac.in/wp-content/uploads/2023/04/coffie%20table%20book.pdf">Coffee Table Book</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/upcoming-courses/">Upcoming Courses</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Admissions</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/courses/">Courses</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/du-bulletins-of-information/">DU Bulletins of Information</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/distribution-of-seats/">Distribution of Seats</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/prospectus/">Prospectus</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/cut-off-lists/">Cut Off Lists</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/sports-admission/">Sports Admission</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/eca-admission/">ECA Admission</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/fee-details/">Fee Details</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/genric-elective-options/">Genric Elective options</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/important-admission-committee/">Admission Committee</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Campus</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/laboratories/">Laboratories</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/activities/">Activities</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/computer-centre/">Computer Centre</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/canteen/">Canteen</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/photo-gallery/">Photo Gallery</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/photostat/">Photostat</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/fauna/">Flora/Fauna</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/map/">Layout Map</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Students Corner</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/notice-for-student/">Notice for Student</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/student-form/">Student Form</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/old-time-table/">Old Time Table</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/time-table/">Time Table</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/national-cadet-corps/">NATIONAL CADET CORPS</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/national-service-scheme/">NATIONAL SERVICE SCHEME</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/student-union/">Student Union</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/internal-assessment/">Internal Assessment</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/scholarship/">Scholarship</a></li>
+<li class=''><a class="" href="http://aditi.du.ac.in/toppers/">Toppers</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/field-work-projects-internship/">Field Work / Projects/ Internship</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Examination</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/examination-notice/">Examination Notice</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/date-sheet/">Date Sheet</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/previous-question-paper/">Question Paper</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/result/">Result</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Research</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/grants/">Grants</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/research-projects/">Research Projects</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/workshop-seminar-conference/">Workshop/ Seminar/ Conference</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/patent/">Patent</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/unnat-bharat-abhiyan/">Unnat Bharat Abhiyan</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/research-paper/">Research paper</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/book-chapter-in-book/">Book/ Chapter in book</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/mou-collaboration/">Mou/ Collaboration</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/extensive-activity/">Extensive Activity</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/research-advisory-committee/">Research Advisory Committee</a></li>
+</ul>
+</li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">Study Center</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/ncweb/">NCWEB</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/sol/">SOL</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/study-centre/ignou/">IGNOU</a></li>
+</ul>
+</li>
+<li class=''><a class="" href="https://aditi.du.ac.in/viksit-bharat/">Viksit Bharat</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/g20/">G20</a></li>
+<li class='dropdown'><a class="dropdown-toggle" href="javascript:void(0)">NAAC</a>
+<ul/ class="dropdown-menu" />
+<li class=''><a class="" href="https://aditi.du.ac.in/naac-ssr/">SSR</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/dvv-naac/">DVV</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/naac-aqar/">AQAR</a></li>
+<li class=''><a class="" href="https://aditi.du.ac.in/certificate-2/">Certificate</a></li>
+</ul>
+</li>
+</ul></div>                    
+                    <!--<ul class="nav navbar-nav navigation">-->
+                    <!--    <li class="dropdown">-->
+                    <!--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About <span class="caret"></span></a>-->
+                    <!--        <ul class="dropdown-menu">-->
+                    <!--            <li><a href="#">Vision and Mission</a></li>-->
+                    <!--            <li><a href="#">Management</a></li>-->
+                    <!--            <li><a href="#">Administration</a></li>-->
+                    <!--            <li><a href="#">Academics</a></li>-->
+                    <!--            <li><a href="#">Infrastructure &amp; Facilities</a></li>-->
+                    <!--            <li><a href="#">Student Zone </a></li>-->
+                    <!--            <li><a href="#">Downloads</a></li>-->
+                    <!--            <li><a href="#">Contact Us</a></li>-->
+                    <!--        </ul>-->
+                    <!--    </li>-->
+                    <!--    <li><a href="#">Administration</a></li>-->
+                    <!--    <li><a href="#">Academics</a></li>-->
+                    <!--    <li><a href="#">Infrastructure &amp; Facilities</a></li>-->
+                    <!--    <li class="dropdown">-->
+                    <!--        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Student Zone  <span class="caret"></span></a>-->
+                    <!--        <ul class="dropdown-menu">-->
+                    <!--            <li><a href="#">General Complaint Form</a></li>-->
+                    <!--            <li><a href="#">SC/ST Complaint Form</a></li>-->
+                    <!--            <li><a href="#">Generic Elective Option</a></li>-->
+                    <!--            <li><a href="#">Placement Cell Registration</a></li>-->
+                    <!--            <li><a href="#">ECA Club Membership</a></li>-->
+                    <!--            <li class="sub-dropdown">-->
+                    <!--                <a href="#">Notice for Students <i class="fa fa-chevron-right"></i></a>-->
+                    <!--                <ul class="sub-dropdown-menu">-->
+                    <!--                    <li><a href="#">General Complaint Form</a></li>-->
+                    <!--                    <li><a href="#">SC/ST Complaint Form</a></li>-->
+                    <!--                    <li><a href="#">Generic Elective Option</a></li>-->
+                    <!--                    <li><a href="#">Placement Cell Registration</a></li>-->
+                    <!--                    <li><a href="#">ECA Club Membership</a></li>-->
+                    <!--                </ul>-->
+                    <!--            </li>-->
+                    <!--        </ul>-->
+                    <!--    </li>-->
+                    <!--    <li><a href="#">Downloads</a></li>-->
+                    <!--</ul>-->
+               </div>
+               <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+         </nav>
+      </header>
+      
+   </head>
+   
+   <script>
+     
+       $( document ).ready(function() {
+        $('.dropdown-toggle').append('<span class="caret"></span>');
+        
+        
+        $(".dropdown-menu li ").addClass("sub-dropdown");
+        $(".dropdown-menu li ul").addClass("sub-dropdown-menu");
+        $(".dropdown-menu li ul").removeClass("dropdown-menu");
+        $(".sub-dropdown-menu li").removeClass("sub-dropdown");
+        $(".sub-dropdown-menu li a").removeClass("dropdown-item");
+       // $('.dropdown-menu li ul').prev('a').append('<i class="fa fa-chevron-right"></i>');
+        // $(".sub-dropdown a").removeClass("dropdown-toggle");
+     
+});
+
+
+
+   </script>
+ 
+   
+      <div id="mydiv1">
+      <style>
+      .box7 img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+         .carousel-inner .item iframe {
+         width: 100%;
+         height: 284px;
+         display: block;
+         padding: 4px;
+         margin-bottom: 20px;
+         line-height: 1.42857143;
+         background-color: #fff;
+         border: 1px solid #ddd;
+         border-radius: 4px;
+         -webkit-transition: border .2s ease-in-out;
+         -o-transition: border .2s ease-in-out;
+         transition: border .2s ease-in-out;
+         }
+         @media screen and (max-width: 550px){
+         .carousel-inner .item iframe {
+         height: 87px;
+         }
+         }
+      </style>
+      <style>.marquee a {margin: 0 0 0 0 !important}</style>
+      <div id="" class="" >
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="n2_clear"><ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body"><div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="2"><div id="n2-ss-2-align" class="n2-ss-align"><div class="n2-padding"><div id="n2-ss-2" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition  ">
+
+
+
+<div class="n2-ss-slider-wrapper-inside">
+        <div class="n2-ss-slider-1 n2_ss__touch_element n2-ow">
+            <div class="n2-ss-slider-2 n2-ow">
+                                                <div class="n2-ss-slider-3 n2-ow">
+
+                    <div class="n2-ss-slide-backgrounds n2-ow-all"><div class="n2-ss-slide-background" data-public-id="1" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-2.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="2" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-1.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="3" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-3.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="4" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-4.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="5" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-5.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="6" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-6.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="7" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-7.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="8" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-8.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="9" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-9.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="10" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2022/06/img-10.png" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="11" data-mode="fill"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2026/02/lit_1.jpeg" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div><div class="n2-ss-slide-background" data-public-id="12" data-mode="fill" aria-hidden="true"><div class="n2-ss-slide-background-image" data-blur="0" data-opacity="100" data-x="50" data-y="50" data-alt="" data-title=""><picture class="skip-lazy" data-skip-lazy="1"><img src="//aditi.du.ac.in/wp-content/uploads/2026/02/Lit_2.jpeg" alt="" title="" loading="lazy" class="skip-lazy" data-skip-lazy="1"></picture></div><div data-color="RGBA(255,255,255,0)" style="background-color: RGBA(255,255,255,0);" class="n2-ss-slide-background-color"></div></div></div>                    <div class="n2-ss-slider-4 n2-ow">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" data-related-device="desktopPortrait" class="n2-ow n2-ss-preserve-size n2-ss-preserve-size--slider n2-ss-slide-limiter"></svg><div data-slide-duration="0" data-id="7" data-slide-public-id="1" aria-hidden="true" data-title="banner-5" class="n2-ss-slide n2-ow  n2-ss-slide-7"><div role="note" class="n2-ss-slide--focus" tabindex="-1">banner-5</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-FITfIq0Tu1FS" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="8" data-slide-public-id="2" aria-hidden="true" data-title="img-1.png" class="n2-ss-slide n2-ow  n2-ss-slide-8"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-1.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-LNoEetYZ0jm2" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="9" data-slide-public-id="3" aria-hidden="true" data-title="img-3.png" class="n2-ss-slide n2-ow  n2-ss-slide-9"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-3.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-hPPujfp2ZDL4" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="10" data-slide-public-id="4" aria-hidden="true" data-title="img-4.png" class="n2-ss-slide n2-ow  n2-ss-slide-10"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-4.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-1ijpOxmpPLu2" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="11" data-slide-public-id="5" aria-hidden="true" data-title="img-5.png" class="n2-ss-slide n2-ow  n2-ss-slide-11"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-5.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-or1MOJGhTMAL" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="12" data-slide-public-id="6" aria-hidden="true" data-title="img-6.png" class="n2-ss-slide n2-ow  n2-ss-slide-12"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-6.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-mXtABz87MEdg" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="13" data-slide-public-id="7" aria-hidden="true" data-title="img-7.png" class="n2-ss-slide n2-ow  n2-ss-slide-13"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-7.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-VsH5HlQwie07" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="14" data-slide-public-id="8" aria-hidden="true" data-title="img-8.png" class="n2-ss-slide n2-ow  n2-ss-slide-14"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-8.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-rEqO6qRbitM8" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="15" data-slide-public-id="9" aria-hidden="true" data-title="img-9.png" class="n2-ss-slide n2-ow  n2-ss-slide-15"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-9.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-dEVVPtQGfZWE" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="16" data-slide-public-id="10" aria-hidden="true" data-title="img-10.png" class="n2-ss-slide n2-ow  n2-ss-slide-16"><div role="note" class="n2-ss-slide--focus" tabindex="-1">img-10.png</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-Ec3kp5JRhToH" data-sstype="slide" data-pm="default"></div></div></div><div data-first="1" data-slide-duration="0" data-id="18" data-slide-public-id="11" data-title="lit_1" class="n2-ss-slide n2-ow  n2-ss-slide-18"><div role="note" class="n2-ss-slide--focus" tabindex="-1">lit_1</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-Blhb6EtNw9Br" data-sstype="slide" data-pm="default"></div></div></div><div data-slide-duration="0" data-id="17" data-slide-public-id="12" aria-hidden="true" data-title="Lit_2" class="n2-ss-slide n2-ow  n2-ss-slide-17"><div role="note" class="n2-ss-slide--focus" tabindex="-1">Lit_2</div><div class="n2-ss-layers-container n2-ss-slide-limiter n2-ow"><div class="n2-ss-layer n2-ow n-uc-wSjxSpXSShlv" data-sstype="slide" data-pm="default"></div></div></div>                    </div>
+
+                                    </div>
+            </div>
+        </div>
+        <div class="n2-ss-slider-controls n2-ss-slider-controls-absolute-left-center"><div style="--widget-offset:15px;" class="n2-ss-widget n2-ss-widget-display-hover nextend-arrow n2-ow-all nextend-arrow-previous  nextend-arrow-animated-fade" data-hide-mobileportrait="1" id="n2-ss-2-arrow-previous" role="button" aria-label="previous arrow" tabindex="0"><img width="32" height="32" class="skip-lazy" data-skip-lazy="1" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxwYXRoIGZpbGw9IiNmZmZmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIKICAgICAgICAgIGQ9Ik0yMC42NTQgOS40M2wtNi4zMjYgNi41MjUgNi4zMjYgNi42Yy4yNDIuMjUzLjM2LjU0NS4zNi44OCAwIC4zMzMtLjExOC42MjUtLjM2Ljg3N2wtMS4yNDQgMS4zYy0uMjQuMjUtLjUyMy4zNzUtLjg0LjM3NS0uMzIgMC0uNi0uMTI0LS44NC0uMzc2bC04LjM2Ny04LjcyYy0uMjQtLjI1LS4zNjMtLjU0LS4zNjMtLjg4IDAtLjMzNC4xMjItLjYzLjM2My0uODhsOC4zNjctOC43NWMuMjMtLjI1Mi41MS0uMzc3LjgzLS4zNzcuMzI1IDAgLjYwNy4xMjYuODUuMzc4bDEuMjQyIDEuMzI2Yy4yNDIuMjUyLjM2LjU0LjM2Ljg2NCAwIC4zMi0uMTE4LjYxLS4zNi44NnoiCiAgICAgICAgICBvcGFjaXR5PSIwLjgiLz4KPC9zdmc+Cg==" alt="previous arrow"></div></div><div class="n2-ss-slider-controls n2-ss-slider-controls-absolute-right-center"><div style="--widget-offset:15px;" class="n2-ss-widget n2-ss-widget-display-hover nextend-arrow n2-ow-all nextend-arrow-next  nextend-arrow-animated-fade" data-hide-mobileportrait="1" id="n2-ss-2-arrow-next" role="button" aria-label="next arrow" tabindex="0"><img width="32" height="32" class="skip-lazy" data-skip-lazy="1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xMy4yODYgMjUuNjFjLS4yNC4yNTMtLjUyLjM3Ny0uODQuMzc3LS4zMTggMC0uNi0uMTI0LS44NC0uMzc2bC0xLjI0NS0xLjI5N2MtLjI0LS4yNTItLjM2LS41NDQtLjM2LS44NzggMC0uMzM0LjEyLS42MjYuMzYtLjg3OGw2LjMyOC02LjZMMTAuMzYgOS40M2MtLjI0LS4yNS0uMzYtLjU0LS4zNi0uODY0IDAtLjMyMy4xMi0uNjEyLjM2LS44NjRsMS4yNDUtMS4zMjVjLjI0LS4yNTIuNTIzLS4zNzcuODQ4LS4zNzcuMzIzIDAgLjYwMi4xMjUuODMzLjM3N2w4LjM2NiA4Ljc0NmMuMjQuMjUuMzYzLjU0Ni4zNjMuODgyIDAgLjM0LS4xMjIuNjM0LS4zNjMuODg2bC04LjM2NiA4LjcyeiIKICAgICAgICAgIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPg==" alt="next arrow"></div></div><div class="n2-ss-slider-controls n2-ss-slider-controls-absolute-center-bottom"><div style="--widget-offset:10px;" class="n2-ss-widget n2-ss-control-bullet n2-ow-all n2-ss-control-bullet-horizontal"><div class=" nextend-bullet-bar n2-bar-justify-content-center" role="group" aria-label="Choose slide to display."><div class="n2-bullet n2-style-785355f374be86c332d4665aae819858-dot " style="visibility:hidden;"></div></div></div></div></div></div><ss3-loader></ss3-loader></div></div><div class="n2_clear"></div></div></ss3-force-full-width></div>      <!--<div class="item active">-->
+      <!--  <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/banner-2.jpg" alt="Los Angeles" style="width:100%;">-->
+      <!--</div>-->
+
+    <!--  <div class="item">-->
+    <!--    <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/banner-3.jpg" alt="Chicago" style="width:100%;">-->
+    <!--  </div>-->
+    
+    <!--  <div class="item">-->
+    <!--    <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/banner-1.jpg" alt="New york" style="width:100%;">-->
+    <!--  </div>-->
+    <!--</div>-->
+
+    <!-- Left and right controls -->
+    <!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">-->
+    <!--  <span class="glyphicon glyphicon-chevron-left"></span>-->
+    <!--  <span class="sr-only">Previous</span>-->
+    <!--</a>-->
+    <!--<a class="right carousel-control" href="#myCarousel" data-slide="next">-->
+    <!--  <span class="glyphicon glyphicon-chevron-right"></span>-->
+    <!--  <span class="sr-only">Next</span>-->
+    <!--</a>-->
+  </div>
+      </div>
+      <!-- END REVOLUTION SLIDER -->   
+      <div class="marquee">
+         <div class="container">
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+               <!--<a class="main2"  href="<br />
+                  <b>Warning</b>:  Use of undefined constant php - assumed 'php' (this will throw an Error in a future version of PHP) in <b>/home/bcasdu/public_html/wp-content/themes/bhaskaracharya/Homepage.php</b> on line <b>81</b><br />
+                  " ></a>-->
+               <aside id="text-3" class="widget widget_text">
+                  <div class="textwidget">
+                      
+                                                   
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/10/Walk-in-interview-for-Appointment-of-Guest-Faculty-2117_0001.pdf" target="_blank" ><p style="display:inline;">Walk-in-interview for Appointment of Guest Faculty ( Education , Music)<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/10/Walk-in-interview-for-guest-appointment-2103_0001.pdf" target="_blank" ><p style="display:inline;">Walk-in-interview for Appointment of Guest Faculty ( Education , Music)<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-Classes-Suspended-2091_0001.pdf" target="_blank" ><p style="display:inline;">Suspension of Classes on 29 September 2026<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Walk-in-interview-for-Appointment-of-Guest-Faculty-2074_0001-1.pdf" target="_blank" ><p style="display:inline;">Walk-in-interview for Appointment of Guest Faculty<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-Closed-on-Monday-2003_0001.pdf" target="_blank" ><p style="display:inline;">Notice Regarding Closed on Monday 21.09.2026<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-College-Student-UNion-Election-2026-27-2002_0001.pdf" target="_blank" ><p style="display:inline;">College Student Union Election 2026-27<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Student-Union-Election-Result-2026-27_0001.pdf" target="_blank" ><p style="display:inline;">Student Union Election Counting Result 2026-27<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Walk-in-interview-for-Appointment-of-Guest-Faculty-1991_0001.pdf" target="_blank" ><p style="display:inline;">Walk-in-interview for Appointment of Guest Faculty<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/17082026_Lyngdoh.pdf" target="_blank" ><p style="display:inline;">Key Lyngdoh Guidelines<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                              
+                     <a style="color: white; cursor:pointer; padding-left: 1px;" href="https://aditi.du.ac.in/wp-content/uploads/2026/09/03092026_Rules-and-Guidlines-for-DUSU-Elections.pdf" target="_blank" ><p style="display:inline;">GUIDELINES FOR THE CONDUCT OF DUSU ELECTIONS : 2026-27<img style="width: 40px; display: inline-block;" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif" /></a></p>|
+                                   </div>
+               </aside>
+               <!--Grievance related to admission 2021-22, please send mail at : grievance@bcas.du.ac.in.<img style="width: 40px; display:inline-block;" src="https://bcas.du.ac.in/wp-content/themes/bhaskaracharya/img/new-gif-image.gif">   
+                  SC/ST/OBC students, grievances related to admissions 2021-22, please send mail at : grievance.rc@bcas.du.ac.in <img style="width: 40px; display:inline-block;" src="https://bcas.du.ac.in/wp-content/themes/bhaskaracharya/img/new-gif-image.gif">-->
+            </marquee>
+         </div>
+      </div>
+      <section class="second_section">
+         <div class="container text-center">
+            <!--        <h3>What We Do</h3><br>-->
+            <div class="row">
+               <div class="col-sm-4">
+                  <div class="notice2">
+                     <h2 class="headings">Notices</h2>
+                     <ul class="wm-recent-list-slider wm-recent-list-slider-color">
+                                                    
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/10/Walk-in-interview-for-Appointment-of-Guest-Faculty-2117_0001.pdf" target="_blank">  Walk-in-interview for Appointment of Guest Faculty ( Education , Music) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/10/Walk-in-interview-for-guest-appointment-2103_0001.pdf" target="_blank">  Walk-in-interview for Appointment of Guest Faculty ( Education , Music) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Walk-in-interview-for-Appointment-of-Guest-Faculty-2074_0001-1.pdf" target="_blank">  Walk-in-interview for Appointment of Guest Faculty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Walk-in-interview-for-Appointment-of-Guest-Faculty-1991_0001.pdf" target="_blank">  Walk-in-interview for Appointment of Guest Faculty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/College-Website-Reg.-Walk-in-intervieew-for-appointment-in-Engilsh-1939_0001.pdf" target="_blank">  Walk-In Interview for the post of Guest Faculty in the English Department <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://forms.gle/NCZv5aigrAUtQC2N9" target="_blank">  Google Form Link Walk-In Interview for the post of Guest Faculty in the various Department <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Guest-Interview-1903_0001.pdf" target="_blank">  Walk-In Interview for the post of Guest Faculty in the various Department <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/07/ANTI.jpeg" target="_blank">  Regarding anti-ragging Poster <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/05/Admission_committee_26-27.pdf" target="_blank">  Admission Committee 2026-27 <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                            
+                        <li><i class="fa fa-chevron-circle-right"></i><a  href="https://aditi.du.ac.in/wp-content/uploads/2026/01/Annual-Property-Return-Form-2026_260102_122735-1.pdf" target="_blank">  Form for Annual Immovable Property Return (2026) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> DPerforma for Skill Enhancement Course (SEC) Option B.A (Prog) II Year Semester IV (2021-22) <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Ref. Advertisement SO (Account) and Senior Assistant <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="images/Poster-29042022.jpg" target="_blank"> Corrigendum of earlier notice 27.12.2021 for post of Guest faculty  <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Link of Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                        <!--<li><i class="fa fa-chevron-circle-right"></i><a  href="" target="_blank"> Notice - Regarding Appointment to the post Guest Faulty <img style='width: 40px; display:inline-block;' src=https://aditi.du.ac.in/wp-content/themes/aditi/images/new-gif-image.gif></a></li>-->
+                                        </ul>
+                     <p class="nws_more"> 
+                        <a href="https://aditi.du.ac.in/notice-archive">More</a>
+                     </p>
+                  </div>
+               </div>
+               <!--<div class="col-sm-4">
+                  <div class="notice">
+                    <h2 class="headings">Events calendar</h2>
+                    <div class="tests">
+                     
+                  <aside id="eo_event_list_widget-2" class="widget EO_Event_List_Widget">
+                  
+                  <ul id="" class="eo-events eo-events-widget" > 
+                  <li class="eo-no-events" > No Events </li>
+                  </ul>
+                  
+                  </aside>			
+                    </div>
+                    <p class="nws_more">
+                     <a href="https://bcas.du.ac.in//?page_id=280">More</a>
+                  </p>
+                  </div>
+                  
+                  </div>-->
+               <div class="col-sm-4">
+                  <div class="notice">
+                     <h2 class="headings">Student Notice</h2>
+                     <ul>
+                                                   
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-Classes-Suspended-2091_0001.pdf" target="_blank">  Suspension of Classes on 29 September 2026 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-Closed-on-Monday-2003_0001.pdf" target="_blank">  Notice Regarding Closed on Monday 21.09.2026 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Notice-Reg.-College-Student-UNion-Election-2026-27-2002_0001.pdf" target="_blank">  College Student Union Election 2026-27 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/Student-Union-Election-Result-2026-27_0001.pdf" target="_blank">  Student Union Election Counting Result 2026-27 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/17082026_Lyngdoh.pdf" target="_blank">  Key Lyngdoh Guidelines </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/03092026_Rules-and-Guidlines-for-DUSU-Elections.pdf" target="_blank">  GUIDELINES FOR THE CONDUCT OF DUSU ELECTIONS : 2026-27 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/VAC-PAPERS-OF-2026-SEM-III-2026-27-july-20261.xlsx" target="_blank">  VAC PAPERS OF 2026-27 SEM 3 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/VAC-PAPERS-OF-2026-SEM-I-2026-27.xlsx" target="_blank">  VAC PAPERS OF 2026-27 SEM-1 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/BA-PROG-TT2.pdf" target="_blank">  B.A. (Prog) Time Table 2026-27 </a>
+                     </li>
+                       
+                                                  
+                      <li>
+                        <a  href="https://aditi.du.ac.in/wp-content/uploads/2026/09/ROOM-WISE-TT.zip" target="_blank">  Room Wise Time Table 2026-27 </a>
+                     </li>
+                       
+                             
+                     </ul>
+                     <!--<div class="tests">-->
+                     <!--   #हर_दिन_पावन - वैशाख शुक्ल पंचमी,  5 मई वीरवार      								-->
+                     <!--</div>-->
+                     <p class="nws_more">
+                        <a href="https://aditi.du.ac.in/student-notice-archive">More</a>
+                     </p>
+                  </div>
+               </div>
+               <div class="col-sm-4">
+                  <div class="notice">
+                     <h2 class="headings">Tenders</h2>
+                     <ul>
+                              
+                     </ul>
+                     <p class="nws_more">
+                        <a href="https://aditi.du.ac.in/tender-archive">More</a>
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container mt-40">
+            <!--            <h3 class="text-center">Hover Effect Style : Demo - 7</h3>-->
+            <div class="row mt-30">
+               <div class="col-md-3 col-sm-6 aos-init aos-animate" >
+                                      <div class="box7">
+                      
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2022/06/library-300x224-1.jpg" alt="">-->
+                     <img src="https://aditi.du.ac.in/wp-content/uploads/2024/05/library-300x224-1.jpg" alt="">
+                     <h4>
+                        Library<!--Library-->
+                     </h4>
+                     <div class="box-content">
+                        <h3 class="title">
+                           Library<!--Library-->
+                        </h3>
+                        <!--<ul class="post">-->
+                                                     <!--</ul>-->
+                        <a class="btn btn-success" href="library">
+                        Read More..
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 aos-init aos-animate" >
+                  <div class="box7">
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2022/06/sports-300x225-1.jpg" alt="">-->
+                     <img src="https://aditi.du.ac.in/wp-content/uploads/2026/01/1000475895.jpg" alt="">
+                     <h4>
+                        Sports<!--Sports-->
+                     </h4>
+                     <div class="box-content">
+                        <h3 class="title">
+                           Sports<!--Sports-->
+                        </h3>
+                     <!--<ul class="post">-->
+                                                  </ul>
+                        <a class="btn btn-success" href="Sports">
+                        Read More..
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <!--<div class="col-md-3 col-sm-6 aos-init aos-animate" >-->
+                  <!--<div class="box7">-->
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2022/06/researchs-300x225-1.jpg" alt="">-->
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2023/04/researchs-300x225-1.jpg" alt="">-->
+                     <!--<h4>-->
+                        <!--Research-->
+                        <!--Research--> 
+                     <!--</h4>-->
+                     <!--<div class="box-content">-->
+                        <!--<h3 class="title">-->
+                           <!--Trainig cell-->
+                           <!--Research-->
+                        <!--</h3>-->
+                        <!--<ul class="post">-->
+                                 <!--//                     </ul>-->
+    <!--//                     <a class="btn btn-success" href="https://aditi.du.ac.in/research-grant-scheme/">-->
+    <!--//                     Read More..-->
+    <!--//                     </a>-->
+                        <!--
+                           <ul class="icon">
+                               <li><a href="#" class="fa fa-search"></a></li>
+                               <li><a href="#" class="fa fa-link"></a></li>
+                           </ul>
+                           -->
+               <!--      </div>-->
+               <!--   </div>-->
+               <!--</div>-->
+               <div class="col-md-3 col-sm-6 aos-init aos-animate" >
+                  <div class="box7">
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2022/06/researchs-300x225-1.jpg" alt="">-->
+                     <img src="https://aditi.du.ac.in/wp-content/uploads/2023/04/researchs-300x225-1.jpg" alt="">
+                     <h4>
+                        Institutional Outreach Activities<!--Research--> 
+                     </h4>
+                     <div class="box-content">
+                        <h3 class="title">
+                           Institutional Outreach Activities
+                        </h3>
+                        <ul class="post">
+                                                     </ul>
+                        <a class="btn btn-success" href="https://aditi.du.ac.in/institutional-outreach-activities/">
+                        Read More..
+                        </a>
+                        <!--
+                           <ul class="icon">
+                               <li><a href="#" class="fa fa-search"></a></li>
+                               <li><a href="#" class="fa fa-link"></a></li>
+                           </ul>
+                           -->
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-3 col-sm-6 aos-init aos-animate" >
+                  <div class="box7">
+                     <!--<img src="https://aditi.du.ac.in/wp-content/uploads/2022/06/bestprac-300x226-1.jpg" alt="">-->
+                     <img src="https://aditi.du.ac.in/wp-content/uploads/2024/05/bestprac-300x226-1.jpg" alt="">
+                     <h4>
+                        Best Practices<!--Best Practices-->
+                     </h4>
+                     <div class="box-content">
+                        <h3 class="title">
+                           Best Practices<!--Best Practices-->
+                        </h3>
+                        <!--<ul class="post">-->
+                                                        <!--<li ><a class="main2"  href="" target="_blank">Digitization & Automation</a></li>-->
+                           <!--<li ><a class="main2"  href="" target="_blank">Environment Friendly Campus</a></li>-->
+                        <!--</ul>-->
+                        <a class="btn btn-success" href="Best Practices">
+                        Read More..
+                        </a>
+                        <!--
+                           <ul class="icon">
+                               <li><a href="#" class="fa fa-search"></a></li>
+                               <li><a href="#" class="fa fa-link"></a></li>
+                           </ul>
+                           -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="slider2">
+         <div class="container-fluid">
+            <div class="row">
+               <div class='col-md-12'>
+                  <div class="carousel slide media-carousel" id="media">
+                     
+                     <div class="carousel-inner">
+                                                    <div class="item  active">
+                           <div class="row">
+                           
+                              <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000" style="position: relative">
+                                 <!--<iframe width="420" height="315" src="https://www.youtube.com/channel/UCATBsiIU-spRiwFkoGMD2RQ"></iframe>-->
+                                  <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-2-1.png"></a>
+                              </div>
+                            
+                             <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                               <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-3-1.png"></a>
+                              </div>
+                            <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                               <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-4-1.png"></a>
+                             </div>
+                             
+                                 <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                                   <a class="thumbnail" href="#"><img alt="" src="img/scndSlider/slide3.jpg"></a>
+                                 </div>        
+                                
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="row">
+                              <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                                 <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-5-1.png"></a>
+                              </div>
+                              <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                                 <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-6-1.png"></a>
+                              </div>
+                              <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">
+                                 <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/uploads/2022/06/img-7-1.png"></a>
+                              </div>
+                           </div>
+                        </div>
+                        <!--<div class="item">-->
+                        <!--   <div class="row">-->
+                        <!--      <div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">-->
+                        <!--         <a class="thumbnail" href="#">DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD<img alt="" src=""></a>-->
+                        <!--      </div>-->
+                              <!--<div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">-->
+                              <!--   <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/themes/aditi/images/scndSlider/slide9.jpg"></a>-->
+                              <!--</div>-->
+                              <!--<div class="col-xs-4 m_p0" data-aos="fade-left" data-aos-duration="1000">-->
+                              <!--   <a class="thumbnail" href="#"><img alt="" src="https://aditi.du.ac.in/wp-content/themes/aditi/https://aditi.du.ac.in/wp-content/themes/aditi/images/scndSlider/slide6.jpg"></a>-->
+                              <!--</div>-->
+                        <!--   </div>-->
+                        <!--</div>-->
+                     </div>
+                     <a class="left carousel-control" data-slide="prev" href="#media">
+                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
+                     </a>
+                     <a class="right carousel-control" data-slide="next" href="#media">
+                     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
+                     </a>
+                     <!--
+                        <a data-slide="next" href="#media" class="right carousel-control"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                        -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <section class="last_section">
+         <div class="container">
+            <!--<h2 class="text-center course-Head">Our Courses</h2>-->
+            <div class="row">
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/roster/">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/imgpsh_fullsize_anim.png" width="50">
+                        </div>
+                        <p>
+                           <!--Star College-->ROSTER
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1200">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/college-annual-reports">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/placement.png" width="50">
+                        </div>
+                        <p>
+                           <!--Training And Placement --> COLLEGE ANNUAL REPORTS 
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <!--<div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1600">-->
+               <!--   <div class="pre_foot_nav">-->
+               <!--      <a href="https://aditi.du.ac.in/college-trip">-->
+               <!--         <div class="icons">-->
+               <!--            <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/trophy.png" width="50">-->
+               <!--         </div>-->
+               <!--         <p>-->
+                           <!--Achievements Highlights--> 
+                           <!--COLLEGE TRIP -->
+               <!--         </p>-->
+               <!--      </a>-->
+               <!--   </div>-->
+               <!--</div>-->
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1600">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/skill-and-incubation-centre">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/trophy.png" width="50">
+                        </div>
+                        <p>
+                           <!--Achievements Highlights--> Skill and Incubation Centre
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/aditi-publication">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/alumni.png" width="50">
+                        </div>
+                        <p>
+                           <!--Alumni--> ADITI PUBLICATION
+                        </p>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1000">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/placement-cell">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/activity1.png" width="50">
+                        </div>
+                        <p>
+                           <!--ECA--> PLACEMENT CELL
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1400">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/short-term-courses">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/speech.png" width="50">
+                        </div>
+                        <p>
+                           <!--Commitees and Cells--> SHORT TERM COURSES
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1400">
+                  <div class="pre_foot_nav">
+                     <a href="https://aditi.du.ac.in/recruitment">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/nss.png" width="50">
+                        </div>
+                        <p>
+                           <!--NSS--> Recruitment
+                        </p>
+                     </a>
+                  </div>
+               </div>
+               <div class="col-md-3 col-xs-6 text-center" data-aos="fade-right" data-aos-duration="1200">
+                  <div class="pre_foot_nav">
+                     <!--<a href="https://aditi.du.ac.in/college-events">-->
+                      <a href="https://aditi.du.ac.in/events-activities">
+                        <div class="icons">
+                           <img src="https://aditi.du.ac.in/wp-content/themes/aditi/images/value.png" width="50">
+                        </div>
+                        <p>
+                           <!--IGNOU--> COMMITTEE & CELL/CLUB 
+                        </p>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+          <style>
+    #wpsvccount ,#wpsvcattribution{
+        
+        display:none!important;
+    }
+    #wpsvctotal img{
+        
+        display:none!important;
+    }
+    .wps_visitor_title{
+      display:none;    
+        
+    }
+</style>
+
+<footer class="footer">
+         <div class="footer_top">
+            <div class="container">
+               <div class="row">
+               </div>
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-4" >
+                        
+                     <!--<aside id="text-1" class="widget widget_text">-->
+                        <div class="textwidget">
+                           <p><iframe style="border: 0; width: 100%;" src="https://maps.google.com/maps?q=aditi mahavidhalaya&t=&z=10&ie=UTF8&iwloc=&output=embed" height="200px" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                        </div>
+                        <aside id="text-2" class="widget widget_text">
+                           <h4>Reach us</h4>
+                           <div class="textwidget">
+                              <ul>
+                                 <li class="address">Delhi Auchandi Road, Bawana, Delhi-110039
+                                 </li>
+                                 <li class="phone"><a>Tel: 011-2752741, 011-27751317</a></li>
+                                 <li class="mail"><a href="mailto:info@aditi.du.ac.in;">Mail: info@aditi.du.ac.in</a></li>
+                              </ul>
+                           </div>
+                        </aside>
+                     </aside>
+                  </div>
+                  <div class="col-md-2">
+                     <aside id="nav_menu-1" class="widget widget_nav_menu">
+                        <h4 >Quick Links</h4>
+                        <div class="menu-quick-container">
+                             <div class="menu-quick-links-container"><ul class="menu"><li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-276"><a href="https://aditi.du.ac.in/gallery/">Gallery</a></li>
+<li id="menu-item-275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-275"><a href="https://aditi.du.ac.in/helpline-numbers/">Helpline Numbers</a></li>
+<li id="menu-item-274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-274"><a href="https://aditi.du.ac.in/sitemap/">Sitemap</a></li>
+<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="https://aditi.du.ac.in/archive/">Archive</a></li>
+<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272"><a href="https://aditi.du.ac.in/others/">Others</a></li>
+</ul></div>                           <!--<ul id="menu-quick" class="menu">-->
+                           <!--   <li id="menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356"><a target="_blank" rel="noopener noreferrer" href="">Gallery</a></li>-->
+                           <!--   <li id="menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a target="_blank" rel="noopener noreferrer" href="">Helpline Numbers</a></li>-->
+                           <!--   <li id="menu-item-4922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4922"><a href="">Sitemap</a></li>-->
+                           <!--   <li id="menu-item-1359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a target="_blank" rel="noopener noreferrer" href="">Archive</a></li>-->
+                           <!--   <li id="menu-item-1360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1360"><a target="_blank" rel="noopener noreferrer" href="">Others</a></li>-->
+                           <!--</ul>-->
+                        </div>
+                     </aside>
+                  </div>
+                  <div class="col-md-3" >
+                     <aside id="nav_menu-4" class="widget widget_nav_menu">
+                        <h4>Important Links</h4>
+                        <div class="menu-important-container">
+                            <div class="menu-important-links-container"><ul class="menu"><li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-255"><a href="http://www.du.ac.in/">Delhi University</a></li>
+<li id="menu-item-256" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-256"><a href="http://www.ipu.ac.in/">GGSIPU</a></li>
+<li id="menu-item-257" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-257"><a href="https://www.ugc.ac.in/">UGC</a></li>
+<li id="menu-item-258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-258"><a href="https://www.edudel.nic.in//">Education Deptt. under NCTD</a></li>
+<li id="menu-item-259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-259"><a href="http://www.tte.delhigovt.nic.in/">Training and Technical</a></li>
+<li id="menu-item-260" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-260"><a href="http://www.jmi.nic.in/">Jamia Millia Islamia</a></li>
+<li id="menu-item-261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-261"><a href="http://www.jnu.ac.in/main/">JNU</a></li>
+<li id="menu-item-263" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-263"><a href="http://www.ignou.ac.in/">IGNOU</a></li>
+</ul></div>                           <!--<ul id="menu-important" class="menu">-->
+                           <!--   <li id="menu-item-1361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a target="_blank" rel="noopener noreferrer" href="">Delhi University-->
+                           <!--   </a></li>-->
+                           <!--   <li id="menu-item-1362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1362"><a target="_blank" rel="noopener noreferrer" href="">GGSIPU</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">UGC</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Education Deptt. under NCTD</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Training and Technical</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Jamia Millia Islamia</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">JNU</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Training and Technical</a></li>-->
+                           <!--   <li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">IGNOU</a></li>-->
+                           <!--</ul>-->
+                        </div>
+                     </aside>
+                  </div>
+                  <div class="col-md-3" >
+                     <div class="contact_details">
+                        <aside id="text-2" class="widget widget_text">
+                           <h4>Quick Links</h4>
+                           <div class="menu-important-container">
+                              
+                           <ul id="menu-important" class="menu">
+                              <li id="menu-item-1361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a target="_blank" rel="noopener noreferrer" href="https://aditi.du.ac.in/alumni">Alumni
+                              </a></li>
+                              <li id="menu-item-1361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a target="_blank" rel="noopener noreferrer" href="https://aditi.du.ac.in/wp-content/uploads/2023/03/anti-ragging-website.pdf">Anti-Ragging
+                              </a></li>
+                               <li id="menu-item-1361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1361"><a target="_blank" rel="noopener noreferrer" href="https://aditi.du.ac.in/download-forms">Download Forms
+                              </a></li>
+                              <!--<li id="menu-item-1362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1362"><a target="_blank" rel="noopener noreferrer" href="">NCC</a></li>-->
+                              <!--<li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">NSS </a></li>-->
+                              <!--<li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Tender & Notice</a></li>-->
+                              <!--<li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Career Placement</a></li>-->
+                              <!--<li id="menu-item-8605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8605"><a href="">Recruitment/Job Opportunity</a></li>-->
+                              
+                           </ul>
+                        </div>
+                        </aside>
+                        <ul class="social_icons">
+                           <li><a class="fb" href="https://www.facebook.com/aditi.mahavidyalaya.94/"><i class="fa fa-facebook"></i></a></li>
+                           <li><a class="tw"  href="https://twitter.com/AditiMahavidya1"><i class="fa fa-twitter"></i></a></li>
+                           <!--<li><a class="gp" href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>-->
+                           <li><a class="gp" href="https://www.instagram.com/aditimahavidyalaya/"><i class="fa fa-instagram"></i></a></li>
+                           <li><a class="gp" href="https://youtube.com/@aditimahavidyalaya723"><i class="fa fa-youtube"></i></a></li></ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-4" >
+                     <!-- <div class="container" style="margin-bottom:10px">
+                        
+                        <strong>Visitor Count : </strong>
+                        <a href="" target="_blank">
+                        <img src="https://hitwebcounter.com/counter/counter.php?page=7158967&amp;style=0001&amp;nbdigits=5&amp;type=page&amp;initCount=0" title="visitor count" Alt="visitor count"   border="0" >
+                        </a>                                        <br/>
+                        <a href="" title="" 
+                           target="_blank" >                                    
+                        </a>  
+                     </div> -->
+                  </div>
+                  <div class="col-md-2" >
+                     <!--Beta Version-->
+                  </div>
+                  <div class="col-md-6" >
+                     Designed and Developed by <a href="https://maxtratechnologies.com/" target="_blank">Maxtra Technologies.</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+          <? echo do_shortcode('[wps_visitor_counter]');?>
+         <div class="footer_bottom text-center">
+            
+             
+            <p>
+               ©2022 Aditi Mahavidyalaya. All Rights Reserved. 
+            </p>
+         </div>
+         <button class="fa fa-arrow-up" onclick="topFunction()" id="myBtn" title="Go to top"></button>
+      </footer>
+      <script src="https://aditi.du.ac.in/wp-content/themes/aditi/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="https://aditi.du.ac.in/wp-content/themes/aditi/js/custom.html"></script>
+      <script type="text/javascript" src="https://aditi.du.ac.in/wp-content/themes/aditi/js/slick.slider.min.js"></script>
+      <script type="text/javascript" src="https://aditi.du.ac.in/wp-content/themes/aditi/js/functions.js"></script>
+      <script src="../unpkg.com/aos%403.0.0-beta.6/dist/aos.js"></script>
+      <script>
+         AOS.init();
+      </script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+          //toggle the component with class accordion_body
+          $(".accordion_head").click(function() {
+            if ($('.accordion_body').is(':visible')) {
+              $(".accordion_body").slideUp(300);
+              $(".plusminus").text('+');
+            }
+            if ($(this).next(".accordion_body").is(':visible')) {
+              $(this).next(".accordion_body").slideUp(300);
+              $(this).children(".plusminus").text('+');
+            } else {
+              $(this).next(".accordion_body").slideDown(300);
+              $(this).children(".plusminus").text('-');
+            }
+          });
+         });
+         
+      </script>
+      
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/bootstrap923e.js'></script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/https://aditi.du.ac.in/wp-content/themes/aditi/js/skip-link-focus-fixd01e.js'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/functions8337.js'></script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/https://aditi.du.ac.in/wp-content/themes/aditi/js/hoverIntent.minc245.js'></script>
+      <script type='text/javascript'>
+         /* <![CDATA[ */
+         var megamenu = {"timeout":"300","interval":"100"};
+         /* ]]> */
+      </script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/maxmegamenub2d8.js'></script>
+      <script type='text/javascript' src='https://aditi.du.ac.in/wp-content/themes/aditi/js/wp-embed.min923e.js'></script>
+
+
+   </body>
+</html>
+<script>
+   function onYouTubeIframeAPIReady() {
+    // iframeId parameter should match your Iframe's id attribute
+    var player = new YT.Player('iframeId', {
+      width: 140,
+      height: 105,
+      videoId: 'tGzl_AB4poI',
+      events: {
+        'onReady': function (event) {
+          event.target.setVolume(0);
+          event.target.playVideo();
+        }
+      }
+    });
+   }
+   
+</script>
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/aditi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>document.body.classList.remove("no-js");</script>	<script>
+	if ( -1 !== navigator.userAgent.indexOf( 'MSIE' ) || -1 !== navigator.appVersion.indexOf( 'Trident/' ) ) {
+		document.body.classList.add( 'is-IE' );
+	}
+	</script>
+				<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<script id="ekit-widget-scripts-js" src="https://aditi.du.ac.in/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.9.6"></script>
+<script id="twenty-twenty-one-ie11-polyfills-js-after">
+( Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach ) || document.write( '<\u0073cript src="https://aditi.du.ac.in/wp-content/themes/aditi/assets/js/polyfills.js?ver=1.6"></scr' + 'ipt>' );
+//# sourceURL=twenty-twenty-one-ie11-polyfills-js-after
+</script>
+<script id="twenty-twenty-one-responsive-embeds-script-js" src="https://aditi.du.ac.in/wp-content/themes/aditi/assets/js/responsive-embeds.js?ver=1.6"></script>
+<script id="eael-general-js-extra">
+var localize = {"ajaxurl":"https://aditi.du.ac.in/wp-admin/admin-ajax.php","nonce":"f1980a16be","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https://aditi.du.ac.in/walk-in-interview-for-appointment-of-guest-faculty-education-music-2/","cart_redirectition":"","cart_page_url":"","el_breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}};
+//# sourceURL=eael-general-js-extra
+</script>
+<script id="eael-general-js" src="https://aditi.du.ac.in/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.6.5"></script>
+<script id="hoverIntent-js" src="https://aditi.du.ac.in/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="megamenu-js" src="https://aditi.du.ac.in/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=3.10.4"></script>
+		<script>
+		/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",(function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())}),!1);
+		</script>
+		<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://aditi.du.ac.in/wp-includes/js/wp-emoji-release.min.js?ver=7.1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+var e="script#wp-emoji-settings",t=document.querySelector(e);if(!(t instanceof HTMLScriptElement))throw new Error("Element missing: "+e);const r=JSON.parse(t.text),s=(window._wpemojiSettings=r,"wpEmojiSettingsSupports"),o=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(s,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const r=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===r[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,r){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!r(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,r){let a;const s=(a="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),o=(s.textBaseline="top",s.font="600 32px Arial",{});return e.forEach(e=>{o[e]=t(s,e,n,r)}),o}function a(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}r.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(s));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(o),u.toString(),c.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"});const a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=e=>{i(n=e.data),a.terminate(),t(n)})}catch(e){}i(n=f(o,u,c,p))}t(n)}).then(e=>{for(const n in e)r.supports[n]=e[n],r.supports.everything=r.supports.everything&&r.supports[n],"flag"!==n&&(r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&r.supports[n]);var t;r.supports.everythingExceptFlag=r.supports.everythingExceptFlag&&!r.supports.flag,r.supports.everything||((t=r.source||{}).concatemoji?a(t.concatemoji):t.wpemoji&&t.twemoji&&(a(t.twemoji),a(t.wpemoji)))});
+//# sourceURL=https://aditi.du.ac.in/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<div style="display:none;">
+<li><a title="Togel 4D Toto Macau" href="http://actuarialscience.abu.edu.ng/hamtan/" rel="dofollow">situs togel macau</a></li>
+<li><a title="Bandar Togel Hadiah 4D 10 Juta Terpercaya" href="http://apps.uepg.br/propesp/pos-graduacao/" rel="dofollow">daftar bandar togel terbesar dan terpercaya</a></li>
+<li><a title="Situs Togel Online" href="https://ecanews.org/wp-snapshots/tmp/" rel="dofollow">agen judi togel online</a></li>
+<li><a title="Situs Togel Terpercaya" href="https://naturalremedy.com/wp-content/configDFN/9-new-host-domain/" rel="dofollow">situs judi togel</a></li>
+<li><a title="10 Situs Togel Terpercaya" href="https://www.msnurses.org/traces/" rel="dofollow">agen togel terpercaya</a></li>
+<li><a title="Situs Togel Resmi" href="https://www.cifft.com/wp-includes/blocks/audio/" rel="dofollow">bandar togel resmi</a></li>
+<li><a title="agen togel terpercaya" href="https://riotallo.com/wp-admin/maint/" rel="dofollow">agen togel terpercaya</a></li>
+<li><a title="bandar togel terpercaya" href="https://loginpokeridn.com/wp-includes/blocks/navigation/" rel="dofollow">bandar togel terpercaya</a></li>
+<li><a title="situs agen judi togel" href="http://competition.dz/imagesPub/" rel="dofollow">situs agen judi togel</a></li>
+<li><a title="bandar togel online terpercaya" href="https://diabetesed.net/wp-includes/blocks/block/ " rel="dofollow">bandar togel online terpercaya</a></li>
+<li><a title="situs agen togel online" href="https://www.corpoguavio.gov.co/caf/index.html" rel="dofollow">situs agen togel online</a></li>
+<li><a title="agen togel online terpercaya" href="https://www.beic.it/includes/filetransfer/" rel="dofollow">agen togel online terpercaya</a></li>
+<li><a title="bandar togel terbaik dan terpercaya" href="https://www.beic.it/includes/" rel="dofollow">bandar togel terbaik dan terpercaya</a></li>
+<li><a title="situs agen togel online" href="https://www.corpoguavio.gov.co/caf/index.html" rel="dofollow">situs agen togel online</a></li>
+<li><a title="situs judi togel online" href="https://yiangaoxin.com/wp-includes/blocks/verse/" rel="dofollow">situs judi togel online</a></li>
+<li><a title="situs agen togel terpercaya" href="https://www.aeroscraft.com/wp-includes/blocks/pattern/" rel="dofollow">situs agen togel terpercaya</a></li>
+<li><a title="situs togel bri online24jam terpercaya" href="https://www.upsidelearning.com/wp-includes/situs-togel-terpercaya/" rel="dofollow">situs togel online terpercaya</a></li>
+<li><a title="daftar bandar togel online terpercaya" href="http://www.jamesbond-fr.com/cgi_des20141022/" rel="dofollow">daftar bandar togel online terpercaya</a></li>
+<li><a title="situs agen togel resmi" href="https://vcunitedway.org/wp-includes/blocks/quote/" rel="dofollow">situs agen togel resmi</a></li>
+<li><a title="daftar bandar togel online" href="https://www.giraffas.com.br/assets/img/" rel="dofollow">daftar bandar togel online terpercaya</a></li>
+<li><a title="daftar bandar togel online" href="https://chinaaccountingblog.com/sandvox_ThisModernLife/orange/" rel="dofollow">daftar bandar togel online</a></li>
+<li><a title="situs agen togel terpercaya" href="https://riotallo.com/wp-admin/maint/" rel="dofollow">situs agen togel terpercaya</a></li>
+<li><a title="situs agen togel online" href="https://posgrado.fcm.uncu.edu.ar/cursos/ALFA_DATA/alfacgiapi/" rel="dofollow">situs agen togel online</a></li>
+<li><a title="agen togel resmi di indonesia" href="https://www.limousinacheval.com/wp-content/themes/twentytwentyone/inc/" rel="dofollow">agen togel resmi di indonesia</a></li>
+<li><a title="situs agen judi togel" href="https://iberflora.feriavalencia.com/wp-content/themes/iberflora2020/" rel="dofollow">situs agen judi togel</a></li>
+<li><a title="link situs togel resmi" href="http://lisab.udec.cl/wp-admin/js/dir/" rel="dofollow">link situs togel resmi</a></li>
+<li><a title="daftar bandar togel terbesar dan terpercaya" href="http://proesa.udec.cl/scripts/js/" rel="dofollow">daftar bandar togel terbesar dan terpercaya</a></li>
+<li><a title="situs judi slot terpercaya" href="https://isbnpa.org/wp-content/plugins/if-menu/" rel="dofollow">situs judi slot terpercaya</a></li>
+<li><a title="bo togel online terpercaya" href="http://www.royalagro.doae.go.th/mp3/60/" rel="dofollow">bo togel online terpercaya</a></li>
+<li><a title="agen judi togel terpercaya" href="https://www.leifertlaw.com/wp-content/themes/twentynineteen/inc/index.html" rel="dofollow">agen judi togel terpercaya</a></li>
+<li><a title="bandar togel lengkap terbesar" href="https://csit.nu.ac.th/jr/medicine-n/js/" rel="dofollow">bandar togel lengkap terbesar</a></li>
+<li><a title="situs agen togel online" href="http://www.thesocial.com/wp-content/img/" rel="dofollow">situs agen togel online</a></li>
+<li><a title="bo togel terpercaya dan terbesar" href="http://staging.eternallifestyle.com/wp-content/themes/twentytwenty/inc/index.html" rel="dofollow">bo togel terpercaya dan terbesar</a></li>
+<li><a title="daftar situs slot online" href="https://zoology.abu.edu.ng/adn/" rel="dofollow">aftar situs slot online</a></li>
+<li><a title="agen judi togel online" href="https://abucauc.abu.edu.ng/src/Abucauc/" rel="dofollow">agen judi togel online</a></li>
+<li><a title="nama situs togel terpercaya" href="https://abucuhsr.abu.edu.ng/indulge/" rel="dofollow">nama situs togel terpercaya</a></li>
+<li><a title="judi slot online" href="https://abudevs.abu.edu.ng/images/" rel="dofollow">judi slot online</a></li>
+<li><a title="situs togel resmi toto" href="https://actuarialscience.abu.edu.ng/hamtan/" rel="dofollow">situs togel resmi toto</a></li>
+<li><a title="10 situs togel terpercaya" href="https://africanlanguagesandcultures.abu.edu.ng/ferrero/" rel="dofollow">10 situs togel terpercaya</a></li>
+<li><a title="situs togel resmi toto" href="http://baclab.ctfc.cat/wp-admin/includes/" rel="dofollow">situs togel resmi toto</a></li>
+<li><a title="situs bo togel online" href="https://rbc.gov.rw/iriza/local/" rel="dofollow">situs bo togel online</a></li>
+<li><a title="bandar togel hadiah 4d 10 juta" href="https://bcaportal.bca.edu.gr/assets/js/" rel="dofollow">bandar togel hadiah 4d 10 juta</a></li>
+<li><a title="situs togel online terpercaya" href="https://etend.abu.edu.ng/snagit/images/index/" rel="dofollow">situs togel online terpercaya</a></li>
+<li><a title="situs judi togel resmi" href="https://https://agriculture.abu.edu.ng/assets/cv/" rel="dofollow">situs judi togel resmi</a></li>
+<li><a title="situs judi togel online" href="https://alliedhealth.abu.edu.ng/ally/" rel="dofollow">situs judi togel online</a></li>
+<li><a title="bandar togel china resmi" href="https://anaesthesia.abu.edu.ng/change/" rel="dofollow">bandar togel china resmi</a></li>
+<li><a title="bandar togel terpercaya" href="https://animalscience.abu.edu.ng/change/" rel="dofollow">bandar togel terpercaya</a></li>
+<li><a title="situs bandar togel toto online" href="https://arts.abu.edu.ng/joyful/accountant/" rel="dofollow">situs bandar togel toto online</a></li>
+<li><a title="situs judi togel 4d resmi" href="https://artsandsocialscienceeducation.abu.edu.ng/pharah/access/" rel="dofollow">situs judi togel 4d resmi</a></li>
+<li><a title="bandar togel hadiah 4d 10 juta" href="https://asuu.abu.edu.ng/document/resources/" rel="dofollow">bandar togel hadiah 4d 10 juta</a></li>
+<li><a title="situs togel terbaik dan terpercaya" href="https://www.krizia.it/wp-content/upgrad" rel="dofollow">situs togel terbaik dan terpercaya</a></li>
+<li><a title="agen togel resmi di indonesia" href="https://archeology.abu.edu.ng/hundreds/things/" rel="dofollow">agen togel resmi di indonesia</a></li>
+<li><a title="bandar togel toto hongkong" href="https://basicclinicals.abu.edu.ng/css/" rel="dofollow">bandar togel toto hongkong</a></li>
+<li><a title="bo togel bonus new member terbesar" href="https://thorpeslaundry.com/dir/" rel="dofollow">bo togel bonus new member terbesar</a></li>
+<li><a title="situs slot deposit pulsa tanpa potongan" href="https://arabic.abu.edu.ng/underground/findigs/" rel="dofollow">situs slot deposit pulsa tanpa potongan</a></li>
+<li><a title="bo togel resmi di indonesia" href="https://architecture.abu.edu.ng/study/staff/" rel="dofollow">bo togel resmi di indonesia</a></li>
+<li><a title="daftar bandar togel terbesar dan terpercaya" href="https://botany.abu.edu.ng/sikwan/" rel="dofollow">daftar bandar togel terbesar dan terpercaya</a></li>
+<li><a title="situs judi togel online" href="https://fashionsizzle.com/wp-admin/network/" rel="dofollow">situs judi togel online</a></li>
+<li><a title="agen bandar togel toto online" https://seasonofcreation.org/wp-content/maintenance/assets/images/" rel="dofollow">agen bandar togel toto online</a></li>
+<li><a title="bandar lotre togel online" href="https://elmstba.com/wp-content/themes/twentytwentytwo/inc/patterns/" rel="dofollow">bandar lotre togel online</a></li>
+<li><a title="situs judi slot terbaik" href="https://bbcstudio.abu.edu.ng/rangers/" rel="dofollow">situs judi slot terbaik</a></li>
+<li><a title="situs togel resmi toto" href="https://bursary.abu.edu.ng/logic/roles/" rel="dofollow">situs togel resmi toto</a></li>
+<li><a title="bandar togel cambodia resmi" href="https://agriculturalengineering.abu.edu.ng/santos/" rel="dofollow">bandar togel cambodia resmi</a></li>
+<li><a title="situs bo togel resmi" href="https://agronomy.abu.edu.ng/billie/" rel="dofollow">situs bo togel resmi</a></li>
+<li><a title="bandar togel hadiah 4d 10 juta terpercaya" href="https://www.theacpa.org/wp-content/uploads/fusionredux/" rel="dofollow">bandar togel hadiah 4d 10 juta terpercaya</a></li>
+<li><a title="bandar togel online terpercaya" href="http://www.thesocial.com/wp-content/img/" rel="dofollow">bandar togel online terpercaya</a></li>
+<li><a title="agen bandar togel online" href="https://posgrado.fcm.uncu.edu.ar/cursos/ALFA_DATA/alfacgiapi/" rel="dofollow">agen bandar togel online</a></li>
+<li><a title="bo slot terbaik" href="http://aulas.fcm.uncu.edu.ar/lang/" rel="dofollow">bo slot online terbaik</a></li>
+<li><a title="bandar togel online terbesar" href="https://thaicentenarian.mahidol.ac.th/img/" rel="dofollow">bandar togel online terbesar</a></li>
+<li><a title="bandar togel terpercaya dan terbesar" href="https://agricextension.abu.edu.ng/typhoon/" rel="dofollow">bandar togel terpercaya dan terbesar</a></li>
+<li><a title="10 situs togel terpercaya resmi" href="https://arewahouse.abu.edu.ng/origami/special/" rel="dofollow">10 situs togel terpercaya resmi</a></li>
+<li><a title="bandar togel terpercaya dan resmi" href="https://building.abu.edu.ng/Phrase/" rel="dofollow">bandar togel terpercaya dan resmi</a></li>
+<li><a title="situs togel resmi dan terpercaya" href="https://businessadministration.abu.edu.ng/staff-profile-image/" rel="dofollow">situs togel resmi dan terpercaya</a></li>
+<li><a title="situs bandar lotre togel" href="https://businessschool.abu.edu.ng/assets/cv/" rel="dofollow">situs bandar lotre togel</a></li>
+<li><a title="togel online" href="https://cbrt.abu.edu.ng/layout/styles/agen-togel-cambodia/" rel="dofollow">togel online</a></li>
+<li><a title="situs togel online" href="https://cdrmds.abu.edu.ng/mail/config/" rel="dofollow">situs togel online</a></li>
+<li><a title="situs agen togel online" href="https://chemicalengineering.abu.edu.ng/situs-togel-terpercaya/" rel="dofollow">situs agen togel online</a></li>
+<li><a title="bandar judi togel online" href="https://chemicalpathology.abu.edu.ng/course/" rel="dofollow">bandar judi togel online</a></li>
+<li><a title="agen bandar togel online" href="http://adb.ctfc.cat/wp-content/uploads/2010/" rel="dofollow">agen bandar togel online</a></li>
+<li><a title="situs togel terbaik" href="https://reforleb.ctfc.cat/wp-content/uploads/2015/" rel="dofollow">situs togel terbaik</a></li>
+<li><a title="daftar bandar togel terbesar dan terpercaya" href="https://basicmedicals.abu.edu.ng/ajax-con/" rel="dofollow">agen togel online terbesar</a></li>
+<li><a title="situs togel terpercaya dan terbesar" href="https://accounting.abu.edu.ng/teyit/" rel="dofollow">situs togel terpercaya dan terbesar</a></li>
+<li><a title="situs agen togel online resmi di indonesia" href="https://administration.abu.edu.ng/assets/fonts/" rel="dofollow">situs agen togel online resmi di indonesia</a></li>
+<li><a title="bandar togel online terpercaya" href="https://bulletin-socpolit.kaznpu.kz/controllers/modals/editorDecision/form/" rel="dofollow">bandar togel online terpercaya</a></li>
+<li><a title="situs judi slot online" href="https://www.vaardigheidstoetsen.nl/cgi-bin/patior/" rel="dofollow">situs judi slot online</a></li>
+<li><a title="agen togel" href="http://b93197pb.beget.tech/wp-content/themes/transportex/inc/index.html" rel="dofollow">agen togel</a></li>
+<li><a title="daftar bandar togel terbesar dan terpercaya" href="http://proesa.udec.cl/scripts/js/" rel="dofollow">daftar bandar togel terbesar dan terpercaya</a></li>
+<li><a title="bandar togel" href="https://kanamemo.com/wp-admin/network/" rel="dofollow">bandar togel</a></li>
+<li><a title="situs togel" href="https://communitymedicine.abu.edu.ng/staff-profile-image/situs-togel" rel="dofollow">situs togel</a></li>
+<li><a title="situs slot" href="https://cropprotection.abu.edu.ng/assets/js" rel="dofollow">situs slot</a></li>
+<li><a title="bandar togel" href="https://cppp.abu.edu.ng/engine1" rel="dofollow">bandar togel</a></li>
+<li><a title="slot resmi" href="https://commerciallaw.abu.edu.ng/assets/images/favicon/" rel="dofollow">slot resmi</a></li>
+<li><a title="Bandar Judi Togel Hari Ini Online24Jam Terpercaya 2022" href="https://clinicalpharmacyandpharmacypractice.abu.edu.ng/pages/images/demo/portfolio/agen-togel/" rel="dofollow">Bandar Judi Togel Hari Ini Online24Jam Terpercaya 2022</a></li>
+<li><a title="bo togel" href="https://clinicalpharmacology.abu.edu.ng/assets/fonts/bo-togel/" rel="dofollow">bo togel</a></li>
+<li><a title="toto togel" href="https://clinicalmedicine.abu.edu.ng/staff-profile-image/toto-togel-terpercaya/" rel="dofollow">toto togel</a></li>
+<li><a title="bo togel" href="https://studiored.com/wp-content/plugins/ywdairw/admin/views/includes/" rel="dofollow">bo togel</a></li>
+<li><a title="togel hongkong" href="https://civilengineering.abu.edu.ng/bohcayu/" rel="dofollow">togel hongkong</a></li>
+<li><a title="togel online" href="https://cils.abu.edu.ng/images/pix/" rel="dofollow">togel online</a></li>
+<li><a title="situs togel" href="https://chemistry.abu.edu.ng/teaching/physic/" rel="dofollow">situs togel</a></li>
+<li><a title="situs bandar togel online terpercaya" href="http://namakemono.mods.jp/images/" rel="dofollow">situs bandar togel online terpercaya</a></li>
+<li><a title="bandar togel" href="http://2022.jeffgalloway.com/" rel="dofollow">bandar togel</a></li>
+<li><a title="agen togel terpercaya" http://search.2modern.com/" rel="dofollow">agen togel terpercaya</a></li>
+<li><a title="situs togel" href="http://www.veganbaking.net/components/com_mailto/views/mailto/10-situs-togel-terpercaya" rel="dofollow">situs togel</a></li>
+<li><a title="toto togel" href="https://cyburbia.org/forum_old/bandar-togel/" rel="dofollow">toto togel</a></li>
+<li><a title="togel online" href="https://joinpdx.org/wp-inc" rel="dofollow">togel online</a></li>
+<li><a title="togel online" href="http://thegiftinsider.com/" rel="dofollow">togel online</a></li>
+<li><a title="situs togel" href="https://joinpdx.org/wp-includes/assets/" rel="dofollow">situs togel</a></li>
+<li><a title="situs togel" href="https://isabellascookies.com/constant.old/signup/register/" rel="dofollow">situs togel</a></li>
+<li><a title="agen togel" href="https://kuklaskorner.com/assets/config/" rel="dofollow">agen togel</a></li>
+<li><a title="agen togel" href="http://dev.2modern.com/" rel="dofollow">agen togel</a></li>
+<li><a title="situs agen togel resmi" href="http://dev.cyburbia.org/" rel="dofollow">situs agen togel resmi</a></li>
+<li><a title="bo togel" href="https://bencana.unimap.edu.my/wp-content/themes/twentytwentytwo/assets/images/" rel="dofollow">bo togel</a></li>
+</div>

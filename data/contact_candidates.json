@@ -1,0 +1,853 @@
+[
+  {
+    "name": "D GC Gurgaon",
+    "url": "http://dgcgurugram.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Jatauli Haily Mandi",
+    "url": "http://gcjhm.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Pataudi",
+    "url": "http://www.gcpataudi.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Rithoj",
+    "url": "http://gcrithoj.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Sector-9 Gurugram",
+    "url": "http://gcsector9.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Sidhrawali",
+    "url": "http://gcsidhrawali.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GC Sultanpur (Farrukhnagar)",
+    "url": "http://gcfarrukhnagar.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GCG Manesar",
+    "url": "http://gcgmanesar.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GCG Sector-52, Gurugram",
+    "url": "http://gcgsec52ggn.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "GCW Sector-14 Gurugram",
+    "url": "http://gcggn.ac.in",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "N.B.G.S.M College, Gurugram",
+    "url": "https://www.nbgsmc.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-fa653a0372ec.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Rao Lal Singh College of Education, Gurugram",
+    "url": "https://rlscoe.ac.in",
+    "status": "fetched",
+    "snapshot": "contact-f37cdf57f58e.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "D.P.G Degree College",
+    "url": "https://www.dpgdegreecollege.com/",
+    "status": "fetched",
+    "snapshot": "contact-af5f585ab3a4.html",
+    "candidates": [],
+    "listed_email_found": true
+  },
+  {
+    "name": "Fore Academy of Management Education, Sector - 32, Gurugram",
+    "url": "https://foreacademy.ac.in/",
+    "status": "redirect requires review",
+    "candidates": []
+  },
+  {
+    "name": "Indian School of Hospitility, Shikhopur, Sec-83 Gurugram",
+    "url": "https://www.ish.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-962080c63522.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "JK Business School (Degree College)",
+    "url": "https://jkbschool.org",
+    "status": "fetched",
+    "snapshot": "contact-0e43286fa767.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Suraj Degree College, Sector-75, Gurugram",
+    "url": "https://surajeducation.in",
+    "status": "fetched",
+    "snapshot": "contact-088f840b2cf0.html",
+    "candidates": [
+      "info@surajeducation.com"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Acharya Narendra Dev College",
+    "url": "https://www.andcollege.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-c6ad62f4e0bd.html",
+    "candidates": [
+      "principal@andc.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Aditi Mahavidyalaya",
+    "url": "https://aditi.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-2e27d76a329b.html",
+    "candidates": [
+      "info@aditi.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ahilya Bai College of Nursing",
+    "url": "http://www.abconlnhdu.com/",
+    "status": "HTTPError",
+    "candidates": []
+  },
+  {
+    "name": "Amar Jyoti Institute of Physiotherapy",
+    "url": "https://www.ajipt.org/",
+    "status": "fetched",
+    "snapshot": "contact-48455590f735.html",
+    "candidates": [
+      "info@ajipt.org"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Aryabhatta College",
+    "url": "https://aryabhattacollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-8cd2229a9072.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Atma Ram Sanatan Dharma College",
+    "url": "https://arsdcollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-2e5017aa4180.html",
+    "candidates": [
+      "principal.arsdcollege@gmail.com",
+      "principal@arsd.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ayurvedic & Unani Tibia College",
+    "url": "https://autch.delhi.gov.in/",
+    "status": "fetched",
+    "snapshot": "contact-2ccda0e55903.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Bhagini Nivedita College",
+    "url": "https://bhagininiveditadu.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-c82e1277ef54.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Bharati College",
+    "url": "https://www.bharaticollege.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-5ead67441e0c.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Bhaskaracharya College of Applied Sciences",
+    "url": "https://www.bcas.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-8eadfe1bb231.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Bhim Rao Ambedkar College",
+    "url": "https://www.drbrambedkarcollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-4384b547b798.html",
+    "candidates": [
+      "info@drbrambedkarcollege.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Chacha Nehru Bal Chikitsalaya",
+    "url": "https://www.cnbchospital.in/",
+    "status": "fetched",
+    "snapshot": "contact-3b5ace679e13.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "College of Art",
+    "url": "http://colart.delhigovt.nic.in/wps/wcm/connect/Lib_Collegeofart/collegeofarts/home",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "College of Nursing at Army Hospital (R&R)",
+    "url": "https://acn.co.in/",
+    "status": "fetched",
+    "snapshot": "contact-4daecd524c66.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "College of Vocational Studies",
+    "url": "http://www.cvs.edu.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Daulat Ram College",
+    "url": "https://www.dr.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-4f819c1ebac7.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Deen Dayal Upadhyaya College",
+    "url": "https://dducollegedu.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-cba934bc722b.html",
+    "candidates": [
+      "office@ddu.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Delhi College of Arts & Commerce",
+    "url": "https://dcac.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-62f4bcbc6940.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Delhi Institute of Pharmaceutical Sciences and Research",
+    "url": "http://www.dipsar.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Deshbandhu College(Morning)",
+    "url": "https://www.deshbandhucollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-965a6ba59307.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Durga Bai Deshmukh College of Special Edu.(VI)",
+    "url": "https://www.durgabaideshmukhcollege.org/",
+    "status": "fetched",
+    "snapshot": "contact-77be494a1105.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Dyal Singh College",
+    "url": "https://www.dsc.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-7f7c1eaac36d.html",
+    "candidates": [
+      "principal@dsc.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Dyal Singh College (Evening)",
+    "url": "https://www.dsce.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-32efafb05893.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Florence Nightingale College of Nursing",
+    "url": "https://www.collegeofnursinggtbh.in/",
+    "status": "fetched",
+    "snapshot": "contact-9acf51c95303.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Gargi College",
+    "url": "https://www.gargicollege.in/",
+    "status": "fetched",
+    "snapshot": "contact-e54238d5d191.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Hans Raj College",
+    "url": "https://www.hansrajcollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-09bcf311e421.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Hindu College",
+    "url": "http://www.hinducollege.ac.in/",
+    "status": "TimeoutError",
+    "candidates": []
+  },
+  {
+    "name": "Holy Family College of Nursing",
+    "url": "https://www.hfcondelhi.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-d46471ca9727.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Indira Gandhi Institute of Physical Education & Sports Sciences",
+    "url": "https://igipess.du.ac.in",
+    "status": "fetched",
+    "snapshot": "contact-fabb5c5b7df9.html",
+    "candidates": [
+      "admin@igipess.du.ac.in",
+      "principal@igipess.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Indraprastha College for Women",
+    "url": "https://ipcollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-ce724e8964ea.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Institute of Home Economics",
+    "url": "https://ihe.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-1e33e1ff1b1f.html",
+    "candidates": [
+      "principal@ihe.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Janki Devi Memorial College",
+    "url": "https://jdm.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-398c3d40674c.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Jesus & Mary College",
+    "url": "https://www.jmc.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-7d739a985b06.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Kalindi College for Women",
+    "url": "https://kalindi.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-4d3281e0da75.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Kamla Nehru College for Women",
+    "url": "https://knc.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-43d70f5df250.html",
+    "candidates": [
+      "office@knc.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Keshav Mahavidyalaya",
+    "url": "https://keshav.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-d9fec2a49491.html",
+    "candidates": [
+      "principal@keshav.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Kirori Mal College",
+    "url": "https://kmc.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-e5e5c7bb72e2.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Lady Hardinge Medical College",
+    "url": "http://fmsc.ac.in/lady.htm",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Lady Irwin College",
+    "url": "https://ladyirwin.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-0a164581f2fc.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Lady Shri Ram College for Women",
+    "url": "https://lsr.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-f0fc088333ce.html",
+    "candidates": [
+      "principal@lsr.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Lakshmi Bai College for Women",
+    "url": "https://lakshmibaicollege.in/",
+    "status": "fetched",
+    "snapshot": "contact-9dbfe8e95bd7.html",
+    "candidates": [
+      "info@lb.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Maharaja Agarsen College",
+    "url": "https://mac.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-a3cebac72cb5.html",
+    "candidates": [
+      "principal@mac.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Maharshi Valmiki College of Education",
+    "url": "https://www.mvce.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-7939d2b04a06.html",
+    "candidates": [
+      "info@mvced.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Maitreyi College for Women",
+    "url": "https://www.maitreyi.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-e7efcbe35b66.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Mata Sundri College for Women",
+    "url": "https://mscw.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-edf690da2148.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Maulana Azad Institute of Dental Sciences",
+    "url": "http://www.maids.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Maulana Azad Medical College",
+    "url": "http://www.mamc.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Miranda House",
+    "url": "https://www.mirandahouse.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-a12ac3798330.html",
+    "candidates": [
+      "principal@mirandahouse.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Moti Lal Nehru College",
+    "url": "http://www.mlncdu.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Moti Lal Nehru College (Evening)",
+    "url": "https://www.mlnce.org/",
+    "status": "fetched",
+    "snapshot": "contact-948e23dddf22.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "University College of Medical Sciences",
+    "url": "https://www.ucms.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-d03db8bc7ca1.html",
+    "candidates": [
+      "principal@ucms.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Nehru Homeopathic Medical College & Hospital",
+    "url": "http://nhmc.delhigovt.nic.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "P.G.D.A.V. College",
+    "url": "https://www.pgdavcollege.in/",
+    "status": "fetched",
+    "snapshot": "contact-ec3210c67699.html",
+    "candidates": [
+      "principal@pgdav.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "P.G.D.A.V. College (Evening)",
+    "url": "https://pgdavecollege.in/",
+    "status": "fetched",
+    "snapshot": "contact-eedd91f2b7aa.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Pt. Deendayal Upadhyaya Institute of Physically Handicapped",
+    "url": "http://iphnewdelhi.in/Home.aspx?ReturnUrl=%2f",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Rajdhani College",
+    "url": "https://www.rajdhanicollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-89950cb46ccf.html",
+    "candidates": [
+      "principal@rajdhani.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Rajkumari Amrit Kaur College of Nursing",
+    "url": "https://rakcon.com/",
+    "status": "fetched",
+    "snapshot": "contact-cc39a3317075.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ram Lal Anand College",
+    "url": "https://rlacollege.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-d07721906275.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ramanujan College",
+    "url": "https://ramanujancollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-93aecccd2494.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ramjas College",
+    "url": "http://ramjas.du.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Satyawati College",
+    "url": "https://satyawati.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-461f8a3a41ac.html",
+    "candidates": [
+      "principal@satyawati.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Satyawati College (Evening)",
+    "url": "http://satyawatievedu.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "School of Open Learning ( Erstwhile School of Correspondence & Continuing Education)",
+    "url": "https://sol.du.ac.in",
+    "status": "fetched",
+    "snapshot": "contact-783e1e4cf5dc.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shaheed Bhagat Singh College",
+    "url": "https://sbs.du.ac.in/",
+    "status": "redirect requires review",
+    "candidates": []
+  },
+  {
+    "name": "Shaheed Bhagat Singh College (Evening)",
+    "url": "https://www.sbsec.org/",
+    "status": "fetched",
+    "snapshot": "contact-275ea1f8a61c.html",
+    "candidates": [
+      "info@sbse.du.ac.in",
+      "principal.sbsec@gmail.com"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shaheed Rajguru College of Applied Sciences for Women",
+    "url": "https://www.rajgurucollege.com/",
+    "status": "fetched",
+    "snapshot": "contact-526c97e09f40.html",
+    "candidates": [
+      "principal@rajguru.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shaheed Sukhdev College of Business Studies",
+    "url": "https://sscbs.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-c4dcf98c248d.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shivaji College",
+    "url": "http://www.shivajicollege.ac.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "Shri Ram College of Commerce",
+    "url": "https://www.srcc.edu/",
+    "status": "fetched",
+    "snapshot": "contact-1c2db9681270.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shyam Lal College",
+    "url": "https://www.slc.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-09497dfbcde6.html",
+    "candidates": [
+      "principal@shyamlal.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shyam Lal College (Evening)",
+    "url": "https://shyamlale.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-afbccea088e2.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Shyama Prasad Mukherji College for Women",
+    "url": "https://spm.du.ac.in/index.php?lang=en",
+    "status": "fetched",
+    "snapshot": "contact-71c854ba634f.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Aurobindo College",
+    "url": "https://www.aurobindo.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-d308dde7779a.html",
+    "candidates": [
+      "principal@aurobindo.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Aurobindo College (Evening)",
+    "url": "https://www.aurobindoe.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-b19cb9faca52.html",
+    "candidates": [
+      "principal.sace.du@gmail.com"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Guru Gobind Singh College of Commerce",
+    "url": "https://www.sggscc.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-6c74c887e7c0.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Guru Nanak Dev Khalsa College",
+    "url": "https://www.sgndkc.org/sk/",
+    "status": "fetched",
+    "snapshot": "contact-a315e42627f4.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Guru Tegh Bahadur Khalsa College",
+    "url": "https://sgtbkhalsadu.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-ff08908e840b.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Sri Venkateswara College",
+    "url": "https://www.svc.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-a19b984284fb.html",
+    "candidates": [
+      "principal@svc.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "St. Stephen's College",
+    "url": "https://www.ststephens.edu/",
+    "status": "fetched",
+    "snapshot": "contact-21723f540612.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Swami Shraddhanand College",
+    "url": "https://ss.du.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-5aef249ec2af.html",
+    "candidates": [
+      "principal@ss.du.ac.in"
+    ],
+    "listed_email_found": false
+  },
+  {
+    "name": "Vallabhbhai Patel Chest Institute",
+    "url": "https://www.vpci.org.in/",
+    "status": "fetched",
+    "snapshot": "contact-dccc6f58776b.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Vivekananda College",
+    "url": "https://www.vivekanandacollege.edu.in/",
+    "status": "fetched",
+    "snapshot": "contact-34597cc47416.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Zakir Husain Delhi College",
+    "url": "https://www.zakirhusaindelhicollege.ac.in/",
+    "status": "fetched",
+    "snapshot": "contact-cdfb0cf0a1f0.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Zakir Husain Post Graduate Evening College",
+    "url": "https://zhdce.ac.in/default.aspx",
+    "status": "fetched",
+    "snapshot": "contact-387ca9d27ffe.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Ginni Devi Modi Girls PG College Modinagar",
+    "url": "https://www.gdmcollege.org/",
+    "status": "fetched",
+    "snapshot": "contact-ca353b2554c3.html",
+    "candidates": [],
+    "listed_email_found": false
+  },
+  {
+    "name": "Janta Degree College Patla, Ghaziabad",
+    "url": "https://www.jdcpatala.org/",
+    "status": "fetched",
+    "snapshot": "contact-8604f55f49f1.html",
+    "candidates": [
+      "info@jdcpatala.org"
+    ],
+    "listed_email_found": true
+  },
+  {
+    "name": "Lajpat Rai College, Sahibabad, Ghaziabad",
+    "url": "http://lrcollege.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "MMH College, Ghaziabad",
+    "url": "https://www.mmhcollegeghaziabad.edu.in/",
+    "status": "URLError",
+    "candidates": []
+  },
+  {
+    "name": "VIDYAVATI MUKANDLAL GIRLS COLLEGE, GHAZIABAD",
+    "url": "http://www.vmlgcollege.com",
+    "status": "URLError",
+    "candidates": []
+  }
+]

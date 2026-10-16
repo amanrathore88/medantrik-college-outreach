@@ -1,0 +1,9 @@
+__pycache__/
+*.log
+.env
+campaign_send_log.csv
+data/*.sqlite3-shm
+data/*.sqlite3-wal
+~$*
+
+

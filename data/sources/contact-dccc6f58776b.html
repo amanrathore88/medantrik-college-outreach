@@ -1,0 +1,1007 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="content-type" />
+    <link rel="stylesheet" href="https://www.vpci.org.in/css/style.css" type="text/css" />
+    <script type="text/javascript" src="https://www.vpci.org.in/lib/jquery-1.7.2.js"></script>
+    <link href="https://www.vpci.org.in/css/jflow.style.css" type="text/css" rel="stylesheet" />
+    <script src="https://www.vpci.org.in/js/jflow.plus.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#myController").jFlow({
+
+                controller: ".jFlowControl", // must be class, use . sign
+
+                slideWrapper: "#jFlowSlider", // must be id, use # sign
+
+                slides: "#mySlides", // the div where all your sliding divs are nested in
+
+                selectedWrapper: "jFlowSelected", // just pure text, no sign
+
+                effect: "flow", //this is the slide effect (rewind or flow)
+
+                width: $(window).width, // this is the width for the content-slider
+
+                height: 200, // this is the height for the content-slider
+
+                duration: 400, // time in milliseconds to transition one slide
+
+                pause: 5000, //time between transitions
+
+                prev: ".jFlowPrev", // must be class, use . sign
+
+                next: ".jFlowNext", // must be class, use . sign
+
+                auto: true
+
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.calender').live('click', function() {
+                var id = $(this).attr("id");
+                var w = 600;
+                var h = 300;
+                var left = (screen.width / 2) - (w / 2);
+                var top = (screen.height / 2) - (h / 2);
+                window.open('/calender?id=' + id, 'Event_Page',
+                    'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=no, copyhistory=no, width=' +
+                    w + ', height=' + h + ', top=' + top + ', left=' + left);
+            });
+            $("#slider").easySlider({
+                auto: true,
+                continuous: true
+            });
+        });
+    </script>
+
+
+
+    <title>VPCI</title>
+    
+        <style>
+    .blinking-text {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        margin-inline: auto;
+        font-size: 1rem;
+        font-weight: bold;
+        text-align: center;
+        animation: blink 0.4s steps(1) infinite;
+        text-decoration: none;
+        display: block;
+    }
+
+    @keyframes blink {
+      0% {
+        color: red;
+      }
+      50% {
+        color: blue;
+      }
+      100% {
+        color: red;
+      }
+    }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+
+
+            <div class="languga">
+    <ul>
+
+        
+        <li><a href="https://www.vpci.org.in/tender-list-show"></a></li>
+
+
+
+
+    </ul>
+    <br /><br />
+    <!--<div class="search">
+      <table cellpadding="0" cellspacing="0" width="100%">
+         <tr>
+        <td><input type="text" value=""  style="margin-top:-4px; line-height:4px; float:left;"/></td>
+       <td><img src="images/go.jpg" /></td>
+
+      </tr>
+   </table>
+  </div>-->
+</div>
+
+<div class="logo"><img src="images/logo.jpg" class="stretch" alt="" border="0" height="84" /></div>
+
+<div style="display:flex; justify-content:space-between;">
+
+    <img src="images/nabh.jpeg" style="margin-top:10px; margin-right:12vw" alt="" height="84" />
+    <img src="images/g20.jpeg" style="margin-top:10px; margin-left:5px;" alt=""height="84" />
+
+</div>
+
+
+
+
+
+<!--  <div class="logo"><img src="images/logo.jpg" class="stretch" alt="" border="0" height="84"   /></div>-->
+
+<!-- <div ><img src="images/nabh.jpeg"style="margin-left:60px; margin-top:10px" alt="" border="0" height="84"  class="stretch"  /></div>-->
+
+<!--<div ><img src="images/g20.jpeg"style="margin-left:60px; margin-top:10px" alt="" border="0" height="84" class="stretch"   /></div>-->
+            <ul id="cm-nav">
+            <li style="min-width:10%;"><a href="https://www.vpci.org.in" style="text-align:center;">Home</a></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=6&cat=implinks" style="text-align:center;">About Us</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=53&subcat=implinks_sublinks" class="parent">Introduction</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=54&subcat=implinks_sublinks" class="parent">History</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=55&subcat=implinks_sublinks" class="parent">Governing Body</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=56&subcat=implinks_sublinks" class="parent">Past Directors</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=7&subcat=implinks_sublinks_sublinks">Prof. Raman Viswanathan</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=8&subcat=implinks_sublinks_sublinks">Prof. Autar Singh Paintal</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=10&subcat=implinks_sublinks_sublinks">Prof. Harbans Singh Randhawa</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=11&subcat=implinks_sublinks_sublinks">Dr V. K. Vijayan</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=121&subcat=implinks_sublinks_sublinks">Prof. Rajendra Prasad</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=57&subcat=implinks_sublinks" class="parent">Milestones</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=58&subcat=implinks_sublinks" class="parent">Orations</a></li><li><a href="https://www.vpci.org.in/page-level?id=6&cat=implinks&subid=120&subcat=implinks_sublinks" class="parent">Awards and Honors</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=7&cat=implinks" style="text-align:center;">Administration</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=59&subcat=implinks_sublinks" class="parent">Meet the Director</a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=60&subcat=implinks_sublinks" class="parent">Administration Structure</a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=61&subcat=implinks_sublinks" class="parent">Organizational Chart</a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=62&subcat=implinks_sublinks" class="parent">Institutional Committees</a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=114&subcat=implinks_sublinks" class="parent">Administrative Committees</a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=122&subcat=implinks_sublinks" class="parent">Financial Statements </a></li><li><a href="https://www.vpci.org.in/page-level?id=7&cat=implinks&subid=124&subcat=implinks_sublinks" class="parent">Information of Employees and Contractual Staff</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=8&cat=implinks" style="text-align:center;">Facilities</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=63&subcat=implinks_sublinks" class="parent">Library</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=91&subcat=implinks_sublinks_sublinks">Library Services</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=92&subcat=implinks_sublinks_sublinks">Library Membership & Circulation</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=93&subcat=implinks_sublinks_sublinks">Librarian & Library Staff</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=112&subcat=implinks_sublinks_sublinks"> Online Public Access Catalogue (OPAC)</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=113&subcat=implinks_sublinks_sublinks">Library Journals</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=135&subcat=implinks_sublinks_sublinks">Feedback & Suggestion</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=136&subcat=implinks_sublinks_sublinks">Contact Us</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=64&subcat=implinks_sublinks" class="parent">Animal House</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=65&subcat=implinks_sublinks" class="parent">Auditorium</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=66&subcat=implinks_sublinks" class="parent">Hostel</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=67&subcat=implinks_sublinks" class="parent">Lecture Theaters</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=68&subcat=implinks_sublinks" class="parent">Residential Campus</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=69&subcat=implinks_sublinks" class="parent">Publication Unit</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=70&subcat=implinks_sublinks" class="parent">Medical Photography</a></li><li><a href="https://www.vpci.org.in/page-level?id=8&cat=implinks&subid=71&subcat=implinks_sublinks" class="parent">Canteen</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=9&cat=implinks" style="text-align:center;">Hospital Wing</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=72&subcat=implinks_sublinks" class="parent">Consultation at Hospital</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=73&subcat=implinks_sublinks" class="parent">Clinical Facilities</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=119&subcat=implinks_sublinks_sublinks">Swine Flu Test Details</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=74&subcat=implinks_sublinks" class="parent">Out Patient Schedule</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=75&subcat=implinks_sublinks" class="parent">Emergency Services</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=76&subcat=implinks_sublinks" class="parent">Intensive Care Unit</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=77&subcat=implinks_sublinks" class="parent">Hospital Charges</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=78&subcat=implinks_sublinks" class="parent">Hospital Statistics</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=125&subcat=implinks_sublinks" class="parent">Online Registration System (ORS)</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=126&subcat=implinks_sublinks" class="parent">Biomedical Waste Management</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=127&subcat=implinks_sublinks" class="parent">Mera Aspataal (My Hospital)</a></li><li><a href="https://www.vpci.org.in/page-level?id=9&cat=implinks&subid=133&subcat=implinks_sublinks" class="parent">Pulmonary Medicine Faculty Roster </a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=11&cat=implinks" style="text-align:center;">Departments</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=80&subcat=implinks_sublinks" class="parent">Biochemistry</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=12&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=17&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=81&subcat=implinks_sublinks" class="parent">Biostatistics</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=21&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=24&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=82&subcat=implinks_sublinks" class="parent">Cardiorespiratory Physiology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=29&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=31&subcat=implinks_sublinks_sublinks">Training Programme </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=32&subcat=implinks_sublinks_sublinks">Faculty</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=33&subcat=implinks_sublinks_sublinks">Technical Staff</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=83&subcat=implinks_sublinks" class="parent">Clinical Biochemistry</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=36&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=39&subcat=implinks_sublinks_sublinks">Faculty</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=94&subcat=implinks_sublinks_sublinks">Training Programme</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=84&subcat=implinks_sublinks" class="parent">Medical Mycology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=43&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=47&subcat=implinks_sublinks_sublinks">Faculty</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=48&subcat=implinks_sublinks_sublinks">Technical Staff</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=85&subcat=implinks_sublinks" class="parent">Micorbiology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=51&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=54&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=86&subcat=implinks_sublinks" class="parent">Pathology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=58&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=67&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=87&subcat=implinks_sublinks" class="parent">Pharmacology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=65&subcat=implinks_sublinks_sublinks">About the Department </a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=68&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=88&subcat=implinks_sublinks" class="parent">Physiology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=79&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=89&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=89&subcat=implinks_sublinks" class="parent">Radiodiagnosis & Imaging</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=70&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=90&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=90&subcat=implinks_sublinks" class="parent">Respiratory Allergy & Immunology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=71&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=78&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=91&subcat=implinks_sublinks" class="parent">Respiratory Medicine</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=72&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=73&subcat=implinks_sublinks_sublinks">Faculty</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=74&subcat=implinks_sublinks_sublinks">Training Programmes</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=92&subcat=implinks_sublinks" class="parent">Respiratory Virology</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=76&subcat=implinks_sublinks_sublinks">About the Department</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=77&subcat=implinks_sublinks_sublinks">Faculty</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=93&subcat=implinks_sublinks" class="parent">Research Centers/ Special Clinics</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=131&subcat=implinks_sublinks" class="parent">VPCI-MRU</a></li><li><a href="https://www.vpci.org.in/page-level?id=11&cat=implinks&subid=135&subcat=implinks_sublinks" class="parent">List of Faculties Working</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=12&cat=implinks" style="text-align:center;">Academics</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=94&subcat=implinks_sublinks" class="parent">Courses</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=95&subcat=implinks_sublinks" class="parent">Admissions</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=96&subcat=implinks_sublinks" class="parent">Examinations</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=97&subcat=implinks_sublinks" class="parent">Results</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=98&subcat=implinks_sublinks" class="parent">Training</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=99&subcat=implinks_sublinks" class="parent">Conferences/Workshops/CMEs</a></li><li><a href="https://www.vpci.org.in/page-level?id=12&cat=implinks&subid=134&subcat=implinks_sublinks" class="parent">Hospital Infection Control Committee</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=14&cat=implinks" style="text-align:center;">Contact Us</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=100&subcat=implinks_sublinks" class="parent">Mail, Fax, Telephones</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=101&subcat=implinks_sublinks" class="parent">Director's Office</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=102&subcat=implinks_sublinks" class="parent">Deputy Registrar</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=115&subcat=implinks_sublinks" class="parent">Vigilance Officer</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=116&subcat=implinks_sublinks" class="parent">Public Information Officer</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=117&subcat=implinks_sublinks" class="parent">Location Map</a></li><li><a href="https://www.vpci.org.in/page-level?id=14&cat=implinks&subid=118&subcat=implinks_sublinks" class="parent">How to reach</a></li></ul></div></li><li style="min-width:10%;"><a href="https://www.vpci.org.in/page?id=15&cat=implinks" style="text-align:center;">Students Corner</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=106&subcat=implinks_sublinks" class="parent">Enrolled</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=80&subcat=implinks_sublinks_sublinks">DM</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=81&subcat=implinks_sublinks_sublinks">MD</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=82&subcat=implinks_sublinks_sublinks">PhD</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=83&subcat=implinks_sublinks_sublinks">DTCD</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=141&subcat=implinks_sublinks_sublinks">DM</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=142&subcat=implinks_sublinks_sublinks">M.Sc.</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=107&subcat=implinks_sublinks" class="parent">Teaching Programme</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=84&subcat=implinks_sublinks_sublinks">Pulmonary Medicine</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=97&subcat=implinks_sublinks_sublinks">DM Seminar </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=98&subcat=implinks_sublinks_sublinks">DM Journal Club </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=100&subcat=implinks_sublinks_sublinks">Critical Care Lectures</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=103&subcat=implinks_sublinks_sublinks">Microbiology</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=108&subcat=implinks_sublinks_sublinks">Pharmacology</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=110&subcat=implinks_sublinks_sublinks">Tuesday Academic and Guest Faculty Lecture Roster </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=111&subcat=implinks_sublinks_sublinks">Physiology</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=114&subcat=implinks_sublinks_sublinks">Friday Case Presentation Roster </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=117&subcat=implinks_sublinks_sublinks">ILD Board Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=126&subcat=implinks_sublinks_sublinks">DM Teaching Schedule</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=127&subcat=implinks_sublinks_sublinks">MD and DTCD Academic Roster (September 2015 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=128&subcat=implinks_sublinks_sublinks">DM Academic Roster (September 2015 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=130&subcat=implinks_sublinks_sublinks">Mortality Meet Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=140&subcat=implinks_sublinks_sublinks">Academic Roster for M.Sc (Respiratory Therapy)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=145&subcat=implinks_sublinks_sublinks">Roster for PFT Technician</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=108&subcat=implinks_sublinks" class="parent">Duty Roster</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=95&subcat=implinks_sublinks_sublinks">Schedule for Senior Residents</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=96&subcat=implinks_sublinks_sublinks">Schedule for Junior Residents</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=99&subcat=implinks_sublinks_sublinks">ICU Duty Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=104&subcat=implinks_sublinks_sublinks">Microbiology</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=116&subcat=implinks_sublinks_sublinks">Resident Doctor's OPD Duty Roster  </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=118&subcat=implinks_sublinks_sublinks">Special Postings of Junior Residents (Clinical)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=120&subcat=implinks_sublinks_sublinks">Unit Postings of Residents</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=122&subcat=implinks_sublinks_sublinks">First Year Residents Duty Roster </a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=123&subcat=implinks_sublinks_sublinks">MD and DTCD Residents Duty Roster  (September 2015 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=125&subcat=implinks_sublinks_sublinks">DM Residents Duty Roster of Ward, Emergency and Night ICU and ICU Day Duty Roster (September 2015 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=131&subcat=implinks_sublinks_sublinks">MD Residents Daily Duty Roster of Emergency, ICU and OPD (14th May 2018 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=132&subcat=implinks_sublinks_sublinks">Resident Doctor Duty Roster for Diagnosis Entry at Record Room (June 2018 onward)</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=134&subcat=implinks_sublinks_sublinks">Senior Resident Duty Roster Telemedicine</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=137&subcat=implinks_sublinks_sublinks">Non-Academic JR'S Duty Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=138&subcat=implinks_sublinks_sublinks">Resident Doctor Duty In e-Sanjeevani OPD October Onwards</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=139&subcat=implinks_sublinks_sublinks">Resident Doctor Daily Duty Roster (Relieving) of ICU and OPD</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=144&subcat=implinks_sublinks_sublinks">Senior Resident Duty Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=147&subcat=implinks_sublinks_sublinks">Pulmonary Medicine, Faculty Roster</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=148&subcat=implinks_sublinks_sublinks">Non-Academic SR Duty Roster</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=110&subcat=implinks_sublinks" class="parent">Research: Thesis Topics</a><div><ul><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=101&subcat=implinks_sublinks_sublinks">MD Thesis</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=102&subcat=implinks_sublinks_sublinks">PhD Thesis</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=129&subcat=implinks_sublinks_sublinks">DM Theses</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=143&subcat=implinks_sublinks_sublinks">MD Thesis</a></li></ul></div></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=111&subcat=implinks_sublinks" class="parent">Examinations</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=112&subcat=implinks_sublinks" class="parent">Results</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=113&subcat=implinks_sublinks" class="parent">Attendance</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=119&subcat=implinks_sublinks" class="parent">Circulars for Students</a></li><li><a href="https://www.vpci.org.in/page-level?id=15&cat=implinks&subid=128&subcat=implinks_sublinks" class="parent">Admission</a></li></ul></div></li><li style="background:none;min-width:10%;"><a href="https://www.vpci.org.in/page?id=20&cat=implinks" style="text-align:center;">Udhmodya Foundation </a></li>
+        </ul>
+
+
+
+            <div class="baanner"><!--<img src="images/banner.jpg" border="0" alt="" />-->
+                <div id="sliderContainer">
+                    <div id="mySlides">
+
+                        <div id="slide1" class="slide">
+                                        <img src="/banner_images/555_Untitled design.png" alt="" width="100%"/>
+                                      </div><div id="slide2" class="slide">
+                                        <img src="/banner_images/507_mini.php%%.jpg" alt="" width="100%"/>
+                                      </div><div id="slide3" class="slide">
+                                        <img src="/banner_images/649_1.png" alt="" width="100%"/>
+                                      </div><div id="slide4" class="slide">
+                                        <img src="/banner_images/90_Banner.png" alt="" width="100%"/>
+                                      </div><div id="slide5" class="slide">
+                                        <img src="/banner_images/618_IMG-20231001-WA0096.png" alt="" width="100%"/>
+                                      </div><div id="slide6" class="slide">
+                                        <img src="/banner_images/292_IMG-20221130-WA0082.png" alt="" width="100%"/>
+                                      </div><div id="slide7" class="slide">
+                                        <img src="/banner_images/762_IMG-20230112-WA0122.png" alt="" width="100%"/>
+                                      </div><div id="slide8" class="slide">
+                                        <img src="/banner_images/720_2.png" alt="" width="100%"/>
+                                      </div><div id="slide9" class="slide">
+                                        <img src="/banner_images/839_3.png" alt="" width="100%"/>
+                                      </div><div id="slide10" class="slide">
+                                        <img src="/banner_images/216_WhatsApp Image 2024-04-09 at 8.21.22 PM.png" alt="" width="100%"/>
+                                      </div><div id="slide11" class="slide">
+                                        <img src="/banner_images/593_Untitled design (1).png" alt="" width="100%"/>
+                                      </div><div id="slide12" class="slide">
+                                        <img src="/banner_images/842_Untitled design (1).png" alt="" width="100%"/>
+                                      </div><div id="slide13" class="slide">
+                                        <img src="/banner_images/213_IMG-20220603-WA0045.jpg" alt="" width="100%"/>
+                                      </div><div id="slide14" class="slide">
+                                        <img src="/banner_images/739_banner.png" alt="" width="100%"/>
+                                      </div><div id="slide15" class="slide">
+                                        <img src="/banner_images/965_IMG-20221031-WA0075.jpg" alt="" width="100%"/>
+                                      </div><div id="slide16" class="slide">
+                                        <img src="/banner_images/Banner_image_2025-05-30_15-55-01_Untitled design (3).png" alt="" width="100%"/>
+                                      </div><div id="slide17" class="slide">
+                                        <img src="/banner_images/Banner_image_2025-06-21_15-23-57_Untitled design (3).png" alt="" width="100%"/>
+                                      </div><div id="slide18" class="slide">
+                                        <img src="/banner_images/Banner_image_2025-08-15_10-58-33_bsnner.jpg" alt="" width="100%"/>
+                                      </div><div id="slide19" class="slide">
+                                        <img src="/banner_images/Banner_image_2025-09-19_14-04-47_Untitled design (3).png" alt="" width="100%"/>
+                                      </div><div id="slide20" class="slide">
+                                        <img src="/banner_images/Banner_image_2026-05-13_07-04-00_IMG_2026051312303689712.png" alt="" width="100%"/>
+                                      </div>
+                    </div>
+
+                    <div id="myController">
+
+                        <span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span><span class="jFlowControl"></span>
+                    </div>
+
+
+
+
+
+                    <!--<div class="jFlowPrev"></div>-->
+                    <!--<div class="jFlowNext"></div>-->
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center">
+            <a href="#"
+                style="  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;   background-color:#0061fc;
+  color: white;"
+                class="jFlowPrev">&laquo; Previous</a>
+            <a href="#"
+                style="  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;   background-color:#0061fc;
+  color: white;"
+                class="jFlowNext">Next &raquo;</a>
+        </div>
+
+        <!--New-->
+
+        <div class="mainlefcirbox" style="margin:0px;">
+            <marquee direction="left" scrollamount="10" height="30" onmouseover="stop();" onmouseout="start();"
+                style="padding:5px 0px 0px 0px ;">
+                <span
+                    style="font-family:'Palatino Linotype', 'Book Antiqua', Palatino, serif; font-size:18px; color:#600; vertical-align:middle; ";>
+                    <strong>
+
+
+
+
+                        The Telemedicine Services are provided by the Doctors available at Viswanathan Chest Hospital,
+                        VPCI through Call & Whatsapp No's : 88005 05328, 88005 05308, 88005 05329 and landline phone
+                        No's : 011 -2740 2433, 011 - 2740 2487/ 88/ 89 from Monday to Friday between 2.30 PM to 5.00 PM
+                        (for the Existing Registered / Follow up Patients)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For RTPCR
+                        - Whatsapp No : 88005 05311 </strong></span>
+            </marquee>
+        </div>
+        
+        <a href="https://www.vpci.org.in/sashakt-nari-abhiyaan" class="blinking-text">SWASTH NARI SASHAKT PARIVAR ABHIYAAN (17/09/2025 TO 02/10/2025)</a>
+
+
+        <div id="container">
+            <div id="centerwrapper">
+                <div id="center">
+                    <div class="maibodymid">
+                        <div class="welcome">
+                            <div
+                                style="position:relative; width:100%; max-height:250px; min-height:189px;  overflow:hidden;">
+                                <div class="welcometext">
+    <span class="arrowblue"></span>
+    <h3><strong>Welcome to VPCI</strong></h3>
+</div>
+<div class="welcomepic">
+    <img src="https://www.vpci.org.in/banner_images/869266_img.png" height="80" alt="">
+</div>
+<div class="text">
+    <p align="justify">
+
+
+The Vallabhbhai Patel Chest Institute (VPCI) is a unique postgraduate medical institution devoted to research, teaching and patient care in the field of chest diseases. It is a University of Delhi maintained institution and is funded entirely by the Ministry of Health and Family Welfare, Government of India.&nbsp;The Institute is ideally located in the heart of the main campus of the University of Delhi, providing the requisite academic environment. 
+&n</p>
+    <div class="read">
+        <a href="welcome"><strong>Read more..</strong></a>
+    </div>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab">
+
+                        <div class="tabsppourt">
+
+                            <div class="tapbox1">
+                                <div class="mainleftlitop" style="width:100%"><span class="hadding"><span
+                                            class="arrowwhite"></span>
+                                        <h2>Events</h2>
+                                    </span></div>
+                                <div class="mainlefcirbox" style="margin-top:4px;">
+                                    <marquee direction="up" scrollamount="3" height="143" onmouseover="stop();"
+                                        onmouseout="start();">
+                                        <h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="265" >Notification) Recruitment to the post of Section Officer Eligible and Not Eligible Candidate List</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="266" >Notification) Recruitment to the post of Senior Assistant Eligible and Not Eligible Candidate List</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="264" >Walk in Interview for temporary/adhoc position of Senior Resident in Pulmonary Medicine Pay level -11</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="263" >List of eligible and not eligible candidates for the posts of Driver</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="262" >Walk in Interview for temporary/adhoc Post of Senior Resident in Pulmonary Medicine</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="261" >Three days training programme on Disaster Response and Preparedness (3 April, 2024 to 5 April, 2024)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="260" >Application are invited for the following temporary post in ICMR Research Project</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="259" >47th Workshop on Respiratory Allergy: Diagnosis & Management (12.02.2024 to 16.02.2024)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="258" >Certificate Course on Diagnosis of Respiratory Allergy and Immunotherapy (14/12/2023 to 16/12/2023)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="257" >Smoking Cessation cum Contract Programme of Certificate Course in Tobacco Cessation</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="256" >Appointment of six (6) Consultants in National Tobacco Control Programme (NTCP) on contract basis-reg</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="254" >Certificate Course on Diagnosis of Respiratory Allergy and Immunotherapy (20/07/2023 to 22/07/2023)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="253" >Public Lecture "Lets Talk - Sleep Apnea " on 28/06/2023</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="252" >Public Lecture "Quit Tobacco, Choose A Healthy Life" on 26/05/2023</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="251" >Recruitment to the post of Stenographer Eligible and not Eligible candidates list</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="249" >Recruitment for the Post of Senior Assistant (Eligible and Not Eligible candidates list)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="246" >Walk -in-Interview for the following posts in ICMR Projectunder Dr Sonam Spalagis</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="247" >Application for the following posts on contractual basis under NationalTobacco Quit LineServices (NTQLS)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="248" >Application for the following posts on contractual basis under VPCI-DHR-ICMR-MRU</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="245" >Appointment of Six (6) consultants in National Tobacco Control Programme (NTCP)on contract basis</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="242" >Short Term Certificate Course (STCC) on Clinical Pathology</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="243" >Sixteenth Batch Short Term Training Programme (STTP) for Technicians on Pulmonary function Test</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="244" >(NOTICE)Recruitment to the post of Assistant Registrar (OBC-1, PwBD-1(VI-LV) in Pay Matrix Level -10 in 7th CPC</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="241" >Recruitment to the post of Section Officer (ST-1) Eligible and Non Eligible Candidates list</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="239" >Workshop on Data Analysis (08.12.2022)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="240" >Recruitment to the post of Assistant In pay matrix Level 4 in 7th CPC- reg. Eligible & Not Eligible Candidates</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="234" >46th Workshop on Respiratory Allergy: Diagnosis and Management</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="238" >Preparation of a Panel to engage Nursing Officer on contract basis</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="236" >Fifteenth Batch Short Term Training Programme (STTP) for Technicians on Pulmonary function Test</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="237" >Short Term Certificate Course (STCC) on Clinical Pathology</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="235" >2nd Workshop On Pulmonary Rehabilitation (4th - 5th September 2022)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="231" >Corrigendum Short Term Certificate Course (STCC) on Clinical Pathology</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="233" >Fourteenth Batch Short Term Training Programme (STTP) for Technicians on Pulmonary function Test</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="232" >45th Workshop on Respiratory Allergy : Diagnosis and Management</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="230" >Recruitment to the post of Assistant Registrar (OBC-1, PwBD-1(VI-LV) in Pay Matrix Level -10 in 7th CPC-reg</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="227" >Swachhta Pakhwada - 2022 Essay Writing Competition</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="226" >Swachhta Pakhwada: Poster Making Competition</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="228" >Swachhta Pakhwada - 2022 Poster Making Competition Participants</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="229" >Thirteenth Batch Short Term Training Programme (STTP) for Technicians on Pulmonary function Test</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="225" >Certificate Course on Diagnosis of Respiratory Allergy and Immunotherapy</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="224" >Invite Applications for the following short term training programmes</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="217" >Training Course on Pulmonary Rehabilitation</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="215" >Eighth Batch Short Term Training Programme (STTP) for  Technicians on Pulmonary Function Test</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="211" >Allergy Workshop 2020 (Workshop on Respiratory Allergy Diagnosis and Management)</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="208" >67th Institute Day and 6th Prof. H.S. Randhawa Oration</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="210" >Basic Cardiopulmonary Training Course</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="203" >Constitution Day and Citizens' Duties Campaign</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="202" >Interaction Meet on "No Tobacco Campaign"</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="201" >Observance of Vigilance Awareness Week 2019</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="197" >Inauguration of Registration & Waiting Hall at VCH and Swachha Bharat Abhiyan Programme on "Swachhata Hi Sewa 2019"</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="193" >Inauguration of VPCI Canteen</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="192" >World Environment Day</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="190" >Mini Symposium on Tackling Antimicrobial Drug Resistance in Tuberculosis- Novel Approaches</a></h><br/><br/><h8><img src="images/arrow.png" />&nbsp;&nbsp;<a href="#" class="calender" id="187" >1st Update on Allergen Immunotherapy</a></h><br/><br/>
+
+                                    </marquee>
+                                    <br />
+                                    <div style="float:right" class="read1"><a
+                                            href="https://www.vpci.org.in/calender-event"><strong><br />
+                                                More..</strong></a></div>
+                                </div>
+                            </div>
+
+                            <div class="tapbox2">
+                                <div class="mainleftlitop" style="width:100%"><span class="hadding"><span
+                                            class="arrowwhite"></span>
+                                        <h2>Journals & Annual Report<h2>
+                                    </span></div>
+                                <div style=" width:100%; float:left; height:172px;max-height:173px;">
+
+
+
+                                    <div style="width:30%; padding:15px 4px 4px 4px;   float:left;  border:1px solid #fff"
+                                        align="center">
+                                        <div style="width:100%;position:relative; overflow:hidden;">
+                                            <a href="https://www.vpci.org.in/journals"><img src="images/book2.png" border="0"
+                                                    height="130" /></a>
+                                        </div>
+                                    </div>
+
+                                    <div style="width:30%; padding:15px 4px 4px 4px;   float:left;  border:1px solid #fff"
+                                        align="center">
+                                        <div style="width:100%;position:relative; overflow:hidden;">
+                                            <a href="https://www.vpci.org.in/newsletter-Notification"><img src="images/newsletter.png"
+                                                    border="0" height="130" /></a>
+                                        </div>
+                                    </div>
+
+                                    <div style="width:30%; padding:15px 4px 4px 4px;  float:left;border:1px solid #fff"
+                                        align="center">
+                                        <div style="width:100%;position:relative;overflow:hidden;">
+                                            <a href="https://www.vpci.org.in/annual-report"><img src="images/book.png"
+                                                    border="0" height="130" /></a>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="left">
+                <div class="maibodyleft">
+                    <div class="mainleftlitopleft"><span class="arrowwhite"> </span><span class="hadding">
+                            <h2>Mandatory Information</h2>
+                        </span> </div>
+
+                    <div class="mainleftli">
+                        <ul>
+                            <li><span class="arrow"></span><a href="/mand-link-sall?id=1&cat=mandatorylinks">Right to Information Act, 2005</a></li><li><span class="arrow"></span><a href="/mand-link-sall?id=2&cat=mandatorylinks">Minimum Disclosure Norms for Colleges of Higher Education</a></li>
+                        </ul>
+                        <p style="float:right; padding-right:10px; font-size:10px; color:#0033FF"><a
+                                href="/mand-link-sall?id=1&cat=mandatorylinks">More Links</a></p>
+                    </div>
+
+
+
+                    <div class="mainleftlitopleft"><span class="hadding"><span class="arrowwhite"> </span>
+                            <h2> Important Links</h2>
+                        </span> </div>
+                    <div class="mainleftlileft">
+                        <ul>
+                            <li><span class="arrow"></span><a href="http://www.du.ac.in/" target="_blank">University of Delhi (DU)</a></li><li><span class="arrow"></span><a href="http://mohfw.gov.in/" target="_blank">Ministry of Health and Family Welfare (MoH&FW), Government of India</a></li>
+                        </ul>
+                        <p style="float:right; padding-right:10px; font-size:10px; color:#0033FF"><a
+                                href="https://www.vpci.org.in/importants-link">More Links</a></p>
+                    </div>
+
+
+
+                    <div class="mainleftlitop" style="margin-top:3px; float:left;"><span class="hadding">
+                            <span class="arrowwhite"></span>
+                            <h2>What �s New</h2>
+                        </span>
+                    </div>
+
+                    <div class="whatsnewbox">
+                        <marquee direction="up" scrollamount="3" height="100px" onmouseover="this.stop();"
+                            onmouseout="this.start();">
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9843_Recruitment to the post of Veterinarian.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of shortlisted/not shortlisted candidate for interview for the post of Veterinarian </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2366_Junior Resident Non PG.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk-in-Interview for appointment to temporary Post of Junior Resident (Non-PG)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8329_Scientific Programme single page-3.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Certificate Course on Diagnosis of Respiratory Allergy and Immunotherapy (20/07/2023 to 22/07/2023) </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2257_47th Workshop Respiratory Allergy.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>47th Workshop on Respiratory Allergy: Diagnosis &amp; Management (12.02.2024 to 16.02.2024)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8023_Shortlisted post of Prof &amp; Associate Prof Pathology-2678.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>  List of Shortlisted application for the post of Professor &amp; Associate Professor in the Department of Pathology</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6135_Shortlisted post of Prof &amp; Associate Prof Physiology-2677.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>  List of Shortlisted application for the post of Professor &amp; Associate Professor in the Department of Physiology</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2031_training course.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Invite Applications for the following short term training programmes</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9646_Certificate Course on Diagnosis of Respiratory Allergy and Immu.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Certificate Course on Diagnosis of Respiratory Allergy and Immunotherapy (14/12/2023 to 16/12/2023)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/729_20230628225404.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Circular on Valedictory Ceremony of the Centenary Celebrations (30/06/2023 at 11:00 am)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4593_Application in ICMR Project--2874.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application are invited for the following temporary post in ICMR Research Project</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2123_(Circular) NABH Accreditation by VPCI.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Circular) NABH Accreditation by VPCI</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6583_Advertisement for the temporary post of Junior research fellow (one).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Advertisement for the temporary post of Junior research fellow (one)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/3456_1st National Conference of Society for Tobacco Control on Smoking Cessation.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>1st National Conference of Society for Tobacco Control on Smoking Cessation</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6207_Senior Resident Pulmonary Medicine-286.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk in Interview for temporary/adhoc Post of Senior Resident in Pulmonary Medicine </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4744_Screening List.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of Screened Applications for the Post of Assistant Professors in varous Departments </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6623_Advertisement for Nursing Superintendent on Deputation Basis.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Advertisement for Nursing Superintendent on Deputation Basis </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9215_Advertisement for Various Post in National Tobacco Quit Line Services.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Advertisement for Various Post in National Tobacco Quit Line Services</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/840_Vacancy on Deputation for Deputy Registrar and Private Secretary.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Advertisement for Deputy Registrar and Private Secretary on Deputation Basis </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/7682_Phyh_CCRYN Project_merged (1).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Applications for the following temporary posts on contract basis in CCRYN funded research project</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4920_Final List of Screened application for the post of AP.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Final List of Screened application for the post of Assistant Professors</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9_List of Screened applications for the Post of Assistant Profess-1045.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> List of screened applications for the post of Assistant Professors</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/XUGMdNLS1tQBZ5LteaSSZZgBJ9UPUJa3mNMIBfXq.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>SHORT-TERM CERTIFICATE COURSES (STCC) CALENDAR
+1st April 2026 to 31st March 2027</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/Z3pBKywaiwYK3FYWuAmf4HpCO6zosekY2Qf0v30v.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for the Post of Junior Resident (Non PG)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4624_Recruitment to the Post of Assistant Registrar.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment of the post of Assistant Registrar</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8435_NCRAAI Post.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk-in Skill Test-cum-Interview for the following temporary posts in National Centre for Respiratory Allergy, Asthma and Applied Immunology (NCRAAI)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6115_4531 Regarding epidemic of nCoV (New Coronavirus) Infection.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Circular)Regarding epidemic of nCoV (New Coronavirus) Infection</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4439_(Circular) COVID-19 Guideline for Clinicians.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Circular) COVID-19 Guideline for Clinicians</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9206_Walk In Interview Junior Resident (Non PG).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk in Interview for temporary post of Junior Resident (Non-PG) in Pay matrix 10 (7th CPC)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8697_Walk -In - Interview Recruitment for LSRB -DRDO Research Projec.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk in Interview for the temporary post of Junior Research Fellow (one) in LSRB-DRDO project </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/7227_AIIMS Faculty Advertisment.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Online Applications and Cut off date for Rolling Advertisement of Faculty Posts in Various Departments at AIIMS </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4380_circular employee.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Circular) Committee constitution for award of &quot;Employees of the month&quot; to Counsellors working in NTQLS, VPCI</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4009_Disaster Response and Preparedness.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Three days training programme on Disaster Response and Preparedness (3 April, 2024 to 5 April, 2024)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8960_STCC Calendar.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Short-Term Certificate Courses (STCC) Calendar (1st April 2024 to 31st March 2025)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/1558_schedule.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Telemedicine Services Through Landline as per Schedule</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/7598_(Notification) Appointment of six consultants in NTQLS.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Appointment of six (6) Consultants in National Tobacco Control Programme (NTCP) on contract basis-reg</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4382_Recruitment to post of Assistant Registrar -95.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the post of Assistant Registrar</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4534_Shortlisted post of Prof &amp; Associate Prof Biochemistry-2680.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> List of Shortlisted application for the post of Professor &amp; Associate Professor in the Department of Biochemistry </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4980_45th Workshop on Respiratory Allergy.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>45th Workshop on Respiratory Allergy : Diagnosis and Management</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/3386_Shortlisted post of Associate Prof Anesthesiology-2679.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> List of Shortlisted application for the post of Associate Professor in the Department of Anesthesiology</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4328_For Website.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Preparation of a Panel to engage Nursing Officer on contract basis </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4853_Flyer workshop on data analysis.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Workshop on Data Analysis (08.12.2022)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2891_Recruitment to the post of Assistant In pay matrix Level 4 in 7th CPC.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Recruitment to the post of Assistant In pay matrix Level 4 in 7th CPC- reg. Eligible &amp; Not Eligible Candidates</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/1441_Recruitment to the post of Section Officer in (ST-1)  in Pay Ma (2).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the post of Section Officer (ST-1) Eligible and Non Eligible Candidates list </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/lictJJeXIcCQmECEkD89eCTlGzmXsi13x6iDqmPF.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Cancellation of Recruitment Process (VPCI)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8890_248_Application for the post of Assistant Professor.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application for the post of Assistant ProfessorRadio-Diagnosison Adhoc Basis in Pay Matrix 11 under 7th CPC</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/5134_NOTICE- 1628.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(NOTICE)Recruitment to the post of Assistant Registrar (OBC-1, PwBD-1(VI-LV) in Pay Matrix Level -10 in 7th CPC</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6316_Pharmacist Candidate List.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Eligible/Not Eligible applicants to the post of Pharmacist (UR-1) </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/3525_Appointmentof Six (6) consultants in Natiional Tobacco Control .pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Appointment of Six (6) consultants in National Tobacco Control Programme (NTCP)on contract basis</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2946_ICMR Advt Dr. Sonam,.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk -in-Interview for the following posts in ICMR Projectunder Dr Sonam Spalagis </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/7594_NTQLS Advt.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application for the following posts on contractual basis under NationalTobacco Quit LineServices (NTQLS)  </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2019_MRU Advt.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application for the following posts on contractual basis under VPCI-DHR-ICMR-MRU  </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/9548_Recruitment to the post of Senior Assistant (Eligible &amp; Not Eligible candidates list.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment for the Post of Senior Assistant (Eligible and Not Eligible candidates list)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/J0c6JoggXee66PNS1Jl9DVaCsEyOWC2sxwlMtf4q.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for temporary post of Junior Resident Non PG on 08/09/2025</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/776_Stenographer Eligible &amp; Not Eligible Candidates list (2).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the post of Stenographer Eligible and not Eligible candidates list</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/7521_Circular - One Week Training programme for Non Teaching staff.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> (Circular) One week training programme for non-teaching staff </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/3315_NTCP.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> (NOTICE) Postpone of Interview to be held on Friday, 10.03.2023 National Tobacco Control Programme (NTCP) </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/3382_Notification 2485.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Notification) Conduct of Limited Department Examination for Ministerial &amp; Technical cadre posts  </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6941_Lab Attendant eligible and non eligible candidate list (2).pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Eligible &amp; Not Eligible Candidate List to the post of Laboratory Attendant </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2870_Recruitment to the post of Lab Assistant.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the Post of Lab Assistant (UR-1) in Pay Matrix Level -4 in 7th CPC</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/334_Application for the following regular Non - Teaching Post.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application for the following regular Non - Teaching Post  </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/826_Application for the following Temporary posts in ICMR Research .pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Application for the following Temporary posts in ICMR Research Project</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6927_Scientific Program.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Smoking Cessation cum Contract Programme of Certificate Course in Tobacco Cessation </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8057_BSL-3.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Eligibility and other terms &amp; conditions for establishment of BSL-3 facility in VPCI</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/8953_List of Shortlisted applications Professor &amp; Associate Professo.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> List of Shortlisted applications for the posts of Professor and Associate Professor in the Department of Microbiology </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2302_(Notification)- Recruitment to the post of Junior Engineer (Ele.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> (Notification) Recruitment to the post of Junior Engineer (Electrical) (OBC-1) in Pay Matrix Level-06 </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/1210_Recruitment to the post of Pharmacist.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>(Notification) Recruitment to the post of Pharmacist (UR-1) in Pay Matrix Level-05 </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/2306_Notification_merged.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of eligible and not eligible candidates for the posts of Driver</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/703_Walk in Interview SRF.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk -in Skill Cum -Personality Test in the temporary post of Senior Research Fellow in ICMR Multi Centric Task Force Project </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/976_Recruitment to the post of Laboratory Assistant -602.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the post of Laboratory Assistant (UR-1)in Pay Matrix Level -4 in 7th CPC-reg</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6594_Senior Resident Pulmonary Medicine -627.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk in Interview for temporary/adhoc position of Senior Resident in Pulmonary Medicine Pay level -11</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/839_Walk in Interview WHO.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Walk in Skill cum Personality Test to the temporary posts of Project Coordinator (1) and Research Assistant (1) IN WHO research project</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/4590_Stenographer notification.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Eligible/Not Eligible applicants to the post of Stenographer</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/5537_Notification- 878.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Eligible/Not Eligible applicants to the post of Laboratory Attendant </p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/5517_(Notification) Recruitment to the post of LIbrary Attendant Eli.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p> Recruitment to the post of Library Attendant Eligible and Not Eligible list</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/kyRZmNaxChawAiR3j6PnsMnF9kAuZSIWU5J713hj.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Application for the following temporary post on Contract basis at National Reference Laboratory for Antimicrobial Resistance in Fungal Pathogens</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/b9fB72xO6QCzYXtC5mo2eAM9iKE1yNdCeoKFicOb.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Recruitment to the post of Nursing Officer Eligible and Not Eligible candidate list</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/jr5dmZEk0lxeYLloF5Q8slMfk534OTBLtv6oonUY.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>ICAAICON -2024 19th to 22nd December 2024</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/54ISm6uNycVExd4Csu43i0P15ncyPYZbnZo1xSrG.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>48th Allergy Workshop (21st -25th October 2024)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/JAeN8bj93CtP0m8wE8rS7caY05XHfykj7zGPOJ43.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for the post of Senior Resident  in Pulmonary Medicine</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/TTxS0J2SHfUXl2sxEJ4Qg831FJsMjfvG23ZdzHfv.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for the post of Junior Resident (Non PG)  in Pulmonary Medicine</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/87TY2Frs0znvrr6e07AL3L53AU1VJ3wBwdM5FbY7.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Recent Advancements &amp; Future of Allergy Management on 17th April 2025</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/HmTyVQN4iT1ftAiQDKwUT0DKMPI5EeoY2yNNtF8g.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Application for the various temporary posts on contract basis in ICMR research project</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/Y7JKx8MyirgSMjHRkbnU3d3j7p6sFIvTJPj4ElRh.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for one post of Project Technical Staff-III in ICMR Research Project Development and Validation of Artificial Intelligence Tool for screenings/detection of Pulmonary TB and other lung diseases using Chest X-Ray</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/Dje4M89z79fFsBsGyIUHdQHSCGEJKzNYWZhBVFeM.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Walk in Interview for the post of Project Technical Support -III in DHR-ICMR-VDRL project under Prof Madhu Khanna, (Virology Unit)</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/gWAhClWi3vklH0gX3w1IrXxyrSfNPQHYK0UQumfO.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of Eligible and Not Eligible Candidate for the Post of Junior Assistant</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/6WVxiMODM85VEKOg3cGAiwgwQYCGWarm7Tfh7sXM.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of Eligible and Not Eligible Candidate for the Post of Section Officer</p>
+                                </a>
+                                <br />
+                                                            <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/ABSHAQSyOUmDhprNwVrAlnfhPRJtc9jUB7K2qfFd.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>List of Eligible and Not Eligible Candidate for the Post of Senior Assistant</p>
+                                </a>
+                                <br />
+                                                    </marquee>
+                    </div>
+                    
+                        <div class="mainleftlitop" style="margin-top:3px; float:left;"><span class="hadding">
+                            <span class="arrowwhite"></span>
+                            <h2>NBEMS Disclosure</h2>
+                        </span>
+                    </div>
+
+                    <div class="whatsnewbox">
+                        <marquee direction="up" scrollamount="3" height="100px" onmouseover="this.stop();"
+                            onmouseout="this.start();">
+                                <span class="ar1"></span>
+                                <a href="#"
+                                    onClick="MyWindow=window.open('https://www.vpci.org.in/what_new/20260831124106500.pdf','MyWindow','toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=300'); return false;">
+                                    <p>Pro-Forma For Display Of Mandatory Information</p>
+                                </a>
+                                <br />
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+            <div id="right">
+
+
+                <div class="mainleftlileft" style="margin-top:4px; margin-bottom:3px; width:92%;">
+                    <!-- <ul>
+    <a href="emp_corner.php" ><img src="images/student.jpg" border="0" width="233px"  style="margin-left:-2px;"/></a>
+                </ul>-->
+                </div>
+
+                
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://naco.mohfw.gov.in/sites/default/files/CVShriJagatPrakashNaddaFinal.pdf" width="250"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Jagat_Prakash_Nadda_2023.jpg/500px-Jagat_Prakash_Nadda_2023.jpg" border="0" width="231px;" height="auto" />
+                                <h4>SHRI JAGAT PRAKASH NADDA</h4>
+                                <span>Hon'ble Minister of Health & Family Welfare and Chemicals & Fertilizers</span>
+                            </a>
+                    </div>
+                </div>
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/pulmotechecell"><img
+                                src="images/pulmotech.jpeg" border="0" width="231px;" height="75" /></a>
+                    </div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/swachhata-pakhwada"><img
+                                src="images/swachhata-pakhwada.gif" border="0" width="231px;"
+                                height="75" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/covid-circulars"><img src="images/covid.jpg"
+                                border="0" width="231px;" height="75" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="/page?id=19&cat=implinks"><img src="images/rtpcr.jpg"
+                                border="0" width="231px;" height="75" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/pcrmc-circulars"><img src="images/PCRMC.jpg"
+                                border="0" width="231px;" height="75" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/hbpr-circulars"><img src="images/HBPR.jpg"
+                                border="0" width="231px;" height="75" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="/page?id=15&cat=implinks"><img src="images/student.jpg"
+                                border="0" width="231px;" height="67" /></a></div>
+                </div>
+
+                <div class="videogallery">
+                    <a href="https://www.vpci.org.in/emp_corner"> <img src="images/emloyee.jpg" border="0"
+                            width="231px" /></a>
+                </div>
+
+
+                <div class="videogallery">
+                    <a href="https://www.vpci.org.in/gallery-album"> <img src="images/new1.jpg" border="0"
+                            width="231px" /></a>
+                </div>
+
+                <div class="videogallery">
+                    <div style="margin:0px;"><a href="https://www.vpci.org.in/vacancy-circulars"><img src="images/vacncy.jpg"
+                                border="0" width="231px;" height="75" /></a></div>
+                </div>
+                <div class="videogallery">
+                    <a href="https://www.vpci.org.in/tender-list-show"> <img src="images/tenders.jpg" border="0"
+                            width="231px" height="75" /></a>
+                </div>
+
+
+            </div>
+
+
+            <div id="footer">
+    <div class="foter_cout"> 14591659 </div>
+    <div class="footertext"> <a href="https://www.antiragging.in/" target="_blank"> Anti Ragging </a> | <a href="https://www.vpci.org.in/grievancess" target="_blank"> Grievance Redressal </a> | <a href="https://www.vpci.org.in/press-release"  target="_blank"> Press Clippings </a> |  <a href="https://www.vpci.org.in/video-gallery"> Video Gallery </a> |   <a href="https://www.vpci.org.in/privacy">Privacy Policy</a>  |  <a href="https://www.vpci.org.in/disclaimer">Disclaimer</a>  | <a href="https://www.vpci.org.in/sitemap"> Site Map </a>| <a href="https://vpci.org.in/webmail/" target="_blank"> Mail Box </a></div>
+  </div>
+
+
+        </div>
+</body>
+
+</html>

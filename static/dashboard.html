@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Medantrik MedTech - Campus Outreach Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="navbar">
+    <div class="brand-group">
+      <div class="brand-title">
+        <span>MEDANTRIK MEDTECH</span>
+        <span class="brand-badge">Campus Outreach</span>
+      </div>
+      <div class="brand-sub">Facility: <strong>Noida Sector 63A</strong> | Incubation: <strong>IIT Kanpur</strong></div>
+    </div>
+
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-tab="overview" onclick="switchTab('overview')">
+        <span>📊</span> Overview
+      </button>
+      <button class="nav-tab" data-tab="colleges" onclick="switchTab('colleges')">
+        <span>📁</span> Directory <span class="nav-badge" id="navCollegesCount">218</span>
+      </button>
+      <button class="nav-tab" data-tab="templates" onclick="switchTab('templates')">
+        <span>✉️</span> Templates
+      </button>
+      <button class="nav-tab" data-tab="campaigns" onclick="switchTab('campaigns')">
+        <span>🚀</span> Campaigns <span class="nav-badge count-badge" id="navCampaignsSelected">0</span>
+      </button>
+      <button class="nav-tab" data-tab="settings" onclick="switchTab('settings')">
+        <span>⚙️</span> Settings <span class="status-dot ok" id="navHealthDot" title="System operational"></span>
+      </button>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn btn-sm btn-accent" onclick="openDirectSendModal()" style="font-weight: 700; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);">
+        <span>⚡</span> Direct Email
+      </button>
+      <span class="stat-pill" id="navStatPill">118 Verified & Sendable</span>
+    </div>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- ==================== 1. OVERVIEW TAB ==================== -->
+    <section id="tabOverview" class="tab-view active">
+      
+      <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid #2563eb; padding: 12px 16px; border-radius: 6px; margin-bottom: 20px; font-size: 13px; color: #1e40af; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <div>
+          📍 <strong>Scope Enforced:</strong> Delhi NCT · Noida · Greater Noida · Ghaziabad district · Gurugram district (Inventory as of <strong>2026-10-16</strong>)
+        </div>
+        <div>
+          <button class="btn btn-sm btn-primary" onclick="switchTab('colleges')">Open Colleges Workspace →</button>
+        </div>
+      </div>
+
+      <!-- Top KPI Cards -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <span class="kpi-label">Directory Inventory</span>
+          <span class="kpi-value" id="kpiTotal">217</span>
+          <span class="kpi-sub">Across 5 NCR focus areas</span>
+        </div>
+        <div class="kpi-card kpi-verified">
+          <span class="kpi-label">Verified & Sendable</span>
+          <span class="kpi-value" id="kpiSendable" style="color: #16a34a;">118</span>
+          <span class="kpi-sub">Checked on official institutional source</span>
+        </div>
+        <div class="kpi-card">
+          <span class="kpi-label">Official Directory Only</span>
+          <span class="kpi-value" id="kpiDirectoryListed" style="color: #0284c7;">21</span>
+          <span class="kpi-sub">Need institution-level verification</span>
+        </div>
+        <div class="kpi-card kpi-review">
+          <span class="kpi-label">Records Needing Review</span>
+          <span class="kpi-value" id="kpiNeedsReview" style="color: #ea580c;">99</span>
+          <span class="kpi-sub">Unverified, gaps or directory-listed</span>
+        </div>
+        <div class="kpi-card kpi-missing">
+          <span class="kpi-label">Placement Email Gaps</span>
+          <span class="kpi-value" id="kpiMissing" style="color: #dc2626;">68</span>
+          <span class="kpi-sub">Admissions only or unpublished</span>
+        </div>
+      </div>
+
+      <!-- Coverage By Area -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">📍 Geographic Area Coverage Breakdown</div>
+          <span style="font-size: 12px; color: var(--text-muted);">Click any area to filter Colleges workspace</span>
+        </div>
+        <div class="area-grid" id="areaCardsGrid">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Recruitment Pipeline Funnel -->
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">🎯 Campus Recruitment Pipeline & Conversion Funnel</div>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-sm btn-outline" onclick="exportPipelineCSV()">📥 Export Pipeline CSV</button>
+            <button class="btn btn-sm btn-outline" onclick="exportOutreachCSV()">📥 Export Activity Log CSV</button>
+          </div>
+        </div>
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 8px;">
+          Track partner institutions from initial contact to active placement partnership. Click any stage to filter the workspace.
+        </p>
+        <div class="funnel-grid" id="pipelineFunnelGrid">
+          <div class="funnel-card" onclick="filterByStage('not_contacted')">
+            <span class="funnel-card-count" id="funnelNotContacted">0</span>
+            <span class="funnel-card-label">Not Contacted</span>
+          </div>
+          <div class="funnel-card" onclick="filterByStage('contacted')">
+            <span class="funnel-card-count" id="funnelContacted" style="color: #0369a1;">0</span>
+            <span class="funnel-card-label">Contacted</span>
+          </div>
+          <div class="funnel-card" onclick="filterByStage('replied')">
+            <span class="funnel-card-count" id="funnelReplied" style="color: #7e22ce;">0</span>
+            <span class="funnel-card-label">Replied</span>
+          </div>
+          <div class="funnel-card" onclick="filterByStage('meeting_arranged')">
+            <span class="funnel-card-count" id="funnelMeeting" style="color: #b45309;">0</span>
+            <span class="funnel-card-label">Meeting Arranged</span>
+          </div>
+          <div class="funnel-card" onclick="filterByStage('partnership_active')">
+            <span class="funnel-card-count" id="funnelActive" style="color: #15803d;">0</span>
+            <span class="funnel-card-label">Partnership Active</span>
+          </div>
+          <div class="funnel-card" onclick="filterByStage('declined')">
+            <span class="funnel-card-count" id="funnelDeclined" style="color: #991b1b;">0</span>
+            <span class="funnel-card-label">Declined</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Operations Layout -->
+      <div class="grid-2">
+        
+        <!-- Left: Actionable Gaps & Failures & Follow-ups -->
+        <div>
+          <!-- Urgent Follow-up Reminders -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">⏰ Follow-up Reminders & Urgent Deadlines</div>
+              <span class="badge" id="followUpBadgeCount" style="background: #fef3c7; color: #b45309;">0 due</span>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Calls, meetings, or check-ins due today or overdue with placement officers.</p>
+            <div class="table-container" style="max-height: 220px; overflow-y: auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Institution</th>
+                    <th>Due Date</th>
+                    <th>Stage</th>
+                    <th>Assigned To</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="overviewFollowUpsBody">
+                  <tr><td colspan="5" style="text-align: center; color: var(--text-muted); padding: 14px;">No urgent follow-ups pending.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">⚠️ Directory Records Needing Review</div>
+              <button class="btn btn-sm btn-outline" onclick="filterByReviewNeeded()">View All in Workspace</button>
+            </div>
+            <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">Institutions with missing placement contacts, admissions helplines only, or unverified emails.</p>
+            <div class="table-container" style="max-height: 280px; overflow-y: auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Institution</th>
+                    <th>Area</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="overviewReviewBody">
+                  <tr><td colspan="4" style="text-align: center; padding: 16px;">Loading records...</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🚨 Recent Dispatches & Attention Items</div>
+              <button class="btn btn-sm btn-outline" onclick="switchTab('campaigns')">Campaigns Log</button>
+            </div>
+            <div class="table-container" style="max-height: 220px; overflow-y: auto;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Recipient</th>
+                    <th>Status</th>
+                    <th>Details</th>
+                    <th>Time</th>
+                  </tr>
+                </thead>
+                <tbody id="overviewFailuresBody">
+                  <tr><td colspan="4" style="text-align: center; color: var(--text-muted); padding: 14px;">No dispatch failures recorded. System healthy.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Queue, Duplicate Manager & Health -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">⏱️ Staggered Campaign Dispatch & Queue</div>
+            </div>
+            <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Outreach messages are staggered with rate limiting (2-second interval between messages) to protect Google Workspace sender reputation and respect recipient servers.
+            </p>
+            <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 14px; font-size: 12.5px; margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Active Queue Status:</span>
+                <strong style="color: #16a34a;">Ready (0 queued messages)</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                <span>Sender Throttle:</span>
+                <span>2s per message</span>
+              </div>
+              <div style="display: flex; justify-content: space-between;">
+                <span>Do-Not-Contact Protection:</span>
+                <span style="color: #16a34a;">Active (10 institutions flagged)</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; justify-content: center;" onclick="switchTab('colleges')">
+              Select Colleges & Prepare Campaign →
+            </button>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🔍 Duplicate Inventory & Campus Management</div>
+              <span class="badge badge-directory" id="duplicateBadgeCount">Checking...</span>
+            </div>
+            <p style="font-size: 12.5px; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">
+              Campuses with shared placement emails are safely kept distinct. Merges are reserved for identical institutions.
+            </p>
+            <button class="btn btn-outline" style="width: 100%; justify-content: center;" onclick="openDuplicateDialog()">
+              Review Potential Duplicates & Campuses
+            </button>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🛡️ System Diagnostics & Health</div>
+              <span class="status-dot ok"></span>
+            </div>
+            <div style="font-size: 12px; line-height: 1.8; color: var(--text-muted);">
+              <div>• Directory Database: <strong style="color: var(--text);">Connected (SQLite 3)</strong></div>
+              <div>• Template Engine: <strong style="color: var(--text);">HTML + Plain Text Loaded</strong></div>
+              <div>• Network Access: <strong style="color: var(--text);">Localhost Only (127.0.0.1)</strong></div>
+              <div>• CSRF Protection: <strong style="color: var(--text);">Active Token Enforced</strong></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== 2. COLLEGES TAB (MAIN WORKSPACE) ==================== -->
+    <section id="tabColleges" class="tab-view">
+      
+      <!-- Category Switcher Bar -->
+      <div class="category-bar">
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+          <span style="font-size: 12px; font-weight: 800; color: var(--navy); text-transform: uppercase; letter-spacing: 0.5px;">Categories:</span>
+          <div class="category-tabs" id="categoryTabsContainer">
+            <!-- Dynamically populated category pills (Colleges, Gyms, Offices, Households, All) -->
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; align-items: center;">
+          <a href="/api/export/sheets" download="delhi_ncr_directory_categories.xlsx" class="btn btn-sm btn-outline" style="color: #059669; border-color: #059669; font-weight: 600;" title="Download unified multi-tab spreadsheet for Google Sheets">📊 Sync Google Sheet</a>
+          <button class="btn btn-sm btn-outline" onclick="openAddCategoryModal()">+ New Category</button>
+          <button class="btn btn-sm btn-primary" onclick="openDirectSendModal()">⚡ Quick Send</button>
+        </div>
+      </div>
+
+      <!-- Toolbar & Multi-field Search -->
+      <div class="toolbar-wrap">
+        <div class="filter-row">
+          
+          <div class="filter-group">
+            <label for="searchInput">Search Institution / Location / Email</label>
+            <input type="text" id="searchInput" class="form-control" placeholder="Search by name, campus, alias, locality, email..." oninput="filterColleges()">
+          </div>
+
+          <div class="filter-group">
+            <label for="filterArea">Area</label>
+            <select id="filterArea" class="form-control" onchange="filterColleges()">
+              <option value="">All 5 Areas</option>
+              <option value="Delhi">Delhi NCT</option>
+              <option value="Noida">Noida</option>
+              <option value="Greater Noida">Greater Noida</option>
+              <option value="Ghaziabad">Ghaziabad district</option>
+              <option value="Gurugram">Gurugram / Gurgaon</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterDiscipline">Institution Type / Discipline</label>
+            <select id="filterDiscipline" class="form-control" onchange="filterColleges()">
+              <option value="">All Disciplines</option>
+              <option value="Engineering">Engineering & Technology</option>
+              <option value="Management">Management & Business (MBA/BBA)</option>
+              <option value="MCA">Computer Applications / IT</option>
+              <option value="Pharmacy">Pharmacy & Medical</option>
+              <option value="Law">Law & Legal Studies</option>
+              <option value="University">Universities (State/Central/Private)</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterStatus">Contact Status</label>
+            <select id="filterStatus" class="form-control" onchange="filterColleges()">
+              <option value="">All Statuses</option>
+              <option value="verified">Verified on official site</option>
+              <option value="directory-listed">Official directory only</option>
+              <option value="unverified">Unverified</option>
+              <option value="missing">Email missing</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterKind">Contact Type</label>
+            <select id="filterKind" class="form-control" onchange="filterColleges()">
+              <option value="">All Types</option>
+              <option value="placement">Placement Cell</option>
+              <option value="general">General Contact</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="filterStage">Recruitment Stage</label>
+            <select id="filterStage" class="form-control" onchange="filterColleges()">
+              <option value="">All Stages</option>
+              <option value="not_contacted">Not Contacted</option>
+              <option value="contacted">Contacted</option>
+              <option value="replied">Replied</option>
+              <option value="meeting_arranged">Meeting Arranged</option>
+              <option value="partnership_active">Partnership Active</option>
+              <option value="declined">Declined</option>
+            </select>
+          </div>
+
+        </div>
+
+        <!-- Action & Selection Controls -->
+        <div class="action-row">
+          <div class="selection-group">
+            <button class="btn btn-outline btn-sm" onclick="selectThisPage()">
+              Select this page (<span id="visibleSendableCount">0</span> sendable)
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="selectAllMatches()">
+              Select all matching results (<span id="totalMatchingSendableCount">0</span> sendable)
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="clearAllSelection()">
+              Clear selection
+            </button>
+            <span style="font-size: 12.5px; color: var(--primary); font-weight: 600; margin-left: 8px;" id="selectedCountText">
+              <span id="selectedCount">0</span> selected across all filters
+            </span>
+          </div>
+
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm" onclick="openAddCollegeDialog()">+ Add Contact / Entity</button>
+            <button class="btn btn-outline btn-sm" onclick="openImportDialog()">Import CSV / JSON</button>
+            <button class="btn btn-outline btn-sm" onclick="openDuplicateDialog()">Duplicates</button>
+            <a href="/api/export/sheets" download="delhi_ncr_directory_categories.xlsx" class="btn btn-success btn-sm" style="font-weight: 700; background: #059669; border-color: #059669;" title="Download unified spreadsheet with dedicated tabs for Colleges, Gyms, Offices, Households, and all categories">📊 Export Google Sheet / Excel (Multi-Tab)</a>
+            <button class="btn btn-outline btn-sm" onclick="exportCurrentCategoryCSV()" title="Download CSV for currently selected category">📥 Current Category CSV</button>
+            <button class="btn btn-outline btn-sm" onclick="exportPipelineCSV()" title="Export contacts with stage & follow-ups">📥 Pipeline CSV</button>
+            <button class="btn btn-outline btn-sm" onclick="exportOutreachCSV()" title="Export complete outreach and CRM activity log">📥 Outreach Log</button>
+            <button class="btn btn-outline btn-sm" onclick="exportDirectoryResults()">Export JSON</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Results Summary -->
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; font-size: 12.5px; color: var(--text-muted);">
+        <span id="collegesResultSummary">Showing all colleges</span>
+        <span>Only verified, contactable institutions can enter an email campaign.</span>
+      </div>
+
+      <!-- Colleges Table -->
+      <div class="table-container">
+        <div class="table-scroll">
+          <table id="collegesTable">
+            <thead>
+              <tr>
+                <th width="36"><input type="checkbox" id="checkMaster" onclick="toggleMaster(this)"></th>
+                <th>Institution / Campus</th>
+                <th>Area / Locality</th>
+                <th>Official Contact</th>
+                <th>Stage & Verification</th>
+                <th>Outreach & Follow-up</th>
+                <th width="80">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="collegesBody">
+              <tr><td colspan="7" style="text-align: center; padding: 30px;">Loading directory...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination-row">
+        <div style="font-size: 12.5px; color: var(--text-muted);" id="paginationInfo">
+          Showing 1–25 of 217 colleges
+        </div>
+        <div class="pagination-controls">
+          <button class="btn btn-outline btn-sm" id="btnPrevPage" onclick="changePage(-1)">← Previous</button>
+          <span style="font-size: 12.5px; font-weight: 600; padding: 0 8px;" id="pageIndicator">Page 1 of 9</span>
+          <button class="btn btn-outline btn-sm" id="btnNextPage" onclick="changePage(1)">Next →</button>
+          <select id="pageSizeSelect" class="form-control" style="width: auto; padding: 4px 8px; font-size: 12px; margin-left: 8px;" onchange="changePageSize(this.value)">
+            <option value="25">25 / page</option>
+            <option value="50">50 / page</option>
+            <option value="100">100 / page</option>
+            <option value="500">All 217 colleges</option>
+          </select>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==================== 3. TEMPLATES TAB ==================== -->
+    <section id="tabTemplates" class="tab-view">
+      
+      <!-- Top Action Bar -->
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h2 style="font-size: 18px; font-weight: 800; color: var(--navy);">Email Template Library</h2>
+          <p style="font-size: 12.5px; color: var(--text-muted);">Create, customize, and preview personalized outreach templates with live college context.</p>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-primary" onclick="createNewTemplate()">+ New Template</button>
+        </div>
+      </div>
+
+      <div class="template-layout">
+        
+        <!-- Left: Template Library Sidebar -->
+        <div>
+          <div class="card" style="padding: 14px; margin-bottom: 0;">
+            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 10px; display: flex; justify-content: space-between;">
+              <span>Templates</span>
+              <span id="templateCountBadge" class="badge badge-directory">0</span>
+            </div>
+            <div class="template-list" id="templateListContainer">
+              <div style="text-align: center; color: var(--text-muted); padding: 20px; font-size: 12.5px;">Loading templates...</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editor & Live Preview Panel -->
+        <div>
+          <div class="card" style="margin-bottom: 16px;">
+            <div class="card-header" style="flex-wrap: wrap; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <div class="card-title" id="editorTitleDisplay">Edit Template</div>
+                <span id="editorVersionBadge" class="badge-version">v1</span>
+                <span id="editorDefaultBadge" class="badge-default" style="display: none;">Default</span>
+              </div>
+              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <button class="btn btn-outline btn-sm" onclick="duplicateCurrentTemplate()">📋 Duplicate</button>
+                <button class="btn btn-outline btn-sm" onclick="openTemplateHistoryModal()">🕒 History</button>
+                <button class="btn btn-outline btn-sm" id="btnArchiveTemplate" onclick="archiveCurrentTemplate()">📦 Archive</button>
+                <button class="btn btn-success btn-sm" onclick="saveCurrentTemplate()">💾 Save Template</button>
+              </div>
+            </div>
+
+            <!-- Meta Form Fields -->
+            <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 12px; margin-bottom: 12px;">
+              <div>
+                <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Template Name *</label>
+                <input type="text" id="tplNameInput" class="form-control" placeholder="e.g. Biomedical Engineering Campus Outreach">
+              </div>
+              <div style="display: flex; align-items: flex-end; padding-bottom: 8px;">
+                <label class="check" style="margin: 0; font-size: 12.5px; font-weight: 600;">
+                  <input type="checkbox" id="tplIsDefaultCheckbox"> Set as Default Template
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Subject Line * (Supports Personalization Tokens)</label>
+              <input type="text" id="tplSubjectInput" class="form-control" placeholder="e.g. Campus Placement & Mentorship Partnership — {{College_Name}}">
+            </div>
+
+            <!-- Rich-Text WYSIWYG Editor -->
+            <div style="margin-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px;">
+                <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Email Body (HTML / Rich Text) *</label>
+                <div style="display: flex; gap: 4px;">
+                  <button class="btn btn-outline btn-sm active" id="btnModeVisual" onclick="setEditorMode('visual')">✨ Visual Editor</button>
+                  <button class="btn btn-outline btn-sm" id="btnModeHtml" onclick="setEditorMode('html')">💻 HTML Source</button>
+                </div>
+              </div>
+
+              <!-- Toolbar -->
+              <div class="rich-toolbar" id="editorToolbar">
+                <button type="button" class="tool-btn" onclick="execEditorCmd('bold')" title="Bold (Ctrl+B)"><b>B</b></button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('italic')" title="Italic (Ctrl+I)"><i>I</i></button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('underline')" title="Underline (Ctrl+U)"><u>U</u></button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('strikeThrough')" title="Strikethrough"><s>S</s></button>
+                <div class="tool-separator"></div>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('formatBlock', '<h1>')" title="Heading 1">H1</button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('formatBlock', '<h2>')" title="Heading 2">H2</button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('formatBlock', '<h3>')" title="Heading 3">H3</button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('formatBlock', '<p>')" title="Paragraph">P</button>
+                <div class="tool-separator"></div>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('insertUnorderedList')" title="Bullet List">• List</button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('insertOrderedList')" title="Numbered List">1. List</button>
+                <div class="tool-separator"></div>
+                <button type="button" class="tool-btn" onclick="insertEditorLink()" title="Insert Link">🔗 Link</button>
+                <button type="button" class="tool-btn" onclick="insertEditorImage()" title="Insert Image">🖼️ Image</button>
+                <button type="button" class="tool-btn" onclick="execEditorCmd('removeFormat')" title="Clear Formatting">🧹 Clean</button>
+              </div>
+
+              <!-- Tokens Bar -->
+              <div class="tokens-bar">
+                <span style="font-weight: 700; color: #475569;">Insert Token:</span>
+                <span class="token-chip" onclick="insertToken('{{College_Name}}')">+ {{College_Name}}</span>
+                <span class="token-chip" onclick="insertToken('{{City}}')">+ {{City}}</span>
+                <span class="token-chip" onclick="insertToken('{{Contact_Person}}')">+ {{Contact_Person}}</span>
+                <span class="token-chip" onclick="insertToken('{{Campus}}')">+ {{Campus}}</span>
+                <span class="token-chip" onclick="insertToken('{{Website}}')">+ {{Website}}</span>
+                <span class="token-chip" onclick="insertToken('{{contact_type}}')">+ {{contact_type}}</span>
+              </div>
+
+              <!-- Editable Containers -->
+              <div id="richEditorArea" class="rich-editor-content" contenteditable="true" oninput="syncEditorToSource()"></div>
+              <textarea id="htmlSourceArea" class="html-editor-content" oninput="syncSourceToEditor()"></textarea>
+            </div>
+
+            <!-- Plain-Text Alternative (Collapsible) -->
+            <details style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px;">
+              <summary style="font-size: 12px; font-weight: 700; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <span>Plain-Text Email Alternative (for text-only email clients)</span>
+                <button type="button" class="btn btn-outline btn-sm" onclick="generatePlainTextFromHtml(event)" style="padding: 2px 8px; font-size: 11px;">Auto-generate from HTML</button>
+              </summary>
+              <div style="margin-top: 10px;">
+                <textarea id="tplTextInput" class="form-control" rows="5" placeholder="Plain text version..."></textarea>
+              </div>
+            </details>
+
+            <div style="display: flex; justify-content: flex-end; gap: 8px;">
+              <button class="btn btn-success" onclick="saveCurrentTemplate()">💾 Save Changes (New Version)</button>
+            </div>
+          </div>
+
+          <!-- Live Personalization Preview Card -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">👁️ Live Personalization Preview</div>
+              <span style="font-size: 12px; color: var(--text-muted);">See exactly what recipients will receive</span>
+            </div>
+
+            <div class="preview-controls">
+              <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <label style="font-size: 12px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Preview with College:</label>
+                <select id="previewCollegeSelect" class="form-control" style="width: 320px;" onchange="onPreviewCollegeChange(this.value)">
+                  <option value="">Select a college to test personalization...</option>
+                </select>
+              </div>
+
+              <div style="display: flex; gap: 8px;">
+                <button class="btn btn-outline btn-sm active" id="btnViewDesktop" onclick="setPreviewDevice('desktop')">🖥️ Desktop</button>
+                <button class="btn btn-outline btn-sm" id="btnViewMobile" onclick="setPreviewDevice('mobile')">📱 Mobile</button>
+                <button class="btn btn-outline btn-sm" id="btnViewHtml" onclick="setPreviewFormat('html')">HTML View</button>
+                <button class="btn btn-outline btn-sm" id="btnViewText" onclick="setPreviewFormat('text')">Plain Text</button>
+              </div>
+            </div>
+
+            <!-- Subject Banner -->
+            <div style="background: #f8fafc; border: 1px solid var(--border); padding: 10px 14px; border-radius: 6px; margin-bottom: 16px; font-size: 13px;">
+              <strong>Subject Preview:</strong> <span id="templateSubjectPreview">Campus Placement Partnership & Industry Project Mentorship</span>
+            </div>
+
+            <!-- Preview Container -->
+            <div class="preview-container">
+              <iframe id="previewIframe" src="/preview" class="preview-frame"></iframe>
+              <div id="plainTextPreviewBox" class="plain-text-preview" style="display: none;"></div>
+            </div>
+
+            <div style="margin-top: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <div style="font-size: 12px; color: var(--text-muted);">
+                Fallback values: Contact Name → <em>Training & Placement Officer</em> · Area → <em>Delhi-NCR</em> · College → <em>Your Prestigious Institution</em>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <button class="btn btn-outline" onclick="switchTab('settings')">Sender Settings →</button>
+                <button class="btn btn-primary" id="btnTest" onclick="sendTestEmail()">Send Test Email to Sender</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== 4. CAMPAIGNS TAB ==================== -->
+    <section id="tabCampaigns" class="tab-view">
+      
+      <div class="grid-2">
+        
+        <!-- Left: Selected Recipients Review & Send Controls -->
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🎯 Campaign Recipients Review</div>
+              <span class="badge badge-verified" id="campaignRecipientsBadge">0 Selected</span>
+            </div>
+
+            <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 10px;">
+              These verified institutions have been selected from the Colleges workspace. Click × on any recipient to remove them before dispatch.
+            </p>
+
+            <div class="recipient-list" id="campaignRecipientList">
+              <div style="color: var(--text-muted); font-size: 12.5px; padding: 12px;">
+                No colleges selected yet. <a href="#" onclick="switchTab('colleges'); return false;" style="color: var(--primary); font-weight: 600;">Open Colleges workspace to select recipients →</a>
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+              <button class="btn btn-outline btn-sm" onclick="switchTab('colleges')">+ Add / Manage Selection</button>
+              <button class="btn btn-outline btn-sm" onclick="clearAllSelection()">Clear All</button>
+            </div>
+          </div>
+
+          <!-- Staggered Campaign Setup & Send Settings -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🚀 Launch Staggered Campaign</div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Campaign Name</label>
+              <input type="text" id="campaignName" class="form-control" placeholder="e.g. Delhi-NCR Placement Drive - Oct 2026" value="Delhi-NCR College Outreach">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Outreach Template</label>
+              <select id="campaignTemplateSelect" class="form-control" onchange="onCampaignTemplateChange(this.value)">
+                <!-- populated dynamically from templates -->
+              </select>
+              <div style="font-size: 11px; color: var(--primary); margin-top: 3px;">
+                A frozen snapshot of this template will be locked to this campaign upon creation.
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Sender Email (Google Workspace)</label>
+              <input type="email" id="senderEmail" class="form-control" value="">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Google App Password (session only)</label>
+              <input type="password" id="senderPassword" class="form-control" autocomplete="off" placeholder="Enter Google App Password">
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px;">
+                Password stays in server memory for active dispatch and is never saved to database or disk.
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Subject Line</label>
+              <input type="text" id="subjectLine" class="form-control" value="">
+            </div>
+
+            <!-- Rate Limiting & Scheduling Controls -->
+            <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 12px; margin-bottom: 14px;">
+              <div style="font-size: 12px; font-weight: 700; color: var(--navy); margin-bottom: 8px;">⏱️ Stagger & Schedule Configuration (IST)</div>
+              
+              <div class="config-grid-3">
+                <div>
+                  <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Interval (sec)</label>
+                  <input type="number" id="campaignInterval" class="form-control" value="30" min="2" max="3600" oninput="updateCampaignDurationEstimate()">
+                </div>
+                <div>
+                  <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Hourly Cap</label>
+                  <input type="number" id="campaignHourlyCap" class="form-control" value="40" min="1" max="200" oninput="updateCampaignDurationEstimate()">
+                </div>
+                <div>
+                  <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Daily Cap</label>
+                  <input type="number" id="campaignDailyCap" class="form-control" value="300" min="1" max="2000">
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px;">
+                <div>
+                  <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Active Window Start (IST)</label>
+                  <input type="time" id="campaignHoursStart" class="form-control" value="09:00">
+                </div>
+                <div>
+                  <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Active Window End (IST)</label>
+                  <input type="time" id="campaignHoursEnd" class="form-control" value="18:00">
+                </div>
+              </div>
+
+              <div style="margin-bottom: 10px;">
+                <label style="font-size: 10.5px; font-weight: 700; color: var(--text-muted); display: block; margin-bottom: 3px;">Schedule Start Date & Time (Optional)</label>
+                <input type="datetime-local" id="campaignScheduledAt" class="form-control">
+                <div style="font-size: 10.5px; color: var(--text-muted); margin-top: 2px;">Leave empty to start sending immediately.</div>
+              </div>
+
+              <label class="check" style="margin: 0; font-size: 12px; font-weight: 600; color: var(--navy);">
+                <input type="checkbox" id="campaignWorkingDaysOnly" checked>
+                Send only during business days (Mon–Fri IST)
+              </label>
+            </div>
+
+            <!-- Estimated Duration Callout -->
+            <div class="duration-callout" id="campaignDurationCallout">
+              ⏱️ Select colleges to see estimated campaign duration.
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px;">
+              <button class="btn btn-success" id="btnSendAll" disabled onclick="startPersistentCampaign()" style="width: 100%; justify-content: center; padding: 12px; font-weight: 700;">
+                🚀 LAUNCH PERSISTENT STAGGERED CAMPAIGN
+              </button>
+              <button class="btn btn-outline" onclick="openInGmailWeb()" style="width: 100%; justify-content: center; font-size: 12px;">
+                ✉️ Open Gmail Web Composer (BCC Fallback)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Background Worker Status, Persistent Campaigns Queue Monitor, and Activity Log -->
+        <div>
+          <!-- Background Worker & Queue KPI Status Card -->
+          <div class="card" style="margin-bottom: 14px;">
+            <div class="card-header" style="margin-bottom: 10px;">
+              <div class="card-title">⚡ Persistent Queue Status</div>
+              <button class="btn btn-outline btn-sm" onclick="loadCampaignHistory(); refreshQueueStatus();">🔄 Refresh</button>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; margin-bottom: 12px;">
+              <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Worker</div>
+                <div id="kpiWorkerState" style="font-size: 13px; font-weight: 700; color: #16a34a; margin-top: 2px;">Running</div>
+              </div>
+              <div style="background: #e0f2fe; border: 1px solid #bae6fd; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #0369a1; text-transform: uppercase;">Queued</div>
+                <div id="kpiQueuedCount" style="font-size: 15px; font-weight: 800; color: #0284c7; margin-top: 2px;">0</div>
+              </div>
+              <div style="background: #dcfce7; border: 1px solid #bbf7d0; border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: #15803d; text-transform: uppercase;">In-Flight</div>
+                <div id="kpiSendingCount" style="font-size: 15px; font-weight: 800; color: #16a34a; margin-top: 2px;">0</div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Sent 1h</div>
+                <div id="kpiLastHourCount" style="font-size: 15px; font-weight: 800; color: var(--navy); margin-top: 2px;">0</div>
+              </div>
+              <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 8px 10px; text-align: center;">
+                <div style="font-size: 10px; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Sent Today</div>
+                <div id="kpiTodayCount" style="font-size: 15px; font-weight: 800; color: var(--navy); margin-top: 2px;">0</div>
+              </div>
+            </div>
+
+            <div style="font-size: 11.5px; color: var(--text-muted); display: flex; justify-content: space-between; align-items: center;">
+              <span>🕒 Current IST: <strong id="kpiIstTime">--</strong></span>
+              <span id="kpiWindowStatus" class="badge badge-placement">Window: Active</span>
+            </div>
+          </div>
+
+          <!-- Active Persistent Campaigns Monitor -->
+          <div class="card" style="margin-bottom: 14px;">
+            <div class="card-header">
+              <div class="card-title">📋 Persistent Campaigns Monitor</div>
+              <div style="font-size: 11px; color: var(--text-muted);">Auto-refreshes every 5s</div>
+            </div>
+            
+            <div id="campaignsMonitorContainer" style="max-height: 400px; overflow-y: auto;">
+              <div style="text-align: center; color: var(--text-muted); padding: 20px;">
+                No campaigns created yet. Select colleges and launch above!
+              </div>
+            </div>
+          </div>
+
+          <!-- Real-time Dispatch Activity Log -->
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">📜 Dispatch Activity Log</div>
+              <button class="btn btn-outline btn-sm" onclick="clearLog()">Clear Log</button>
+            </div>
+            <div class="log-box" id="logBox" style="max-height: 180px;">
+              <div class="log-entry">[READY] Staggered campaign worker initialized. Ready for persistent dispatch.</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- ==================== 5. SETTINGS TAB ==================== -->
+    <section id="tabSettings" class="tab-view">
+      
+      <div class="grid-2">
+        
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">⚙️ Google Workspace Email Account</div>
+            </div>
+
+            <p style="font-size: 12.5px; color: var(--text-muted); margin-bottom: 14px;">
+              Configure your authorized corporate Google Workspace sender account. Passwords are never written to disk or configuration files.
+            </p>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Default Sender Address</label>
+              <input type="email" id="settingsSenderEmail" class="form-control" placeholder="hiring@medantrik.com">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 14px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Default Subject Line</label>
+              <input type="text" id="settingsSubject" class="form-control">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Session App Password</label>
+              <input type="password" id="settingsAppPassword" class="form-control" autocomplete="off" placeholder="Enter App Password for test send">
+            </div>
+
+            <div style="display: flex; gap: 10px;">
+              <button class="btn btn-outline" id="btnTest" onclick="sendTestEmail()">Send Test Email to Sender</button>
+              <button class="btn btn-primary" onclick="syncSettingsInputs()">Sync Credentials to Dispatcher</button>
+            </div>
+          </div>
+
+          <div class="card" style="background: #eff6ff; border-color: #bfdbfe;">
+            <div class="card-title" style="color: #1e40af;">💡 Google App Password Instructions</div>
+            <div style="font-size: 12.5px; color: #1e40af; line-height: 1.6; margin-top: 8px;">
+              Google requires <strong>2-Step Verification (2FA)</strong> before issuing App Passwords:
+              <ol style="margin-left: 18px; margin-top: 6px;">
+                <li>Enable 2FA at <a href="https://myaccount.google.com/security" target="_blank" style="color: #1d4ed8; font-weight: 700;">myaccount.google.com/security</a>.</li>
+                <li>Generate an App Password at <a href="https://myaccount.google.com/apppasswords" target="_blank" style="color: #1d4ed8; font-weight: 700;">myaccount.google.com/apppasswords</a> (App: Mail, Device: Windows).</li>
+                <li>Paste the 16-character code into the session password field.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">🛡️ System Status & Security Audit</div>
+              <button class="btn btn-sm btn-outline" onclick="checkHealth()">Refresh Diagnostics</button>
+            </div>
+
+            <div id="healthReportContent" style="font-size: 13px; line-height: 1.6;">
+              <div style="padding: 10px; background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; margin-bottom: 12px;">
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Application Health:</span>
+                  <strong style="color: #16a34a;" id="diagAppStatus">Checking...</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Directory Database:</span>
+                  <strong id="diagDbStatus">Checking...</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Templates Module:</span>
+                  <strong id="diagTplStatus">Checking...</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between;">
+                  <span>Settings File:</span>
+                  <strong id="diagCfgStatus">Checking...</strong>
+                </div>
+              </div>
+
+              <div style="font-size: 12px; color: var(--text-muted); line-height: 1.6;">
+                <strong>Security Principles Enforced:</strong>
+                <ul style="margin-left: 18px; margin-top: 4px;">
+                  <li>Localhost binding only (127.0.0.1) prevents network eavesdropping.</li>
+                  <li>CSRF tokens required on all mutating API endpoints.</li>
+                  <li>Sender passwords are never saved to disk, committed to git, or printed in logs.</li>
+                  <li>Path traversal guard on static assets.</li>
+                  <li>Strict geographic boundary isolation for Delhi, Noida, Greater Noida, Ghaziabad, Gurugram.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== PERSISTENT FLOATING BOTTOM ACTION BAR ==================== -->
+  <div class="floating-bar" id="floatingActionBar">
+    <div class="floating-bar-info">
+      <div class="floating-bar-title">
+        <span>🎓</span> <strong id="barSelectedCount">0</strong> verified colleges selected
+      </div>
+      <div class="floating-bar-sub" id="barSelectedDetails">
+        Ready for personalized outreach campaign
+      </div>
+    </div>
+    <div class="floating-bar-actions">
+      <button class="btn btn-sm btn-outline" onclick="openRecipientReviewModal()">Review Recipients</button>
+      <button class="btn btn-sm btn-outline" onclick="clearAllSelection()">Clear</button>
+      <button class="btn btn-sm btn-accent" onclick="createCampaignFromSelection()">
+        Create Campaign →
+      </button>
+    </div>
+  </div>
+
+  <!-- ==================== DETAIL SLIDEOUT DRAWER ==================== -->
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDetailDrawer()"></div>
+  <aside class="drawer" id="collegeDrawer">
+    <div class="drawer-header">
+      <div>
+        <div class="drawer-title" id="drawerCollegeName">Institution Details</div>
+        <div class="drawer-subtitle" id="drawerCollegeSubtitle">Provenance and contacts dossier</div>
+      </div>
+      <button class="drawer-close" onclick="closeDetailDrawer()">&times;</button>
+    </div>
+
+    <div class="drawer-body" id="drawerBody">
+      <!-- Populated dynamically -->
+    </div>
+  </aside>
+
+  <!-- ==================== DIALOGS & MODALS ==================== -->
+
+  <!-- Add/Edit College Dialog -->
+  <dialog id="editor">
+    <form id="collegeForm">
+      <h2 id="editorTitle" style="font-size: 16px; margin-bottom: 8px;">Review Institution</h2>
+      <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+        Use the official source link to check the exact email and role. Never infer an address from a domain.
+      </p>
+      <div id="fields" class="fields-grid"></div>
+      <label class="check">
+        <input type="checkbox" id="blocked"> Do not contact this institution/email
+      </label>
+      <label class="check">
+        <input type="checkbox" id="confirmed"> I checked the displayed email and contact type on the official institutional source.
+      </label>
+      <p id="formError" role="alert" style="color: var(--danger); font-size: 12px; margin: 8px 0;"></p>
+      <div style="display: flex; gap: 8px; justify-content: flex-end; margin-top: 14px;">
+        <button type="button" class="btn btn-outline" id="closeEditor" onclick="closeEditorDialog()">Close</button>
+        <button type="button" class="btn btn-outline" id="historyBtn" onclick="viewRecordHistory()">View Audit History</button>
+        <button type="submit" class="btn btn-primary">Save Record</button>
+      </div>
+      <pre id="historyText" style="font-size: 11px; background: #f8fafc; padding: 10px; border-radius: 4px; margin-top: 10px; max-height: 140px; overflow-y: auto; display: none;"></pre>
+    </form>
+  </dialog>
+
+  <!-- Import Dialog -->
+  <dialog id="importDialog">
+    <h2 style="font-size: 16px; margin-bottom: 8px;">Review an import before saving</h2>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+      Required: College_Name and City. Imported emails start unverified. Exact duplicates are skipped; existing records are never overwritten.
+    </p>
+    <input id="importFile" type="file" accept=".csv,.json" class="form-control" style="margin-bottom: 10px;">
+    <label style="font-size: 12px; font-weight: 700; color: var(--text-muted);">Or paste CSV / JSON
+      <textarea id="importText" rows="5" class="form-control" style="font-family: monospace; font-size: 12px; margin-top: 4px;"></textarea>
+    </label>
+    <div style="display: flex; gap: 8px; justify-content: flex-end; margin: 12px 0;">
+      <button class="btn btn-outline" onclick="closeImportDialog()">Close</button>
+      <button class="btn btn-outline" id="previewImportBtn" onclick="previewImportAction()">Preview Import</button>
+      <button class="btn btn-primary" id="commitImportBtn" disabled onclick="commitImportAction()">Apply Reviewed Import</button>
+    </div>
+    <p id="importSummary" style="font-size: 12.5px; font-weight: 600; margin-bottom: 8px;"></p>
+    <div id="importRows" class="table-container" style="max-height: 200px; overflow-y: auto;"></div>
+  </dialog>
+
+  <!-- Duplicate Review Dialog -->
+  <dialog id="duplicateDialog">
+    <h2 style="font-size: 16px; margin-bottom: 8px;">Potential Duplicates & Campuses</h2>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+      Shared emails can belong to separate campuses. Merge only if it is the same institution/campus.
+    </p>
+    <div id="duplicateRows" style="max-height: 360px; overflow-y: auto; margin-bottom: 14px;"></div>
+    <div style="display: flex; justify-content: flex-end;">
+      <button class="btn btn-outline" onclick="closeDuplicateDialog()">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Recipient Review Modal -->
+  <dialog id="recipientReviewModal">
+    <h2 style="font-size: 16px; margin-bottom: 8px;">Selected Campaign Recipients</h2>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+      Exact institutions and verified placement addresses queued for outreach:
+    </p>
+    <div class="table-container" style="max-height: 360px; overflow-y: auto; margin-bottom: 14px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Area</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="recipientReviewBody"></tbody>
+      </table>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <button class="btn btn-outline" onclick="closeRecipientReviewModal()">Close</button>
+      <button class="btn btn-accent" onclick="closeRecipientReviewModal(); switchTab('campaigns');">Proceed to Campaign →</button>
+    </div>
+  </dialog>
+
+  <!-- Template Version History Dialog -->
+  <dialog id="templateHistoryDialog">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+      <h2 style="font-size: 16px; font-weight: 800; color: var(--navy); margin: 0;">Template Version History</h2>
+      <button class="btn btn-outline btn-sm" onclick="closeTemplateHistoryDialog()">&times;</button>
+    </div>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+      Inspect previous revisions and restore them anytime. Restoring creates a new revision without losing previous history.
+    </p>
+    <div class="history-list" id="templateHistoryList">
+      <div style="text-align: center; color: var(--text-muted); padding: 20px;">Loading history...</div>
+    </div>
+    <div style="margin-top: 16px; text-align: right;">
+      <button class="btn btn-outline" onclick="closeTemplateHistoryDialog()">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Campaign Queue Inspector Dialog -->
+  <dialog id="campaignQueueInspectorDialog" style="max-width: 900px; width: 92%;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <div>
+        <h2 style="font-size: 16px; font-weight: 800; color: var(--navy); margin: 0;" id="inspectorCampaignTitle">Campaign Queue Details</h2>
+        <p style="font-size: 11.5px; color: var(--text-muted); margin: 3px 0 0 0;" id="inspectorCampaignMeta"></p>
+      </div>
+      <button class="btn btn-outline btn-sm" onclick="closeCampaignQueueInspector()">&times;</button>
+    </div>
+
+    <!-- Summary chips -->
+    <div id="inspectorSummaryChips" class="campaign-counts-row" style="margin-bottom: 12px;"></div>
+
+    <div class="table-container" style="max-height: 400px; overflow-y: auto; margin-bottom: 14px;">
+      <table>
+        <thead>
+          <tr>
+            <th>Recipient & Institution</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Attempts</th>
+            <th>Next / Sent</th>
+            <th>Details / Failure Reason</th>
+          </tr>
+        </thead>
+        <tbody id="inspectorQueueTableBody">
+          <tr><td colspan="6" style="text-align: center; color: var(--text-muted); padding: 16px;">Loading queue items...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <button class="btn btn-outline btn-sm" id="btnRefreshInspector" onclick="refreshCurrentInspector()">🔄 Refresh Queue</button>
+      <button class="btn btn-outline" onclick="closeCampaignQueueInspector()">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Resume Campaign Password Dialog -->
+  <dialog id="resumePasswordDialog" style="max-width: 480px; width: 90%;">
+    <h2 style="font-size: 16px; font-weight: 800; color: var(--navy); margin-bottom: 8px;">Resume Staggered Campaign</h2>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
+      The campaign sender requires an active Google App Password in server memory to continue dispatching queued emails.
+    </p>
+
+    <div class="form-group" style="margin-bottom: 16px;">
+      <label style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">Google App Password</label>
+      <input type="password" id="resumeAppPassword" class="form-control" autocomplete="off" placeholder="Enter Google App Password">
+    </div>
+
+    <div style="display: flex; justify-content: flex-end; gap: 10px;">
+      <button class="btn btn-outline" onclick="closeResumePasswordDialog()">Cancel</button>
+      <button class="btn btn-primary" id="btnConfirmResume" onclick="confirmResumeCampaign()">Resume Dispatch</button>
+    </div>
+  </dialog>
+
+  <!-- Direct Email Send Dialog -->
+  <dialog id="directSendModal" style="max-width: 650px; width: 92%;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <div>
+        <h2 style="font-size: 17px; font-weight: 800; color: var(--navy); margin: 0;">⚡ Quick Direct Email</h2>
+        <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">
+          Send an email immediately to any email address — no need to add an entity to the directory first.
+        </p>
+      </div>
+      <button class="btn btn-outline btn-sm" onclick="closeDirectSendModal()">&times;</button>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px;">
+      <div class="form-group">
+        <label for="directRecipientEmail" style="font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;">
+          Recipient Email Address <span style="color: #ef4444;">*</span>
+        </label>
+        <input type="email" id="directRecipientEmail" class="form-control" placeholder="e.g. manager@anycompany.com, contact@gym.in, hr@office.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="directRecipientName" style="font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;">
+          Recipient Name / Organization (Optional)
+        </label>
+        <input type="text" id="directRecipientName" class="form-control" placeholder="e.g. Rohit Sharma, Anytime Fitness, TechCorp HR">
+      </div>
+
+      <div class="form-group">
+        <label for="directTemplateSelect" style="font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;">
+          Use Saved Template (Optional)
+        </label>
+        <select id="directTemplateSelect" class="form-control" onchange="onDirectTemplateChange(this.value)">
+          <option value="">-- Custom Message (No Template) --</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="directSubject" style="font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;">
+          Email Subject <span style="color: #ef4444;">*</span>
+        </label>
+        <input type="text" id="directSubject" class="form-control" placeholder="Enter email subject line..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="directMessageBody" style="font-size: 11.5px; font-weight: 700; color: var(--navy); text-transform: uppercase;">
+          Message Content <span style="color: #ef4444;">*</span>
+        </label>
+        <textarea id="directMessageBody" class="form-control" rows="6" placeholder="Write your email message here..."></textarea>
+        <span style="font-size: 11px; color: var(--text-muted); margin-top: 3px; display: block;">
+          Personalization tags like <code>{{college_name}}</code>, <code>{{contact_name}}</code>, <code>{{city}}</code> are automatically supported.
+        </span>
+      </div>
+
+      <!-- Sender Account Info -->
+      <div style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 12px;">
+        <div style="font-size: 11.5px; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 8px;">
+          Sender Credentials
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div>
+            <label for="directSenderEmail" style="font-size: 11px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px;">Sender Email</label>
+            <input type="email" id="directSenderEmail" class="form-control" style="font-size: 12px;">
+          </div>
+          <div>
+            <label for="directSenderPassword" style="font-size: 11px; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 4px;">Google App Password</label>
+            <input type="password" id="directSenderPassword" class="form-control" style="font-size: 12px;" placeholder="Session password or enter new">
+          </div>
+        </div>
+        <div id="directSenderHint" style="font-size: 11px; color: var(--text-muted); margin-top: 4px;"></div>
+      </div>
+
+      <div id="directSendStatus" style="display: none; padding: 10px; border-radius: 6px; font-size: 12.5px;"></div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <button class="btn btn-outline" onclick="closeDirectSendModal()">Cancel</button>
+      <button class="btn btn-accent" id="btnDirectSend" onclick="executeDirectSend()">
+        <span>🚀</span> Send Immediately
+      </button>
+    </div>
+  </dialog>
+
+  <!-- Add Category Dialog -->
+  <dialog id="addCategoryModal" style="max-width: 440px; width: 90%;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+      <h2 style="font-size: 16px; font-weight: 800; color: var(--navy); margin: 0;">➕ Create New Category</h2>
+      <button class="btn btn-outline btn-sm" onclick="closeAddCategoryModal()">&times;</button>
+    </div>
+    <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 14px;">
+      Organize different entities (e.g. Gyms, Offices, Households, Hospitals) into distinct searchable categories.
+    </p>
+
+    <div class="form-group" style="margin-bottom: 12px;">
+      <label for="newCategoryName" style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">
+        Category Name <span style="color: #ef4444;">*</span>
+      </label>
+      <input type="text" id="newCategoryName" class="form-control" placeholder="e.g. Gyms, Offices, Households, Clinics..." required>
+    </div>
+
+    <div class="form-group" style="margin-bottom: 14px;">
+      <label for="newCategoryDesc" style="font-size: 11px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); display: block; margin-bottom: 4px;">
+        Description (Optional)
+      </label>
+      <input type="text" id="newCategoryDesc" class="form-control" placeholder="e.g. Fitness centers and sports clubs in Delhi-NCR">
+    </div>
+
+    <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 9px 11px; margin-bottom: 12px; font-size: 12px; color: #166534; display: flex; align-items: center; gap: 8px;">
+      <span>📊</span>
+      <span>A dedicated tab (sheet) will be automatically generated in your Google Sheet / Excel workbook for this category.</span>
+    </div>
+
+    <div id="addCategoryError" style="color: var(--danger); font-size: 12px; display: none; margin-bottom: 10px;"></div>
+
+    <div style="display: flex; justify-content: flex-end; gap: 8px;">
+      <button class="btn btn-outline" onclick="closeAddCategoryModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="submitNewCategory()">Create Category</button>
+    </div>
+  </dialog>
+
+  <!-- Core Scripts -->
+  <script src="/static/selection.js"></script>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>
