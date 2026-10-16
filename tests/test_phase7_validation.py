@@ -22,6 +22,8 @@ import campaign_queue
 import directory
 import mailer
 import templates
+import dashboard
+from email.message import Message
 
 class Phase7ValidationTests(unittest.TestCase):
     def setUp(self):
@@ -365,5 +367,27 @@ class Phase7ValidationTests(unittest.TestCase):
         self.assertEqual(reader[0]['Recipient_Email'], 'placements@dtu.ac.in')
         self.assertEqual(reader[0]['Status'], 'Queued')
 
+    # ==================== 8. SERVERLESS CSRF & HOST INTEGRITY ====================
+
+    def test_csrf_token_is_deterministic_across_calls(self):
+        """CSRF token must be consistent across calls to prevent multi-instance 403 drift."""
+        token1 = dashboard.get_csrf_token()
+        token2 = dashboard.get_csrf_token()
+        self.assertEqual(token1, token2)
+        self.assertEqual(token1, dashboard.CSRF_TOKEN)
+        self.assertTrue(len(token1) >= 32)
+
+    def test_vercel_host_authorization(self):
+        """Requests from Vercel deployment domains or with Vercel headers are authorized."""
+        handler = object.__new__(dashboard.CampaignHandler)
+        handler.headers = Message()
+        handler.headers['Host'] = 'medantrik-college-outreach.vercel.app'
+        self.assertTrue(handler.is_authorized_host())
+
+        handler.headers['Host'] = 'custom-domain.com'
+        handler.headers['x-vercel-id'] = 'iad1::sin1::xyz123'
+        self.assertTrue(handler.is_authorized_host())
+
 if __name__ == '__main__':
     unittest.main()
+

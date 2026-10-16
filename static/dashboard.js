@@ -9,6 +9,45 @@ const selection = new CollegeSelection();
 let campaignRunning = false;
 let csrfToken = "";
 let currentPage = 1;
+
+// Auto-recovering fetch interceptor for multi-instance serverless resilience
+if (typeof window !== 'undefined' && typeof window.fetch === 'function') {
+  const _rawFetch = window.fetch.bind(window);
+  window.fetch = async function(input, init) {
+    let response = await _rawFetch(input, init);
+    if (response && response.status === 403 && init && (init.method || '').toUpperCase() === 'POST') {
+      try {
+        const cloned = response.clone();
+        const data = await cloned.json();
+        if (data && data.message && typeof data.message === 'string' && data.message.includes('Reload the dashboard')) {
+          const settingsRes = await _rawFetch('/api/settings');
+          if (settingsRes.ok) {
+            const settings = await settingsRes.json();
+            if (settings.csrf_token) {
+              csrfToken = settings.csrf_token;
+              let headers = init.headers;
+              if (typeof Headers !== 'undefined' && headers instanceof Headers) {
+                headers.set('X-CSRF-Token', csrfToken);
+              } else if (Array.isArray(headers)) {
+                headers = headers.filter(([k]) => k.toLowerCase() !== 'x-csrf-token');
+                headers.push(['X-CSRF-Token', csrfToken]);
+              } else if (headers && typeof headers === 'object') {
+                headers = { ...headers, 'X-CSRF-Token': csrfToken };
+              } else {
+                headers = { 'X-CSRF-Token': csrfToken };
+              }
+              const retryInit = { ...init, headers };
+              response = await _rawFetch(input, retryInit);
+            }
+          }
+        }
+      } catch (e) {
+        // Not JSON or parse error, ignore
+      }
+    }
+    return response;
+  };
+}
 let pageSize = 25;
 let activeTab = 'overview';
 let activePreviewCollege = null;

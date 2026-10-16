@@ -19,19 +19,12 @@ from mailer import send_mail, validate_message
 import campaign_queue
 
 import os
+import hashlib
 
-CSRF_TOKEN = secrets.token_urlsafe(32)
+CSRF_SECRET = os.environ.get('CSRF_SECRET', 'medantrik_campus_outreach_salt_2026')
+CSRF_TOKEN = hashlib.sha256(f"medantrik_csrf_{CSRF_SECRET}".encode('utf-8')).hexdigest()
 
 def get_csrf_token():
-    if os.environ.get('VERCEL'):
-        token_file = Path('/tmp/csrf.token')
-        try:
-            if token_file.exists():
-                return token_file.read_text(encoding='utf-8').strip()
-            token_file.write_text(CSRF_TOKEN, encoding='utf-8')
-            return CSRF_TOKEN
-        except Exception:
-            return CSRF_TOKEN
     return CSRF_TOKEN
 
 def health():
@@ -58,7 +51,14 @@ class CampaignHandler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def is_authorized_host(self):
-        if os.environ.get('VERCEL') or os.environ.get('PORT') or os.environ.get('ALLOW_REMOTE_HOSTS') == '1':
+        if (
+            os.environ.get('VERCEL')
+            or os.environ.get('VERCEL_ENV')
+            or os.environ.get('PORT')
+            or os.environ.get('ALLOW_REMOTE_HOSTS') == '1'
+            or bool(self.headers.get('x-vercel-id'))
+            or 'vercel.app' in self.headers.get('Host', '')
+        ):
             return True
         host = self.headers.get('Host', '')
         port = getattr(getattr(self, 'server', None), 'server_port', 5050)
