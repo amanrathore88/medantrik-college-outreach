@@ -1691,6 +1691,32 @@ function updateCampaignDurationEstimate() {
   el.innerText = `⏱️ Estimated duration: ~${timeStr.trim()} across ${count} recipient${count > 1 ? 's' : ''} (${interval}s stagger, max ${hourlyCap}/hr).`;
 }
 
+let isSteppingQueue = false;
+
+async function stepQueue(passwordOverride) {
+  if (typeof fetch === 'undefined' || isSteppingQueue) return;
+  const password = passwordOverride || window.activeSessionPassword || (typeof sessionStorage !== 'undefined' ? sessionStorage.getItem('medantrik_session_pass') : '') || '';
+  if (!password) return;
+  isSteppingQueue = true;
+  try {
+    const res = await fetch('/api/queue/step', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify({ sender_password: password })
+    });
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.acted) {
+        await loadCampaignHistory();
+        await refreshQueueStatus();
+      }
+    }
+  } catch (_) {
+  } finally {
+    isSteppingQueue = false;
+  }
+}
+
 async function startPersistentCampaign() {
   if (typeof fetch === 'undefined') return;
   if (campaignRunning) return;
@@ -1717,8 +1743,8 @@ async function startPersistentCampaign() {
   const hourlyCap = Number(hourlyCapInput?.value || 40);
   const dailyCap = Number(dailyCapInput?.value || 300);
   const scheduledAt = schedInput?.value ? schedInput.value.replace('T', ' ') + ':00' : null;
-  const hoursStart = (hoursStartInput?.value || '09:00').trim();
-  const hoursEnd = (hoursEndInput?.value || '18:00').trim();
+  const hoursStart = (hoursStartInput?.value || '00:00').trim();
+  const hoursEnd = (hoursEndInput?.value || '23:59').trim();
   const workingDaysOnly = weekdaysInput ? weekdaysInput.checked : true;
 
   const checkedIds = selectedRecipientIds();
@@ -1735,6 +1761,8 @@ async function startPersistentCampaign() {
     if (typeof alert !== 'undefined') alert('Enter your Google App Password for this session.');
     return;
   }
+  window.activeSessionPassword = password;
+  try { sessionStorage.setItem('medantrik_session_pass', password); } catch (_) {}
   if (!subject) {
     if (typeof alert !== 'undefined') alert('Enter an email subject line.');
     return;
@@ -1792,6 +1820,7 @@ async function startPersistentCampaign() {
       if (typeof alert !== 'undefined') {
         alert(`Campaign "${data.name}" created!\n\n${data.total_recipients} recipients enqueued.\nThe background worker will send each email individually according to your schedule.\n\nYou can close your browser or navigate anywhere safely.`);
       }
+      await stepQueue(password);
       await loadCampaignHistory();
       await refreshQueueStatus();
     } else {
@@ -2033,8 +2062,13 @@ async function confirmResumeCampaign() {
     });
     const data = await res.json();
     if (res.ok) {
+      if (password) {
+        window.activeSessionPassword = password;
+        try { sessionStorage.setItem('medantrik_session_pass', password); } catch (_) {}
+      }
       addLog(`▶️ Campaign #${id} resumed successfully! Worker is active.`, 'success');
       closeResumePasswordDialog();
+      await stepQueue(password);
       await loadCampaignHistory();
       await refreshQueueStatus();
     } else {
@@ -2511,12 +2545,14 @@ function exportDirectoryResults() {
 
 // Auto-polling for active campaign queue monitor
 if (typeof window !== 'undefined' && typeof setInterval !== 'undefined') {
-  setInterval(() => {
+  setInterval(async () => {
     if (typeof activeTab !== 'undefined' && activeTab === 'campaigns') {
-      loadCampaignHistory();
-      refreshQueueStatus();
+      await stepQueue();
+      await loadCampaignHistory();
+      await refreshQueueStatus();
     }
     if (typeof currentInspectorCampaignId !== 'undefined' && currentInspectorCampaignId) {
+      await stepQueue();
       refreshCurrentInspector();
     }
   }, 5000);
@@ -2698,6 +2734,10 @@ async function executeDirectSend() {
     alert('Enter your sender email.');
     senderEl?.focus();
     return;
+  }
+  if (sender_password) {
+    window.activeSessionPassword = sender_password;
+    try { sessionStorage.setItem('medantrik_session_pass', sender_password); } catch (_) {}
   }
 
   if (statusEl) {

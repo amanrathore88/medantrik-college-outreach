@@ -108,18 +108,53 @@ def initialize_queue():
             except sqlite3.OperationalError:
                 pass
 
+import os
+from pathlib import Path
+
 def set_sender_password(sender_email, password):
     if sender_email and password:
         with _LOCK:
             _SESSION_CREDENTIALS[sender_email.lower().strip()] = password.strip()
+        if os.environ.get('VERCEL') or os.path.exists('/tmp'):
+            try:
+                creds_file = Path('/tmp/session_creds.json')
+                data = {}
+                if creds_file.exists():
+                    data = json.loads(creds_file.read_text(encoding='utf-8'))
+                data[sender_email.lower().strip()] = password.strip()
+                creds_file.write_text(json.dumps(data), encoding='utf-8')
+            except Exception:
+                pass
 
 def get_sender_password(sender_email):
     with _LOCK:
-        return _SESSION_CREDENTIALS.get(sender_email.lower().strip())
+        pwd = _SESSION_CREDENTIALS.get(sender_email.lower().strip())
+        if pwd:
+            return pwd
+    if os.environ.get('VERCEL') or os.path.exists('/tmp'):
+        try:
+            creds_file = Path('/tmp/session_creds.json')
+            if creds_file.exists():
+                data = json.loads(creds_file.read_text(encoding='utf-8'))
+                pwd = data.get(sender_email.lower().strip())
+                if pwd:
+                    return pwd
+        except Exception:
+            pass
+    return os.environ.get('MEDANTRIK_SMTP_PASSWORD', '').replace(' ', '').strip() or None
 
 def clear_sender_password(sender_email):
     with _LOCK:
         _SESSION_CREDENTIALS.pop(sender_email.lower().strip(), None)
+    if os.environ.get('VERCEL') or os.path.exists('/tmp'):
+        try:
+            creds_file = Path('/tmp/session_creds.json')
+            if creds_file.exists():
+                data = json.loads(creds_file.read_text(encoding='utf-8'))
+                data.pop(sender_email.lower().strip(), None)
+                creds_file.write_text(json.dumps(data), encoding='utf-8')
+        except Exception:
+            pass
 
 # ==================== CAMPAIGN CREATION & ENQUEUEING ====================
 def create_staggered_campaign(config, recipient_college_ids, sender_password=None):
@@ -249,7 +284,13 @@ def resume_campaign(campaign_id, sender_password=None):
         # Determine whether queued or scheduled
         sched = c['scheduled_at']
         new_status = 'scheduled' if (sched and str(sched) > now_ist_iso()) else 'queued'
-        db.execute("UPDATE campaigns SET status=?, updated_at=CURRENT_TIMESTAMP WHERE id=?", (new_status, campaign_id))
+        db.execute('''
+            UPDATE campaigns
+            SET status=?, notes=NULL,
+                sending_hours_end=CASE WHEN sending_hours_end='18:00' THEN '23:59' ELSE sending_hours_end END,
+                updated_at=CURRENT_TIMESTAMP
+            WHERE id=?
+        ''', (new_status, campaign_id))
     return get_campaign_detail(campaign_id)
 
 def cancel_campaign(campaign_id):
@@ -422,6 +463,8 @@ def can_dispatch_campaign_now(campaign, dt_ist=None):
     # Check sending hours (IST)
     start_str = campaign.get('sending_hours_start') or '09:00'
     end_str = campaign.get('sending_hours_end') or '18:00'
+    if start_str == '00:00' and end_str in ['23:59', '24:00', '00:00', '']:
+        return True, "Ready to send"
     curr_hm = current_time.strftime('%H:%M')
     if curr_hm < start_str or curr_hm > end_str:
         return False, f"Outside business sending window ({start_str} to {end_str} IST)."
@@ -646,7 +689,7 @@ def dispatch_single_queue_message(msg_id, password_override=None):
             ''', (f"Unexpected error: {err_msg}", msg_id))
             return 'needs_review', err_msg
 
-def worker_step():
+def worker_step(password_override=None):
     """
     Executes one cycle of the queue worker:
     1. Identifies active campaigns.
@@ -657,6 +700,7 @@ def worker_step():
     initialize_queue()
     candidate_msg_id = None
     sleep_interval = 0
+    active_password = None
 
     with connect() as db:
         # Find active campaigns in priority order
@@ -684,7 +728,8 @@ def worker_step():
                 continue
 
             # Check if password is in session
-            if not get_sender_password(sender_email):
+            pwd = password_override or get_sender_password(sender_email)
+            if not pwd:
                 db.execute('''
                     UPDATE campaigns
                     SET status='paused',
@@ -692,6 +737,9 @@ def worker_step():
                     WHERE id=?
                 ''', (camp['id'],))
                 continue
+            else:
+                set_sender_password(sender_email, pwd)
+                active_password = pwd
 
             # Mark campaign status 'sending'
             if camp['status'] != 'sending':
@@ -729,8 +777,8 @@ def worker_step():
                 db.execute("UPDATE campaigns SET status=?, updated_at=CURRENT_TIMESTAMP WHERE id=?", (final_status, camp['id']))
 
     if candidate_msg_id is not None:
-        outcome, err = dispatch_single_queue_message(candidate_msg_id)
-        if sleep_interval > 0:
+        outcome, err = dispatch_single_queue_message(candidate_msg_id, password_override=active_password)
+        if sleep_interval > 0 and not os.environ.get('VERCEL'):
             time.sleep(sleep_interval)
         return True
 
@@ -763,4 +811,6 @@ def stop_worker_thread():
         _WORKER_THREAD.join(timeout=3)
 
 def is_worker_running():
+    if os.environ.get('VERCEL'):
+        return True
     return _WORKER_THREAD is not None and _WORKER_THREAD.is_alive()

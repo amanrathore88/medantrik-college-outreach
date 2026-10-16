@@ -288,5 +288,23 @@ class CampaignQueueTests(unittest.TestCase):
         cancelled = handler.reply.call_args.args[0]
         self.assertEqual(cancelled['status'], 'cancelled')
 
+    def test_queue_step_endpoint_and_credential_override(self):
+        col_ids = self.create_sample_colleges()
+        camp = campaign_queue.create_staggered_campaign({
+            'name': 'Step Test',
+            'sender_email': 'step@example.com',
+            'sending_hours_start': '00:00',
+            'sending_hours_end': '23:59'
+        }, [col_ids[0]])
+
+        # Queue step with password override
+        with patch('campaign_queue.send_mail') as mock_send:
+            handler = self.request('/api/queue/step', {'sender_password': 'override-pass'})
+            handler.do_POST()
+            res = handler.reply.call_args.args[0]
+            self.assertEqual(res['status'], 'ok')
+            self.assertTrue(res['acted'])
+            mock_send.assert_called_once()
+
 if __name__ == '__main__':
     unittest.main()

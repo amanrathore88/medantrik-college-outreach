@@ -231,7 +231,7 @@ class CampaignHandler(BaseHTTPRequestHandler):
             '/api/campaign/record',
             '/api/campaigns/create', '/api/campaigns/pause',
             '/api/campaigns/resume', '/api/campaigns/cancel',
-            '/api/campaigns/retry-failed',
+            '/api/campaigns/retry-failed', '/api/queue/step',
             '/api/templates/save', '/api/templates/duplicate',
             '/api/templates/archive', '/api/templates/restore',
             '/api/templates/preview',
@@ -367,7 +367,10 @@ class CampaignHandler(BaseHTTPRequestHandler):
                 c_id = data.get('id')
                 if not c_id: raise ValueError('Campaign ID required.')
                 password = data.get('sender_password') or data.get('password')
-                return self.reply(campaign_queue.resume_campaign(int(c_id), password))
+                res = campaign_queue.resume_campaign(int(c_id), password)
+                if password:
+                    campaign_queue.worker_step(password_override=password)
+                return self.reply(res)
             if path == '/api/campaigns/cancel':
                 c_id = data.get('id')
                 if not c_id: raise ValueError('Campaign ID required.')
@@ -375,7 +378,15 @@ class CampaignHandler(BaseHTTPRequestHandler):
             if path == '/api/campaigns/retry-failed':
                 c_id = data.get('id')
                 if not c_id: raise ValueError('Campaign ID required.')
-                return self.reply(campaign_queue.retry_failed_messages(int(c_id)))
+                res = campaign_queue.retry_failed_messages(int(c_id))
+                password = data.get('sender_password') or data.get('password') or self.headers.get('X-Session-Password')
+                if password:
+                    campaign_queue.worker_step(password_override=password)
+                return self.reply(res)
+            if path == '/api/queue/step':
+                password = data.get('sender_password') or data.get('password') or self.headers.get('X-Session-Password')
+                acted = campaign_queue.worker_step(password_override=password)
+                return self.reply({'acted': acted, 'status': 'ok', 'overview': campaign_queue.get_queue_overview()})
             if path == '/api/import/preview':
                 return self.reply(directory.preview_import(data.get('text')))
             if path == '/api/import/commit':
