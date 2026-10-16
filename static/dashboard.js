@@ -1740,7 +1740,13 @@ async function startPersistentCampaign() {
       })
     });
 
-    const data = await res.json();
+    let data;
+    try {
+      data = await res.json();
+    } catch (_) {
+      const errText = await res.text().catch(() => '');
+      throw new Error(errText || `Server returned HTTP ${res.status}`);
+    }
     if (res.ok && data.id) {
       addLog(`🚀 Campaign "${data.name}" enqueued successfully! (${data.total_recipients} messages). Background worker is active.`, 'success');
       if (passInput) passInput.value = '';

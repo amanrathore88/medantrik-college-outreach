@@ -6,6 +6,7 @@ import re
 import mimetypes
 import secrets
 import time
+from pathlib import Path
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, unquote, parse_qs
 import sqlite3

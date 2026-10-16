@@ -11,8 +11,23 @@ from difflib import SequenceMatcher
 from urllib.parse import urlparse
 from settings import BASE_DIR, load_settings
 from mailer import validate_email
+from pathlib import Path
+import os
+import shutil
 
-DB_PATH = BASE_DIR / 'data' / 'directory.sqlite3'
+if os.environ.get('VERCEL'):
+    TMP_DIR = Path('/tmp/data')
+    TMP_DIR.mkdir(exist_ok=True, parents=True)
+    DB_PATH = TMP_DIR / 'directory.sqlite3'
+    orig_db = BASE_DIR / 'data' / 'directory.sqlite3'
+    if not DB_PATH.exists() and orig_db.exists():
+        try:
+            shutil.copy2(orig_db, DB_PATH)
+        except Exception:
+            pass
+else:
+    DB_PATH = BASE_DIR / 'data' / 'directory.sqlite3'
+
 AREAS = ['Delhi', 'Noida', 'Greater Noida', 'Ghaziabad', 'Gurugram']
 FIELDS = ['College_Name','category','Location','City','District','Type','Campus','Institution_ID','Aliases',
           'Website','TPO_Email','contact_type','Contact_Person','Phone','source_url',
@@ -33,11 +48,20 @@ def today():
 
 @contextmanager
 def connect():
+    if os.environ.get('VERCEL') and not DB_PATH.exists():
+        orig_db = BASE_DIR / 'data' / 'directory.sqlite3'
+        if orig_db.exists():
+            try:
+                DB_PATH.parent.mkdir(exist_ok=True, parents=True)
+                shutil.copy2(orig_db, DB_PATH)
+            except Exception:
+                pass
     DB_PATH.parent.mkdir(exist_ok=True)
     db = sqlite3.connect(DB_PATH, timeout=30.0)
     db.row_factory = sqlite3.Row
     db.execute('PRAGMA foreign_keys=ON')
-    db.execute('PRAGMA journal_mode=WAL')
+    if not os.environ.get('VERCEL'):
+        db.execute('PRAGMA journal_mode=WAL')
     db.execute('PRAGMA busy_timeout=30000')
     try:
         with db:
@@ -1010,7 +1034,12 @@ def sync_spreadsheet_file():
     try:
         content = export_multi_category_workbook_bytes()
         # Always maintain backup copy in data directory
-        (BASE_DIR / 'data' / 'directory_master.xlsx').write_bytes(content)
+        try:
+            target_data = Path('/tmp/data') if os.environ.get('VERCEL') else BASE_DIR / 'data'
+            target_data.mkdir(exist_ok=True, parents=True)
+            (target_data / 'directory_master.xlsx').write_bytes(content)
+        except OSError:
+            pass
 
         # Attempt writing root convenience workbooks if not locked by Excel
         for filename in ['colleges_delhi_ncr_multi_category.xlsx', 'colleges_delhi_ncr_google_sheets.xlsx']:
