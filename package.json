@@ -1,0 +1,12 @@
+{
+  "name": "medantrik-college-outreach",
+  "version": "1.0.0",
+  "description": "Medantrik MedTech - Campus Outreach Platform",
+  "scripts": {
+    "dev": "python dashboard.py",
+    "start": "python dashboard.py",
+    "test": "python -m unittest discover -s tests"
+  },
+  "author": "Medantrik MedTech",
+  "license": "ISC"
+}
