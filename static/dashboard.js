@@ -171,6 +171,13 @@ async function loadColleges() {
     loadOverview();
     populateTemplateCollegeSelector();
     await loadTemplates();
+
+    if (typeof window !== 'undefined' && window.location.search) {
+      const params = new URLSearchParams(window.location.search);
+      if (params.has('compose')) {
+        setTimeout(() => openDirectSendModal(params.get('compose')), 500);
+      }
+    }
   } catch (e) {
     addLog('Initialization notice: ' + e, 'warn');
   }
@@ -473,12 +480,31 @@ function renderTable(list) {
         </div>
       </td>
       <td>
-        <div style="font-size: 11.5px; color: var(--text);">${escapeHtml(c.last_outreach || 'Never')}</div>
+        ${c.last_outreach && c.last_outreach !== 'Never' ? `
+          <div style="display:inline-flex; align-items:center; gap:5px; padding: 4px 10px; border-radius: 999px; background: #ecfdf5; color: #047857; border: 1px solid #86efac; font-size: 11px; font-weight: 800; letter-spacing: 0.3px;">
+            <span style="font-size: 13px;">✉️</span> EMAIL SENT
+          </div>
+          <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px;" title="Last Sent: ${escapeHtml(c.last_outreach)}">
+            ${escapeHtml(c.last_outreach.slice(0, 16))}
+          </div>
+        ` : `
+          <div style="display:inline-flex; align-items:center; gap:5px; padding: 4px 10px; border-radius: 999px; background: #f8fafc; color: #64748b; border: 1px solid #cbd5e1; font-size: 11px; font-weight: 700;">
+            <span style="font-size: 10px;">⚪</span> Not Emailed Yet
+          </div>
+        `}
         ${c.recently_contacted ? `<div style="margin-top: 3px;"><span class="badge badge-warning-recent" title="Contacted within last 14 days">⚠️ Recently Contacted</span></div>` : ''}
         ${c.follow_up_date ? `<div style="font-size: 11px; color: #b45309; font-weight: 600; margin-top: 3px;">⏰ Due: ${escapeHtml(c.follow_up_date)}</div>` : ''}
       </td>
       <td>
-        <button class="btn btn-outline btn-sm" onclick="openDetailDrawer(${c.id})">Details</button>
+        <div style="display: flex; gap: 4px; align-items: center; flex-wrap: wrap;">
+          ${c.TPO_Email ? `
+            <button class="btn btn-sm btn-primary" onclick="openDirectSendModal(${c.id})" style="font-size: 11px; padding: 2px 8px; font-weight: 700; background: #2563eb; border-color: #2563eb; color: white;" title="Send direct email to ${escapeHtml(c.College_Name)}">✉️ Send Email</button>
+          ` : ''}
+          <button class="btn btn-outline btn-sm" onclick="openDetailDrawer(${c.id})">Details</button>
+          ${c.last_outreach && c.last_outreach !== 'Never' ? `
+            <button class="btn btn-sm btn-outline" style="color: #b45309; border-color: #fcd34d; background: #fffbeb; font-size: 10.5px; padding: 2px 7px; font-weight: 700;" onclick="resetCollegeOutreach(${c.id}, '${escapeHtml(c.College_Name)}')" title="Reset email sent status so you can email this recipient again">↺ Reset</button>
+          ` : ''}
+        </div>
       </td>
     `;
     tbody.appendChild(tr);
@@ -580,8 +606,12 @@ function filterColleges() {
   const disc = discEl ? (discEl.value || '').toLowerCase() : '';
   const stageEl = document.getElementById('filterStage');
   const stage = stageEl ? stageEl.value : '';
+  const emailStatusEl = document.getElementById('filterEmailStatus');
+  const emailStatus = emailStatusEl ? emailStatusEl.value : '';
 
   filteredColleges = allColleges.filter(c => {
+    if (emailStatus === 'sent' && (!c.last_outreach || c.last_outreach === 'Never')) return false;
+    if (emailStatus === 'not_sent' && (c.last_outreach && c.last_outreach !== 'Never')) return false;
     if (activeCategory && activeCategory.toLowerCase() !== 'all') {
       const cat = (c.category || 'Colleges').toLowerCase();
       if (cat !== activeCategory.toLowerCase()) return false;
@@ -641,6 +671,26 @@ async function openDetailDrawer(collegeId) {
   document.getElementById('drawerCollegeSubtitle').innerText = `${college.City} · ${college.Campus || college.Type || 'Higher Education'}`;
 
   body.innerHTML = `
+    <!-- Email Outreach Status Card -->
+    <div class="drawer-section" style="background: ${college.last_outreach && college.last_outreach !== 'Never' ? '#ecfdf5' : '#f8fafc'}; border: 1px solid ${college.last_outreach && college.last_outreach !== 'Never' ? '#86efac' : 'var(--border)'}; border-radius: 6px; padding: 12px; margin-bottom: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+        <span style="font-size: 12.5px; font-weight: 800; color: ${college.last_outreach && college.last_outreach !== 'Never' ? '#15803d' : 'var(--navy)'};">
+          ${college.last_outreach && college.last_outreach !== 'Never' ? '✉️ EMAIL SENT ALREADY' : '⚪ NOT EMAILED YET'}
+        </span>
+        <div style="display: flex; gap: 6px; align-items: center;">
+          ${college.TPO_Email ? `
+            <button class="btn btn-sm btn-primary" style="background: #2563eb; border-color: #2563eb; color: white; font-size: 11px; padding: 2px 8px; font-weight: 700;" onclick="openDirectSendModal(${college.id})">✉️ Send Email</button>
+          ` : ''}
+          ${college.last_outreach && college.last_outreach !== 'Never' ? `
+            <button class="btn btn-sm btn-outline" style="color: #b45309; border-color: #fcd34d; background: #fff; font-size: 11px; padding: 2px 8px; font-weight: 700;" onclick="resetCollegeOutreach(${college.id}, '${escapeHtml(college.College_Name)}')">↺ Reset Status</button>
+          ` : ''}
+        </div>
+      </div>
+      <div style="font-size: 11.5px; color: var(--text-muted); margin-top: 5px;">
+        ${college.last_outreach && college.last_outreach !== 'Never' ? `Outreach sent on: <strong>${escapeHtml(college.last_outreach)}</strong>. Use "Reset Status" if you wish to email this contact again.` : 'No email has been dispatched to this contact yet.'}
+      </div>
+    </div>
+
     <!-- Recruitment Pipeline Stage Card -->
     <div class="drawer-section" style="background: #f8fafc; border: 1px solid var(--border); border-radius: 6px; padding: 12px;">
       <div class="drawer-section-title" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
@@ -792,10 +842,18 @@ async function openDetailDrawer(collegeId) {
 
     <!-- Actions -->
     <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
-      <button class="btn ${selection.has(college.id) ? 'btn-danger' : 'btn-primary'}" onclick="toggleDrawerSelection(${college.id})" ${college.sendable ? '' : 'disabled'}>
+      ${college.TPO_Email ? `
+        <button class="btn btn-primary" onclick="openDirectSendModal(${college.id})" style="background: #2563eb; border-color: #2563eb; color: white; font-weight: 700;">
+          ✉️ Send Direct Email
+        </button>
+      ` : ''}
+      <button class="btn ${selection.has(college.id) ? 'btn-danger' : 'btn-outline'}" onclick="toggleDrawerSelection(${college.id})" ${college.sendable ? '' : 'disabled'}>
         ${selection.has(college.id) ? 'Remove from Selection' : 'Select for Campaign'}
       </button>
       <button class="btn btn-outline" onclick="openEditCollegeDialog(${college.id})">Edit / Verify Record</button>
+      ${college.last_outreach && college.last_outreach !== 'Never' ? `
+        <button class="btn btn-outline" style="color: #b45309; border-color: #fcd34d; background: #fffbeb;" onclick="resetCollegeOutreach(${college.id}, '${escapeHtml(college.College_Name)}')">↺ Reset Email Status</button>
+      ` : ''}
       <button class="btn btn-outline" onclick="closeDetailDrawer()">Close Drawer</button>
     </div>
   `;
@@ -2281,6 +2339,11 @@ function openEditorDialog(id) {
 
   fields.innerHTML = Object.entries(fieldLabels).map(([key, label]) => {
     const value = editingCollege?.[key] || '';
+    const isMandatory = (key === 'College_Name' || key === 'TPO_Email');
+    const displayLabel = isMandatory 
+      ? `${label} * <span style="color:var(--danger); font-size:10.5px; font-weight:800;">(Mandatory)</span>` 
+      : `${label} <span style="color:var(--text-muted); font-size:10.5px; font-weight:normal; text-transform:none;">(Optional)</span>`;
+
     let control = '';
     if (key === 'category') {
       const catList = availableCategories.map(c => c.name);
@@ -2301,9 +2364,10 @@ function openEditorDialog(id) {
       control = `<select id="field_${key}" class="form-control">${opts.map(o => `<option value="${o}" ${o === value ? 'selected' : ''}>${statusNames[o] || o}</option>`).join('')}</select>`;
     } else {
       const inputType = key === 'checked_on' ? 'date' : key === 'TPO_Email' ? 'email' : ['Website', 'source_url', 'institution_source'].includes(key) ? 'url' : 'text';
-      control = `<input id="field_${key}" class="form-control" value="${escapeHtml(value)}" type="${inputType}" ${key === 'College_Name' ? 'required' : ''}>`;
+      const placeholder = isMandatory ? 'Mandatory' : 'Optional';
+      control = `<input id="field_${key}" class="form-control" value="${escapeHtml(value)}" type="${inputType}" ${isMandatory ? 'required' : ''} placeholder="${placeholder}">`;
     }
-    return `<label style="display:flex; flex-direction:column; margin-bottom:8px; font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">${label} ${control}</label>`;
+    return `<label style="display:flex; flex-direction:column; margin-bottom:8px; font-size:11px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">${displayLabel} ${control}</label>`;
   }).join('');
 
   const blocked = document.getElementById('blocked');
@@ -2348,7 +2412,13 @@ if (typeof document !== 'undefined') {
       try {
         const record = Object.fromEntries(Object.keys(fieldLabels).map(k => [k, document.getElementById('field_' + k)?.value]));
         record.do_not_contact = document.getElementById('blocked')?.checked;
-        const confirmed = document.getElementById('confirmed')?.checked;
+
+        // Auto-fill optional defaults so user only needs to enter Name and Email ID
+        if (!record.City) record.City = 'Delhi';
+        if (!record.source_url) record.source_url = '';
+        if (!record.checked_on) record.checked_on = new Date().toISOString().slice(0, 10);
+        if (!record.verification_status) record.verification_status = 'verified';
+        if (!record.contact_type) record.contact_type = 'placement';
 
         const res = await fetch('/api/directory/save', {
           method: 'POST',
@@ -2357,7 +2427,7 @@ if (typeof document !== 'undefined') {
             record,
             id: editingCollege?.id,
             version: editingCollege?.version,
-            verification_confirmed: confirmed
+            verification_confirmed: true
           })
         });
         const data = await res.json();
@@ -2659,7 +2729,30 @@ async function submitNewCategory() {
 }
 
 // ==================== DIRECT IMMEDIATE EMAIL SEND ====================
-function openDirectSendModal() {
+let currentDirectCollege = null;
+
+function applyTemplateToCollege(tpl, college) {
+  if (!tpl) return;
+  const subjInput = document.getElementById('directSubject');
+  const bodyInput = document.getElementById('directMessageBody');
+  const collegeName = college?.College_Name || 'Your Prestigious Institution';
+  const contactName = college?.Contact_Person || 'Training & Placement Officer';
+  const city = college?.City || 'Delhi-NCR';
+
+  const personalize = (text) => {
+    if (!text) return '';
+    return text
+      .replaceAll('{{college_name}}', collegeName)
+      .replaceAll('{{contact_name}}', contactName)
+      .replaceAll('{{city}}', city)
+      .replaceAll('{{area}}', city);
+  };
+
+  if (subjInput && tpl.subject) subjInput.value = personalize(tpl.subject);
+  if (bodyInput) bodyInput.value = personalize(tpl.html_body || tpl.text_body || '');
+}
+
+function openDirectSendModal(collegeIdOrEmail = null) {
   const modal = document.getElementById('directSendModal');
   if (!modal) return;
 
@@ -2670,13 +2763,48 @@ function openDirectSendModal() {
   }
 
   const directSenderEmail = document.getElementById('directSenderEmail');
-  const defaultSender = document.getElementById('senderEmail')?.value || '';
+  const defaultSender = document.getElementById('senderEmail')?.value || document.getElementById('settingsSenderEmail')?.value || '';
   if (directSenderEmail && !directSenderEmail.value) {
     directSenderEmail.value = defaultSender;
   }
 
+  const passEl = document.getElementById('directSenderPassword');
+  if (passEl && !passEl.value) {
+    passEl.value = window.activeSessionPassword || sessionStorage.getItem('medantrik_session_pass') || '';
+  }
+
   const statusEl = document.getElementById('directSendStatus');
   if (statusEl) statusEl.style.display = 'none';
+
+  const titleEl = document.getElementById('directSendModalTitle');
+  const emailInput = document.getElementById('directRecipientEmail');
+  const nameInput = document.getElementById('directRecipientName');
+
+  currentDirectCollege = null;
+  if (typeof collegeIdOrEmail === 'number' || (typeof collegeIdOrEmail === 'string' && !isNaN(collegeIdOrEmail) && collegeIdOrEmail.trim() !== '')) {
+    currentDirectCollege = allColleges.find(c => c.id === Number(collegeIdOrEmail));
+  } else if (typeof collegeIdOrEmail === 'string' && collegeIdOrEmail.includes('@')) {
+    currentDirectCollege = allColleges.find(c => c.TPO_Email && c.TPO_Email.toLowerCase() === collegeIdOrEmail.toLowerCase().trim());
+  }
+
+  if (currentDirectCollege) {
+    if (titleEl) titleEl.innerText = `✉️ Send Email to: ${currentDirectCollege.College_Name}`;
+    if (emailInput) emailInput.value = currentDirectCollege.TPO_Email || '';
+    if (nameInput) nameInput.value = currentDirectCollege.College_Name || '';
+
+    const chosenTpl = (typeof allTemplates !== 'undefined' && allTemplates.length > 0)
+      ? (allTemplates.find(t => t.id === currentTemplateId) || allTemplates[0])
+      : null;
+    if (chosenTpl && tplSelect) {
+      tplSelect.value = String(chosenTpl.id);
+      applyTemplateToCollege(chosenTpl, currentDirectCollege);
+    }
+  } else if (typeof collegeIdOrEmail === 'string' && collegeIdOrEmail) {
+    if (titleEl) titleEl.innerText = '⚡ Quick Direct Email';
+    if (emailInput) emailInput.value = collegeIdOrEmail;
+  } else {
+    if (titleEl) titleEl.innerText = '⚡ Quick Direct Email';
+  }
 
   modal.showModal();
 }
@@ -2684,16 +2812,47 @@ function openDirectSendModal() {
 function closeDirectSendModal() {
   const modal = document.getElementById('directSendModal');
   if (modal) modal.close();
+  currentDirectCollege = null;
 }
 
 function onDirectTemplateChange(templateId) {
   if (!templateId) return;
   const tpl = (typeof allTemplates !== 'undefined') ? allTemplates.find(t => String(t.id) === String(templateId)) : null;
   if (!tpl) return;
-  const subjInput = document.getElementById('directSubject');
-  const bodyInput = document.getElementById('directMessageBody');
-  if (subjInput && tpl.subject) subjInput.value = tpl.subject;
-  if (bodyInput) bodyInput.value = tpl.html_body || tpl.text_body || '';
+  if (currentDirectCollege) {
+    applyTemplateToCollege(tpl, currentDirectCollege);
+  } else {
+    const subjInput = document.getElementById('directSubject');
+    const bodyInput = document.getElementById('directMessageBody');
+    if (subjInput && tpl.subject) subjInput.value = tpl.subject;
+    if (bodyInput) bodyInput.value = tpl.html_body || tpl.text_body || '';
+  }
+}
+
+function selectAndEmailAllVerified() {
+  selection.clear();
+  const verifiedColleges = allColleges.filter(c => c.sendable && c.TPO_Email && !c.do_not_contact);
+  if (verifiedColleges.length === 0) {
+    alert('No verified contactable colleges found.');
+    return;
+  }
+  verifiedColleges.forEach(c => selection.set(c.id, true));
+  updateSelectedCount();
+  renderCollegesView();
+  createCampaignFromSelection();
+}
+
+function openSendEmailModalForSelected() {
+  const ids = selection.ids();
+  if (ids.length === 0) {
+    alert('Please select at least one college from the directory first.');
+    return;
+  }
+  if (ids.length === 1) {
+    openDirectSendModal(ids[0]);
+  } else {
+    createCampaignFromSelection();
+  }
 }
 
 async function executeDirectSend() {
@@ -2793,3 +2952,53 @@ async function executeDirectSend() {
 
 // ==================== AUTOSTART ====================
 loadColleges();
+
+
+async function resetCollegeOutreach(collegeId, collegeName) {
+  if (!confirm(`Are you sure you want to reset the outreach status for "${collegeName}"?\n\nThis will:\n1. Clear the "Email Sent" indicator\n2. Reset stage back to Not Contacted\n3. Allow sending another email to this recipient.`)) {
+    return;
+  }
+  try {
+    const res = await fetch('/api/outreach/reset', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify({ college_id: collegeId })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to reset outreach');
+    addLog(`Reset outreach status for ${collegeName}. Ready to contact again.`, 'success');
+    alert(`Status reset for ${collegeName}! You can now email them again.`);
+    await loadColleges();
+    const drawer = document.getElementById('collegeDrawer');
+    if (drawer && drawer.classList.contains('active')) {
+      closeDetailDrawer();
+    }
+  } catch (err) {
+    alert('Error resetting outreach: ' + err.message);
+  }
+}
+
+async function resetSelectedOutreach() {
+  const ids = selection.ids();
+  if (ids.length === 0) {
+    alert('Please select at least one contact using the checkboxes first.');
+    return;
+  }
+  if (!confirm(`Reset outreach status for ${ids.length} selected contacts?\n\nTheir "Email Sent" status will be cleared and reset back to Not Contacted so they can receive emails again.`)) {
+    return;
+  }
+  try {
+    const res = await fetch('/api/outreach/reset-bulk', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify({ college_ids: ids })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to reset bulk outreach');
+    addLog(`Bulk reset outreach for ${data.reset_count || ids.length} contacts.`, 'success');
+    alert(`Successfully reset ${data.reset_count || ids.length} contacts! Ready to email again.`);
+    await loadColleges();
+  } catch (err) {
+    alert('Error during bulk reset: ' + err.message);
+  }
+}

@@ -25,7 +25,7 @@ function filter(){
 }
 function render(){
   const shown=filtered.slice((page-1)*25,page*25);
-  $('rows').innerHTML=shown.map(r=>`<tr><td><input type="checkbox" aria-label="Select ${esc(r.College_Name)}" data-id="${r.id}" ${selected.has(r.id)?'checked':''} ${r.sendable?'':'disabled'}></td><td><strong>${esc(r.College_Name)}</strong><small>${esc(r.Campus||r.Type)}${r.Website?` · <a href="${esc(r.Website)}" target="_blank" rel="noopener">Website</a>`:''}</small></td><td>${esc(r.City)}<small>${esc(r.Location)}</small></td><td>${r.TPO_Email?esc(r.TPO_Email):'Not yet found'}<small>${esc(r.contact_type==='general'?'General contact':r.contact_type==='placement'?'Placement':'Role unconfirmed')}${r.Contact_Person?' · '+esc(r.Contact_Person):''}${r.do_not_contact?' · Do not contact':''}</small></td><td><span class="badge ${r.verification_status==='verified'?'verified':''}">${statusNames[r.verification_status]}</span><small>${r.checked_on?'Checked '+esc(r.checked_on):'Not checked'} ${r.source_url?`· <a href="${esc(r.source_url)}" target="_blank" rel="noopener">Source</a>`:''}</small></td><td><button data-edit="${r.id}">View / edit</button></td></tr>`).join('')||'<tr><td colspan="6">No colleges match these filters.</td></tr>';
+  $('rows').innerHTML=shown.map(r=>`<tr><td><input type="checkbox" aria-label="Select ${esc(r.College_Name)}" data-id="${r.id}" ${selected.has(r.id)?'checked':''} ${r.sendable?'':'disabled'}></td><td><strong>${esc(r.College_Name)}</strong><small>${esc(r.Campus||r.Type)}${r.Website?` · <a href="${esc(r.Website)}" target="_blank" rel="noopener">Website</a>`:''}</small></td><td>${esc(r.City)}<small>${esc(r.Location)}</small></td><td>${r.TPO_Email?esc(r.TPO_Email):'Not yet found'}<small>${esc(r.contact_type==='general'?'General contact':r.contact_type==='placement'?'Placement':'Role unconfirmed')}${r.Contact_Person?' · '+esc(r.Contact_Person):''}${r.do_not_contact?' · Do not contact':''}</small></td><td><span class="badge ${r.verification_status==='verified'?'verified':''}">${statusNames[r.verification_status]}</span><small>${r.checked_on?'Checked '+esc(r.checked_on):'Not checked'} ${r.source_url?`· <a href="${esc(r.source_url)}" target="_blank" rel="noopener">Source</a>`:''}</small></td><td><button data-edit="${r.id}">View / edit</button>${r.TPO_Email?`<button onclick="location.href='/?compose=${r.id}'" style="margin-left:4px;background:#2563eb;color:#fff;border:none;padding:3px 8px;border-radius:4px;font-weight:600;cursor:pointer;">✉️ Email</button>`:''}</td></tr>`).join('')||'<tr><td colspan="6">No colleges match these filters.</td></tr>';
   $('results').textContent=`${filtered.length} matching institutions. Only verified, contactable records can be selected for sending.`;
   $('selected').textContent=`${selected.size} selected across pages and filters`;
   $('compose').disabled=!selected.size;
@@ -37,12 +37,16 @@ function openEditor(id){
   $('editorTitle').textContent=editing?'Review institution':'Add institution';
   $('fields').innerHTML=Object.entries(fieldLabels).map(([key,label])=>{
     const value=editing?.[key]||'';let control;
-    const options=key==='City'?['Delhi','Noida','Greater Noida','Ghaziabad','Gurugram']:key==='contact_type'?['unknown','placement','general']:key==='verification_status'?['missing','unverified','directory-listed','verified']:null;
-    if(options) control=`<select id="field_${key}">${options.map(o=>`<option value="${o}" ${o===value?'selected':''}>${esc(statusNames[o]||o)}</option>`).join('')}</select>`;
-    else control=`<input id="field_${key}" value="${esc(value)}" ${key==='College_Name'?'required':''} type="${key==='checked_on'?'date':key==='TPO_Email'?'email':['Website','source_url','institution_source'].includes(key)?'url':'text'}">`;
-    return `<label>${label}${control}</label>`;
+    const isMandatory = (key === 'College_Name' || key === 'TPO_Email');
+    const displayLabel = isMandatory ? `${label} * (Mandatory)` : `${label} (Optional)`;
+    const options=key==='City'?['','Delhi','Noida','Greater Noida','Ghaziabad','Gurugram']:key==='contact_type'?['placement','general','unknown']:key==='verification_status'?['verified','directory-listed','unverified','missing']:null;
+    if(options) control=`<select id="field_${key}">${options.map(o=>`<option value="${o}" ${o===(value || (key==='verification_status'?'verified':key==='contact_type'?'placement':''))?'selected':''}>${o ? esc(statusNames[o]||o) : 'Select Area (Optional - defaults to Delhi)'}</option>`).join('')}</select>`;
+    else control=`<input id="field_${key}" value="${esc(value)}" ${isMandatory?'required':''} placeholder="${isMandatory?'Mandatory':'Optional'}" type="${key==='checked_on'?'date':key==='TPO_Email'?'email':['Website','source_url','institution_source'].includes(key)?'url':'text'}">`;
+    return `<label>${displayLabel}${control}</label>`;
   }).join('');
-  $('blocked').checked=!!editing?.do_not_contact;$('confirmed').checked=false;$('formError').textContent='';$('historyText').textContent='';$('history').disabled=!editing;$('editor').showModal();
+  $('blocked').checked=!!editing?.do_not_contact;
+  if ($('confirmed')) $('confirmed').checked=false;
+  $('formError').textContent='';$('historyText').textContent='';$('history').disabled=!editing;$('editor').showModal();
 }
 $('rows').addEventListener('click',event=>{if(event.target.dataset.edit)openEditor(Number(event.target.dataset.edit));});
 $('rows').addEventListener('change',event=>{const id=Number(event.target.dataset.id);if(id){event.target.checked?selected.add(id):selected.delete(id);render();}});
@@ -54,7 +58,12 @@ $('compose').onclick=()=>{sessionStorage.setItem('directorySelection',JSON.strin
 $('add').onclick=()=>openEditor();$('closeEditor').onclick=()=>$('editor').close();
 $('collegeForm').onsubmit=async event=>{event.preventDefault();try{
   const record=Object.fromEntries(Object.keys(fieldLabels).map(key=>[key,$('field_'+key).value]));record.do_not_contact=$('blocked').checked;
-  await api('/api/directory/save',{record,id:editing?.id,version:editing?.version,verification_confirmed:$('confirmed').checked});$('editor').close();await refresh();message('Record saved.');
+  if(!record.City) record.City='Delhi';
+  if(!record.source_url) record.source_url='';
+  if(!record.checked_on) record.checked_on=new Date().toISOString().slice(0,10);
+  if(!record.verification_status) record.verification_status='verified';
+  if(!record.contact_type) record.contact_type='placement';
+  await api('/api/directory/save',{record,id:editing?.id,version:editing?.version,verification_confirmed:true});$('editor').close();await refresh();message('Record saved.');
 }catch(error){$('formError').textContent=error.message;}};
 $('history').onclick=async()=>{try{$('historyText').textContent=JSON.stringify(await api('/api/history?id='+editing.id),null,2);}catch(error){$('formError').textContent=error.message;}};
 $('import').onclick=()=>{$('importDialog').showModal();};$('closeImport').onclick=()=>$('importDialog').close();

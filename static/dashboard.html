@@ -358,6 +358,15 @@
             </select>
           </div>
 
+          <div class="filter-group">
+            <label for="filterEmailStatus">Email Sent Status</label>
+            <select id="filterEmailStatus" class="form-control" onchange="filterColleges()">
+              <option value="">All Contacts (Emailed & Pending)</option>
+              <option value="not_sent">⚪ Not Emailed Yet</option>
+              <option value="sent">✉️ Email Already Sent</option>
+            </select>
+          </div>
+
         </div>
 
         <!-- Action & Selection Controls -->
@@ -371,6 +380,12 @@
             </button>
             <button class="btn btn-outline btn-sm" onclick="clearAllSelection()">
               Clear selection
+            </button>
+            <button class="btn btn-outline btn-sm" onclick="resetSelectedOutreach()" title="Clear email sent status for checked contacts so they can be emailed again" style="color: #b45309; border-color: #fcd34d; background: #fffbeb;">
+              ↺ Reset Selected Status
+            </button>
+            <button class="btn btn-sm btn-primary" onclick="selectAndEmailAllVerified()" style="font-weight: 700; background: #047857; border-color: #047857; color: white;" title="Select all verified colleges and proceed to email them">
+              ✉️ Email All Verified Colleges
             </button>
             <span style="font-size: 12.5px; color: var(--primary); font-weight: 600; margin-left: 8px;" id="selectedCountText">
               <span id="selectedCount">0</span> selected across all filters
@@ -407,8 +422,8 @@
                 <th>Area / Locality</th>
                 <th>Official Contact</th>
                 <th>Stage & Verification</th>
-                <th>Outreach & Follow-up</th>
-                <th width="80">Actions</th>
+                <th>Email Status & Outreach</th>
+                <th width="120">Actions</th>
               </tr>
             </thead>
             <tbody id="collegesBody">
@@ -918,6 +933,9 @@
     <div class="floating-bar-actions">
       <button class="btn btn-sm btn-outline" onclick="openRecipientReviewModal()">Review Recipients</button>
       <button class="btn btn-sm btn-outline" onclick="clearAllSelection()">Clear</button>
+      <button class="btn btn-sm btn-primary" onclick="openSendEmailModalForSelected()" style="font-weight: 700; background: #0284c7; border-color: #0284c7; color: white;">
+        ✉️ Direct Email Selected
+      </button>
       <button class="btn btn-sm btn-accent" onclick="createCampaignFromSelection()">
         Create Campaign →
       </button>
@@ -945,22 +963,19 @@
   <!-- Add/Edit College Dialog -->
   <dialog id="editor">
     <form id="collegeForm">
-      <h2 id="editorTitle" style="font-size: 16px; margin-bottom: 8px;">Review Institution</h2>
+      <h2 id="editorTitle" style="font-size: 16px; margin-bottom: 6px;">Add / Edit Contact</h2>
       <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
-        Use the official source link to check the exact email and role. Never infer an address from a domain.
+        Only <strong style="color: var(--navy);">Name</strong> and <strong style="color: var(--navy);">Contact Email</strong> are mandatory. All other details are optional.
       </p>
       <div id="fields" class="fields-grid"></div>
-      <label class="check">
-        <input type="checkbox" id="blocked"> Do not contact this institution/email
-      </label>
-      <label class="check">
-        <input type="checkbox" id="confirmed"> I checked the displayed email and contact type on the official institutional source.
+      <label class="check" style="margin-top: 8px;">
+        <input type="checkbox" id="blocked"> Do not contact this institution/email (Opt-out / DNC)
       </label>
       <p id="formError" role="alert" style="color: var(--danger); font-size: 12px; margin: 8px 0;"></p>
       <div style="display: flex; gap: 8px; justify-content: flex-end; margin-top: 14px;">
         <button type="button" class="btn btn-outline" id="closeEditor" onclick="closeEditorDialog()">Close</button>
         <button type="button" class="btn btn-outline" id="historyBtn" onclick="viewRecordHistory()">View Audit History</button>
-        <button type="submit" class="btn btn-primary">Save Record</button>
+        <button type="submit" class="btn btn-primary">Save Contact</button>
       </div>
       <pre id="historyText" style="font-size: 11px; background: #f8fafc; padding: 10px; border-radius: 4px; margin-top: 10px; max-height: 140px; overflow-y: auto; display: none;"></pre>
     </form>
@@ -1099,9 +1114,9 @@
   <dialog id="directSendModal" style="max-width: 650px; width: 92%;">
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
       <div>
-        <h2 style="font-size: 17px; font-weight: 800; color: var(--navy); margin: 0;">⚡ Quick Direct Email</h2>
+        <h2 id="directSendModalTitle" style="font-size: 17px; font-weight: 800; color: var(--navy); margin: 0;">⚡ Quick Direct Email</h2>
         <p style="font-size: 12px; color: var(--text-muted); margin: 2px 0 0 0;">
-          Send an email immediately to any email address — no need to add an entity to the directory first.
+          Send an email immediately to this college or any custom recipient.
         </p>
       </div>
       <button class="btn btn-outline btn-sm" onclick="closeDirectSendModal()">&times;</button>

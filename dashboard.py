@@ -236,7 +236,8 @@ class CampaignHandler(BaseHTTPRequestHandler):
             '/api/templates/archive', '/api/templates/restore',
             '/api/templates/preview',
             '/api/college/stage', '/api/college/reply',
-            '/api/college/follow-up', '/api/college/note'
+            '/api/college/follow-up', '/api/college/note',
+            '/api/outreach/reset', '/api/outreach/reset-bulk'
         }
         if path not in allowed_paths:
             return self.reply({'status': 'error', 'message': 'Endpoint not found.'}, 404)
@@ -464,13 +465,21 @@ class CampaignHandler(BaseHTTPRequestHandler):
             if path == '/api/directory/save':
                 record = data.get('record',{})
                 if not isinstance(record,dict): raise ValueError('Invalid record.')
-                is_col = (record.get('category') or 'Colleges').lower() == 'colleges'
-                if is_col and record.get('verification_status') == 'verified' and data.get('verification_confirmed') is not True:
-                    raise ValueError('Confirm that you checked this email on the official institutional source.')
                 return self.reply(directory.save_record(record,data.get('id'),data.get('version')))
             if path == '/api/directory/merge':
                 if data.get('confirmed') is not True: raise ValueError('Review and confirm the merge first.')
                 return self.reply(directory.merge_records(data.get('source_id'),data.get('target_id'),data.get('source_version'),data.get('target_version')))
+            if path == '/api/outreach/reset':
+                college_id = data.get('college_id')
+                recipient_email = data.get('recipient_email')
+                if not college_id and not recipient_email:
+                    raise ValueError('Specify college_id or recipient_email to reset.')
+                return self.reply(directory.reset_outreach(college_id, recipient_email))
+            if path == '/api/outreach/reset-bulk':
+                college_ids = data.get('college_ids', [])
+                if not isinstance(college_ids, list) or not college_ids:
+                    raise ValueError('Select at least one contact to reset.')
+                return self.reply(directory.reset_outreach_bulk(college_ids))
 
             # Validate message fields
             for k, v in data.items():

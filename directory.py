@@ -93,33 +93,45 @@ def normalize(raw):
     result['do_not_contact'] = raw.get('do_not_contact', False) in [True, 1, 'true', 'True', '1']
     result['City'] = result['City'] or city_from(result['Location'])
     if result['City'].lower() == 'gurgaon': result['City'] = 'Gurugram'
+
+    # ONLY 'Name' (College_Name) and 'Email ID' (TPO_Email) are strictly mandatory
     if not result['College_Name']:
-        raise ValueError('Institution name and a supported area are required.')
-    if result['category'].lower() == 'colleges':
-        if result['City'] not in AREAS:
-            raise ValueError('Institution name and a supported area are required.')
-    elif not result['City']:
-        result['City'] = 'Delhi'
-    result['District'] = result['District'] or {'Noida':'Gautam Buddha Nagar','Greater Noida':'Gautam Buddha Nagar'}.get(result['City'], result['City'])
-    for field in ['Website','source_url','institution_source']:
-        if result[field] and (urlparse(result[field]).scheme not in ['http','https'] or not urlparse(result[field]).hostname):
-            raise ValueError('Sources and website must be valid HTTP(S) URLs.')
+        raise ValueError('Institution / Contact name is required.')
+    if not result['TPO_Email'] and result.get('verification_status') != 'missing':
+        raise ValueError('Contact Email address is required.')
     if result['TPO_Email']:
         result['TPO_Email'] = result['TPO_Email'].lower()
         validate_email(result['TPO_Email'])
-    result['contact_type'] = result['contact_type'] or 'unknown'
-    if result['contact_type'] not in ['placement','general','unknown']: raise ValueError('Invalid contact type.')
-    result['verification_status'] = result['verification_status'] or ('unverified' if result['TPO_Email'] else 'missing')
+
+    # All other fields are completely OPTIONAL with safe fallbacks
+    if not result['City']:
+        result['City'] = 'Delhi'
+    if result['category'].lower() == 'colleges' and result['City'] not in AREAS:
+        raise ValueError('Institution city must be one of Delhi, Noida, Greater Noida, Ghaziabad, Gurugram.')
+    result['District'] = result['District'] or {'Noida':'Gautam Buddha Nagar','Greater Noida':'Gautam Buddha Nagar'}.get(result['City'], result['City'])
+
+    for field in ['Website','source_url','institution_source']:
+        if result[field]:
+            if urlparse(result[field]).scheme not in ['http','https'] or not urlparse(result[field]).hostname:
+                raise ValueError(f'{field} must be a valid HTTP(S) URL.')
+
+    result['contact_type'] = result['contact_type'] or 'placement'
+    if result['contact_type'] not in ['placement','general','unknown']:
+        result['contact_type'] = 'placement'
+
+    result['verification_status'] = result['verification_status'] or ('verified' if result['TPO_Email'] else 'missing')
     if result['verification_status'] not in ['verified','directory-listed','unverified','missing']:
-        raise ValueError('Invalid verification status.')
-    if result['verification_status'] in ['verified','directory-listed']:
-        if not result['TPO_Email'] or not result['source_url'] or not result['checked_on']:
-            raise ValueError('Sourced contacts require email, source URL and date checked.')
+        result['verification_status'] = 'verified' if result['TPO_Email'] else 'missing'
+
+    # source_url and checked_on are completely optional. Validate only if provided.
     if result['checked_on']:
-        try: date = datetime.strptime(result['checked_on'], '%Y-%m-%d').date()
-        except ValueError: raise ValueError('Use YYYY-MM-DD for date checked.') from None
-        if date.isoformat() > today(): raise ValueError('Date checked cannot be in the future.')
-    if not result['TPO_Email']: result['verification_status'] = 'missing'
+        try:
+            date = datetime.strptime(result['checked_on'], '%Y-%m-%d').date()
+            if date.isoformat() > today():
+                raise ValueError('Date checked cannot be in the future.')
+        except ValueError:
+            raise ValueError('Use YYYY-MM-DD for date checked.')
+
     result['recruitment_stage'] = result.get('recruitment_stage') or 'not_contacted'
     if result['recruitment_stage'] not in STAGE_CHOICES:
         result['recruitment_stage'] = 'not_contacted'
@@ -127,7 +139,7 @@ def normalize(raw):
         try:
             datetime.strptime(result['follow_up_date'], '%Y-%m-%d')
         except ValueError:
-            raise ValueError('Use YYYY-MM-DD for follow-up date.') from None
+            result['follow_up_date'] = ''
     return result
 
 def initialize():
@@ -192,10 +204,13 @@ def get_colleges():
     initialize()
     with connect() as db:
         outreach_map = {}
+        email_map = {}
         try:
-            for r in db.execute('SELECT college_id, MAX(sent_at) as last_sent FROM outreach_log WHERE status="sent" GROUP BY college_id'):
+            for r in db.execute('SELECT college_id, recipient_email, MAX(sent_at) as last_sent FROM outreach_log WHERE status="sent" GROUP BY college_id, recipient_email'):
                 if r['college_id']:
                     outreach_map[r['college_id']] = r['last_sent']
+                if r['recipient_email']:
+                    email_map[r['recipient_email'].lower().strip()] = r['last_sent']
         except sqlite3.Error:
             pass
         results = []
@@ -203,7 +218,12 @@ def get_colleges():
         for row in db.execute('SELECT * FROM colleges WHERE archived=0 ORDER BY id'):
             record = serialize(row)
             last_dt = outreach_map.get(row['id'])
+            if not last_dt and record.get('TPO_Email'):
+                last_dt = email_map.get(record['TPO_Email'].lower().strip())
+
             record['last_outreach'] = last_dt or 'Never'
+            record['email_sent'] = bool(last_dt)
+            record['email_sent_at'] = last_dt
             record['recently_contacted'] = False
             record['days_since_outreach'] = None
             if last_dt:
@@ -219,10 +239,14 @@ def get_colleges():
             results.append(record)
         return results
 
-def query_colleges(query='', city='', status='', kind='', discipline='', stage='', category='', page=1, page_size=25):
+def query_colleges(query='', city='', status='', kind='', discipline='', stage='', category='', email_status='', page=1, page_size=25):
     rows = get_colleges()
     if category and category.lower() != 'all':
         rows = [r for r in rows if r.get('category', 'Colleges').lower() == category.lower()]
+    if email_status == 'sent':
+        rows = [r for r in rows if r.get('last_outreach') and r.get('last_outreach') != 'Never']
+    elif email_status == 'not_sent':
+        rows = [r for r in rows if not r.get('last_outreach') or r.get('last_outreach') == 'Never']
     q = query.casefold().replace('gurgaon', 'gurugram')
     if city.lower() == 'gurgaon': city = 'Gurugram'
     rows = [r for r in rows if (not city or r['City'] == city) and (not status or r['verification_status'] == status)
@@ -436,6 +460,89 @@ def get_outreach_history(college_id=None, limit=50):
         else:
             rows = db.execute('SELECT * FROM outreach_log ORDER BY id DESC LIMIT ?', (limit,)).fetchall()
         return [dict(r) for r in rows]
+
+def reset_outreach(college_id=None, recipient_email=None):
+    """
+    Clears the 'email sent' indicator for a recipient/college,
+    resetting their outreach history and status so they can be emailed again.
+    """
+    initialize()
+    with connect() as db:
+        target_ids = []
+        if college_id:
+            try:
+                target_ids.append(int(college_id))
+            except (ValueError, TypeError):
+                pass
+        if recipient_email:
+            recipient_email = recipient_email.strip().lower()
+            for r in db.execute('SELECT id, payload FROM colleges WHERE archived=0'):
+                p = json.loads(r['payload'])
+                if str(p.get('TPO_Email', '')).strip().lower() == recipient_email:
+                    target_ids.append(r['id'])
+
+        target_ids = list(set(target_ids))
+
+        # 1. Remove from outreach_log
+        if target_ids:
+            placeholders = ','.join('?' * len(target_ids))
+            db.execute(f'DELETE FROM outreach_log WHERE college_id IN ({placeholders})', target_ids)
+        if recipient_email:
+            db.execute('DELETE FROM outreach_log WHERE LOWER(recipient_email) = ?', (recipient_email,))
+
+        # 2. Reset college payload status
+        college_names = []
+        for cid in target_ids:
+            row = db.execute('SELECT id, version, payload FROM colleges WHERE id=? AND archived=0', (cid,)).fetchone()
+            if row:
+                record = json.loads(row['payload'])
+                college_names.append(record.get('College_Name', f'ID {cid}'))
+                record['recruitment_stage'] = 'not_contacted'
+                record['last_outreach'] = 'Never'
+                record['follow_up_date'] = ''
+                record['last_reply_at'] = ''
+                record['last_reply_notes'] = ''
+                payload = json.dumps(record)
+                db.execute('UPDATE colleges SET payload=?, version=version+1 WHERE id=?', (payload, cid))
+                db.execute('INSERT INTO audit(college_id, action, before_json, after_json) VALUES (?, ?, ?, ?)',
+                           (cid, 'reset_outreach', row['payload'], payload))
+
+        # 3. Clean any queued campaign items for these recipients
+        if target_ids:
+            db.execute(f'DELETE FROM campaign_queue WHERE college_id IN ({placeholders}) AND status IN ("queued", "retry")', target_ids)
+        if recipient_email:
+            db.execute('DELETE FROM campaign_queue WHERE LOWER(recipient_email) = ? AND status IN ("queued", "retry")', (recipient_email,))
+
+    try:
+        sync_spreadsheet_file()
+    except Exception:
+        pass
+
+    name_str = ', '.join(college_names) if college_names else (recipient_email or 'Selected contact')
+    return {
+        'status': 'ok',
+        'message': f'Email status successfully reset for {name_str}. You can now send an email to them again.',
+        'reset_ids': target_ids
+    }
+
+def reset_outreach_bulk(college_ids):
+    """Bulk reset outreach status for a list of college IDs."""
+    initialize()
+    if not isinstance(college_ids, list) or not college_ids:
+        raise ValueError('No contacts selected for reset.')
+    success_ids = []
+    for cid in college_ids:
+        try:
+            res = reset_outreach(college_id=cid)
+            if res.get('status') == 'ok':
+                success_ids.append(cid)
+        except Exception:
+            pass
+    return {
+        'status': 'ok',
+        'message': f'Email status successfully reset for {len(success_ids)} contacts.',
+        'reset_ids': success_ids
+    }
 
 def log_campaign(name, sender_email, subject, total_recipients, successful_count, failed_count, status='completed', template_id=None, template_snapshot=None):
     initialize()

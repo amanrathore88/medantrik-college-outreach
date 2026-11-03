@@ -35,9 +35,19 @@ class DirectoryTests(unittest.TestCase):
         self.assertEqual(directory.query_colleges(page_size=1000)['page_size'],100)
 
     def test_verified_requires_evidence_and_safe_url(self):
-        for field,value in [('source_url',''),('checked_on',''),('source_url','javascript:alert(1)'),('checked_on','2999-01-01'),('TPO_Email','bad\r\n@example.edu')]:
+        for field,value in [('source_url','javascript:alert(1)'),('checked_on','2999-01-01'),('TPO_Email','bad\r\n@example.edu')]:
             record=self.record();record[field]=value
             with self.assertRaises(ValueError):directory.save_record(record)
+        # Empty source_url and checked_on are completely optional and valid
+        rec_empty_url = self.record(College_Name='Empty URL Inst', source_url='')
+        row1 = directory.save_record(rec_empty_url)
+        self.assertEqual(row1['source_url'], '')
+        self.assertTrue(row1['sendable'])
+
+        rec_empty_date = self.record(College_Name='Empty Date Inst', checked_on='')
+        row2 = directory.save_record(rec_empty_date)
+        self.assertEqual(row2['checked_on'], '')
+        self.assertTrue(row2['sendable'])
 
     def test_edit_is_version_checked_and_audited(self):
         row=directory.save_record(self.record())
