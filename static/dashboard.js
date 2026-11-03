@@ -1739,7 +1739,24 @@ function selectedRecipientIds() {
 async function sendTestEmail() {
   const email = (document.getElementById('senderEmail')?.value || document.getElementById('settingsSenderEmail')?.value || '').trim();
   const password = (document.getElementById('senderPassword')?.value || document.getElementById('settingsAppPassword')?.value || '').trim();
-  const subject = (document.getElementById('subjectLine')?.value || document.getElementById('settingsSubject')?.value || '').trim();
+  
+  // Detect if user is on the templates tab or editing a template
+  const isTemplatesTab = Boolean(document.getElementById('tabTemplates')?.classList.contains('active'));
+  const tplSubj = (document.getElementById('tplSubjectInput')?.value || '').trim();
+
+  let subject = '';
+  let html_body = undefined;
+  let text_body = undefined;
+
+  if (isTemplatesTab || tplSubj) {
+    subject = tplSubj;
+    html_body = getEditorHtml().trim();
+    text_body = (document.getElementById('tplTextInput')?.value || '').trim();
+  }
+
+  if (!subject) {
+    subject = (document.getElementById('subjectLine')?.value || document.getElementById('settingsSubject')?.value || '').trim();
+  }
 
   if (!email || !password || !subject) {
     alert('Provide a valid sender email, Google App Password, and subject line.');
@@ -1747,9 +1764,14 @@ async function sendTestEmail() {
   }
 
   const btn = document.getElementById('btnTest');
+  const btnSettings = document.getElementById('btnSettingsTest');
   if (btn) {
     btn.disabled = true;
     btn.innerText = '⏳ Sending Test Email...';
+  }
+  if (btnSettings) {
+    btnSettings.disabled = true;
+    btnSettings.innerText = '⏳ Sending Test Email...';
   }
   addLog(`Initiating test email to ${email}...`);
 
@@ -1762,7 +1784,9 @@ async function sendTestEmail() {
         email,
         password,
         subject,
-        template_id: chosenTemplateId
+        template_id: chosenTemplateId,
+        html_body,
+        text_body
       })
     });
     const data = await res.json();
@@ -1780,6 +1804,10 @@ async function sendTestEmail() {
     if (btn) {
       btn.disabled = false;
       btn.innerText = 'Send Test Email to Sender';
+    }
+    if (btnSettings) {
+      btnSettings.disabled = false;
+      btnSettings.innerText = 'Send Test Email to Sender';
     }
   }
 }
@@ -2808,8 +2836,13 @@ function applyTemplateToCollege(tpl, college) {
     if (!text) return '';
     return text
       .replaceAll('{{college_name}}', collegeName)
+      .replaceAll('{{College_Name}}', collegeName)
+      .replaceAll('{{COLLEGE_NAME}}', collegeName)
       .replaceAll('{{contact_name}}', contactName)
+      .replaceAll('{{contact_person}}', contactName)
+      .replaceAll('{{Contact_Person}}', contactName)
       .replaceAll('{{city}}', city)
+      .replaceAll('{{City}}', city)
       .replaceAll('{{area}}', city);
   };
 

@@ -1,6 +1,8 @@
-Subject: Campus Internship & Hiring Connect: Medantrik MedTech (IIT Kanpur Incubated | Noida Sec 63A Facility)
+Subject: Campus Placement Partnership & Industry Project Mentorship — {{College_Name}}
 
-Dear Training & Placement Officer / Placement Committee,
+Dear {{Contact_Person}},
+
+{{College_Name}}
 
 Greetings from Medantrik MedTech Pvt Ltd!
 

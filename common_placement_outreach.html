@@ -41,15 +41,16 @@
     }
     .header {
       background: linear-gradient(135deg, #091e3a 0%, #0f3d6c 100%);
-      padding: 30px 30px 26px 30px;
+      background-color: #091e3a;
+      padding: 32px 30px 26px 30px;
       text-align: center;
       color: #ffffff;
     }
     .header-badge {
       display: inline-block;
       background-color: #f97316;
-      color: #ffffff;
-      padding: 4px 14px;
+      color: #ffffff !important;
+      padding: 5px 14px;
       border-radius: 20px;
       font-size: 11px;
       font-weight: 800;
@@ -59,34 +60,35 @@
     }
     .header h1 {
       margin: 0;
-      font-size: 23px;
+      font-size: 24px;
       font-weight: 800;
-      letter-spacing: 0.3px;
-      color: #ffffff;
+      letter-spacing: 0.5px;
+      color: #ffffff !important;
+      line-height: 1.3;
     }
     .header-sub {
       margin: 8px 0 0 0;
-      font-size: 13.5px;
-      color: #93c5fd;
+      font-size: 14px;
+      color: #93c5fd !important;
       font-weight: 500;
     }
     .content {
       padding: 32px 32px 24px 32px;
+      background-color: #ffffff;
     }
     .greeting {
       font-size: 15px;
       font-weight: 700;
-      color: #0f172a;
+      color: #0f172a !important;
       margin-bottom: 16px;
+      line-height: 1.6;
     }
     .intro-p {
       font-size: 14px;
-      color: #334155;
+      color: #334155 !important;
       margin-bottom: 16px;
       line-height: 1.7;
     }
-
-    /* Press Card */
     .press-card {
       background-color: #ffffff;
       border: 1px solid #cbd5e1;
@@ -97,7 +99,7 @@
     }
     .press-tag {
       background-color: #dc2626;
-      color: #ffffff;
+      color: #ffffff !important;
       padding: 6px 14px;
       font-size: 11.5px;
       font-weight: 700;
@@ -115,6 +117,7 @@
       max-width: 100%;
       height: auto;
       display: block;
+      border: 0;
     }
     .press-body {
       padding: 14px 18px;
@@ -123,25 +126,26 @@
     .press-headline {
       font-size: 14px;
       font-weight: 700;
-      color: #0f172a;
+      color: #0f172a !important;
       margin: 0 0 6px 0;
     }
     .press-quote {
       font-size: 12.5px;
-      color: #475569;
+      color: #475569 !important;
       font-style: italic;
       margin: 0 0 8px 0;
+      line-height: 1.5;
     }
     .press-link {
       display: inline-block;
       font-size: 12px;
       font-weight: 700;
-      color: #0284c7;
+      color: #0284c7 !important;
       text-decoration: none;
     }
-
     .facility-banner {
       background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%);
+      background-color: #ecfeff;
       border: 1px solid #bae6fd;
       border-left: 5px solid #0284c7;
       padding: 16px 20px;
@@ -151,16 +155,15 @@
     .facility-banner h3 {
       margin: 0 0 6px 0;
       font-size: 15px;
-      color: #0369a1;
+      color: #0369a1 !important;
       font-weight: 700;
     }
     .facility-banner p {
       margin: 0;
       font-size: 13px;
-      color: #0c4a6e;
-      line-height: 1.5;
+      color: #0c4a6e !important;
+      line-height: 1.6;
     }
-
     .capabilities-box {
       background-color: #f8fafc;
       border: 1px solid #e2e8f0;
@@ -171,7 +174,7 @@
     .capabilities-title {
       font-size: 13.5px;
       font-weight: 700;
-      color: #0f172a;
+      color: #0f172a !important;
       margin: 0 0 10px 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -180,11 +183,9 @@
       margin: 0;
       padding-left: 18px;
       font-size: 13px;
-      color: #334155;
+      color: #334155 !important;
       line-height: 1.7;
     }
-
-    /* Next Steps / Connect Card */
     .connect-card {
       background-color: #eff6ff;
       border: 1px solid #bfdbfe;
@@ -196,33 +197,21 @@
     .connect-title {
       font-size: 15px;
       font-weight: 700;
-      color: #1e40af;
-      margin: 0 0 10px 0;
-    }
-    .step-item {
-      display: flex;
-      margin-bottom: 12px;
-      font-size: 13px;
-      color: #1e3a8a;
-    }
-    .step-item:last-child {
-      margin-bottom: 0;
+      color: #1e40af !important;
+      margin: 0 0 12px 0;
     }
     .step-num {
       display: inline-block;
       width: 22px;
       height: 22px;
       background-color: #2563eb;
-      color: #ffffff;
+      color: #ffffff !important;
       border-radius: 50%;
       text-align: center;
       line-height: 22px;
       font-weight: 700;
       font-size: 12px;
-      margin-right: 10px;
-      flex-shrink: 0;
     }
-
     .cta-container {
       text-align: center;
       margin-top: 24px;
@@ -240,23 +229,22 @@
     }
     .cta-hint {
       font-size: 12.5px;
-      color: #64748b;
+      color: #64748b !important;
       margin-top: 10px;
     }
-
     .footer {
       background-color: #0f172a;
       padding: 24px 30px;
       text-align: center;
-      color: #94a3b8;
+      color: #94a3b8 !important;
       font-size: 12px;
       line-height: 1.6;
     }
     .footer strong {
-      color: #e2e8f0;
+      color: #e2e8f0 !important;
     }
     .footer a {
-      color: #38bdf8;
+      color: #38bdf8 !important;
       text-decoration: none;
     }
   </style>
@@ -267,101 +255,103 @@
       
       <!-- Hero Header with Logo -->
       <tr>
-        <td class="header" style="background: linear-gradient(135deg, #07172c 0%, #0d325e 100%); padding: 36px 30px 28px 30px; text-align: center; border-bottom: 3px solid #f97316;">
+        <td class="header" style="background: linear-gradient(135deg, #07172c 0%, #0d325e 100%); background-color: #07172c; padding: 36px 30px 28px 30px; text-align: center; border-bottom: 3px solid #f97316;">
           <div style="margin-bottom: 18px;">
             <a href="https://medantrik.com" target="_blank" style="text-decoration: none; display: inline-block;">
-              <img src="https://medantrik.com/images/logo/logo.png" alt="Medantrik MedTech" style="max-height: 56px; width: auto; display: block; margin: 0 auto;">
+              <img src="https://medantrik.com/images/logo/logo.png" alt="Medantrik MedTech" style="max-height: 56px; width: auto; display: block; margin: 0 auto; border: 0;">
             </a>
           </div>
-          <div class="header-badge">IIT KANPUR INCUBATED DEEP-TECH STARTUP</div>
-          <h1>MEDANTRIK MEDTECH PVT LTD</h1>
-          <p class="header-sub">Innovating Respiratory Care, Biomedical Devices & Medical Hardware</p>
+          <div class="header-badge" style="display: inline-block; background-color: #f97316; color: #ffffff !important; padding: 5px 14px; border-radius: 20px; font-size: 11px; font-weight: 800; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">IIT KANPUR INCUBATED DEEP-TECH STARTUP</div>
+          <h1 style="margin: 0; font-size: 24px; font-weight: 800; letter-spacing: 0.5px; color: #ffffff !important; line-height: 1.3; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">MEDANTRIK MEDTECH PVT LTD</h1>
+          <p class="header-sub" style="margin: 8px 0 0 0; font-size: 14px; color: #93c5fd !important; font-weight: 500; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Innovating Respiratory Care, Biomedical Devices &amp; Medical Hardware</p>
         </td>
       </tr>
 
       <!-- Content Area -->
       <tr>
-        <td class="content">
+        <td class="content" style="padding: 32px 32px 24px 32px; background-color: #ffffff;">
           
-          <div class="greeting">Dear Training & Placement Officer / Placement Committee,</div>
+          <div class="greeting" style="font-size: 15px; font-weight: 700; color: #0f172a !important; margin-bottom: 16px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Dear {{Contact_Person}},<br><br><strong>{{College_Name}}</strong>
+          </div>
           
-          <p class="intro-p">
-            Greetings from <strong>Medantrik MedTech Pvt Ltd</strong>!
+          <p class="intro-p" style="font-size: 14px; color: #334155 !important; margin-bottom: 16px; line-height: 1.7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            Greetings from <strong style="color: #0f172a !important;">Medantrik MedTech Pvt Ltd</strong>!
           </p>
 
-          <p class="intro-p">
-            We are an <strong>IIT Kanpur-incubated deep-tech healthcare company</strong> (supported by the Startup Incubation and Innovation Centre - SIIC IIT Kanpur). Our journey originated during the national oxygen crisis, where we pioneered India's first <strong>Oxygen Purity Meter</strong> and actively contributed to drafting its official Bureau of Indian Standards (BIS) standard.
+          <p class="intro-p" style="font-size: 14px; color: #334155 !important; margin-bottom: 16px; line-height: 1.7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+            We are an <strong style="color: #0f172a !important;">IIT Kanpur-incubated deep-tech healthcare company</strong> (supported by the Startup Incubation and Innovation Centre – SIIC IIT Kanpur). Our journey originated during the national oxygen crisis, where we pioneered India's first <strong style="color: #0f172a !important;">Oxygen Purity Meter</strong> and actively contributed to drafting its official Bureau of Indian Standards (BIS) standard.
           </p>
 
           <!-- Hindustan Times Feature Card -->
-          <div class="press-card">
-            <div class="press-tag">Featured in National Media: Hindustan Times</div>
-            <div class="press-img-container">
-              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank">
-                <img src="assets/ht_news_clipping_opt.jpg" alt="Hindustan Times: IIT-K startup opens respiratory device unit in Noida Sector 63A" class="press-img">
+          <div class="press-card" style="background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden; margin: 22px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.04);">
+            <div class="press-tag" style="background-color: #dc2626; color: #ffffff !important; padding: 6px 14px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Featured in National Media: Hindustan Times</div>
+            <div class="press-img-container" style="width: 100%; background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; text-align: center;">
+              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank" style="text-decoration: none; display: block;">
+                <img src="assets/ht_news_clipping_opt.jpg" alt="Hindustan Times: IIT-K startup opens respiratory device unit in Noida Sector 63A" class="press-img" style="width: 100%; max-width: 100%; height: auto; display: block; border: 0;">
               </a>
             </div>
-            <div class="press-body">
-              <div class="press-headline">"IIT-K startup opens respiratory device unit in Noida Sector 63A"</div>
-              <p class="press-quote">
+            <div class="press-body" style="padding: 14px 18px; background-color: #f8fafc;">
+              <div class="press-headline" style="font-size: 14px; font-weight: 700; color: #0f172a !important; margin: 0 0 6px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">"IIT-K startup opens respiratory device unit in Noida Sector 63A"</div>
+              <p class="press-quote" style="font-size: 12.5px; color: #475569 !important; font-style: italic; margin: 0 0 8px 0; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                 "Medantrik Medtech, a startup from IIT Kanpur, opens a manufacturing facility in Noida for indigenous respiratory devices to address healthcare needs in India."
               </p>
-              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank" class="press-link">
+              <a href="https://www.hindustantimes.com/cities/noida-news/iitk-startup-opens-respiratory-device-unit-in-noida-sector-63a-101780513263678.html" target="_blank" class="press-link" style="display: inline-block; font-size: 12px; font-weight: 700; color: #0284c7 !important; text-decoration: none; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
                 Read Full Coverage on Hindustan Times ↗
               </a>
             </div>
           </div>
 
           <!-- Manufacturing Facility Announcement -->
-          <div class="facility-banner">
-            <h3>🏭 New Manufacturing Plant – Noida Sector 63A</h3>
-            <p>
-              To scale local manufacturing of medical hardware and clean-air technology, our <strong>new state-of-the-art facility in Sector 63A, Noida</strong> is now fully operational. To support our expansion, we are looking forward to partnering with your institution to hire students for paid internships and Pre-Placement Offers (PPOs).
+          <div class="facility-banner" style="background: linear-gradient(135deg, #ecfeff 0%, #e0f2fe 100%); background-color: #ecfeff; border: 1px solid #bae6fd; border-left: 5px solid #0284c7; padding: 16px 20px; border-radius: 6px; margin: 20px 0;">
+            <h3 style="margin: 0 0 6px 0; font-size: 15px; color: #0369a1 !important; font-weight: 700; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">🏭 New Manufacturing Plant – Noida Sector 63A</h3>
+            <p style="margin: 0; font-size: 13px; color: #0c4a6e !important; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              To scale local manufacturing of medical hardware and clean-air technology, our <strong style="color: #0369a1 !important;">new state-of-the-art facility in Sector 63A, Noida</strong> is now fully operational. To support our expansion, we are looking forward to partnering with your institution to hire students for paid internships and Pre-Placement Offers (PPOs).
             </p>
           </div>
 
           <!-- Core Verticals -->
-          <div class="capabilities-box">
-            <div class="capabilities-title">Our Core Capabilities & Domains</div>
-            <ul class="capabilities-list">
-              <li><strong>Respiratory & Lung Health Devices:</strong> Smart air purification, aerosol drug delivery, and respiratory diagnostics (Asthma, COPD).</li>
-              <li><strong>Clinical Biomedical & Diagnostic Hardware:</strong> Sensor-integrated medical instruments and patient monitoring systems.</li>
-              <li><strong>Health & Wellness Smart Devices:</strong> Preventive wellness and indoor environmental quality hardware.</li>
-              <li><strong>Turnkey OEM & Contract Manufacturing:</strong> End-to-end medical device engineering, tooling, cleanroom assembly, and manufacturing.</li>
+          <div class="capabilities-box" style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px 20px; margin: 20px 0;">
+            <div class="capabilities-title" style="font-size: 13.5px; font-weight: 700; color: #0f172a !important; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 0.5px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">Our Core Capabilities &amp; Domains</div>
+            <ul class="capabilities-list" style="margin: 0; padding-left: 18px; font-size: 13px; color: #334155 !important; line-height: 1.7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              <li style="margin-bottom: 6px;"><strong style="color: #0f172a !important;">Respiratory &amp; Lung Health Devices:</strong> Smart air purification, aerosol drug delivery, and respiratory diagnostics (Asthma, COPD).</li>
+              <li style="margin-bottom: 6px;"><strong style="color: #0f172a !important;">Clinical Biomedical &amp; Diagnostic Hardware:</strong> Sensor-integrated medical instruments and patient monitoring systems.</li>
+              <li style="margin-bottom: 6px;"><strong style="color: #0f172a !important;">Health &amp; Wellness Smart Devices:</strong> Preventive wellness and indoor environmental quality hardware.</li>
+              <li style="margin-bottom: 6px;"><strong style="color: #0f172a !important;">Turnkey OEM &amp; Contract Manufacturing:</strong> End-to-end medical device engineering, tooling, cleanroom assembly, and manufacturing.</li>
             </ul>
           </div>
 
           <!-- Proposed 2-Step Connect Process -->
-          <div class="connect-card">
-            <div class="connect-title">🤝 How We Propose to Connect:</div>
+          <div class="connect-card" style="background-color: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 20px; margin: 24px 0 10px 0; text-align: left;">
+            <div class="connect-title" style="font-size: 15px; font-weight: 700; color: #1e40af !important; margin: 0 0 12px 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">🤝 How We Propose to Connect:</div>
             
-            <table cellpadding="0" cellspacing="0" width="100%">
+            <table cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;">
               <tr>
-                <td style="vertical-align: top; width: 28px; padding-bottom: 12px;">
-                  <span class="step-num">1</span>
+                <td style="vertical-align: top; width: 30px; padding-bottom: 12px;">
+                  <span class="step-num" style="display: inline-block; width: 22px; height: 22px; background-color: #2563eb; color: #ffffff !important; border-radius: 50%; text-align: center; line-height: 22px; font-weight: 700; font-size: 12px;">1</span>
                 </td>
-                <td style="font-size: 13.5px; color: #1e3a8a; padding-bottom: 12px;">
-                  <strong>Share Contact Details:</strong> Kindly reply to this email with the primary contact person’s name, designation, direct phone/WhatsApp number, and email.
+                <td style="font-size: 13.5px; color: #1e3a8a !important; padding-bottom: 12px; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                  <strong style="color: #1e40af !important;">Share Contact Details:</strong> Kindly reply to this email with the primary contact person’s name, designation, direct phone/WhatsApp number, and email.
                 </td>
               </tr>
               <tr>
-                <td style="vertical-align: top; width: 28px;">
-                  <span class="step-num">2</span>
+                <td style="vertical-align: top; width: 30px;">
+                  <span class="step-num" style="display: inline-block; width: 22px; height: 22px; background-color: #2563eb; color: #ffffff !important; border-radius: 50%; text-align: center; line-height: 22px; font-weight: 700; font-size: 12px;">2</span>
                 </td>
-                <td style="font-size: 13.5px; color: #1e3a8a;">
-                  <strong>Quick 15-Minute Intro Call:</strong> We would love to schedule a brief 15-minute video call (Google Meet) with our HR & leadership team to understand your student availability, academic calendar, and share detailed role profiles and hiring pathways.
+                <td style="font-size: 13.5px; color: #1e3a8a !important; line-height: 1.5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+                  <strong style="color: #1e40af !important;">Quick 15-Minute Intro Call:</strong> We would love to schedule a brief 15-minute video call (Google Meet) with our HR &amp; leadership team to understand your student availability, academic calendar, and share detailed role profiles and hiring pathways.
                 </td>
               </tr>
             </table>
           </div>
 
           <!-- CTA Button -->
-          <div class="cta-container">
-            <a href="mailto:join@medantrik.com?subject=Campus%20Hiring%20Connect%20-%20Placement%20Cell" class="cta-btn">
+          <div class="cta-container" style="text-align: center; margin-top: 24px;">
+            <a href="mailto:join@medantrik.com?subject=Campus%20Hiring%20Connect%20-%20Placement%20Cell" class="cta-btn" style="display: inline-block; background-color: #0284c7; color: #ffffff !important; font-weight: 700; font-size: 14px; padding: 13px 32px; text-decoration: none; border-radius: 6px; box-shadow: 0 3px 8px rgba(2, 132, 199, 0.35); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
               Reply to Connect / Propose a Call Slot
             </a>
-            <p class="cta-hint">
-              You can simply reply to this email or write to us at <strong>join@medantrik.com</strong>.
+            <p class="cta-hint" style="font-size: 12.5px; color: #64748b !important; margin-top: 10px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+              You can simply reply to this email or write to us at <strong style="color: #0284c7 !important;">join@medantrik.com</strong>.
             </p>
           </div>
 
@@ -370,14 +360,14 @@
 
       <!-- Footer -->
       <tr>
-        <td class="footer">
-          <p style="margin: 0 0 6px 0;"><strong>Medantrik MedTech Pvt Ltd</strong></p>
-          <p style="margin: 0 0 6px 0;">
-            📍 <strong>New Manufacturing Plant:</strong> Sector 63A, Noida, Uttar Pradesh 201301<br>
-            🏛️ <strong>Incubation & R&D Hub:</strong> SIIC, Diamond Jubilee Academic Complex (DJAC), IIT Kanpur
+        <td class="footer" style="background-color: #0f172a; padding: 24px 30px; text-align: center; color: #94a3b8 !important; font-size: 12px; line-height: 1.6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+          <p style="margin: 0 0 6px 0; color: #e2e8f0 !important;"><strong style="color: #ffffff !important;">Medantrik MedTech Pvt Ltd</strong></p>
+          <p style="margin: 0 0 6px 0; color: #94a3b8 !important;">
+            📍 <strong style="color: #cbd5e1 !important;">New Manufacturing Plant:</strong> Sector 63A, Noida, Uttar Pradesh 201301<br>
+            🏛️ <strong style="color: #cbd5e1 !important;">Incubation &amp; R&amp;D Hub:</strong> SIIC, Diamond Jubilee Academic Complex (DJAC), IIT Kanpur
           </p>
-          <p style="margin: 8px 0 0 0;">
-            📧 <a href="mailto:join@medantrik.com">join@medantrik.com</a> | 🌐 <a href="https://medantrik.com">medantrik.com</a>
+          <p style="margin: 8px 0 0 0; color: #94a3b8 !important;">
+            📧 <a href="mailto:join@medantrik.com" style="color: #38bdf8 !important; text-decoration: none;">join@medantrik.com</a> | 🌐 <a href="https://medantrik.com" style="color: #38bdf8 !important; text-decoration: none;">medantrik.com</a>
           </p>
         </td>
       </tr>

@@ -164,7 +164,7 @@ def render_personalized(subject, html_body, text_body, college=None):
 def list_templates(include_archived=False):
     initialize_templates()
     with connect() as db:
-        query = 'SELECT id, name, subject, is_default, version, archived, updated_at, created_at FROM email_templates'
+        query = 'SELECT id, name, subject, html_body, text_body, is_default, version, archived, updated_at, created_at FROM email_templates'
         if not include_archived:
             query += ' WHERE archived=0'
         query += ' ORDER BY is_default DESC, id ASC'
@@ -232,6 +232,14 @@ def save_template(data, template_id=None):
                 INSERT INTO template_history (template_id, version, name, subject, html_body, text_body, note)
                 VALUES (?, 1, ?, ?, ?, ?, 'Initial template creation')
             ''', (target_id, name, subject, html_body, text_body))
+        
+        # Synchronize default/primary template to disk files so Vercel and CLI scripts stay in sync
+        if is_default or target_id == 1:
+            try:
+                (BASE_DIR / 'common_placement_outreach.html').write_text(html_body, encoding='utf-8')
+                (BASE_DIR / 'common_placement_outreach.txt').write_text(text_body, encoding='utf-8')
+            except Exception:
+                pass
     return get_template(target_id)
 
 def duplicate_template(template_id):

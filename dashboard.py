@@ -423,23 +423,38 @@ class CampaignHandler(BaseHTTPRequestHandler):
                 display_name = recipient_name or (matching['College_Name'] if matching else 'Direct Recipient')
 
                 tpl_id = data.get('template_id')
-                html_body = data.get('html_body')
-                text_body = data.get('text_body')
+                client_html = data.get('html_body')
+                client_text = data.get('text_body')
+                recipient_info = matching or {'College_Name': display_name, 'Contact_Person': recipient_name or 'Training & Placement Officer', 'City': 'Delhi-NCR'}
 
-                if tpl_id:
+                if client_html and str(client_html).strip():
+                    rendered = templates.render_personalized(
+                        subject,
+                        client_html,
+                        client_text or '',
+                        recipient_info
+                    )
+                    subject = rendered['subject'] or subject
+                    html_body = rendered['html']
+                    text_body = rendered['text']
+                elif tpl_id:
                     try:
                         tpl = templates.get_template(int(tpl_id))
                         rendered = templates.render_personalized(
                             subject or tpl.get('subject', ''),
                             tpl.get('html_body', ''),
                             tpl.get('text_body', ''),
-                            matching or {'College_Name': display_name, 'Contact_Person': recipient_name or 'Sir/Madam', 'City': 'Delhi-NCR'}
+                            recipient_info
                         )
                         subject = rendered['subject'] or subject
                         html_body = rendered['html']
                         text_body = rendered['text']
                     except Exception:
-                        pass
+                        html_body = None
+                        text_body = None
+                else:
+                    html_body = None
+                    text_body = None
 
                 if not html_body:
                     if data.get('message'):
@@ -517,23 +532,35 @@ class CampaignHandler(BaseHTTPRequestHandler):
                 if recipient.lower() not in {c['TPO_Email'] for c in rows if c.get('TPO_Email')}:
                     raise ValueError('Choose an institution with a valid email from the directory.')
 
-            tpl_id = data.get('template_id')
-            if tpl_id:
-                try:
-                    tpl = templates.get_template(int(tpl_id))
-                except Exception:
+            passed_html = data.get('html_body')
+            passed_text = data.get('text_body')
+            recipient_info = matching or ({'College_Name': 'Test Placement Cell', 'Contact_Person': 'Test Placement Officer', 'City': 'Delhi-NCR'} if test else None)
+
+            if passed_html and str(passed_html).strip():
+                rendered = templates.render_personalized(
+                    subject,
+                    passed_html,
+                    passed_text or '',
+                    recipient_info
+                )
+            else:
+                tpl_id = data.get('template_id')
+                tpl = None
+                if tpl_id:
+                    try:
+                        tpl = templates.get_template(int(tpl_id))
+                    except Exception:
+                        pass
+                if not tpl:
                     html, text = load_templates()
                     tpl = {'subject': subject, 'html_body': html, 'text_body': text}
-            else:
-                html, text = load_templates()
-                tpl = {'subject': subject, 'html_body': html, 'text_body': text}
 
-            rendered = templates.render_personalized(
-                subject or tpl.get('subject', ''),
-                tpl.get('html_body', ''),
-                tpl.get('text_body', ''),
-                matching
-            )
+                rendered = templates.render_personalized(
+                    subject or tpl.get('subject', ''),
+                    tpl.get('html_body', ''),
+                    tpl.get('text_body', ''),
+                    recipient_info
+                )
             final_subject = rendered['subject'] or subject
             final_html = rendered['html']
             final_text = rendered['text']
