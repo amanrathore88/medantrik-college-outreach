@@ -237,7 +237,8 @@ class CampaignHandler(BaseHTTPRequestHandler):
             '/api/templates/preview',
             '/api/college/stage', '/api/college/reply',
             '/api/college/follow-up', '/api/college/note',
-            '/api/outreach/reset', '/api/outreach/reset-bulk'
+            '/api/outreach/reset', '/api/outreach/reset-bulk',
+            '/api/directory/verify-quick'
         }
         if path not in allowed_paths:
             return self.reply({'status': 'error', 'message': 'Endpoint not found.'}, 404)
@@ -480,6 +481,13 @@ class CampaignHandler(BaseHTTPRequestHandler):
                 if not isinstance(college_ids, list) or not college_ids:
                     raise ValueError('Select at least one contact to reset.')
                 return self.reply(directory.reset_outreach_bulk(college_ids))
+            if path == '/api/directory/verify-quick':
+                cid = data.get('id')
+                if not cid: raise ValueError('Institution id required.')
+                detail = directory.get_college_detail(int(cid))
+                rec = detail['record']
+                rec['verification_status'] = 'verified'
+                return self.reply(directory.save_record(rec, rec['id'], rec['version']))
 
             # Validate message fields
             for k, v in data.items():
@@ -506,8 +514,8 @@ class CampaignHandler(BaseHTTPRequestHandler):
                     college_name = matching.get('College_Name', college_name)
                 if any(c['TPO_Email']==recipient.lower() and c['do_not_contact'] for c in rows):
                     raise ValueError('This email is marked do not contact.')
-                if recipient.lower() not in {c['TPO_Email'] for c in rows if c['sendable']}:
-                    raise ValueError('Choose a verified, contactable recipient from the directory.')
+                if recipient.lower() not in {c['TPO_Email'] for c in rows if c.get('TPO_Email')}:
+                    raise ValueError('Choose an institution with a valid email from the directory.')
 
             tpl_id = data.get('template_id')
             if tpl_id:

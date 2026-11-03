@@ -206,11 +206,14 @@ def create_staggered_campaign(config, recipient_college_ids, sender_password=Non
     all_directory = get_colleges()
     college_map = {c['id']: c for c in all_directory}
     
+    allow_unverified = config.get('allow_unverified', True)
     selected_colleges = []
     seen_emails = set()
     for cid in recipient_college_ids:
         c = college_map.get(int(cid))
-        if not c or not c.get('sendable') or c.get('do_not_contact'):
+        if not c or c.get('do_not_contact'):
+            continue
+        if not c.get('sendable') and not (allow_unverified and c.get('TPO_Email')):
             continue
         email = (c.get('TPO_Email') or '').lower().strip()
         if not email or email in seen_emails:
@@ -219,7 +222,7 @@ def create_staggered_campaign(config, recipient_college_ids, sender_password=Non
         selected_colleges.append(c)
 
     if not selected_colleges:
-        raise ValueError('Select at least one sendable, verified college from the directory.')
+        raise ValueError('Select at least one institution with a valid contact email.')
 
     with connect() as db:
         cur = db.execute('''

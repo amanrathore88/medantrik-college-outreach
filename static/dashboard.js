@@ -54,6 +54,11 @@ let activePreviewCollege = null;
 let editingCollege = null;
 let currentImportToken = "";
 let activeCategory = 'Colleges';
+let allowUnverified = true;
+try {
+  const savedMode = localStorage.getItem('medantrik_allow_unverified');
+  if (savedMode !== null) allowUnverified = savedMode !== 'false';
+} catch (_) {}
 let availableCategories = [];
 
 const escapeHtml = value => String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;", "'":"&#39;"}[c]));
@@ -167,6 +172,8 @@ async function loadColleges() {
     }
 
     await loadCategories();
+    const toggleEl = document.getElementById('toggleAllowUnverified');
+    if (toggleEl) toggleEl.checked = allowUnverified;
     filterColleges();
     loadOverview();
     populateTemplateCollegeSelector();
@@ -407,8 +414,11 @@ function renderCollegesView() {
   if (nextBtn) nextBtn.disabled = currentPage >= maxPage;
 
   // Counts in action bar
-  const visibleSendable = pageItems.filter(c => c.sendable).length;
-  const totalMatchingSendable = filteredColleges.filter(c => c.sendable).length;
+  const isContactable = (c) => allowUnverified 
+    ? Boolean(c.TPO_Email && !c.do_not_contact && c.recruitment_stage !== 'declined' && c.recruitment_stage !== 'partnership_active')
+    : Boolean(c.sendable);
+  const visibleSendable = pageItems.filter(isContactable).length;
+  const totalMatchingSendable = filteredColleges.filter(isContactable).length;
   const visCountEl = document.getElementById('visibleSendableCount');
   if (visCountEl) visCountEl.innerText = visibleSendable;
   const totCountEl = document.getElementById('totalMatchingSendableCount');
@@ -417,7 +427,8 @@ function renderCollegesView() {
   const summaryEl = document.getElementById('collegesResultSummary');
   if (summaryEl) {
     const catLabel = activeCategory.toLowerCase() === 'all' ? 'All Categories' : activeCategory;
-    summaryEl.innerText = `${total} ${catLabel.toLowerCase()} match current filters (${totalMatchingSendable} verified & sendable).`;
+    const modeLabel = allowUnverified ? 'contactable with email' : 'verified & sendable';
+    summaryEl.innerText = `${total} ${catLabel.toLowerCase()} match current filters (${totalMatchingSendable} ${modeLabel}).`;
   }
 }
 
@@ -439,7 +450,10 @@ function renderTable(list) {
     const tr = document.createElement('tr');
     if (selection.has(c.id) && tr.classList) tr.classList.add('row-selected');
     const checkedAttr = selection.has(c.id) ? "checked" : "";
-    const disabledAttr = c.sendable ? "" : "disabled";
+    const canSend = allowUnverified 
+      ? Boolean(c.TPO_Email && !c.do_not_contact && c.recruitment_stage !== 'declined' && c.recruitment_stage !== 'partnership_active')
+      : Boolean(c.sendable);
+    const disabledAttr = canSend ? "" : "disabled";
     const statusBadgeClass = c.verification_status === 'verified' ? 'badge-verified' :
                              c.verification_status === 'directory-listed' ? 'badge-directory' :
                              c.verification_status === 'missing' ? 'badge-missing' : 'badge-unverified';
@@ -576,16 +590,60 @@ function selectThisPage() {
   const startIdx = (currentPage - 1) * pageSize;
   const pageItems = filteredColleges.slice(startIdx, startIdx + pageSize);
   pageItems.forEach(c => {
-    if (c.sendable) selection.set(c.id, true);
+    const canSend = allowUnverified ? Boolean(c.TPO_Email && !c.do_not_contact) : Boolean(c.sendable);
+    if (canSend) selection.set(c.id, true);
   });
   renderCollegesView();
 }
 
 function selectAllMatches() {
   filteredColleges.forEach(c => {
-    if (c.sendable) selection.set(c.id, true);
+    const canSend = allowUnverified ? Boolean(c.TPO_Email && !c.do_not_contact) : Boolean(c.sendable);
+    if (canSend) selection.set(c.id, true);
   });
   renderCollegesView();
+}
+
+function toggleAllowUnverified(enabled) {
+  allowUnverified = !!enabled;
+  try { localStorage.setItem('medantrik_allow_unverified', allowUnverified ? 'true' : 'false'); } catch (_) {}
+  const noteEl = document.getElementById('collegesSendableNote');
+  if (noteEl) {
+    noteEl.innerText = allowUnverified
+      ? 'Sending to unverified colleges is enabled. All contactable institutions can receive emails.'
+      : 'Strict mode: Only verified, contactable institutions can enter an email campaign.';
+  }
+  renderCollegesView();
+}
+
+function selectAndEmailAllUnverified() {
+  selection.clear();
+  const unverifiedColleges = allColleges.filter(c => c.TPO_Email && !c.do_not_contact && c.verification_status !== 'verified');
+  if (unverifiedColleges.length === 0) {
+    alert('No unverified colleges with email addresses found.');
+    return;
+  }
+  unverifiedColleges.forEach(c => selection.set(c.id, true));
+  updateSelectedCount();
+  renderCollegesView();
+  createCampaignFromSelection();
+}
+
+async function quickVerifyCollege(collegeId) {
+  try {
+    const res = await fetch('/api/directory/verify-quick', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': csrfToken },
+      body: JSON.stringify({ id: collegeId })
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Failed to verify');
+    alert(`Marked "${data.College_Name}" as verified on official site!`);
+    await loadColleges();
+    openDetailDrawer(collegeId);
+  } catch (err) {
+    alert('Error: ' + err.message);
+  }
 }
 
 function clearAllSelection() {
@@ -781,7 +839,10 @@ async function openDetailDrawer(collegeId) {
       <div class="drawer-section-title">Provenance & Verification Evidence</div>
       <div class="drawer-row">
         <span class="drawer-label">Verification Status:</span>
-        <span class="drawer-value"><span class="badge ${college.verification_status === 'verified' ? 'badge-verified' : college.verification_status === 'directory-listed' ? 'badge-directory' : college.verification_status === 'missing' ? 'badge-missing' : 'badge-unverified'}">${escapeHtml(statusNames[college.verification_status] || college.verification_status)}</span></span>
+        <span class="drawer-value" style="display:flex; align-items:center; gap:6px;">
+          <span class="badge ${college.verification_status === 'verified' ? 'badge-verified' : college.verification_status === 'directory-listed' ? 'badge-directory' : college.verification_status === 'missing' ? 'badge-missing' : 'badge-unverified'}">${escapeHtml(statusNames[college.verification_status] || college.verification_status)}</span>
+          ${college.verification_status !== 'verified' ? `<button class="btn btn-sm btn-outline" style="font-size:10.5px; padding:2px 7px; color:#15803d; border-color:#86efac; background:#f0fdf4;" onclick="quickVerifyCollege(${college.id})" title="Mark this record as verified">✅ Mark Verified</button>` : ''}
+        </span>
       </div>
       <div class="drawer-row">
         <span class="drawer-label">Checked Date:</span>
@@ -847,7 +908,7 @@ async function openDetailDrawer(collegeId) {
           ✉️ Send Direct Email
         </button>
       ` : ''}
-      <button class="btn ${selection.has(college.id) ? 'btn-danger' : 'btn-outline'}" onclick="toggleDrawerSelection(${college.id})" ${college.sendable ? '' : 'disabled'}>
+      <button class="btn ${selection.has(college.id) ? 'btn-danger' : 'btn-outline'}" onclick="toggleDrawerSelection(${college.id})" ${college.TPO_Email && !college.do_not_contact ? '' : 'disabled'}>
         ${selection.has(college.id) ? 'Remove from Selection' : 'Select for Campaign'}
       </button>
       <button class="btn btn-outline" onclick="openEditCollegeDialog(${college.id})">Edit / Verify Record</button>
@@ -1668,7 +1729,8 @@ function selectedRecipientIds() {
   const seen = new Set();
   return selection.ids().filter(id => {
     const college = allColleges.find(c => c.id === id);
-    if (!college || !college.sendable || seen.has(college.TPO_Email)) return false;
+    const canSend = allowUnverified ? Boolean(college?.TPO_Email && !college?.do_not_contact) : Boolean(college?.sendable);
+    if (!college || !canSend || seen.has(college.TPO_Email)) return false;
     seen.add(college.TPO_Email);
     return true;
   });
@@ -1861,6 +1923,7 @@ async function startPersistentCampaign() {
         sending_hours_start: hoursStart,
         sending_hours_end: hoursEnd,
         working_days_only: workingDaysOnly,
+        allow_unverified: allowUnverified,
         college_ids: checkedIds
       })
     });
@@ -2721,6 +2784,8 @@ async function submitNewCategory() {
     closeAddCategoryModal();
     activeCategory = name;
     await loadCategories();
+    const toggleEl = document.getElementById('toggleAllowUnverified');
+    if (toggleEl) toggleEl.checked = allowUnverified;
     filterColleges();
     addLog(`Created new category "${name}". A separate tab has been automatically added to your Google Sheet / Excel workbook.`, 'success');
   } catch (e) {

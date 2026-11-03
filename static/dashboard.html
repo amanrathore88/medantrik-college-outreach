@@ -387,6 +387,13 @@
             <button class="btn btn-sm btn-primary" onclick="selectAndEmailAllVerified()" style="font-weight: 700; background: #047857; border-color: #047857; color: white;" title="Select all verified colleges and proceed to email them">
               ✉️ Email All Verified Colleges
             </button>
+            <label class="check-toggle" style="display: inline-flex; align-items: center; gap: 7px; font-size: 12px; font-weight: 700; background: #fff7ed; border: 1px solid #fdba74; padding: 4px 10px; border-radius: 6px; color: #9a3412; cursor: pointer; user-select: none;" title="Toggle to allow selecting and sending emails to unverified colleges that have email addresses">
+              <input type="checkbox" id="toggleAllowUnverified" onchange="toggleAllowUnverified(this.checked)" checked style="accent-color: #ea580c; width: 15px; height: 15px; cursor: pointer;">
+              <span>⚡ Allow Sending to Unverified</span>
+            </label>
+            <button class="btn btn-sm btn-outline" onclick="selectAndEmailAllUnverified()" style="font-weight: 700; color: #c2410c; border-color: #fed7aa; background: #fff7ed;" title="Select all unverified colleges that have email addresses">
+              ✉️ Email Unverified
+            </button>
             <span style="font-size: 12.5px; color: var(--primary); font-weight: 600; margin-left: 8px;" id="selectedCountText">
               <span id="selectedCount">0</span> selected across all filters
             </span>
@@ -408,7 +415,7 @@
       <!-- Results Summary -->
       <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; font-size: 12.5px; color: var(--text-muted);">
         <span id="collegesResultSummary">Showing all colleges</span>
-        <span>Only verified, contactable institutions can enter an email campaign.</span>
+        <span id="collegesSendableNote">Sending to unverified colleges is enabled. All contactable institutions can receive emails.</span>
       </div>
 
       <!-- Colleges Table -->
